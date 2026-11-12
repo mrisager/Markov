@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-10-02T20:37:29.730372+00:00",
+  "maximum_cutoff": "10^2000",
+  "sample_count": 2000,
+  "sample_step": 1,
+  "sampling_definition": "exact counts at the listed integer exponents k; x=10**k",
+  "plot_interpolation": "straight lines connect samples; the continuous error function is not computed",
+  "counting_definition": "positive Markov triples a <= b <= c <= x",
+  "exceptional_triples_included": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      2
+    ]
+  ],
+  "uniqueness_checked": false,
+  "cutoff_comparisons": "exact integer arithmetic",
+  "constant": "0.18071710471180647805779264904916762147630562767088273",
+  "constant_source": "https://oeis.org/A261613",
+  "main_term": "C * (k * ln(10) + ln(3))**2 at x=10**k",
+  "main_term_decimal_precision": 70,
+  "python_version": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "backend": "gmpy2",
+  "backend_version": "2.3.1",
+  "strict_triples": 3834390,
+  "triples_including_exceptions": 3834392,
+  "pruned_children": 3834391,
+  "products_avoided_by_bit_length_guard": 3832941,
+  "maximum_pending_stack_entries": 16,
+  "counting_seconds": 3.092726709000999,
+  "last_sample": {
+    "k": 2000,
+    "x": "10^2000",
+    "strict_triples": 3834390,
+    "M_x": 3834392,
+    "main_term": "3834403.524978520372405098476509633812224044850350018511270668803532337",
+    "error": "-11.524978520372405098476509633812224044850350018511270668803532337"
+  },
+  "minimum_sampled_error": {
+    "k": 1900,
+    "x": "10^1900",
+    "strict_triples": 3460591,
+    "M_x": 3460593,
+    "main_term": "3460636.061194906263260410714428474156384612905817725096441641313462065",
+    "error": "-43.061194906263260410714428474156384612905817725096441641313462065"
+  },
+  "maximum_sampled_error": {
+    "k": 1116,
+    "x": "10^1116",
+    "strict_triples": 1194383,
+    "M_x": 1194385,
+    "main_term": "1194346.368647066716065435720339082163181593404618396344124661074419837",
+    "error": "38.631352933283934564279660917836818406595381603655875338925580163"
+  }
+}

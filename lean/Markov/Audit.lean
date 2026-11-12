@@ -1,0 +1,5126 @@
+import Markov.Basic
+import Markov.TraceAlgebra
+import Markov.Transfer
+import Markov.Covectors
+import Markov.ArithmeticSeparation
+import Markov.SelectedSeparation
+import Markov.SupportDerivative
+import Markov.SelectedTraceValue
+import Markov.FareyHolonomy
+
+import Markov.FareyCoverage
+import Markov.PrimitivePartner
+import Markov.UnimodularPartners
+import Markov.FareyConsistency
+import Markov.CanonicalTrace
+import Markov.FrickeLengthTriangle
+import Markov.SeededFarey
+import Markov.QuadrantSeeds
+import Markov.QuadrantCoverage
+import Markov.SupportShear
+import Markov.SeededSeparation
+import Markov.GlobalSeparation
+import Markov.UnresolvedSizes
+import Markov.UnresolvedSeparation
+import Markov.FanSupport
+import Markov.FanTurn
+import Markov.FareyRefinement
+import Markov.FiniteAffineEnvelope
+import Markov.FrickeConvexity
+import Markov.NormLimit
+import Markov.QuadrantSymmetry
+import Markov.AxisCorner
+import Markov.BirthRayConvexity
+import Markov.FrontierIndex
+import Markov.FareyFanLocal
+import Markov.FareyProfile
+import Markov.FareyInterpolants
+import Markov.FrontierEnvelope
+import Markov.FrontierDecrease
+import Markov.FrontierLimit
+import Markov.QuadrantSeminormGlue
+import Markov.SeedCanonical
+import Markov.SeedBirthConvexity
+import Markov.SeedEvaluation
+import Markov.SeededCoordinates
+import Markov.SeedProfiles
+import Markov.FrontierAxes
+import Markov.SeedEnvelope
+import Markov.ActualAxisJoins
+import Markov.SeedLinearPieces
+import Markov.TraceSeminorm
+import Markov.TraceNorm
+import Markov.TracePlane
+import Markov.TraceCompatibility
+import Markov.TraceSeparation
+
+import Markov.FareyScale
+import Markov.PaperSeeds
+import Markov.SupportLimit
+import Markov.RadialLipschitz
+
+import Markov.TraceArcs
+
+import Markov.BoundaryArc
+import Markov.CutoffNeighbors
+import Markov.NormalArcClosure
+import Markov.SignedSectors
+import Markov.BoundaryArcHomeomorph
+import Markov.BoundaryNormals
+import Markov.CutoffArcs
+import Markov.CutoffGapCoverage
+import Markov.NormalDeterminant
+import Markov.BoundaryArcComponents
+import Markov.BoundaryWedgeInclusion
+import Markov.NormalArcProximity
+import Markov.SignedTraceArcs
+import Markov.NormalUnresolved
+import Markov.SignedCutoffComponents
+import Markov.NormalArcTransfer
+import Markov.CutoffNormalEstimates
+
+import Markov.AngularNormals
+import Markov.CutoffGapCount
+import Markov.RealSectorCoverage
+import Markov.AngularCutoffEstimates
+import Markov.GlobalCutoffCoverage
+import Markov.GlobalArcLength
+import Markov.GlobalCutoffCount
+
+import Markov.NormalHalfPlane
+import Markov.SupportAngleEnvelope
+import Markov.SupportNormalOrder
+import Markov.TurnMeasure
+import Markov.AffineSupport
+import Markov.AngleEnvelopeCutoff
+import Markov.HalfPlaneAngleOrder
+import Markov.SupportAngleCompact
+import Markov.TraceLocalTurn
+
+import Markov.SupportAngleConnected
+import Markov.LeftAffineSupport
+import Markov.TraceCornerTurn
+import Markov.SignedSelectedSupport
+import Markov.ChordHalfPlane
+import Markov.TraceArcTurn
+
+import Markov.ChordCharts
+import Markov.SupportQuarterRotation
+import Markov.StieltjesGlue
+import Markov.TraceChordTurn
+import Markov.TraceBoundaryPath
+import Markov.TraceCyclicTurn
+import Markov.TraceCyclicNormals
+import Markov.TraceBoundaryTurn
+
+import Markov.ChordParametrization
+import Markov.TraceBoundaryInjective
+import Markov.TraceBoundaryCoverage
+import Markov.ChordCornerGeometry
+import Markov.TraceFullCornerArc
+import Markov.TraceCyclicAtoms
+import Markov.TraceBoundaryOpenArcs
+import Markov.TraceBoundaryAtoms
+import Markov.TraceBoundaryNormalTurn
+import Markov.StieltjesCompletedGraph
+import Markov.TraceBoundaryNormalAngles
+
+import Markov.BoundaryAtomDeterminant
+import Markov.CornerJumpBounds
+
+import Markov.BirthSelectedValues
+import Markov.BirthCornerJump
+import Markov.CornerSupportDeterminant
+import Markov.PrimitiveTraceBounds
+import Markov.PrimitiveBirthCoverage
+import Markov.RealCutoffCorners
+import Markov.AxisSelectedValues
+import Markov.TraceBirthCornerBounds
+import Markov.PrimitiveCornerBounds
+import Markov.TraceCornerEstimate
+import Markov.CornerTailDeficit
+import Markov.FrickeUpperBranch
+import Markov.TraceCoefficientTail
+import Markov.SupportGapCoordinates
+import Markov.ShortNormalArc
+import Markov.NormingCovectorRadius
+import Markov.TraceSupportDeficit
+import Markov.TraceSupportGap
+
+import Markov.SelectedSupportTransport
+import Markov.SupportAngleShortBranch
+import Markov.TraceRationalParameters
+import Markov.ChordRationalSupport
+import Markov.TraceChordArcBounds
+import Markov.TraceRationalSupports
+import Markov.TraceRationalArcDecay
+import Markov.SignedQuadrantWords
+import Markov.CutoffGapHeightBounds
+import Markov.SlopeArcPositiveCone
+import Markov.TracePositiveConeArc
+import Markov.TailPolynomialAbsorption
+import Markov.SignedCutoffTurnDecay
+import Markov.CutoffTurnSummation
+import Markov.TraceTurnTail
+import Markov.TraceChordAngleEnvelope
+import Markov.CanonicalCutoffAngleDecay
+import Markov.NormalClosureProximity
+import Markov.TraceNormalArcClosure
+import Markov.ClosedAngularNeighborhood
+import Markov.TraceCutoffClosureHeight
+import Markov.CanonicalAngularNeighborhoodHeight
+
+import Markov.CircularNormalSeparation
+import Markov.CutoffParameterBounds
+import Markov.PrimitiveAngularSpacing
+import Markov.SignedCutoffArcEmbedding
+import Markov.SignedCutoffEndpointClosure
+import Markov.TracePathArcOrder
+import Markov.TraceUnresolvedAssociation
+import Markov.SignedCutoffHeight
+import Markov.TraceCutoffNormalSeparation
+import Markov.TraceCutoffPathComponents
+import Markov.TraceUnresolvedMonotone
+import Markov.SignedUnresolvedArcSize
+import Markov.TraceUnresolvedAngularWidth
+import Markov.TraceUnresolvedUnique
+import Markov.RealCutoffUnresolvedSizes
+import Markov.TraceUnresolvedSizes
+import Markov.TraceLemmaSix
+
+import Markov.EuclideanCapBracket
+import Markov.FiniteCountingIntegral
+import Markov.LogarithmicCountingGrowth
+import Markov.LogarithmicCutoff
+import Markov.PrimitiveUnresolvedSet
+import Markov.TraceUnresolvedArcLength
+import Markov.TraceUnresolvedFiniteCount
+import Markov.TraceLemmaSeven
+import Markov.WeightedLogarithmicCount
+import Markov.TraceWeightedUnresolved
+
+import Markov.CircleAngularLift
+import Markov.CompletedGraphInverse
+import Markov.TraceClosedBoundaryArcs
+import Markov.TraceCutoffSmallAngle
+import Markov.TraceEuclideanSupport
+import Markov.CircleNormalOffsets
+import Markov.TraceConvexCap
+import Markov.TraceSupportLocation
+import Markov.TraceResolvedSupportingPoints
+import Markov.TraceUnresolvedSupportingPoints
+import Markov.TraceLemmaEight
+
+import Markov.ConcaveSamplingCells
+import Markov.ConcaveSamplingIntegerMesh
+import Markov.L1FourierConvolution
+import Markov.PrimitiveRationalDensity
+import Markov.SamplingMeshTelescoping
+import Markov.TraceLatticeCount
+import Markov.ConcaveSamplingFiniteMesh
+import Markov.TraceRadialMollifier
+import Markov.TraceStrictNormalOrder
+import Markov.ConcaveSampling
+import Markov.TraceSmoothingSandwich
+import Markov.TraceStrictConvexity
+import Markov.ConcaveSamplingRescale
+import Markov.TraceFourierConvolution
+import Markov.TraceFourierScaling
+
+import Markov.CompactPairPeriodization
+import Markov.EuclideanPairCoordinates
+import Markov.SchwartzLatticeSummability
+import Markov.TraceSupportCapLimit
+import Markov.OrientedPlaneCoordinates
+import Markov.PartialFourierPlane
+import Markov.TraceSections
+import Markov.PoissonPlane
+import Markov.TraceProjectedMollifier
+import Markov.TraceSectionConcavity
+import Markov.TraceSectionFourier
+import Markov.TracePoisson
+import Markov.TraceSectionSampling
+import Markov.TraceLatticeDiscrepancy
+
+import Markov.FourierPositivePairs
+import Markov.NormalProjectionFourier
+import Markov.SmoothedSampling
+import Markov.TraceRadialScale
+import Markov.TraceSectionSymmetry
+import Markov.TraceSmoothedSections
+import Markov.TraceRadialPoisson
+import Markov.TraceSmoothedSectionSampling
+import Markov.TraceLemmaTen
+import Markov.TraceLemmaTenCovector
+
+import Markov.CorollaryElevenParameters
+import Markov.FiniteAngularPacking
+import Markov.FiniteComponentWeights
+import Markov.FiniteLatticeReciprocalSquare
+import Markov.FiniteReciprocalCounting
+import Markov.FourierIntervalBound
+import Markov.LogarithmicErrorScales
+import Markov.PrimitiveRayDecomposition
+import Markov.TraceComponentVariationSum
+import Markov.TraceRadialBlockFiniteSum
+import Markov.TraceUnresolvedCutoffTransport
+import Markov.FiniteComponentMaxWeights
+import Markov.LatticePowerTail
+import Markov.PrimitiveEuclideanDirections
+import Markov.PrimitiveRaySummation
+import Markov.TheoremTwelveParameters
+import Markov.TraceComponentReciprocalSum
+import Markov.TraceIndicatorFourierDecay
+import Markov.TraceFourierTail
+import Markov.TracePrimitiveRayPoisson
+import Markov.TraceWeightedGeneral
+import Markov.TraceCorollaryEleven
+import Markov.TracePrimitiveRayCutoff
+import Markov.TraceSmoothedSharpBound
+import Markov.TraceLatticeSharpParameters
+import Markov.TraceLatticeAsymptotic
+
+import Markov.HyperbolicFixedPointTrace
+import Markov.HyperbolicTranslationLength
+import Markov.ModularTraceAction
+import Markov.PaperSeedConjugacy
+import Markov.PrimitiveNormUniqueness
+import Markov.ModularTraceQuotient
+import Markov.TraceNormTransfer
+import Markov.ModularProperDiscontinuity
+import Markov.ModularTraceCongruence
+import Markov.ModularTraceCovering
+
+import Markov.HyperbolicDiagonalization
+import Markov.ModularProjectiveCenter
+import Markov.PaperModularCommutators
+import Markov.ModularTraceCommutator
+import Markov.ModularTraceParabolicPowers
+import Markov.PaperFreeGroup
+import Markov.PrimitiveMetricLength
+import Markov.ModularProjectiveAction
+import Markov.ModularTraceCyclicQuotient
+import Markov.ModularTraceIndex
+import Markov.PaperCuspHolonomy
+import Markov.ModularTraceSLIndex
+
+import Markov.CoveringLoopEndpoint
+import Markov.FreeBasisFareyMoves
+import Markov.ModularTraceFundamentalRegion
+import Markov.ModularTraceMonodromy
+import Markov.ModularTraceQuotientMetric
+import Markov.PaperAbelianization
+import Markov.ModularClosedGeodesic
+import Markov.ModularTraceFundamentalGroup
+import Markov.SeededWordCoordinates
+import Markov.ModularMarkedLoops
+import Markov.PaperPrimitiveHolonomy
+import Markov.SeededFreeBases
+
+import Markov.ModularClosedDomain
+import Markov.ModularPolygonSides
+import Markov.PathTriangle
+import Markov.PathHomotopyTriangles
+import Markov.SingularOneChains
+import Markov.SingularHomotopyBoundary
+
+import Markov.ModularClosedAdmissibility
+import Markov.SingularHurewiczMap
+
+import Markov.ModularSixCellBoundary
+import Markov.SingularEdges
+import Markov.SingularTriangleEdges
+
+import Markov.BasedPathAbelianization
+import Markov.ModularSixCellProper
+import Markov.SingularBasedLoopBoundary
+import Markov.SingularChainAbelianization
+import Markov.SingularHurewiczInverse
+import Markov.ModularTraceSingularH1
+
+import Markov.PaperQuadrilateralInversion
+import Markov.PaperQuadrilateralCutWords
+import Markov.PaperQuadrilateralUpperCover
+import Markov.PaperQuadrilateralFiniteCover
+import Markov.PaperQuadrilateralQuotient
+
+import Markov.ModularH1Transport
+import Markov.PaperQuadrilateralSideReturns
+import Markov.QuadrilateralReturnEnumeration
+import Markov.PaperQuadrilateralSideRelation
+import Markov.QuadrilateralReturns
+import Markov.QuadrilateralBoundaryExact
+import Markov.PaperQuadrilateralSideQuotient
+
+import Markov.PrimitiveHolonomyNoProperPower
+import Markov.RealCurvePeriodGenerator
+import Markov.SquareChartAlgebra
+import Markov.SquareSideNormalizer
+import Markov.StandardCircleSquareScalar
+import Markov.PaperQuadrilateralSquareChart
+import Markov.PaperSquareSideAlgebra
+import Markov.PrimitiveAxisLeastPeriod
+import Markov.PaperPuncturedSquareNormalizer
+import Markov.PaperQuadrilateralSquareEdges
+import Markov.StandardSquareEdgeKernel
+import Markov.StandardTorusSquare
+import Markov.PaperQuadrilateralSquareSides
+import Markov.StandardPuncturedTorusQuotient
+import Markov.PaperMarkedSquareChart
+import Markov.PaperMarkedSquareRelations
+import Markov.PaperMarkedSquareStandardRelations
+import Markov.PaperActualPuncturedTorus
+
+import Markov.NormalizedCircleWinding
+import Markov.StandardPrimitiveCircles
+import Markov.NormalizedCircleWindingConjugation
+import Markov.PaperGeneratorSquareWinding
+import Markov.SingularCircleWinding
+import Markov.StandardPrimitiveCircleNontrivial
+import Markov.ModularEmbeddedCircles
+import Markov.EmbeddedCircleSingularH1
+import Markov.ModularAffineCircleCoordinates
+import Markov.ModularOriginalPrimitiveCircles
+
+import Markov.IntersectingAffineCircles
+import Markov.PaperSimpleGeneratorCalibration
+import Markov.SignedSwapTorusHomeomorphisms
+import Markov.StandardMediantSurgery
+import Markov.UnimodularTorusHomeomorphisms
+import Markov.StandardShearSurgery
+import Markov.StandardShearBasedAction
+
+import Markov.BasedHomeomorphFundamentalGroup
+import Markov.OriginalMarkedNielsenLoops
+import Markov.OriginalMarkedNielsenAutomorphism
+
+import Markov.BasedHomeomorphComposition
+import Markov.OriginalMarkedTorusSymmetries
+import Markov.OriginalGeometricRealization
+import Markov.OriginalMarkedNielsenRight
+import Markov.OriginalGeometricEmbeddedCircles
+import Markov.SeededGeometricRealization
+import Markov.CanonicalEmbeddedCircles
+import Markov.CanonicalAxisMarkedClass
+import Markov.ReversedEmbeddedCircles
+import Markov.CanonicalAxisEmbeddedHomotopy
+import Markov.HyperbolicDiagonalMinset
+import Markov.HyperbolicAxisMinset
+import Markov.ModularAxisUniqueness
+import Markov.EmbeddedCircleRealLift
+import Markov.EquivariantCurveAxisBounds
+import Markov.HyperbolicVerticalTriangle
+import Markov.EmbeddedCircleRealLiftInjective
+import Markov.ProperEmbeddedCircleLift
+import Markov.CanonicalEmbeddedMonodromy
+import Markov.CanonicalProperEmbeddedLift
+import Markov.HyperbolicVerticalContinuation
+import Markov.UpperHalfPlanePairVerticalization
+import Markov.HyperbolicLocalStraightening
+import Markov.IsometricAxisPeriod
+import Markov.ModularLocalGeodesicLift
+import Markov.NormalizedCircleDiskObstruction
+import Markov.DiskArcChordHomotopy
+import Markov.ConvexDiskRadialObstruction
+import Markov.UpperHalfPlaneCayley
+import Markov.UpperHalfPlaneCayleyEndpoints
+import Markov.ConvexFrontierLoopObstruction
+import Markov.DiskArcTransverseCrossing
+import Markov.CanonicalAxisRangeStabilizer
+import Markov.EquivariantCurveCayleyEndpoints
+import Markov.RealCurveCompactification
+import Markov.UpperHalfPlaneCayleySLBoundary
+import Markov.UpperHalfPlaneCayleyAxisSides
+import Markov.CanonicalAxisCommonEndpoints
+import Markov.RealDiskCurveCrossing
+import Markov.UpperHalfPlaneCayleyInjective
+import Markov.UnitDiskOppositeChord
+import Markov.IntegerPeriodCircleDescent
+import Markov.HyperbolicAxisRangeTransport
+import Markov.NormalizedCurveAxisSeparation
+import Markov.CanonicalAxisDeckSeparation
+import Markov.CanonicalSimpleGeodesicCircle
+import Markov.CanonicalTraceNormPeriods
+import Markov.PrimitiveSimpleGeodesicExistence
+import Markov.StandardAffineCircleComplement
+import Markov.StandardTorusPunctureCorrection
+import Markov.StandardPuncturedGraphHomotopy
+import Markov.CanonicalEssentialClassObstruction
+import Markov.CircleHomotopyLoopConjugacy
+import Markov.FilledTorusCircleHomotopy
+import Markov.IntrinsicSimpleGeodesicLengths
+import Markov.PunctureChartWindingObstruction
+import Markov.CanonicalPunctureNeighborhoodObstruction
+import Markov.StandardAffineComplementCylinder
+import Markov.MetricCircleLengthFromHomotopy
+import Markov.StandardPrimitiveAnnularHomotopy
+import Markov.PaperQuadrilateralLocalFiniteness
+import Markov.HyperbolicAxesSingleIntersection
+import Markov.OriginalNielsenStandardLinear
+import Markov.FiniteNoncrossingMatching
+import Markov.FiniteRealCutTable
+import Markov.NormalizedCircleWindingLinear
+import Markov.InvariantIsometricAxisHyperbolic
+import Markov.PeriodicAxisLeavesQuadrilateral
+import Markov.OriginalLinearFareyWitnesses
+import Markov.HyperbolicAxesSignCrossing
+import Markov.AnnularOriginalClassHomotopy
+import Markov.ModularMetricCircleAxisNormalization
+import Markov.PaperQuadrilateralFiniteAxisCuts
+import Markov.SeededLinearFareyWitnesses
+import Markov.PaperAxisGenericPhase
+import Markov.CanonicalAffineFreeClass
+import Markov.PaperQuadrilateralFrontierCuts
+import Markov.CanonicalAnnularFreeClass
+import Markov.PaperStrictCellReturns
+import Markov.PaperQuadrilateralFrontierExact
+import Markov.PaperCellSubarc
+import Markov.AnnularMetricCircleLength
+import Markov.PaperQuadrilateralSideAdjacency
+import Markov.PaperPeriodFrontierWitness
+import Markov.PaperCutFreeGapCell
+import Markov.PaperAxisCutSet
+import Markov.PaperQuadrilateralSideHalfplanes
+import Markov.PaperAxisCutTable
+import Markov.PaperGeodesicSideCrossing
+import Markov.PaperAxisCellItinerary
+import Markov.PaperGeodesicCellTransition
+import Markov.PaperAxisNormalSubarcs
+import Markov.PaperAxisAdjacentCellLabels
+import Markov.PaperAxisCyclicCellLabels
+import Markov.PaperAxisOrderedCellWord
+import Markov.ModularSimpleMetricCircleNormalization
+import Markov.IntegerPeriodOpenIntervalInjectivity
+import Markov.PaperAxisNormalArcEndpoints
+import Markov.PaperQuadrilateralDiskChart
+import Markov.PaperAxisCellWordH1
+import Markov.DiskChordEndpointDistinct
+import Markov.ModularSimpleMetricCircleNormalDiagram
+import Markov.PaperQuadrilateralArcNoncrossing
+import Markov.PaperAxisCellWordProjectedLoop
+import Markov.ModularMetricCircleCellWordH1
+import Markov.PaperAxisWrapSubarc
+import Markov.ModularSimpleMetricCircleNormalDiagramH1
+import Markov.PaperAxisWrapGapDisjoint
+import Markov.PaperAxisNormalArcNoncrossing
+import Markov.PaperAxisProperArcFamily
+import Markov.PaperAxisWrapArcNoncrossing
+import Markov.PaperAxisProperArcGluing
+import Markov.ModularSimpleMetricCircleProperArcFamily
+import Markov.PaperAxisWrapClosedDisjoint
+import Markov.PaperAxisCellNoBacktrack
+import Markov.PaperQuadrilateralOppositeGluing
+import Markov.PaperAxisCellWordReduced
+import Markov.PaperAxisProperEndpointTags
+import Markov.PaperQuadrilateralMarkedSideCoordinates
+import Markov.PaperAxisCellWordCyclicReduced
+import Markov.PaperAxisProperEndpointPairings
+import Markov.PaperAxisProperEndpointOrder
+import Markov.PaperAxisProperEndpointOpposite
+import Markov.PaperAxisOppositeEndpointCounts
+import Markov.PaperAxisProperDiagramConnected
+import Markov.PaperAxisProperEndpointOrderPairing
+import Markov.ModularSimpleMetricCircleEndpointData
+import Markov.PaperAxisProperSixArcCounts
+import Markov.SquareOppositeArcCrossing
+import Markov.PaperOppositeArcExclusion
+import Markov.PaperQuadrilateralBoundaryOrientation
+import Markov.PaperAxisBoundaryRanks
+import Markov.PaperAxisSortedExtremalRanks
+import Markov.PaperAxisTaggedOrientedArcs
+import Markov.RawSquareArcCrossing
+import Markov.RawSquareQuarterTurns
+import Markov.PaperAxisExtremeEndpointSet
+import Markov.PaperAxisCellWordTargetSide
+import Markov.RawSquareCornerCap
+import Markov.PaperQuadrilateralRawSideFrame
+import Markov.PaperAxisExtremePeripheralCounts
+import Markov.PaperAxisFourArcParity
+import Markov.PaperAxisCorner01Nearest
+import Markov.PaperAxisCornerFrameBarrier
+import Markov.PaperAxisExtremeAdjacentArcs
+import Markov.PaperAxisAllCornersNearest
+import Markov.PaperAxisExtremeArcClosure
+import Markov.PaperAxisPrimitiveCornerExclusion
+import Markov.PaperAxisCornerPacketIntervals
+import Markov.PaperAxisBoundaryEdgeRanks
+import Markov.RawSquareOppositePacketOrder
+import Markov.FareyMechanicalWords
+import Markov.PaperAxisSourceCycleWord
+import Markov.PaperAxisMissingCornerOrientation
+import Markov.PaperAxisPrimitiveMissingCorner
+import Markov.CanonicalWordConjugacyLengths
+import Markov.PaperAxisActualPacketPartition
+import Markov.PaperAxisCornerPacketMatching
+import Markov.PaperAxisOppositePartnerOrder
+import Markov.MechanicalCanonicalWords
+import Markov.MechanicalRotationCoding
+import Markov.PaperAxisBackwardCycleWord
+import Markov.PaperAxisOppositeRankCardinality
+import Markov.PaperAxisPacketCutCounts
+import Markov.PaperAxisCyclicRankStates
+import Markov.PaperAxisOppositePartnerStrict
+import Markov.MechanicalWordCounts
+import Markov.PaperAxisOppositePacketMatching
+import Markov.PaperAxisCyclicPacketParameters
+import Markov.PaperAxisPacketStepTranslations
+import Markov.PaperAxisCyclicPacketRotation
+import Markov.PaperAxisRoleZeroMechanicalWord
+import Markov.MechanicalWordCanonicalConjugacy
+import Markov.PaperAxisRoleOneMechanicalWord
+import Markov.PrimitiveAxisTraceNorm
+import Markov.PrimitiveSimpleGeodesicLengthAgreement
+import Markov.IntrinsicMcShaneRivinNorm
+import Markov.IntrinsicMcShaneRivinCount
+
+/-! Report kernel dependencies of the current nontrivial results.
+No declaration here is a proof of the active Theorem 12 target. -/
+
+#print axioms Markov.mem_triplesUpTo_floor
+#print axioms Markov.countNat_mono
+#print axioms Markov.countNat_two
+#print axioms Markov.normalized_fricke
+#print axioms Markov.vieta_preserves_equation
+#print axioms Markov.fricke_opposite_product
+#print axioms Markov.quadratic_trace_identity
+#print axioms Markov.quadratic_norm_identity
+#print axioms Markov.scaled_root_identity
+#print axioms Markov.cutoffExponent_spec
+#print axioms Markov.unconditionalScale_isLittleO_log
+#print axioms Markov.UnconditionalBound.sublogarithmic
+#print axioms Markov.transfer_error_bound
+#print axioms Markov.compose_primitive_error
+
+#print axioms Markov.discriminant_not_square
+#print axioms Markov.trace_polynomial_no_rat_root
+#print axioms Markov.traceFieldNumberField
+#print axioms Markov.traceField_finrank
+#print axioms Markov.traceRoot_field_norm
+#print axioms Markov.traceRoot_isUnit_integerRing
+#print axioms Markov.traceCoefficient_eq
+#print axioms Markov.traceCoefficient_star
+#print axioms Markov.traceCoefficient_field_norm
+#print axioms Markov.traceCoefficient_field_norm_gt_one
+#print axioms Markov.traceCoefficient_field_trace
+#print axioms Markov.scaled_traceCoefficient_equation
+#print axioms Markov.scaled_traceCoefficient_isIntegral_via_polynomial
+#print axioms Markov.traceRealEmbedding_injective
+#print axioms Markov.trace_multiplicatively_independent
+#print axioms Markov.trace_beta_ne_one
+#print axioms Markov.traceField_one_le_abs_norm
+#print axioms Markov.traceField_one_le_product_embeddings
+#print axioms Markov.traceCoefficient_real_pos
+#print axioms Markov.cleared_beta_sub_one_isIntegral
+#print axioms Markov.cleared_beta_norm_lower_bound
+#print axioms Markov.gap_lower_bound_of_norm_bound
+#print axioms Markov.log_lower_bound_of_gap_bound
+#print axioms Markov.trace_beta_log_lower_bound
+#print axioms Markov.intCovector_evals_nonzero
+#print axioms Markov.trace_beta_log_identity
+#print axioms Markov.trace_covector_linear_form_ne_zero
+
+#print axioms Markov.positiveTraceRoot_add_inv
+#print axioms Markov.positiveTraceRoot_lt_trace
+#print axioms Markov.positiveTraceRoot_abs_log_le
+#print axioms Markov.traceCoefficient_real_bounds
+#print axioms Markov.traceCoefficient_abs_log_le
+#print axioms Markov.zpow_le_exp_of_abs_log_le
+#print axioms Markov.traceClearingFactor_exp_bound
+#print axioms Markov.traceBeta_conjugate_exp_bound
+#print axioms Markov.trace_log_linear_form_explicit_lower_bound
+#print axioms Markov.trace_log_linear_form_height_bound
+
+#print axioms Markov.intEuclidean_coordinate_bounds
+#print axioms Markov.intEuclidean_ge_one
+#print axioms Markov.intEuclidean_le_two_height
+#print axioms Markov.intEval_abs_le_euclidean_height
+#print axioms Markov.covectorDet_basis_identity
+#print axioms Markov.covectorDet_abs_basis
+#print axioms Markov.supportDet_lower_bound_of_trace_bounds
+#print axioms Markov.traceLength_eq_two_log_root
+#print axioms Markov.traceRoot_eq_exp_half_length
+#print axioms Markov.traceCoefficient_real_quotient
+#print axioms Markov.trace_log_le_half_length_add_one
+#print axioms Markov.trace_log_height_bounds
+#print axioms Markov.supportDet_lower_bound_of_length_data
+#print axioms Markov.supportSeparationConstant_pos
+#print axioms Markov.normingFunctionals_nonempty
+#print axioms Markov.normingFunctionals_isClosed
+#print axioms Markov.normingFunctionals_isCompact
+#print axioms Markov.normingFunctional_on_unitBall
+#print axioms Markov.normingFunctional_normalized_eq_one
+#print axioms Markov.exists_unique_selectedSupport
+#print axioms Markov.selectedSupport_spec
+#print axioms Markov.selectedSupport_norm_eq_one
+#print axioms Markov.integerColumnMatrix_det
+#print axioms Markov.intPairBasis_zero
+#print axioms Markov.intPairBasis_one
+#print axioms Markov.selectedSupportAt_spec
+#print axioms Markov.dualCoordinates_eval
+#print axioms Markov.intVector_norm_le
+#print axioms Markov.selectedSupportAt_value_self
+#print axioms Markov.planeSeparationConstant_pos
+#print axioms Markov.selectedSupport_det_lower_bound
+
+#print axioms Markov.convexOn_norm_line
+#print axioms Markov.norm_line_rightDeriv_support
+#print axioms Markov.norm_plane_support_from_line
+#print axioms Markov.slopeFunctional_zero
+#print axioms Markov.slopeFunctional_one
+#print axioms Markov.slopeFunctional_isNorming
+#print axioms Markov.normingFunctional_le_norm
+#print axioms Markov.normingFunctional_le_rightDeriv
+#print axioms Markov.selectedSupport_value_eq_rightDeriv
+#print axioms Markov.selectedSupport_directional_limit
+#print axioms Markov.selectedSupportAt_directional_limit
+#print axioms Markov.norm_affine_difference_identity
+#print axioms Markov.selectedSupport_integral_ray_limit
+
+#check Markov.MainTheorem
+
+/-! Fricke rays, length asymptotics, and the selected trace-value bridge. -/
+#print axioms Markov.traceWave_recurrence
+#print axioms Markov.traceCoefficient_real_first
+#print axioms Markov.frickeRay_eq_traceWave
+#print axioms Markov.traceWave_div_pow
+#print axioms Markov.traceWave_normalized_limit
+#print axioms Markov.arcosh_half_eq_log_add
+#print axioms Markov.arcosh_half_sub_log_limit
+#print axioms Markov.traceWave_tendsto_atTop
+#print axioms Markov.traceWave_log_limit
+#print axioms Markov.traceWave_length_limit
+#print axioms Markov.length_eq_two_arcosh
+#print axioms Markov.frickeRay_length_limit
+#print axioms Markov.matrix_two_characteristic
+#print axioms Markov.matrix_trace_ray_recurrence
+#print axioms Markov.matrix_trace_ray_eq_frickeRay
+#print axioms Markov.matrix_fricke_polynomial
+#print axioms Markov.matrix_fricke_of_commutator
+#print axioms Markov.modular_generators_det_trace
+#print axioms Markov.modular_generator_ray
+#print axioms Markov.modular_generators_commutator_trace
+#print axioms Markov.selectedSupport_value_of_ray_traces
+#print axioms Markov.selectedSupportAt_value_of_ray_traces
+#print axioms Markov.selectedSupport_det_lower_bound_of_ray_traces
+#print axioms Markov.selectedSupport_det_lower_bound_of_matrix_traces
+
+/-! Concrete positive-sector Farey words and relative separation. -/
+#print axioms Markov.fricke_third_ge_three
+#print axioms Markov.matrix_trace_left_move
+#print axioms Markov.matrix_trace_right_move
+#print axioms Markov.PositiveFrickePair.left
+#print axioms Markov.PositiveFrickePair.right
+#print axioms Markov.seed_positiveFrickePair
+#print axioms Markov.FareyHolonomy.positiveFrickePair
+#print axioms Markov.FareyHolonomy.det_eq_one
+#print axioms Markov.FareyHolonomy.commutator_trace
+#print axioms Markov.FareyHolonomy.primitive_labels
+#print axioms Markov.PositiveFrickePair.markovTriple
+#print axioms Markov.FareyHolonomy.integral_ray
+#print axioms Markov.FareyHolonomy.integral_ray_primitive
+#print axioms Markov.FareyHolonomy.separation_of_trace_lengths
+#print axioms Markov.intVector_nsmul_add
+#print axioms Markov.FareyHolonomy.separation
+
+/-! Farey coverage, canonical traces, all-quadrant separation, Lemma 6 analysis. -/
+#print axioms Markov.nonnegative_unimodular_descent
+#print axioms Markov.exists_fareyHolonomy_of_nonnegative
+#print axioms Markov.FareyHolonomy.nonnegative_labels
+#print axioms Markov.exists_fareyHolonomy_iff
+#print axioms Markov.positive_coprime_bounded_partner
+#print axioms Markov.nonnegative_primitive_axis
+#print axioms Markov.nonnegative_primitive_bounded_partner
+#print axioms Markov.nonnegative_primitive_in_unimodular_pair
+#print axioms Markov.intDet_vector_decomposition
+#print axioms Markov.unimodular_kernel_eq_zsmul
+#print axioms Markov.unimodular_partners_shear
+#print axioms Markov.unimodular_partners_exists_shear
+#print axioms Markov.neg_unimodular_partners_shear
+#print axioms Markov.neg_unimodular_partners_exists_shear
+#print axioms Markov.FareyHolonomy.nonzero_labels
+#print axioms Markov.intMatrix_left_cancel
+#print axioms Markov.intMatrix_right_cancel
+#print axioms Markov.nonnegative_not_left_seed
+#print axioms Markov.nonnegative_not_right_seed
+#print axioms Markov.nonnegative_left_right_disjoint
+#print axioms Markov.FareyHolonomy.matrices_unique_general
+#print axioms Markov.FareyHolonomy.matrices_unique
+#print axioms Markov.FareyHolonomy.right_integral_ray
+#print axioms Markov.toNat_nsmul_eq_zsmul
+#print axioms Markov.FareyHolonomy.first_matrix_unique
+#print axioms Markov.FareyHolonomy.second_matrix_unique
+#print axioms Markov.unimodular_positive_sum_unique
+#print axioms Markov.FareyHolonomy.positive_mass
+#print axioms Markov.FareyHolonomy.cross_matrix_unique_general
+#print axioms Markov.FareyHolonomy.cross_matrix_unique
+#print axioms Markov.carriesFareyMatrix_unique
+#print axioms Markov.exists_carriesFareyMatrix
+#print axioms Markov.exists_unique_carriesFareyMatrix
+#print axioms Markov.primitiveFareyMatrix_spec
+#print axioms Markov.primitiveFareyMatrix_eq_of_carries
+#print axioms Markov.primitiveFareyMatrix_det
+#print axioms Markov.primitiveFareyTrace_ge_three
+#print axioms Markov.primitiveFareyTrace_dvd_three
+#print axioms Markov.primitiveFareyLength_pos
+#print axioms Markov.primitiveFareyTrace_eq_two_cosh
+#print axioms Markov.FareyHolonomy.left_nonnegativePrimitive
+#print axioms Markov.FareyHolonomy.right_nonnegativePrimitive
+#print axioms Markov.FareyHolonomy.primitiveFareyMatrix_left
+#print axioms Markov.FareyHolonomy.primitiveFareyMatrix_right
+#print axioms Markov.fareyTraceLengthCompatible_of_primitive_lengths
+#print axioms Markov.FareyHolonomy.canonicalTrace_fricke
+#print axioms Markov.FareyHolonomy.canonicalMatrix_integral_ray
+#print axioms Markov.FareyHolonomy.canonicalTrace_integral_ray
+#print axioms Markov.seededDirection_zero_one
+#print axioms Markov.seededDirection_add
+#print axioms Markov.seededDirection_det
+#print axioms Markov.SeededFarey.positiveFrickePair
+#print axioms Markov.SeededFarey.det_eq_seed
+#print axioms Markov.FareyHolonomy.to_seeded
+#print axioms Markov.exists_seededFarey_of_nonnegative_coordinates
+#print axioms Markov.SeededFarey.integral_ray
+#print axioms Markov.SeededFarey.commutator_trace
+#print axioms Markov.SeededFarey.right_integral_ray
+#print axioms Markov.quadrantSeed_positiveFrickePair
+#print axioms Markov.quadrantSeed_det_eq_one
+#print axioms Markov.quadrantSeed_trace_triple
+#print axioms Markov.quadrantSeed_commutator_trace
+#print axioms Markov.quadrantCoordinates_reconstruct
+#print axioms Markov.quadrantCoordinates_det
+#print axioms Markov.quadrantCoordinates_coprime
+#print axioms Markov.exists_nonnegative_quadrantCoordinates
+#print axioms Markov.exists_quadrantSeededFarey_of_coordinates
+#print axioms Markov.primitive_exists_quadrantSeededFarey
+#print axioms Markov.quadrantCoordinates_height
+#print axioms Markov.quadrantSeededDirection_height
+#print axioms Markov.primitive_exists_positive_first_quadrantCoordinates
+#print axioms Markov.positive_first_primitive_right_partner
+#print axioms Markov.primitive_exists_quadrantSeededFarey_left
+#print axioms Markov.primitive_exists_positive_second_quadrantCoordinates
+#print axioms Markov.positive_second_primitive_left_partner
+#print axioms Markov.primitive_exists_quadrantSeededFarey_right
+#print axioms Markov.isSelectedSupport_shear_iff
+#print axioms Markov.intVector_zsmul_add
+#print axioms Markov.intDet_shear
+#print axioms Markov.selectedSupportAt_shear
+#print axioms Markov.selectedSupportAt_eq_of_unimodular
+#print axioms Markov.selectedSupportAt_eq_of_neg_unimodular
+#print axioms Markov.SeededFarey.separation
+#print axioms Markov.SeededFarey.quadrant_separation
+#print axioms Markov.SeededFarey.reversed_separation
+#print axioms Markov.SeededFarey.quadrant_reversed_separation
+#print axioms Markov.isCoprime_of_intDet_one
+#print axioms Markov.isCoprime_of_intDet_neg_one
+#print axioms Markov.selectedSupport_global_lower_bound_pos
+#print axioms Markov.selectedSupport_global_lower_bound_neg
+#print axioms Markov.selectedSupport_global_lower_bound
+#print axioms Markov.selectedSupport_global_det_ne_zero
+#print axioms Markov.unresolved_log_height_bound
+#print axioms Markov.unresolved_height_bound
+#print axioms Markov.cap_arc_squared_bound
+#print axioms Markov.cap_arc_sqrt_bound
+#print axioms Markov.unresolved_cap_arc_bound
+#print axioms Markov.unresolved_direction_height
+#print axioms Markov.unresolved_direction_arc_bound
+
+/-! Local Fricke length triangle inequality. -/
+#print axioms Markov.cosh_sum_fricke_polynomial
+#print axioms Markov.fricke_trace_lt_cosh_sum
+#print axioms Markov.fricke_trace_length_strict_triangle
+#print axioms Markov.FareyHolonomy.canonicalLength_strict_triangle
+
+/-! Constructive convexity and actual finite Farey profiles. -/
+#print axioms Markov.fan_neighbor_inequality_iff
+#print axioms Markov.fan_neighbor_inequality_iff_other
+#print axioms Markov.linearMap_le_on_twoRayCone
+#print axioms Markov.fanSupport_convexOn
+#print axioms Markov.fanSupport_eq_left
+#print axioms Markov.fanSupport_eq_right
+#print axioms Markov.twoCone_convex_extension
+#print axioms Markov.fanSupport_smul
+#print axioms Markov.fanSupport_add_le
+#print axioms Markov.realDet_outer_eq
+#print axioms Markov.normalized_fan_turn_identity
+#print axioms Markov.normalized_fan_turn_pos_iff
+#print axioms Markov.normalized_fan_turn_nonneg_iff
+#print axioms Markov.normalized_fan_turn_pos
+#print axioms Markov.fareyFrontier_left_mem
+#print axioms Markov.fareyFrontier_right_mem
+#print axioms Markov.FareyHolonomy.exists_frontier
+#print axioms Markov.fareyFrontier_endpoint_mem
+#print axioms Markov.fareyFrontierDirections_subset_succ
+#print axioms Markov.fareyFrontierDirections_mono
+#print axioms Markov.primitive_exists_frontier_direction
+#print axioms Markov.primitive_eventually_frontier_direction
+#print axioms Markov.FareyEdgeChain.refine
+#print axioms Markov.fareyFrontier_chain
+#print axioms Markov.refinementDirection_add
+#print axioms Markov.inFareyCone_refine
+#print axioms Markov.farey_refine_union_cones
+#print axioms Markov.fareyFrontier_covers_quadrant
+#print axioms Markov.FareyAdjacent.tail
+#print axioms Markov.fareyAdjacent_refine_cases
+#print axioms Markov.fareyFrontier_adjacent_birth
+#print axioms Markov.farey_refine_length
+#print axioms Markov.fareyFrontier_length
+#print axioms Markov.fareyFrontier_direction_primitive
+#print axioms Markov.exists_frontier_direction_iff
+#print axioms Markov.prefixEnvelope_le
+#print axioms Markov.le_prefixEnvelope
+#print axioms Markov.prefixEnvelope_eq_of_adjacent
+#print axioms Markov.prefixEnvelope_convexOn
+#print axioms Markov.affinePiece_convexOn
+#print axioms Markov.affinePiece_le_right
+#print axioms Markov.affinePiece_le_left
+#print axioms Markov.affineEnvelope_eq_on_cell
+#print axioms Markov.finite_affine_gluing
+#print axioms Markov.affineEnvelope_eq_on_interval
+#print axioms Markov.positive_pair_sum_gt_two
+#print axioms Markov.arcosh_half_add_gt_log
+#print axioms Markov.traceWave_length_gt_log_model
+#print axioms Markov.traceWave_opposite_length_sum_gt
+#print axioms Markov.frickeRay_opposite_length_sum_gt
+#print axioms Markov.seminorm_add_kernel
+#print axioms Markov.seminorm_kernel_trivial_of_strict_triangles
+#print axioms Markov.pointwiseLimitSeminorm_apply
+#print axioms Markov.antitone_seminorm_tendsto_inf
+#print axioms Markov.antitoneInfSeminorm_apply
+#print axioms Markov.antitoneInfSeminorm_eventual_value
+#print axioms Markov.antitoneInfSeminorm_kernel_trivial
+#print axioms Markov.groupNormOfTrivialKernel_apply
+#print axioms Markov.antitoneInfGroupNorm_apply
+#print axioms Markov.antipodalMatrix_mul
+#print axioms Markov.antipodalMatrix_trace
+#print axioms Markov.antipodalMatrix_involutive
+#print axioms Markov.antipodalQuadrant_involutive
+#print axioms Markov.quadrantSeedDirections_antipodal
+#print axioms Markov.quadrantSeedMatrices_antipodal
+#print axioms Markov.SeededFarey.antipodal
+#print axioms Markov.SeededFarey.quadrant_antipodal
+#print axioms Markov.antipodalMatrix_length
+#print axioms Markov.quadrantWordTrace_neg
+#print axioms Markov.quadrantWordTrace_neg_iff
+#print axioms Markov.quadrantWordLength_neg_iff
+#print axioms Markov.matrix_two_trace_adjugate
+#print axioms Markov.matrix_two_trace_mul_adjugate
+#print axioms Markov.positiveFrickePair_opposite_matrix_rays
+#print axioms Markov.positiveFrickePair_axis_corner
+#print axioms Markov.positiveFrickePair_axis_corner_equal
+#print axioms Markov.traceCoefficient_shift
+#print axioms Markov.traceCoefficient_birth_opposite
+#print axioms Markov.traceWave_shift
+#print axioms Markov.frickeRay_birth_opposite_wave
+#print axioms Markov.fricke_birth_length_corner
+#print axioms Markov.FareyHolonomy.canonical_birth_corner
+#print axioms Markov.fareyAdjacent_getD
+#print axioms Markov.FareyEdgeChain.adjacent_shared
+#print axioms Markov.FareyEdgeChain.first_getD
+#print axioms Markov.FareyEdgeChain.last_getD
+#print axioms Markov.indexedFareyEdge_mem
+#print axioms Markov.fareyFrontier_mem_exists_index
+#print axioms Markov.indexedFareyEdge_adjacent
+#print axioms Markov.indexedFareyEdge_shared_endpoint
+#print axioms Markov.indexedFareyEdge_first
+#print axioms Markov.indexedFareyEdge_last
+#print axioms Markov.indexedFareyEdge_adjacent_birth
+#print axioms Markov.pairInterpolant_left
+#print axioms Markov.pairInterpolant_right
+#print axioms Markov.intVector_add
+#print axioms Markov.intVector_nsmul
+#print axioms Markov.FareyHolonomy.canonical_birth_convex_extension
+#print axioms Markov.profileMass_add
+#print axioms Markov.profileMass_nsmul
+#print axioms Markov.profileMass_pos
+#print axioms Markov.profileParameter_nonneg
+#print axioms Markov.profileParameter_le_one
+#print axioms Markov.profileParameter_lt_of_det_one
+#print axioms Markov.profileLine_left
+#print axioms Markov.profileLine_right
+#print axioms Markov.profileSlope_difference
+#print axioms Markov.FareyEdge.lengthU_pos
+#print axioms Markov.FareyEdge.lengthV_pos
+#print axioms Markov.FareyEdge.profileParameter_lt
+#print axioms Markov.FareyEdge.profile_left
+#print axioms Markov.FareyEdge.profile_right
+#print axioms Markov.fareyFrontier_adjacent_endpoint
+#print axioms Markov.fareyFrontier_adjacent_profile_match
+#print axioms Markov.fareyFrontier_adjacent_slope_lt
+#print axioms Markov.FareyEdge.profileParameter_bounds_of_cone
+#print axioms Markov.FareyEdge.profile_mediant
+#print axioms Markov.affine_profile_le_on_interval
+#print axioms Markov.FareyEdge.left_profile_left
+#print axioms Markov.FareyEdge.right_profile_right
+#print axioms Markov.FareyEdge.left_profile_mediant_lt
+#print axioms Markov.FareyEdge.right_profile_mediant_lt
+#print axioms Markov.FareyEdge.left_profile_le
+#print axioms Markov.FareyEdge.right_profile_le
+#print axioms Markov.fareyEdgeInterpolant_left
+#print axioms Markov.fareyEdgeInterpolant_right
+#print axioms Markov.fareyEdgeInterpolant_sum
+#print axioms Markov.fareyEdgeInterpolant_left_newray_lt
+#print axioms Markov.fareyEdgeInterpolant_right_newray_lt
+#print axioms Markov.fareyEdgeInterpolant_left_le
+#print axioms Markov.fareyEdgeInterpolant_right_le
+#print axioms Markov.fareyEdgeInterpolant_left_lt
+#print axioms Markov.fareyEdgeInterpolant_right_lt
+#print axioms Markov.fareyEdgeInterpolant_refine_le
+#print axioms Markov.frontierProfile_convexOn
+#print axioms Markov.frontierSlopes_adjacent
+#print axioms Markov.frontierProfiles_match
+#print axioms Markov.frontierBreakpoints_adjacent
+#print axioms Markov.frontierBreakpoints_mono
+#print axioms Markov.frontierProfile_eq_on_interval
+#print axioms Markov.frontierProfile_interpolates_left
+#print axioms Markov.frontierProfile_interpolates_right
+#print axioms Markov.frontierProfile_eventual_interpolation
+#print axioms Markov.frontierProfile_piece_exists
+#print axioms Markov.FareyEdge.profile_pos_on_interval
+#print axioms Markov.frontierProfile_pos
+#print axioms Markov.frontierProfile_nonneg
+#print axioms Markov.frontierProfile_eq_of_mem_interval
+#print axioms Markov.frontierProfile_succ_le
+#print axioms Markov.frontierProfile_antitone
+#print axioms Markov.convexOn_of_pointwise_tendsto_real
+#print axioms Markov.frontierProfile_range_bddBelow
+#print axioms Markov.frontierLimitProfile_nonneg
+#print axioms Markov.frontierLimitProfile_le
+#print axioms Markov.frontierProfile_tendsto_limit
+#print axioms Markov.frontierLimitProfile_convexOn
+#print axioms Markov.frontierLimitProfile_interpolates
+#print axioms Markov.frontierLimitProfile_pos_at_primitive
+#print axioms Markov.pointwiseLimitSeminorm
+#print axioms Markov.antitoneInfSeminorm
+#print axioms Markov.groupNormOfTrivialKernel
+#print axioms Markov.antitoneInfGroupNorm
+
+/-! Actual signed trace-norm construction and compatibility. -/
+#print axioms Markov.prefixLinearSeminorm_apply
+#print axioms Markov.affinePiece_min_endpoints
+#print axioms Markov.signedLinearSeminorm_eq_of_bounds
+#print axioms Markov.linearMap_le_on_cone_of_endpoints
+#print axioms Markov.signedLinearSeminorm_eq_on_quadrant
+#print axioms Markov.linearFamily_min_on_cone
+#print axioms Markov.prefixLinearSeminorm_neg_apply
+#print axioms Markov.signedLinearSeminorm_swap_neg_apply
+#print axioms Markov.signedLinearSeminorm_eq_on_next_quadrant
+#print axioms Markov.SeededFarey.coordinate_nonnegative_labels
+#print axioms Markov.SeededFarey.coordinate_det_eq_one
+#print axioms Markov.SeededFarey.coordinate_primitive_labels
+#print axioms Markov.SeededFarey.coordinate_nonzero_labels
+#print axioms Markov.SeededFarey.coordinate_matrices_unique_general
+#print axioms Markov.SeededFarey.coordinate_first_matrix_unique
+#print axioms Markov.SeededFarey.coordinate_second_matrix_unique
+#print axioms Markov.SeededFarey.coordinate_positive_mass
+#print axioms Markov.SeededFarey.coordinate_cross_matrix_unique_general
+#print axioms Markov.exists_coordinateSeededFarey_of_nonnegative
+#print axioms Markov.carriesSeedMatrix_unique
+#print axioms Markov.exists_carriesSeedMatrix
+#print axioms Markov.exists_unique_carriesSeedMatrix
+#print axioms Markov.primitiveSeedMatrix_spec
+#print axioms Markov.primitiveSeedMatrix_eq_of_carries
+#print axioms Markov.primitiveSeedMatrix_det
+#print axioms Markov.primitiveSeedTrace_ge_three
+#print axioms Markov.primitiveSeedTrace_three_dvd
+#print axioms Markov.primitiveSeedLength_pos
+#print axioms Markov.primitiveSeedTrace_eq_two_cosh
+#print axioms Markov.SeededFarey.coordinate_left_nonnegativePrimitive
+#print axioms Markov.SeededFarey.coordinate_right_nonnegativePrimitive
+#print axioms Markov.SeededFarey.primitiveSeedMatrix_left
+#print axioms Markov.SeededFarey.primitiveSeedMatrix_right
+#print axioms Markov.SeededFarey.canonicalSeedTrace_fricke
+#print axioms Markov.SeededFarey.canonicalSeedMatrix_integral_ray
+#print axioms Markov.SeededFarey.canonicalSeedTrace_integral_ray
+#print axioms Markov.SeededFarey.canonicalSeedLength_strict_triangle
+#print axioms Markov.SeededFarey.canonical_seed_birth_corner
+#print axioms Markov.exists_seedEvaluation
+#print axioms Markov.seedEvaluation_spec
+#print axioms Markov.seedEvaluation_seed
+#print axioms Markov.seedEvaluation_left
+#print axioms Markov.seedEvaluation_right
+#print axioms Markov.seedEvaluation_positiveFrickePair
+#print axioms Markov.seedEvaluation_adjacent_endpoint
+#print axioms Markov.seedEvaluation_original
+#print axioms Markov.quadrantCoordinates_add
+#print axioms Markov.quadrantCoordinates_seed
+#print axioms Markov.SeededFarey.quadrant_coordinates
+#print axioms Markov.SeededFarey.quadrant_left_nonnegativePrimitive
+#print axioms Markov.SeededFarey.quadrant_right_nonnegativePrimitive
+#print axioms Markov.SeededFarey.quadrant_primitiveSeedMatrix_left
+#print axioms Markov.SeededFarey.quadrant_primitiveSeedMatrix_right
+#print axioms Markov.seedEdge_profile_left
+#print axioms Markov.seedEdge_profile_right
+#print axioms Markov.seedEdgeLengthU_pos
+#print axioms Markov.seedEdgeLengthV_pos
+#print axioms Markov.seedEdge_profile_pos
+#print axioms Markov.seedProfile_adjacent_match
+#print axioms Markov.seedProfile_adjacent_slope_lt
+#print axioms Markov.seedEdge_profile_mediant
+#print axioms Markov.seedEdge_left_profile_left
+#print axioms Markov.seedEdge_right_profile_right
+#print axioms Markov.seedEdge_left_profile_mediant_lt
+#print axioms Markov.seedEdge_right_profile_mediant_lt
+#print axioms Markov.seedEdge_right_profile_le
+#print axioms Markov.farey_refine_getD_even
+#print axioms Markov.farey_refine_getD_odd
+#print axioms Markov.indexedFareyEdge_first_succ
+#print axioms Markov.indexedFareyEdge_last_succ
+#print axioms Markov.indexedFareyEdge_first_neighbor
+#print axioms Markov.indexedFareyEdge_last_neighbor
+#print axioms Markov.seedEvaluation_first_axis
+#print axioms Markov.seedEvaluation_last_axis
+#print axioms Markov.seedEdgeLengthU_eq_seedEvaluation
+#print axioms Markov.seedEdgeLengthV_eq_seedEvaluation
+#print axioms Markov.seedEdgeOffset_first_axis
+#print axioms Markov.seedEdgeOffset_add_slope_first_axis
+#print axioms Markov.seedEdgeOffset_last_axis
+#print axioms Markov.seedEdgeOffset_add_slope_last_axis
+#print axioms Markov.matrix_two_trace_adjugate_power_mul
+#print axioms Markov.seedFrontierProfile_convexOn
+#print axioms Markov.seedFrontierSlopes_adjacent
+#print axioms Markov.seedFrontierProfiles_match
+#print axioms Markov.seedFrontierProfile_eq_on_interval
+#print axioms Markov.seedFrontierProfile_eq_of_mem_interval
+#print axioms Markov.seedFrontierProfile_interpolates_left
+#print axioms Markov.seedFrontierProfile_interpolates_right
+#print axioms Markov.seedFrontierProfile_eventual_interpolation
+#print axioms Markov.seedFrontierProfile_piece_exists
+#print axioms Markov.seedFrontierProfile_pos
+#print axioms Markov.seedFrontierProfile_succ_le
+#print axioms Markov.seedFrontierProfile_antitone
+#print axioms Markov.seedFrontierProfile_tendsto_limit
+#print axioms Markov.seedFrontierLimitProfile_convexOn
+#print axioms Markov.seedFrontierLimitProfile_nonneg
+#print axioms Markov.seedFrontierLimitProfile_interpolates
+#print axioms Markov.mixedFrontierLimitProfile_convexOn
+#print axioms Markov.mixedFrontierLimitProfile_interpolates
+#print axioms Markov.actual_axis_join_zero
+#print axioms Markov.actual_axis_join_one
+#print axioms Markov.seedLinearPiece_apply_basis_zero
+#print axioms Markov.seedLinearPiece_apply_basis_one
+#print axioms Markov.seedLinearPiece_profile
+#print axioms Markov.seedLinearPiece_min_on_cone
+#print axioms Markov.seedLinearPiece_basis_zero_adjacent
+#print axioms Markov.seedLinearPiece_basis_one_adjacent
+#print axioms Markov.seedLinearPiece_basis_zero_antitone
+#print axioms Markov.seedLinearPiece_basis_one_monotone
+#print axioms Markov.seedLinearPiece_basis_zero_bounds
+#print axioms Markov.seedLinearPiece_basis_one_bounds
+#print axioms Markov.traceAxisLength_pos
+#print axioms Markov.quarterCoordinateMap_zero
+#print axioms Markov.quarterCoordinateMap_one
+#print axioms Markov.mixedTracePiece_zero
+#print axioms Markov.mixedTracePiece_one
+#print axioms Markov.positiveTracePiece_first_zero
+#print axioms Markov.positiveTracePiece_last_one
+#print axioms Markov.mixedTracePiece_first_one
+#print axioms Markov.mixedTracePiece_last_zero
+#print axioms Markov.mixedTracePiece_zero_bounds
+#print axioms Markov.mixedTracePiece_one_bounds
+#print axioms Markov.quarterCoordinateMap_next_cone
+#print axioms Markov.mixedTracePiece_min_on_cone
+#print axioms Markov.finiteTraceSeminorm_positive_cone
+#print axioms Markov.finiteTraceSeminorm_next_cone
+#print axioms Markov.finiteTraceSeminorm_pos_formula
+#print axioms Markov.finiteTraceSeminorm_next_formula
+#print axioms Markov.finiteTraceSeminorm_succ_le
+#print axioms Markov.finiteTraceSeminorm_antitone
+#print axioms Markov.finiteTraceSeminorm_eventual_positive
+#print axioms Markov.finiteTraceSeminorm_eventual_next
+#print axioms Markov.traceSeedLength_basis_zero
+#print axioms Markov.traceSeedLength_basis_one
+#print axioms Markov.traceSeedLength_basis_sum
+#print axioms Markov.finiteTraceSeminorm_eventual_basis_zero
+#print axioms Markov.finiteTraceSeminorm_eventual_basis_one
+#print axioms Markov.finiteTraceSeminorm_eventual_basis_sum
+#print axioms Markov.traceGroupNorm_apply
+#print axioms Markov.traceGroupNorm_positive
+#print axioms Markov.traceGroupNorm_next
+#print axioms Markov.traceGroupNorm_smul
+#print axioms Markov.traceGroupNorm_basis_zero
+#print axioms Markov.traceGroupNorm_basis_one
+#print axioms Markov.traceGroupNorm_basis_sum
+#print axioms Markov.tracePlane_norm
+#print axioms Markov.norm_intVector_positive
+#print axioms Markov.norm_intVector_next
+#print axioms Markov.norm_intVector_quadrant_one
+#print axioms Markov.norm_traceBasis_zero
+#print axioms Markov.norm_traceBasis_one
+#print axioms Markov.norm_traceBasis_sum
+#print axioms Markov.SeededTraceLengthCompatible.antipodal_quadrant
+#print axioms Markov.quadrantTraceLengthCompatible_of_zero_one
+#print axioms Markov.seededTraceLengthCompatible_of_quadrant_interpolation
+#print axioms Markov.tracePlane_quadrantTraceLengthCompatible
+#print axioms Markov.absLinearSeminorm
+#print axioms Markov.traceBasis
+#print axioms Markov.instNormedAddCommGroupTracePlane
+#print axioms Markov.instNormedSpaceRealTracePlane
+
+/-! Separation instantiated on the constructed norm. -/
+#print axioms Markov.traceSeparationConstant
+#print axioms Markov.traceSeparationConstant_eq
+#print axioms Markov.traceSeparationConstant_pos
+#print axioms Markov.trace_selectedSupport_global_lower_bound_pos
+#print axioms Markov.trace_selectedSupport_global_lower_bound_neg
+#print axioms Markov.trace_selectedSupport_global_lower_bound
+#print axioms Markov.trace_selectedSupport_global_det_ne_zero
+#print axioms Markov.trace_unresolved_direction_height
+#print axioms Markov.trace_unresolved_direction_arc_bound
+#print axioms Markov.primitiveSeedMatrix
+#print axioms Markov.primitiveSeedTrace
+#print axioms Markov.primitiveSeedLength
+#print axioms Markov.seedEvaluation
+#print axioms Markov.seedFrontierProfile
+#print axioms Markov.seedFrontierLimitProfile
+#print axioms Markov.prefixLinearSeminorm
+#print axioms Markov.signedLinearSeminorm
+#print axioms Markov.finiteTraceSeminorm
+#print axioms Markov.traceGroupNorm
+
+/-! Endpoint support limits and radial arc ingredients (v1 Lemmas 3 and 6). -/
+#print axioms Markov.mem_primitiveDirectionsUpTo
+#print axioms Markov.primitiveDirectionsUpTo_card_le
+#print axioms Markov.farey_slope_gap
+#print axioms Markov.farey_reciprocal_scale
+#print axioms Markov.farey_slope_gap_le_scale
+#print axioms Markov.seedSwapMatrix_sq
+#print axioms Markov.seedSwapMatrix_det_trace
+#print axioms Markov.seedSwapMatrix_conjugates_paperA
+#print axioms Markov.seedSwapMatrix_conjugates_paperB
+#print axioms Markov.paper_generators_det_trace
+#print axioms Markov.paper_generators_commutator_trace
+#print axioms Markov.normingSupport_secant_le
+#print axioms Markov.normingSupport_tendsto_selectedSupport_of_tendsto
+#print axioms Markov.normingSupport_tendsto_selectedSupport
+#print axioms Markov.normingSupport_opNorm_sub_tendsto_zero
+#print axioms Markov.normingSupport_inverse_nat_tendsto_selectedSupport
+#print axioms Markov.normingSupport_tendsto_selectedSupportAt
+#print axioms Markov.normalize_sub_le_of_norm_lower_bound
+#print axioms Markov.radialBasisSection_dist_le
+#print axioms Markov.radialBasisSection_lipschitzOnWith
+#print axioms Markov.basis_affineLine_ne_zero
+#print axioms Markov.radialBasisSection_exists_norm_lower_bound
+#print axioms Markov.radialBasisSection_exists_lipschitzOnWith
+#print axioms Markov.radialBasisSection_target_lipschitzOnWith
+#print axioms Markov.lipschitzOnWith_eVariationOn_Icc_le
+#print axioms Markov.radialBasisSection_target_eVariationOn_le
+#print axioms Markov.radialBasisSection_target_boundedVariationOn
+#print axioms Markov.primitiveDirectionsUpTo
+
+/-! Actual Euclidean trace-unit-section arc estimates. -/
+#print axioms Markov.traceEuclideanCoordinates_apply
+#print axioms Markov.traceEuclideanCoordinates_basis
+#print axioms Markov.traceRadialLowerBound_pos
+#print axioms Markov.traceRadialLowerBound_le
+#print axioms Markov.traceEuclideanRadialSection_lipschitzOnWith
+#print axioms Markov.traceEuclideanRadialSection_eVariationOn_le
+#print axioms Markov.traceEuclideanRadialSection_variation_le
+#print axioms Markov.traceEuclideanRadialSection_exists_arc_constant
+#print axioms Markov.traceEuclideanRadialSection_farey_eVariationOn_le
+#print axioms Markov.traceEuclideanRadialSection_farey_variation_le
+#print axioms Markov.norm_radialBasisSection
+#print axioms Markov.traceEuclideanEquiv
+#print axioms Markov.traceEuclideanCoordinates
+#print axioms Markov.traceRadialLowerBound
+#print axioms Markov.traceEuclideanRadialSection
+#print axioms Markov.traceEuclideanArcConstant
+
+/-! Actual cutoff arcs, signed components, and boundary-normal estimates. -/
+#print axioms Markov.basisSlope
+#print axioms Markov.slopeBoundaryArc
+#print axioms Markov.radialBasisSection_coord_zero
+#print axioms Markov.radialBasisSection_coord_one
+#print axioms Markov.radialBasisSection_coord_zero_pos
+#print axioms Markov.basisSlope_radialBasisSection
+#print axioms Markov.radialBasisSection_basisSlope
+#print axioms Markov.radialBasisSection_image_Ioo
+#print axioms Markov.slopeBoundaryArc_eq_frontier_wedge
+#print axioms Markov.radialBasisSection_injective
+#print axioms Markov.radialBasisSection_continuous
+#print axioms Markov.slopeBoundaryArc_isPreconnected
+#print axioms Markov.cutoffSlopesUpTo
+#print axioms Markov.mem_cutoffSlopesUpTo
+#print axioms Markov.cutoffSlope
+#print axioms Markov.cutoffSlope_lt_iff_intDet_pos
+#print axioms Markov.ConsecutiveCutoffSlopes
+#print axioms Markov.consecutiveCutoffSlopes_iff_slope
+#print axioms Markov.cutoff_exists_maximal_right_partner
+#print axioms Markov.consecutiveCutoffSlopes_det_and_denominator_sum
+#print axioms Markov.consecutiveCutoffSlopes_abs_det
+#print axioms Markov.consecutiveCutoffSlopes_gap
+#print axioms Markov.consecutiveCutoffSlopes_gap_le_scale
+#print axioms Markov.euclideanDualCoordinates
+#print axioms Markov.euclideanDualCoordinates_apply
+#print axioms Markov.euclideanDualCoordinates_pair
+#print axioms Markov.continuous_euclideanDualCoordinates
+#print axioms Markov.euclideanDualCoordinates_ne_zero
+#print axioms Markov.normingFunctional_ne_zero
+#print axioms Markov.normingFunctional_basisLine_ne_zero
+#print axioms Markov.normingFunctionals_normalize_eq
+#print axioms Markov.normalizedEuclideanCovector
+#print axioms Markov.normalizedEuclideanCovector_continuousAt
+#print axioms Markov.norm_normalizedEuclideanCovector
+#print axioms Markov.norm_normalizedEuclideanCovector_of_norming
+#print axioms Markov.interiorConeNormals
+#print axioms Markov.interiorRadialNormals
+#print axioms Markov.interiorRadialNormals_eq_interiorConeNormals
+#print axioms Markov.normalizedNormingSupport_tendsto_selectedSupport
+#print axioms Markov.selectedSupport_normal_mem_closure_interiorConeNormals
+#print axioms Markov.selectedSupportAt_normal_mem_closure_interiorConeNormals
+#print axioms Markov.selectedSupport_normal_mem_closure_interiorRadialNormals
+#print axioms Markov.signedPairCoordinates
+#print axioms Markov.signedSectorCoordinates
+#print axioms Markov.signedSectorInverse
+#print axioms Markov.signedSectorInverse_involutive
+#print axioms Markov.signedPairCoordinates_inverse
+#print axioms Markov.signedSectorCoordinates_inverse
+#print axioms Markov.signedSectorCoordinates_injective
+#print axioms Markov.signedSectorCoordinates_zero
+#print axioms Markov.signedSectorCoordinates_add
+#print axioms Markov.signedSectorCoordinates_ne_zero
+#print axioms Markov.signedSectorCoordinates_height
+#print axioms Markov.signedSectorCoordinates_euclidean
+#print axioms Markov.signedSectorCoordinates_abs_det
+#print axioms Markov.signedSectorCoordinates_coprime
+#print axioms Markov.signedSectorCoordinates_coprime_iff
+#print axioms Markov.InSignedSector
+#print axioms Markov.exists_signedSector
+#print axioms Markov.InSignedSector.first_pos
+#print axioms Markov.InSignedSector.height_eq_first
+#print axioms Markov.InSignedSector.add
+#print axioms Markov.InSignedSector.height_add
+#print axioms Markov.exists_positive_signedSectorCoordinates
+#print axioms Markov.primitive_exists_signedSectorCoordinates
+#print axioms Markov.signedEuclideanCoordinates
+#print axioms Markov.signedEuclideanCoordinates_inverse
+#print axioms Markov.signedEuclideanCoordinates_add
+#print axioms Markov.signedEuclideanCoordinates_smul
+#print axioms Markov.signedEuclideanCoordinates_norm
+#print axioms Markov.signedEuclideanEquiv
+#print axioms Markov.sectorEuclideanEmbedding
+#print axioms Markov.sectorEuclideanEmbedding_norm
+#print axioms Markov.signedEuclideanCoordinates_embedding
+#print axioms Markov.euclideanCoordinateDet
+#print axioms Markov.signedEuclideanCoordinates_abs_det
+#print axioms Markov.signedSector_pair_reduction
+#print axioms Markov.sectorBasisEuclideanEquiv
+#print axioms Markov.sectorBasisEuclideanEquiv_intVector
+#print axioms Markov.signedSectorBasis
+#print axioms Markov.signedSectorBasis_intVector
+#print axioms Markov.continuous_basisCoord
+#print axioms Markov.basisSlope_continuousAt
+#print axioms Markov.basisSlope_continuousOn_arc
+#print axioms Markov.slopeBoundaryArcHomeomorph
+#print axioms Markov.closure_slopeBoundaryArc
+#print axioms Markov.normalsOn
+#print axioms Markov.normalsOn_mono
+#print axioms Markov.norm_eq_one_of_mem_normalsOn
+#print axioms Markov.normalsOn_slopeBoundaryArc
+#print axioms Markov.normalsOn_slopeBoundaryArc_eq_interiorRadialNormals
+#print axioms Markov.selectedSupport_normal_mem_closure_normalsOn_slopeBoundaryArc
+#print axioms Markov.selectedSupport_normal_mem_closure_normalsOn_frontier_wedge
+#print axioms Markov.selectedSupportAt_normal_mem_closure_normalsOn_slopeBoundaryArc
+#print axioms Markov.cutoffCorners
+#print axioms Markov.cutoffCorners_card_le
+#print axioms Markov.cutoffSlope_mem_primitiveDirectionsUpTo
+#print axioms Markov.normalize_mem_cutoffCorners
+#print axioms Markov.normalize_intVector_eq_radialBasisSection
+#print axioms Markov.mem_cutoffCorners_norm
+#print axioms Markov.cutoffSlope_mem_Icc
+#print axioms Markov.cutoffCorner_in_canonical_wedge
+#print axioms Markov.consecutiveCutoffSlopes_arc_disjoint_corners
+#print axioms Markov.consecutiveCutoffSlopes_arc_subset_boundary_difference
+#print axioms Markov.traceCutoffArc
+#print axioms Markov.traceEuclideanRadialSection_cutoff_eVariationOn_le
+#print axioms Markov.traceEuclideanRadialSection_cutoff_variation_le
+#print axioms Markov.finset_exists_adjacent_bracketing
+#print axioms Markov.cutoffSlopesUpTo_endpoints_mem
+#print axioms Markov.exists_consecutiveCutoffSlopes_bracketing
+#print axioms Markov.euclideanPlaneDet
+#print axioms Markov.euclideanPlaneDet_smul_left
+#print axioms Markov.euclideanPlaneDet_smul_right
+#print axioms Markov.euclideanPlaneDet_sub_self_right
+#print axioms Markov.euclideanPlaneDet_abs_le
+#print axioms Markov.euclideanPlaneDet_abs_le_normal_distance
+#print axioms Markov.euclideanIntDirection
+#print axioms Markov.euclideanIntDirection_norm
+#print axioms Markov.euclideanIntDirection_ne_zero
+#print axioms Markov.euclideanDualCoordinates_norm_le
+#print axioms Markov.integralCovectorDet_le_normal_distance
+#print axioms Markov.selectedSupportAt_det_upper_of_normal_proximity
+#print axioms Markov.unit_eq_normalize_basis_one_or_neg
+#print axioms Markov.coord_zero_ne_of_mem_boundary_difference
+#print axioms Markov.preconnected_subset_slopeBoundaryArc
+#print axioms Markov.connectedComponentIn_boundary_difference_eq_slopeBoundaryArc
+#print axioms Markov.connectedComponentIn_boundary_difference_eq_slopeBoundaryArc_of_axis_cuts
+#print axioms Markov.basis_one_axis_mem_cutoffCorners
+#print axioms Markov.consecutiveCutoffSlopes_connectedComponentIn_eq_arc
+#print axioms Markov.normalize_basis_combination
+#print axioms Markov.radial_intPairBasis_mem_slopeBoundaryArc
+#print axioms Markov.intPairBasis_local_arc_subset_slopeBoundaryArc
+#print axioms Markov.consecutiveCutoffSlopes_selectedSupport_normal_mem_closure
+#print axioms Markov.dist_le_diam_of_mem_closure
+#print axioms Markov.dist_le_add_of_mem_closure_of_exists_near
+#print axioms Markov.norm_normalizedEuclideanCovector_le_one
+#print axioms Markov.normalsOn_subset_closedBall
+#print axioms Markov.normalsOn_isBounded
+#print axioms Markov.selectedSupport_normal_dist_le_add
+#print axioms Markov.selectedSupport_normal_dist_le_add_frontier_wedge
+#print axioms Markov.selectedSupportAt_normal_dist_le_add
+#print axioms Markov.signedTraceRadialLowerBound
+#print axioms Markov.signedTraceRadialLowerBound_pos
+#print axioms Markov.signedTraceRadialLowerBound_le
+#print axioms Markov.signedTraceEuclideanRadialSection
+#print axioms Markov.norm_signedTraceRadialSection
+#print axioms Markov.signedTraceEuclideanSectorConstant
+#print axioms Markov.signedTraceEuclideanArcConstant
+#print axioms Markov.signedTraceEuclideanSectorConstant_le
+#print axioms Markov.signedTraceEuclideanRadialSection_sector_lipschitzOnWith
+#print axioms Markov.signedTraceEuclideanRadialSection_lipschitzOnWith
+#print axioms Markov.signedTraceEuclideanRadialSection_eVariationOn_le
+#print axioms Markov.signedTraceEuclideanRadialSection_variation_le
+#print axioms Markov.signedTraceEuclideanRadialSection_exists_uniform_constant
+#print axioms Markov.signedTraceEuclideanRadialSection_cutoff_eVariationOn_le
+#print axioms Markov.signedTraceEuclideanRadialSection_cutoff_endpoint
+#print axioms Markov.signedTraceEuclideanRadialSection_transformed_cutoff_eVariationOn_le
+#print axioms Markov.signedTraceEuclideanRadialSection_transformed_cutoff_variation_le
+#print axioms Markov.signedSectorCoordinates_mem_primitiveDirectionsUpTo
+#print axioms Markov.cutoffCorners_signedSectorBasis
+#print axioms Markov.transformedCutoffSlopes_arc_disjoint_corners
+#print axioms Markov.transformedCutoffSlopes_arc_subset_boundary_difference
+#print axioms Markov.intDet_ne_zero_of_abs_eq_one
+#print axioms Markov.traceNormalArcDetConstant
+#print axioms Markov.one_le_traceNormalArcDetConstant
+#print axioms Markov.trace_selectedSupportAt_normal_proximity_of_local_arc
+#print axioms Markov.trace_selectedSupportAt_det_upper_of_local_normal_arc
+#print axioms Markov.trace_unresolved_direction_height_of_local_normal_arc
+#print axioms Markov.trace_unresolved_direction_arc_bound_of_local_normal_arc
+#print axioms Markov.transformedCutoffSlopes_connectedComponentIn_eq_arc
+#print axioms Markov.selectedSupportAt_normal_mem_closure_normalsOn_of_local_arc_subset
+#print axioms Markov.selectedSupportAt_normal_dist_le_add_of_local_arc_subset
+#print axioms Markov.trace_selectedSupportAt_normal_proximity_of_arc_subset
+#print axioms Markov.trace_selectedSupportAt_det_upper_of_arc_subset
+#print axioms Markov.trace_unresolved_direction_height_of_normal_arc_subset
+#print axioms Markov.trace_unresolved_direction_arc_bound_of_normal_arc_subset
+#print axioms Markov.consecutiveCutoffSlopes_intHeight_le
+#print axioms Markov.trace_cutoff_selectedSupport_normal_proximity
+#print axioms Markov.trace_cutoff_selectedSupport_det_upper
+#print axioms Markov.trace_unresolved_direction_height_of_cutoff_normals
+
+/-! Global component coverage/count and angular cutoff estimates. -/
+#print axioms Markov.dist_le_angle_of_norm_eq_one
+#print axioms Markov.circleNormal
+#print axioms Markov.circleNormal_zero_apply
+#print axioms Markov.circleNormal_one_apply
+#print axioms Markov.norm_circleNormal
+#print axioms Markov.dist_circleNormal_le
+#print axioms Markov.circleNormal_lipschitz
+#print axioms Markov.dist_circleNormal_le_angular_width
+#print axioms Markov.diam_le_angular_width_of_subset_circleNormal_image
+#print axioms Markov.normalsOn_diam_le_angular_width
+#print axioms Markov.exists_normal_near_of_angular_witness
+#print axioms Markov.normal_dist_le_angular_width_add_of_mem_closure
+#print axioms Markov.selectedSupport_normal_dist_le_angular_width_add
+#print axioms Markov.consecutiveCutoffSlopes_right_unique
+#print axioms Markov.cutoffGapPairs
+#print axioms Markov.mem_cutoffGapPairs
+#print axioms Markov.cutoffGapPairs_card_le
+#print axioms Markov.cutoffSlopesUpTo_card_le_primitiveDirectionsUpTo
+#print axioms Markov.cutoffSlopesUpTo_card_le
+#print axioms Markov.cutoffGapPairs_card_le_quadratic
+#print axioms Markov.signedGapIndices
+#print axioms Markov.mem_signedGapIndices
+#print axioms Markov.signedGapIndices_card
+#print axioms Markov.signedGapIndices_card_le_cutoffSlopes
+#print axioms Markov.signedGapIndices_card_le
+#print axioms Markov.exists_signedPairCoordinates_real
+#print axioms Markov.exists_positive_signedPairCoordinates_real
+#print axioms Markov.signedSectorBasis_coord_pair
+#print axioms Markov.exists_signedSectorBasis_coords
+#print axioms Markov.radialBasisSection_endpoints_mem_cutoffCorners
+#print axioms Markov.exists_signedSectorBasis_strict_slope_of_uncut
+#print axioms Markov.exists_signedSectorBasis_radial_of_uncut
+#print axioms Markov.norm_eq_one_of_mem_trace_cutoff_normals
+#print axioms Markov.trace_cutoff_normal_diam_le_of_angular_width
+#print axioms Markov.trace_cutoff_normal_near_of_angle_near
+#print axioms Markov.trace_cutoff_selectedSupport_normal_proximity_of_angular_bounds
+#print axioms Markov.trace_cutoff_selectedSupport_det_upper_of_angular_bounds
+#print axioms Markov.trace_unresolved_direction_height_of_cutoff_angular_bounds
+#print axioms Markov.uncut_boundary_exists_signed_cutoff_component
+#print axioms Markov.inverse_signedSectorCoordinates_mem_primitiveDirectionsUpTo
+#print axioms Markov.inverse_signedSectorCoordinates_intHeight_eq_first
+#print axioms Markov.signedSectorBasis_radial_cutoff_endpoint
+#print axioms Markov.signedTraceEuclideanRadialSection_original_cutoff_endpoint
+#print axioms Markov.signedTraceCutoffArcLength
+#print axioms Markov.signedTraceCutoffArcLength_le_original_heights
+#print axioms Markov.signedTraceCutoffArcLength_toReal_le_original_heights
+#print axioms Markov.traceGlobalCutoffArcLengthConstant
+#print axioms Markov.traceGlobalCutoffArcLengthConstant_pos
+#print axioms Markov.signedTraceCutoffArcLength_le_uniform_constant
+#print axioms Markov.trace_uncut_boundary_exists_signed_component_variation_le
+#print axioms Markov.trace_uncut_boundary_exists_uniform_component_length_constant
+#print axioms Markov.connectedComponents_card_le_of_componentIn_mem
+#print axioms Markov.cutoffComponentFamily
+#print axioms Markov.connectedComponentIn_mem_cutoffComponentFamily
+#print axioms Markov.cutoffComponentFamily_card_le_cutoffSlopes
+#print axioms Markov.cutoffComponentFamily_card_le
+#print axioms Markov.cutoffBoundaryComponents_finite_and_card_le_cutoffSlopes
+#print axioms Markov.cutoffBoundaryComponents_finite
+#print axioms Markov.cutoffBoundaryComponents_card_le
+#print axioms Markov.cutoffBoundaryComponents_card_le_mul_sq
+
+/-! Actual support angles, ordering, compactness and local trace turn measure. -/
+#print axioms Markov.normingFunctional_sum_pos_of_equal_norm
+#print axioms Markov.normingFunctional_sum_pos_of_equal_norm_Icc
+#print axioms Markov.normalizedEuclideanCovector_sum_pos
+#print axioms Markov.norm_traceBasis_sub_lt_twice_axis
+#print axioms Markov.trace_normingFunctional_sum_pos
+#print axioms Markov.trace_normingFunctional_sum_pos_Icc
+#print axioms Markov.trace_quarterArc_normals_subset_openHalfPlane
+#print axioms Markov.trace_closedQuarterArc_normals_subset_openHalfPlane
+#print axioms Markov.supportComplex
+#print axioms Markov.supportAngle
+#print axioms Markov.supportComplex_norm
+#print axioms Markov.supportComplex_ne_zero
+#print axioms Markov.circleNormal_supportAngle
+#print axioms Markov.continuous_supportComplex
+#print axioms Markov.supportAngle_continuousAt_of_sum_pos
+#print axioms Markov.supportAnglesOn
+#print axioms Markov.supportAnglesOn_bddBelow
+#print axioms Markov.supportAnglesOn_bddAbove
+#print axioms Markov.supportAnglesOn_nonempty
+#print axioms Markov.supportAngleLower
+#print axioms Markov.supportAngleUpper
+#print axioms Markov.supportAngleLower_le_upper
+#print axioms Markov.normalsOn_subset_supportAngle_envelope
+#print axioms Markov.normingSupport_parameter_subgradient_mono
+#print axioms Markov.normingSupport_affineLine_det_nonneg
+#print axioms Markov.normingSupport_basisLine_euclideanDet_nonneg
+#print axioms Markov.normingSupport_basisLine_normalizedDet_nonneg
+#print axioms Markov.normingSupport_sameParameter_det_eq
+#print axioms Markov.normingSupport_basisLine_sameParameter_det_nonneg_iff
+#print axioms Markov.isSelectedSupport_affineLine_det_nonneg
+#print axioms Markov.angleTurnMeasure
+#print axioms Markov.angleTurnMeasure_Ioc
+#print axioms Markov.angleTurnMeasure_Ioo
+#print axioms Markov.angleTurnMeasure_Icc
+#print axioms Markov.angleTurnMeasure_singleton
+#print axioms Markov.angleTurnMeasure_Ioc_toReal
+#print axioms Markov.angleTurnMeasure_Ioo_toReal
+#print axioms Markov.angleTurnMeasure_singleton_toReal
+#print axioms Markov.angleTurnMeasure_singleton_eq_zero_iff
+#print axioms Markov.angleTurnMeasure_lt_top_of_subset_Icc
+#print axioms Markov.angleTurnMeasureOn
+#print axioms Markov.angleTurnMeasureOn_univ
+#print axioms Markov.angleTurnMeasureOn_apply_of_subset
+#print axioms Markov.angleTurnMeasureOn_singleton
+#print axioms Markov.sum_angle_jumps_le_interval_turn
+#print axioms Markov.angleTurnMeasureOn_univ_of_period
+#print axioms Markov.angleTurnMeasure_Ioc_add_period
+#print axioms Markov.diam_circleNormal_angleLift_image_le_interval_turn
+#print axioms Markov.normalsOn_diam_le_interval_turn
+#print axioms Markov.affineBasisShear
+#print axioms Markov.affineBasisShear_apply
+#print axioms Markov.affinePairBasis
+#print axioms Markov.affinePairBasis_zero
+#print axioms Markov.affinePairBasis_one
+#print axioms Markov.selectedAffineSupport
+#print axioms Markov.selectedAffineSupport_spec
+#print axioms Markov.selectedAffineSupport_mem_normingFunctionals
+#print axioms Markov.normingSupport_tendsto_selectedAffineSupport_of_tendsto
+#print axioms Markov.selectedAffineSupport_tendsto_right
+#print axioms Markov.selectedAffineSupport_continuousWithinAt_right
+#print axioms Markov.supportAngle_selectedAffineSupport_tendsto_right
+#print axioms Markov.supportAngle_selectedAffineSupport_continuousWithinAt_right
+#print axioms Markov.traceCutoffArc_nonempty
+#print axioms Markov.trace_cutoff_supportAngleLower_le_upper
+#print axioms Markov.trace_cutoff_normals_subset_supportAngle_envelope
+#print axioms Markov.trace_cutoff_normal_diam_le_supportAngle_width
+#print axioms Markov.trace_cutoff_normal_diam_le_of_supportAngle_width
+#print axioms Markov.trace_cutoff_selectedSupport_normal_proximity_of_supportAngle_width
+#print axioms Markov.trace_cutoff_selectedSupport_det_upper_of_supportAngle_width
+#print axioms Markov.trace_unresolved_direction_height_of_cutoff_supportAngle_width
+#print axioms Markov.complex_arg_eq_arctan_of_re_pos
+#print axioms Markov.complex_arg_eq_arctan_of_sum_pos
+#print axioms Markov.complex_arg_le_iff_det_nonneg_of_sum_pos
+#print axioms Markov.complex_arg_le_of_sum_pos_of_det_nonneg
+#print axioms Markov.supportAngle_le_iff_det_nonneg_of_sum_pos
+#print axioms Markov.normingSupport_basisLine_supportAngle_le
+#print axioms Markov.normingSupport_basisLine_supportAngle_monotoneOn
+#print axioms Markov.normingSupport_basisLine_sameParameter_supportAngle_le_iff
+#print axioms Markov.basisSupportGraph
+#print axioms Markov.basisSupportGraph_isClosed
+#print axioms Markov.basisSupportGraph_isCompact
+#print axioms Markov.supportAnglesOn_closedRadial_eq_graph_image
+#print axioms Markov.supportAnglesOn_closedRadial_nonempty
+#print axioms Markov.supportAnglesOn_closedRadial_isCompact_of_sum_pos
+#print axioms Markov.trace_closedQuarter_supportAngles_isCompact
+#print axioms Markov.trace_closedQuarter_supportAngleLower_mem
+#print axioms Markov.trace_closedQuarter_supportAngleUpper_mem
+#print axioms Markov.trace_closedQuarter_supportAngleLower_attained
+#print axioms Markov.trace_closedQuarter_supportAngleUpper_attained
+#print axioms Markov.traceSelectedAngle
+#print axioms Markov.traceSelectedAngle_monotoneOn
+#print axioms Markov.traceSelectedAngle_continuousWithinAt_right
+#print axioms Markov.quarterClamp
+#print axioms Markov.quarterClamp_mem
+#print axioms Markov.quarterClamp_monotone
+#print axioms Markov.quarterClamp_continuous
+#print axioms Markov.quarterClamp_eq_self
+#print axioms Markov.traceQuarterAngle
+#print axioms Markov.traceQuarterAngle_monotone
+#print axioms Markov.traceQuarterAngle_continuousWithinAt_right
+#print axioms Markov.traceQuarterAngleLift
+#print axioms Markov.traceQuarterTurnMeasure
+#print axioms Markov.traceQuarterAngleLift_eq_selected
+#print axioms Markov.traceQuarterTurnMeasure_Ioc
+#print axioms Markov.traceQuarterTurnMeasure_Ioc_selected
+#print axioms Markov.traceQuarterTurnMeasure_singleton
+#print axioms Markov.traceQuarterTurnMeasure_Ioc_lt_top
+
+#print axioms Markov.normingFunctionals_convex
+#print axioms Markov.normingFunctionals_isConnected
+#print axioms Markov.basisSupportGraph_isConnected
+#print axioms Markov.supportAnglesOn_closedRadial_isConnected_of_sum_pos
+#print axioms Markov.supportAnglesOn_closedRadial_eq_Icc_of_sum_pos
+#print axioms Markov.trace_closedQuarter_supportAngles_isConnected
+#print axioms Markov.trace_closedQuarter_supportAngles_eq_Icc
+#print axioms Markov.trace_closedQuarter_normals_eq_supportAngle_arc
+
+#print axioms Markov.reverseSecondBasis
+#print axioms Markov.reverseSecondBasis_zero
+#print axioms Markov.reverseSecondBasis_one
+#print axioms Markov.leftSelectedAffineSupport
+#print axioms Markov.leftSelectedAffineSupport_spec
+#print axioms Markov.leftSelectedAffineSupport_mem_normingFunctionals
+#print axioms Markov.leftSelectedAffineSupport_eval_le
+#print axioms Markov.normingSupport_tendsto_leftSelectedAffineSupport_of_tendsto
+#print axioms Markov.selectedAffineSupport_tendsto_left
+#print axioms Markov.supportAngle_selectedAffineSupport_tendsto_left
+
+#print axioms Markov.traceLeftSelectedAngle
+#print axioms Markov.trace_supportAngle_le_selected
+#print axioms Markov.trace_leftSelectedAngle_le_supportAngle
+#print axioms Markov.trace_leftSelectedAngle_le_selected
+#print axioms Markov.trace_corner_supportAngles_eq_Icc
+#print axioms Markov.trace_corner_normals_eq_arc
+#print axioms Markov.traceSelectedAngle_tendsto_left
+#print axioms Markov.traceQuarterAngle_tendsto_left
+#print axioms Markov.traceQuarterAngle_leftLim
+#print axioms Markov.traceQuarterTurnMeasure_singleton_eq_corner
+#print axioms Markov.traceQuarterTurnMeasure_singleton_toReal_eq_corner
+#print axioms Markov.traceQuarterTurnMeasure_singleton_eq_angular_length
+
+#print axioms Markov.signedSectorCoordinates_det_ne_zero_iff
+#print axioms Markov.selectedSupportAt_signedSectorBasis
+
+#print axioms Markov.normingFunctionals_pos_smul_eq
+#print axioms Markov.normingFunctional_sum_pos_of_equal_norm_nonneg
+#print axioms Markov.normingFunctional_sum_pos_on_equal_norm_chord
+#print axioms Markov.trace_normingFunctional_sum_pos_on_chord
+
+#print axioms Markov.trace_supportAngle_le_of_parameter_lt
+#print axioms Markov.trace_selectedAngle_le_leftSelectedAngle_of_lt
+#print axioms Markov.trace_openArc_normals_subset_endpoint_angle_arc
+#print axioms Markov.traceQuarterTurnMeasure_Ioo_eq_endpoint_angles
+#print axioms Markov.traceQuarterTurnMeasure_Ioo_toReal_eq_endpoint_angles
+#print axioms Markov.trace_openArc_normals_diam_le_turn
+#print axioms Markov.trace_openArc_normals_closure_diam_le_turn
+
+#print axioms Markov.quarterTurnBasis
+#print axioms Markov.quarterTurnBasis_zero
+#print axioms Markov.quarterTurnBasis_one
+#print axioms Markov.chordBasis
+#print axioms Markov.chordBasis_zero
+#print axioms Markov.chordBasis_one
+#print axioms Markov.chordBasis_affinePoint
+#print axioms Markov.chordSelectedSupport
+#print axioms Markov.chordSelectedAngle
+#print axioms Markov.chordSelectedSupport_spec
+#print axioms Markov.chordSelectedSupport_mem_normingFunctionals
+#print axioms Markov.chordSelectedSupport_seam
+#print axioms Markov.normingSupport_chord_det_nonneg
+#print axioms Markov.chordSelectedSupport_sum_pos
+#print axioms Markov.chordSelectedAngle_monotoneOn
+#print axioms Markov.chordSelectedSupport_tendsto_right
+#print axioms Markov.chordSelectedAngle_continuousWithinAt_right
+
+#print axioms Markov.complex_arg_neg_I_mul_add_pi_div_two
+#print axioms Markov.quarterTurnNormal
+#print axioms Markov.quarterTurnNormal_zero_apply
+#print axioms Markov.quarterTurnNormal_one_apply
+#print axioms Markov.circleNormal_add_pi_div_two
+#print axioms Markov.quarterTurnNormal_four
+#print axioms Markov.norm_quarterTurnNormal
+#print axioms Markov.supportComplex_quarterTurnBasis
+#print axioms Markov.norm_euclideanDualCoordinates_quarterTurnBasis
+#print axioms Markov.supportAngle_quarterTurnBasis_add_pi_div_two_of_nonneg
+#print axioms Markov.supportAngle_quarterTurnBasis_add_pi_div_two
+#print axioms Markov.normalizedEuclideanCovector_quarterTurnBasis
+#print axioms Markov.circleNormal_supportAngle_quarterTurnBasis
+#print axioms Markov.quarterTurnBasis_four
+#print axioms Markov.quarterTurnBasis_iterate_four
+#print axioms Markov.circleNormal_supportAngle_iterate_quarterTurnBasis
+#print axioms Markov.chordSelectedAngle_seam
+
+#print axioms Markov.stieltjesGlueValue
+#print axioms Markov.stieltjesGlueValue_monotone
+#print axioms Markov.stieltjesGlueValue_right_continuous
+#print axioms Markov.stieltjesGlue
+#print axioms Markov.stieltjesGlue_apply
+#print axioms Markov.stieltjesGlue_of_lt
+#print axioms Markov.stieltjesGlue_of_le
+#print axioms Markov.stieltjesGlue_of_ge
+#print axioms Markov.stieltjesGlue_seam
+#print axioms Markov.stieltjesGlue_eqOn_left
+#print axioms Markov.stieltjesGlue_eqOn_right
+#print axioms Markov.stieltjesGlue_measure_Ioc_left
+#print axioms Markov.stieltjesGlue_measure_Ioc_right
+#print axioms Markov.stieltjesTranslate
+#print axioms Markov.stieltjesTranslate_apply
+#print axioms Markov.stieltjesTranslate_zero
+#print axioms Markov.stieltjesTranslate_measure_Ioc
+
+#print axioms Markov.traceRotationBasis
+#print axioms Markov.traceRotationBasis_zero
+#print axioms Markov.traceRotationBasis_succ
+#print axioms Markov.norm_traceRotationBasis_zero
+#print axioms Markov.norm_traceRotationBasis_one
+#print axioms Markov.norm_traceRotationBasis_sub_lt
+#print axioms Markov.traceChordAngle
+#print axioms Markov.traceChordAngle_monotone
+#print axioms Markov.traceChordAngle_continuousWithinAt_right
+#print axioms Markov.traceChordAngleLift
+#print axioms Markov.traceChordAngleLift_eq_chord
+
+#print axioms Markov.tracePlaneMeasurableSpace
+#print axioms Markov.tracePlaneBorelSpace
+#print axioms Markov.traceBoundaryPath
+#print axioms Markov.traceBoundaryPath_of_lt_one
+#print axioms Markov.traceBoundaryPath_of_one_le_of_lt_two
+#print axioms Markov.traceBoundaryPath_of_two_le_of_lt_three
+#print axioms Markov.traceBoundaryPath_of_three_le
+#print axioms Markov.norm_traceBoundaryPath
+#print axioms Markov.traceBoundaryPath_mem_frontier
+#print axioms Markov.measurable_traceBoundaryPath
+#print axioms Markov.traceBoundaryPath_four_eq_zero
+
+#print axioms Markov.traceShiftedChordLift
+#print axioms Markov.traceShiftedChordLift_apply
+#print axioms Markov.traceShiftedChordLift_seam_one
+#print axioms Markov.traceShiftedChordLift_seam_two
+#print axioms Markov.traceShiftedChordLift_seam_three
+#print axioms Markov.traceFirstTwoChordLift
+#print axioms Markov.traceFirstTwoChordLift_seam_two
+#print axioms Markov.traceFirstThreeChordLift
+#print axioms Markov.traceFirstThreeChordLift_seam_three
+#print axioms Markov.traceCyclicAngleLift
+#print axioms Markov.traceCyclicAngleLift_of_lt_one
+#print axioms Markov.traceCyclicAngleLift_of_one_le_of_lt_two
+#print axioms Markov.traceCyclicAngleLift_of_two_le_of_lt_three
+#print axioms Markov.traceCyclicAngleLift_of_three_le
+#print axioms Markov.traceCyclicAngleLift_zero
+#print axioms Markov.traceCyclicAngleLift_four
+#print axioms Markov.traceCyclicAngleLift_period_increment
+#print axioms Markov.traceCyclicParameterTurn
+#print axioms Markov.traceCyclicParameterTurn_univ
+#print axioms Markov.traceCyclicParameterTurn_isFiniteMeasure
+
+#print axioms Markov.chordSelectedSupport_mem_norming_radialBasisSection
+#print axioms Markov.chordSelectedSupport_ne_zero
+#print axioms Markov.circleNormal_traceShiftedChordLift
+#print axioms Markov.traceCyclicSelectedSupport
+#print axioms Markov.traceCyclicSelectedSupport_mem_normingFunctionals
+#print axioms Markov.traceCyclicSelectedSupport_ne_zero
+#print axioms Markov.circleNormal_traceCyclicAngleLift
+#print axioms Markov.traceCyclicAngleLift_exists_normingFunctional
+#print axioms Markov.circleNormal_traceCyclicAngleLift_mem_normalsOn
+
+#print axioms Markov.traceBoundaryTurn
+#print axioms Markov.traceBoundaryTurn_apply
+#print axioms Markov.traceBoundaryTurn_univ
+#print axioms Markov.traceBoundaryTurn_isFiniteMeasure
+#print axioms Markov.traceBoundaryTurn_frontier
+#print axioms Markov.traceBoundaryTurn_compl_frontier
+#print axioms Markov.traceBoundaryTurn_apply_eq_parameter_turn
+
+#print axioms Markov.chordBoundarySection
+#print axioms Markov.chordBoundarySection_eq_normalize
+#print axioms Markov.norm_chordBoundarySection
+#print axioms Markov.chordBoundarySection_coord_zero
+#print axioms Markov.chordBoundarySection_coord_one
+#print axioms Markov.chordBoundarySection_injective
+#print axioms Markov.chordBoundarySection_continuous
+#print axioms Markov.chordBoundarySection_zero
+#print axioms Markov.chordBoundarySection_one
+#print axioms Markov.chordBoundarySection_seam
+#print axioms Markov.quarterTurnBasis_coord_zero
+#print axioms Markov.quarterTurnBasis_coord_one
+#print axioms Markov.chordBoundarySection_coordRatio
+#print axioms Markov.chordBoundarySection_exists_Ioc
+
+#print axioms Markov.traceBoundaryPath_add_eq_chordBoundarySection
+#print axioms Markov.chordBoundarySection_coord_signs
+#print axioms Markov.traceChordBoundarySection_eq_iff
+#print axioms Markov.exists_traceBoundary_quarter
+#print axioms Markov.traceBoundaryPath_injOn_Ioc
+#print axioms Markov.traceBoundaryPath_preimage_singleton_inter_Ioc
+
+#print axioms Markov.traceRotationBasis_exists_nonnegative_pos
+#print axioms Markov.traceBoundaryPath_exists_Ioc
+#print axioms Markov.traceBoundaryPath_image_Ioc
+#print axioms Markov.traceBoundaryPath_surjOn
+
+#print axioms Markov.chordLeftSelectedSupport
+#print axioms Markov.chordLeftSelectedAngle
+#print axioms Markov.chordLeftSelectedSupport_mem_normingFunctionals
+#print axioms Markov.normingSupport_chord_sameParameter_supportAngle_le_iff
+#print axioms Markov.chord_supportAngle_le_selected
+#print axioms Markov.chord_leftSelectedAngle_le_supportAngle
+#print axioms Markov.chord_leftSelectedAngle_le_selected
+#print axioms Markov.chord_supportAngles_eq_Icc
+#print axioms Markov.chordSelectedAngle_tendsto_left
+
+#print axioms Markov.traceBoundaryPath_normingFunctionals_eq_chord
+#print axioms Markov.traceBoundaryPath_corner_supportAngles_eq_Icc
+#print axioms Markov.traceBoundaryPath_corner_normals_eq_arc
+
+#print axioms Markov.traceCyclicAngleLift_eq_shifted_on_Icc
+#print axioms Markov.traceCyclicAngleLift_at_chord
+#print axioms Markov.traceChordAngleLift_tendsto_left
+#print axioms Markov.traceShiftedChordLift_tendsto_left
+#print axioms Markov.traceCyclicAngleLift_tendsto_left_at_chord
+#print axioms Markov.traceCyclicAngleLift_leftLim_at_chord
+#print axioms Markov.traceCyclicTurn_singleton_at_chord
+#print axioms Markov.traceCyclicTurn_singleton_at_chord_toReal
+#print axioms Markov.traceCyclicParameterTurn_singleton_at_chord
+#print axioms Markov.traceCyclicParameterTurn_singleton_at_chord_toReal
+
+#print axioms Markov.traceBoundaryOpenArc
+#print axioms Markov.traceBoundaryOpenArc_subset_frontier
+#print axioms Markov.traceBoundaryPath_preimage_openArc_inter_Ioc
+#print axioms Markov.measurableSet_traceBoundaryOpenArc
+#print axioms Markov.traceBoundaryTurn_openArc
+#print axioms Markov.traceBoundaryTurn_openArc_eq
+
+#print axioms Markov.traceBoundaryTurn_singleton_eq_parameter
+#print axioms Markov.traceBoundaryTurn_singleton_eq_jump
+#print axioms Markov.traceBoundaryTurn_singleton_toReal_eq_jump
+#print axioms Markov.traceBoundaryTurn_singleton_exists_parameter
+#print axioms Markov.traceBoundaryPath_normals_eq_lift_arc
+#print axioms Markov.traceBoundaryTurn_singleton_eq_angular_length
+#print axioms Markov.traceBoundaryTurn_full_normal_fibre
+#print axioms Markov.traceBoundaryTurn_singleton_at_chord
+
+#print axioms Markov.traceBoundaryOpenArc_normals_subset_lift_arc
+#print axioms Markov.traceBoundaryTurn_openArc_toReal
+#print axioms Markov.traceBoundaryOpenArc_normals_diam_le_turn
+#print axioms Markov.traceBoundaryOpenArc_normals_closure_diam_le_turn
+
+#print axioms Markov.stieltjes_completedGraph_intermediate
+
+#print axioms Markov.traceBoundaryNormalAngles
+#print axioms Markov.traceBoundaryOpenArc_normals_eq_circle_angles
+#print axioms Markov.traceBoundaryNormalAngles_subset_Icc
+#print axioms Markov.Ioo_subset_traceBoundaryNormalAngles
+#print axioms Markov.traceBoundaryNormalAngles_ordConnected
+#print axioms Markov.traceBoundaryNormalAngles_isConnected
+#print axioms Markov.measurableSet_traceBoundaryNormalAngles
+#print axioms Markov.traceBoundaryOpenArc_normals_isConnected
+#print axioms Markov.volume_traceBoundaryNormalAngles
+#print axioms Markov.traceBoundaryTurn_openArc_eq_angular_length
+#print axioms Markov.traceBoundaryNormalAngles_width_le_two_pi
+
+#print axioms Markov.traceBoundaryTurn_normal_distance_le
+#print axioms Markov.traceBoundaryTurn_det_le
+#print axioms Markov.traceBasis_norm_sum_pos
+#print axioms Markov.traceBoundaryTurn_atom_lower_of_norming_det
+
+#print axioms Markov.analyticCornerJump
+#print axioms Markov.analyticCornerJump_ge_eight_div_sq
+#print axioms Markov.analyticCornerJump_pos
+#print axioms Markov.analyticCornerJump_ge_two_exp_neg
+#print axioms Markov.analyticCornerJump_ge_two_exp_neg_of_cosh
+
+-- Actual primitive corner lower estimates and endpoint tail ingredients.
+#print axioms Markov.SeededFarey.selected_value
+#print axioms Markov.SeededFarey.reversed_selected_value
+#print axioms Markov.SeededFarey.birth_selected_values
+#print axioms Markov.SeededFarey.quadrant_birth_selected_values
+#print axioms Markov.SeededFarey.trace_birth_selected_values
+#print axioms Markov.traceCoefficient_conjugate_log_jump
+#print axioms Markov.traceCoefficient_birth_log_jump
+#print axioms Markov.birth_norming_support_jump
+#print axioms Markov.euclideanDualCoordinates_det_basis_identity
+#print axioms Markov.euclideanDualCoordinates_det_mul_intDet_of_common_value
+#print axioms Markov.euclideanDualCoordinates_det_abs_of_common_value
+#print axioms Markov.normingSupport_det_abs_of_unimodular_sum
+#print axioms Markov.normingSupport_det_abs_of_jump
+#print axioms Markov.normingSupport_det_abs_of_unimodular_direction
+#print axioms Markov.normingSupport_det_abs_of_direction_jump
+#print axioms Markov.traceBoundaryTurn_atom_lower_of_direction_support_jump
+#print axioms Markov.traceBoundaryTurn_atom_lower_of_support_jump
+#print axioms Markov.intVector_norm_le_height
+#print axioms Markov.primitive_tracePlane_trace
+#print axioms Markov.traceAxisLength_le_of_trace_cosh
+#print axioms Markov.traceAxisLength_le_norm_intVector
+#print axioms Markov.tracePlane_norm_intVector_le_height
+#print axioms Markov.tracePlane_norm_intVector_le_two_basis_height
+#print axioms Markov.exists_intVector_norm_ge_height
+#print axioms Markov.tracePlane_exists_height_lower_bound
+#print axioms Markov.SeededFarey.labels_seed_or_birth
+#print axioms Markov.quadrantSeed_snd_eq_fst
+#print axioms Markov.primitive_quadrant_seed_or_birth
+#print axioms Markov.realCutoffCorners
+#print axioms Markov.mem_realCutoffCorners
+#print axioms Markov.intHeight_eq_natMaxAbs_cast
+#print axioms Markov.intHeight_le_iff_le_natFloor
+#print axioms Markov.realCutoffCorners_eq_natFloor
+#print axioms Markov.realCutoffCorners_nat
+#print axioms Markov.realCutoffCorners_eq_empty_of_neg
+#print axioms Markov.realCutoffCorners_finite
+#print axioms Markov.axisPreviousQuadrant
+#print axioms Markov.quadrantSeedDirections_axis_previous
+#print axioms Markov.quadrantSeed_product_trace_axis_previous
+#print axioms Markov.quadrant_axis_selected_values
+#print axioms Markov.quadrant_axis_selected_jump
+#print axioms Markov.quadrant_axis_norming_supports
+#print axioms Markov.trace_quadrant_axis_norming_supports
+#print axioms Markov.trace_quadrant_axis_norm
+#print axioms Markov.trace_axis_atom_lower
+#print axioms Markov.trace_axis_atom_exp_lower
+#print axioms Markov.SeededFarey.trace_birth_support_jump
+#print axioms Markov.SeededFarey.trace_birth_atom_lower
+#print axioms Markov.SeededFarey.trace_birth_atom_exp_lower
+#print axioms Markov.SeededFarey.trace_birth_atom_height_lower
+#print axioms Markov.primitive_trace_atom_exp_lower
+#print axioms Markov.traceCornerLowerConstant
+#print axioms Markov.traceCornerLowerConstant_pos
+#print axioms Markov.primitive_trace_atom_height_lower
+#print axioms Markov.primitive_trace_atom_height_exp_lower
+#print axioms Markov.trace_cutoff_corner_atom_lower
+#print axioms Markov.trace_cutoff_corner_atom_lower_measure
+#print axioms Markov.primitive_trace_atom_pos
+#print axioms Markov.trace_real_cutoff_corner_atom_lower
+#print axioms Markov.traceBoundary_corner_lower_estimate
+#print axioms Markov.logarithmic_coefficient_deficit_bounds
+#print axioms Markov.SeededFarey.product_trace_ge_factors
+#print axioms Markov.SeededFarey.product_trace_ge_max
+#print axioms Markov.SeededFarey.upper_branch_or_seed
+#print axioms Markov.SeededFarey.upper_branch_of_not_seed
+#print axioms Markov.quadrantSeed_product_trace_ge_factors
+#print axioms Markov.SeededFarey.quadrant_product_trace_ge_factors
+#print axioms Markov.SeededFarey.quadrant_product_trace_ge_max
+#print axioms Markov.SeededFarey.quadrant_upper_branch_of_not_seed
+#print axioms Markov.quadrantSeed_sum_height
+#print axioms Markov.SeededFarey.quadrant_upper_branch_of_height
+#print axioms Markov.traceCoefficient_real_ge_half
+#print axioms Markov.traceCoefficient_logarithmic_deficit_bounds
+#print axioms Markov.euclideanDualCoordinates_dist_le_pair_values
+#print axioms Markov.euclideanDualCoordinates_dist_le_uniform_pair_values
+#print axioms Markov.dist_circleNormal_eq_two_abs_sin_half
+#print axioms Markov.abs_sub_le_pi_div_two_mul_dist_circleNormal
+#print axioms Markov.sub_le_pi_div_two_mul_dist_circleNormal
+#print axioms Markov.normalize_dist_le_of_norm_lower_bound
+#print axioms Markov.normalizedEuclideanCovector_dist_le_of_norm_lower_bound
+#print axioms Markov.traceSupport_eval_eq_inner_coordinates
+#print axioms Markov.traceNormingCovectorRadius
+#print axioms Markov.traceNormingCovectorRadius_pos
+#print axioms Markov.traceNormingCovectorRadius_le
+#print axioms Markov.exists_traceNormingCovectorRadius
+#print axioms Markov.traceNormingCovector_normalize_dist_le
+#print axioms Markov.exists_traceNormingCovectorNormalizationConstant
+#print axioms Markov.inverse_sq_trace_product_le_exp_neg_of_cosh
+#print axioms Markov.SeededFarey.support_deficit_bounds
+#print axioms Markov.SeededFarey.support_deficit_exp_bounds
+#print axioms Markov.SeededFarey.quadrant_support_deficit_bounds
+#print axioms Markov.SeededFarey.quadrant_support_deficit_exp_bounds
+#print axioms Markov.SeededFarey.trace_support_deficit_bounds
+#print axioms Markov.SeededFarey.trace_support_deficit_exp_bounds
+#print axioms Markov.SeededFarey.trace_inward_covector_gap
+#print axioms Markov.trace_inward_covector_gap_height_decay
+#print axioms Markov.trace_inward_normal_gap_height_decay
+
+-- Full trace-boundary turn tail, rational arcs, and exact angular neighborhoods.
+#print axioms Markov.isSelectedSupport_pos_smul_left_iff
+#print axioms Markov.isSelectedSupport_pos_smul_right_iff
+#print axioms Markov.isSelectedSupport_pos_smul_shear_iff
+#print axioms Markov.isSelectedSupport_unique_of_basis
+#print axioms Markov.isSelectedSupport_iff_eq_selectedSupport_of_basis
+#print axioms Markov.selectedSupport_eq_of_pos_smul_shear
+#print axioms Markov.complex_arg_mem_Ioo_of_sum_pos
+#print axioms Markov.abs_complex_arg_sub_lt_pi_of_sum_pos
+#print axioms Markov.supportAngle_mem_Ioo_of_sum_pos
+#print axioms Markov.abs_supportAngle_sub_lt_pi_of_sum_pos
+#print axioms Markov.supportAngle_sub_lt_pi_of_sum_pos
+#print axioms Markov.abs_supportAngle_sub_le_pi_div_two_mul_dist_of_sum_pos
+#print axioms Markov.supportAngle_sub_le_pi_div_two_mul_dist_of_sum_pos
+#print axioms Markov.normingSupport_chord_abs_supportAngle_sub_lt_pi
+#print axioms Markov.normingSupport_chord_supportAngle_sub_lt_pi
+#print axioms Markov.normingSupport_chord_abs_supportAngle_sub_le_pi_div_two_mul_dist
+#print axioms Markov.normingSupport_chord_supportAngle_sub_le_pi_div_two_mul_dist
+#print axioms Markov.chordBoundarySection_ratio_eq_normalize
+#print axioms Markov.traceRotationBasis_quadrantCoordinates
+#print axioms Markov.traceRationalQuarterParameter
+#print axioms Markov.traceRationalParameter
+#print axioms Markov.traceRationalQuarterParameter_mem_Icc
+#print axioms Markov.traceRationalParameter_mem_quarter
+#print axioms Markov.chordBoundarySection_traceRationalQuarterParameter
+#print axioms Markov.traceBoundaryPath_traceRationalParameter
+#print axioms Markov.traceRationalQuarterParameter_lt_of_det_one
+#print axioms Markov.traceRationalParameter_lt_of_det_one
+#print axioms Markov.SeededFarey.traceRationalQuarterParameter_left_mem_Icc
+#print axioms Markov.SeededFarey.traceRationalQuarterParameter_right_mem_Icc
+#print axioms Markov.SeededFarey.traceBoundaryPath_traceRationalParameter_left
+#print axioms Markov.SeededFarey.traceBoundaryPath_traceRationalParameter_right
+#print axioms Markov.SeededFarey.traceRationalQuarterParameter_lt
+#print axioms Markov.SeededFarey.traceRationalParameter_lt
+#print axioms Markov.intVector_eq_profileMass_smul_chordPoint
+#print axioms Markov.intVector_eq_chordPoint_pos_shear_of_det_one
+#print axioms Markov.intVector_eq_chordPoint_neg_shear_of_det_one
+#print axioms Markov.chordLeftSelectedSupport_spec
+#print axioms Markov.selectedSupportAt_eq_chordSelectedSupport
+#print axioms Markov.selectedSupportAt_rev_eq_chordLeftSelectedSupport
+#print axioms Markov.traceBoundaryTurn_chord_openArc_eq
+#print axioms Markov.traceBoundaryTurn_chord_openArc_toReal_eq
+#print axioms Markov.traceBoundaryTurn_chord_openArc_le_inward_normal_distance
+#print axioms Markov.selectedSupportAt_traceRotation_coordinates
+#print axioms Markov.SeededFarey.trace_rational_inward_supports
+#print axioms Markov.SeededFarey.trace_rational_arc_turn_le_inward_distance
+#print axioms Markov.trace_rational_arc_turn_height_decay
+#print axioms Markov.inverseSignedSectorCoordinates
+#print axioms Markov.inverseSignedSectorCoordinates_coordinates
+#print axioms Markov.coordinates_inverseSignedSectorCoordinates
+#print axioms Markov.inverseSignedSectorCoordinates_add
+#print axioms Markov.inverseSignedSectorCoordinates_height
+#print axioms Markov.inverseSignedSectorCoordinates_height_add
+#print axioms Markov.inverseSignedSectorCoordinates_euclidean
+#print axioms Markov.signedSectorQuadrant
+#print axioms Markov.quadrantCoordinates_inverseSignedSectorCoordinates
+#print axioms Markov.inverseSignedSectorCoordinates_det
+#print axioms Markov.inverseSignedSectorCoordinates_quadrant_nonneg
+#print axioms Markov.signedSector_exists_quadrantSeededFarey
+#print axioms Markov.intHeight_eq_first_of_canonical
+#print axioms Markov.inverseSignedSectorCoordinates_height_eq_first_of_cutoff
+#print axioms Markov.inverseSignedSectorCoordinates_cutoff_height_bounds
+#print axioms Markov.inverseSignedSectorCoordinates_height_add_eq_of_canonical
+#print axioms Markov.signedConsecutiveCutoffSlopes_height_bounds
+#print axioms Markov.basis_affineLine_eq_intVector_combination_of_det_one
+#print axioms Markov.mem_slopeBoundaryArc_exists_pos_intVector_combination
+#print axioms Markov.consecutiveCutoffSlopes_mem_arc_exists_pos_intVector_combination
+#print axioms Markov.positive_weightedRatio_mem_Ioo
+#print axioms Markov.positiveCombinationQuarterParameter
+#print axioms Markov.positiveCombinationQuarterParameter_mem_Ioo
+#print axioms Markov.chordBoundarySection_positiveCombinationQuarterParameter
+#print axioms Markov.normalize_positiveCombination_mem_traceBoundaryOpenArc
+#print axioms Markov.SeededFarey.normalize_positiveCombination_mem_traceBoundaryOpenArc
+#print axioms Markov.cube_mul_exp_neg_le_half_rate
+#print axioms Markov.exists_cube_mul_exp_neg_le_half_rate
+#print axioms Markov.signedSectorBasis_intVector_inverse
+#print axioms Markov.signed_cutoff_arc_turn_height_decay
+#print axioms Markov.signed_cutoff_arc_turn_cutoff_decay
+#print axioms Markov.uncut_boundary_subset_iUnion_signedGapIndices
+#print axioms Markov.signedGapIndices_card_le_mul_sq
+#print axioms Markov.traceBoundaryTurn_uncut_le_sum_signedGapIndices
+#print axioms Markov.traceBoundaryTurn_uncut_le_card_mul_of_gap_bound
+#print axioms Markov.traceBoundaryTurn_uncut_le_mul_sq_of_gap_bound
+#print axioms Markov.traceBoundaryTurn_uncut_le_exp_of_gap_bound
+#print axioms Markov.traceBoundary_turn_tail_nat
+#print axioms Markov.traceBoundary_turn_tail_real
+#print axioms Markov.traceBoundary_turn_tail_estimate
+#print axioms Markov.traceBoundary_quantitative_turn_estimates
+#print axioms Markov.traceBoundaryPath_chord_supportAngle_mem_Icc
+#print axioms Markov.supportAnglesOn_traceBoundaryOpenArc_subset_Icc
+#print axioms Markov.traceChord_supportAngleLower_upper_bounds
+#print axioms Markov.supportAngleWidth_le_traceBoundaryTurn_chord_openArc
+#print axioms Markov.traceCutoffArc_exists_quadrant_zero_word
+#print axioms Markov.trace_cutoff_supportAngle_width_decay
+#print axioms Markov.trace_cutoff_normal_diam_decay
+#print axioms Markov.dist_le_diam_of_mem_closure_pair
+#print axioms Markov.dist_le_add_of_mem_closure_of_exists_near_closure
+#print axioms Markov.norm_eq_one_of_mem_closure_normalsOn
+#print axioms Markov.normal_dist_le_add_of_mem_closure_of_exists_near_closure
+#print axioms Markov.normal_dist_le_add_of_mem_closure_of_exists_angle_near_closure
+#print axioms Markov.selectedSupport_normal_dist_le_add_of_near_closure
+#print axioms Markov.selectedSupportAt_normal_dist_le_add_of_near_closure
+#print axioms Markov.closure_eq_Icc_of_interval_sandwich
+#print axioms Markov.closure_traceBoundaryNormalAngles
+#print axioms Markov.closure_normalsOn_traceBoundaryOpenArc
+#print axioms Markov.angularDistanceToSet
+#print axioms Markov.closedAngularNeighborhood
+#print axioms Markov.angularDistanceToSet_image_bddBelow
+#print axioms Markov.angularDistanceToSet_nonneg
+#print axioms Markov.norm_eq_one_of_mem_closure_unit_set
+#print axioms Markov.angle_continuousOn_closure_unit_set
+#print axioms Markov.angularDistanceToSet_le_angle_of_mem_closure
+#print axioms Markov.angularDistanceToSet_closure_eq
+#print axioms Markov.exists_mem_closure_angle_eq_angularDistanceToSet
+#print axioms Markov.mem_closedAngularNeighborhood_iff_exists_mem_closure
+#print axioms Markov.trace_cutoff_selectedSupport_normal_proximity_of_angle_near_closure
+#print axioms Markov.trace_cutoff_selectedSupport_det_upper_of_angle_near_closure
+#print axioms Markov.trace_cutoff_angle_near_closure_height_bound
+#print axioms Markov.traceCutoffArc_normals_nonempty
+#print axioms Markov.trace_cutoff_angular_neighborhood_witness
+#print axioms Markov.trace_canonical_angular_neighborhood_height_bound
+
+-- Signed real-cutoff unresolved estimates, exact association and Lemma 7 ingredients.
+#print axioms Markov.closedAngularNeighborhood_angle_separation
+#print axioms Markov.disjoint_closedAngularNeighborhood_of_angle_separation
+#print axioms Markov.angle_circleNormal_eq_arccos_cos_sub
+#print axioms Markov.angle_circleNormal_eq_min_of_ordered
+#print axioms Markov.angle_circleNormal_ge_of_interval_separation
+#print axioms Markov.cutoff_common_rate_pos
+#print axioms Markov.cutoff_eta_le_common_rate
+#print axioms Markov.cutoff_eta_le_of_basic_assumption
+#print axioms Markov.cutoff_eta_le_common_rate_of_basic_assumption
+#print axioms Markov.cutoff_natFloor_bounds
+#print axioms Markov.cutoff_eta_le_common_rate_natFloor
+#print axioms Markov.cutoff_eta_le_common_rate_natFloor_of_basic_assumption
+#print axioms Markov.cutoff_real_height_le_of_natFloor_le
+#print axioms Markov.cutoff_sqrt_le_twice_natFloor_sqrt
+#print axioms Markov.cutoff_sqrt_denominator_bounds
+#print axioms Markov.cutoff_natFloor_reciprocal_le
+#print axioms Markov.cutoff_natFloor_quotient_le
+#print axioms Markov.cutoff_arc_bound_of_natFloor_bound
+#print axioms Markov.primitiveIntDirection_ne_zero
+#print axioms Markov.intDet_abs_le_norm_mul_angle
+#print axioms Markov.primitive_intDet_zero_eq_or_eq_neg
+#print axioms Markov.euclideanIntDirection_neg
+#print axioms Markov.primitive_angular_spacing
+#print axioms Markov.primitive_eq_of_angle_lt_inv_sq
+#print axioms Markov.signedCutoffArc_exists_quadrant_word
+#print axioms Markov.SeededFarey.normals_diam_le_trace_rational_arc_turn
+#print axioms Markov.signed_cutoff_normal_diam_height_decay
+#print axioms Markov.signed_cutoff_normal_diam_cutoff_decay
+#print axioms Markov.signed_cutoff_normal_diam_decay
+#print axioms Markov.radial_intPairBasis_reverse_mem_slopeBoundaryArc
+#print axioms Markov.intPairBasis_reverse_local_arc_subset_slopeBoundaryArc
+#print axioms Markov.consecutiveCutoffSlopes_reverse_selectedSupport_normal_mem_closure
+#print axioms Markov.signedConsecutiveCutoffSlopes_selectedSupport_normal_mem_closure
+#print axioms Markov.signedConsecutiveCutoffSlopes_reverse_selectedSupport_normal_mem_closure
+#print axioms Markov.signedConsecutiveCutoffSlopes_both_selectedSupport_normals_mem_closure
+#print axioms Markov.traceBoundaryPath_mem_openArc
+#print axioms Markov.traceBoundaryOpenArc_nonempty
+#print axioms Markov.traceBoundaryOpenArc_parameters_ordered_of_disjoint
+#print axioms Markov.traceBoundaryOpenArc_disjoint_iff_parameters_ordered
+#print axioms Markov.traceBoundaryOpenArc_disjoint_of_distinct_components
+#print axioms Markov.traceBoundaryOpenArc_parameters_ordered_of_distinct_components
+#print axioms Markov.traceUncutBoundary
+#print axioms Markov.IsTraceUnresolved
+#print axioms Markov.traceUncutBoundary_eq_natFloor
+#print axioms Markov.traceUncutBoundary_exists_signed_cutoff_component
+#print axioms Markov.signed_cutoff_component_exists_mem_traceUncutBoundary
+#print axioms Markov.isTraceUnresolved_iff_exists_signed_cutoff_component
+#print axioms Markov.IsTraceUnresolved.exists_signed_cutoff_component
+#print axioms Markov.signed_cutoff_angular_neighborhood_witness
+#print axioms Markov.trace_selectedSupportAt_det_upper_of_angle_near_closure
+#print axioms Markov.signed_cutoff_closedAngularNeighborhood_height_of_diameter
+#print axioms Markov.signed_cutoff_closedAngularNeighborhood_height_bound
+#print axioms Markov.trace_ordered_cutoff_arcs_normal_closure_separation
+#print axioms Markov.traceBoundaryOpenArc_normals_unit
+#print axioms Markov.trace_ordered_cutoff_arcs_angular_neighborhood_gap
+#print axioms Markov.trace_ordered_cutoff_arcs_angular_neighborhood_disjoint
+#print axioms Markov.SeededFarey.mem_trace_rational_arc_exists_pos_intVector_combination
+#print axioms Markov.normalize_pos_intVector_combination_mem_slopeBoundaryArc
+#print axioms Markov.signedCutoffArc_exists_quadrant_word_eq
+#print axioms Markov.SeededFarey.traceRationalParameter_bounds
+#print axioms Markov.traceUncutBoundary_exists_path_component
+#print axioms Markov.realCutoffCorners_mono
+#print axioms Markov.traceUncutBoundary_antitone
+#print axioms Markov.traceUncutBoundary_component_mono
+#print axioms Markov.norm_eq_one_of_mem_traceUncutBoundary
+#print axioms Markov.traceUncutBoundary_component_normals_nonempty
+#print axioms Markov.traceUncutBoundary_component_normals_unit
+#print axioms Markov.closedAngularNeighborhood_mono
+#print axioms Markov.traceUncutBoundary_component_angular_neighborhood_mono
+#print axioms Markov.IsTraceUnresolved.mono_cutoff
+#print axioms Markov.one_le_signedCutoff_min_endpoint_height
+#print axioms Markov.signed_cutoff_arc_sqrt_bound_of_height
+#print axioms Markov.signed_cutoff_unresolved_height_and_arc_bound_of_diameter
+#print axioms Markov.signed_cutoff_unresolved_height_and_arc_bound
+#print axioms Markov.angle_circleNormal_le_abs_sub
+#print axioms Markov.closedAngularNeighborhood_angle_le_of_closure_bound
+#print axioms Markov.traceBoundaryOpenArc_normal_closure_angle_le_turn
+#print axioms Markov.traceBoundaryOpenArc_angular_neighborhood_angle_le_turn
+#print axioms Markov.traceUncutBoundary_component_angular_neighborhood_angle_le_turn
+#print axioms Markov.traceUncutBoundary_component_angular_neighborhood_exp_width
+#print axioms Markov.traceUncutBoundary_angular_neighborhood_disjoint
+#print axioms Markov.traceUncutBoundary_component_eq_of_neighborhood_membership
+#print axioms Markov.IsTraceUnresolved.unique_component
+#print axioms Markov.traceUnresolvedHeightCoefficient
+#print axioms Markov.traceUnresolvedHeightCoefficient_pos
+#print axioms Markov.real_cutoff_signed_unresolved_height_and_arc_bound
+#print axioms Markov.trace_unresolved_actual_component_sizes
+#print axioms Markov.trace_unresolved_direction_sizes
+#print axioms Markov.trace_lemma6
+
+-- Actual Lemma 7, weighted bound (83), and the explicit spatial cap bracket.
+#print axioms Markov.euclideanPlane_norm_le_orthogonal_coordinates
+#print axioms Markov.euclideanPlane_diam_le_of_coordinate_brackets
+#print axioms Markov.euclideanCap_transverse_brackets
+#print axioms Markov.euclideanCap_diam_le
+#print axioms Markov.euclideanCap_diam_le_trigonometric
+#print axioms Markov.inv_sqrt_eq_half_integral_Ioi_rpow
+#print axioms Markov.finite_sum_inv_sqrt_le_of_count_quarter_rpow
+#print axioms Markov.log_two_mul_sq_le_quarter_power
+#print axioms Markov.le_quarter_power_of_le_log_square
+#print axioms Markov.logarithmic_cutoff_decay
+#print axioms Markov.exists_logarithmic_cutoff_constant
+#print axioms Markov.intHeight_le_intEuclidean
+#print axioms Markov.primitiveUnresolvedUpTo
+#print axioms Markov.mem_primitiveUnresolvedUpTo
+#print axioms Markov.primitiveUnresolvedSet
+#print axioms Markov.coe_primitiveUnresolvedUpTo
+#print axioms Markov.finite_primitiveUnresolvedSet
+#print axioms Markov.ncard_primitiveUnresolvedSet
+#print axioms Markov.primitiveUnresolvedUpTo_mono_size
+#print axioms Markov.primitiveUnresolvedUpTo_card_le_square
+#print axioms Markov.primitiveUnresolvedUpTo_eq_empty_of_lt_one
+#print axioms Markov.coe_primitiveUnresolvedUpTo_self
+#print axioms Markov.finite_primitive_traceUnresolved
+#print axioms Markov.ncard_primitive_traceUnresolved
+#print axioms Markov.TraceUnresolvedComponentData
+#print axioms Markov.IsTraceUnresolved.component_data_nonempty
+#print axioms Markov.traceUnresolvedComponentData
+#print axioms Markov.traceUnresolvedArcLength
+#print axioms Markov.traceUnresolvedComponent
+#print axioms Markov.traceUnresolvedArcLength_nonneg
+#print axioms Markov.traceUnresolvedArcLength_spec
+#print axioms Markov.traceUnresolvedArcLength_eq_finite_variation
+#print axioms Markov.exists_traceUnresolvedArcLength_bound
+#print axioms Markov.traceUnresolvedComponent_eq_actual_component
+#print axioms Markov.traceUnresolved_finset_card_le_of_component_width
+#print axioms Markov.traceUnresolved_finset_card_le_of_exp_width
+#print axioms Markov.traceUnresolved_finset_card_le_coarse_cutoff
+#print axioms Markov.trace_lemma7_finset
+#print axioms Markov.trace_lemma7
+#print axioms Markov.trace_lemma7_ncard
+#print axioms Markov.finite_sum_inv_sqrt_le_of_count_log_square
+#print axioms Markov.finite_sum_le_of_count_log_square
+#print axioms Markov.primitiveUnresolvedUpTo_self_filter
+#print axioms Markov.div_le_inv_sqrt_of_sqrt_bound
+#print axioms Markov.trace_weighted_unresolved_bound
+
+-- Actual trace-ball Lemma 8: circular lifts, both support associations, and cap bounds.
+#print axioms Markov.exists_circleNormal_eq_and_abs_sub_eq_angle
+#print axioms Markov.exists_circleNormal_eq_of_norm_eq_one
+#print axioms Markov.exists_circleNormal_eq_and_abs_sub_le_of_angle_le
+#print axioms Markov.isClosed_circleNormal_image_Icc
+#print axioms Markov.exists_mem_Icc_eq_circleNormal_of_mem_closedAngularNeighborhood_of_subset
+#print axioms Markov.exists_mem_Icc_eq_circleNormal_of_mem_closedAngularNeighborhood
+#print axioms Markov.completedGraph_parameter_mem_Icc
+#print axioms Markov.completedGraph_exists_mem_Icc
+#print axioms Markov.completedGraph_offset_mem_between_endpoint_jumps
+#print axioms Markov.continuous_traceBoundaryPath
+#print axioms Markov.closure_traceBoundaryOpenArc
+#print axioms Markov.closure_signed_cutoff_arc
+#print axioms Markov.signedTraceCutoffArcLength_ne_top
+#print axioms Markov.dist_traceEuclideanCoordinates_le_signedTraceCutoffArcLength
+#print axioms Markov.traceUncutBoundary_exists_closed_path_component
+#print axioms Markov.primitiveDirectionsUpTo_one_card
+#print axioms Markov.trace_normalize_intVector_injective_primitive
+#print axioms Markov.trace_cutoffCorners_one_card
+#print axioms Markov.trace_cutoff_corner_lower_scale_le_pi_div_four
+#print axioms Markov.trace_basic_angle_lt_pi_div_eight
+#print axioms Markov.traceEuclideanBall
+#print axioms Markov.traceEuclideanCoordinates_mem_ball
+#print axioms Markov.zero_mem_traceEuclideanBall
+#print axioms Markov.traceEuclideanBall_nonempty
+#print axioms Markov.isCompact_traceEuclideanBall
+#print axioms Markov.traceSupport_normalized_inner_coordinates
+#print axioms Markov.traceEuclideanBall_support_of_normingFunctional
+#print axioms Markov.traceEuclideanBall_support_of_mem_normalsOn_singleton
+#print axioms Markov.traceEuclideanSupportHeight
+#print axioms Markov.inner_le_traceEuclideanSupportHeight
+#print axioms Markov.traceEuclideanSupportHeight_exists_mem
+#print axioms Markov.traceEuclideanSupportHeight_eq_of_mem_normalsOn_singleton
+#print axioms Markov.inner_quarterTurnNormal_self
+#print axioms Markov.circleNormal_add_eq_offset
+#print axioms Markov.circleNormal_sub_eq_offset
+#print axioms Markov.norm_normal_offset_plus
+#print axioms Markov.norm_normal_offset_minus
+#print axioms Markov.traceConvexCap
+#print axioms Markov.traceConvexCap_inner_bounds
+#print axioms Markov.traceConvexCap_longitudinal_width
+#print axioms Markov.traceConvexCap_depth
+#print axioms Markov.traceConvexCap_diam_le_trigonometric
+#print axioms Markov.cos_div_sin_le_pi_div_two_mul
+#print axioms Markov.trigonometric_cap_error_le
+#print axioms Markov.traceConvexCap_diam_le
+#print axioms Markov.traceConvexCap_diam_le_of_dist_le
+#print axioms Markov.IsTraceUnresolvedNormal
+#print axioms Markov.isTraceUnresolved_iff_normal
+#print axioms Markov.circleNormal_add_two_pi
+#print axioms Markov.traceBoundaryIncomingAngle
+#print axioms Markov.traceBoundaryIncomingAngle_le
+#print axioms Markov.traceBoundaryPath_zero_normal_of_angle_mem
+#print axioms Markov.traceBoundary_closedArc_support_exists
+#print axioms Markov.traceBoundary_support_exists_of_unit_normal
+#print axioms Markov.traceBoundary_cutoff_interior_parameters_finite
+#print axioms Markov.traceBoundary_outgoing_normal_mem_uncut_closure
+#print axioms Markov.traceBoundary_incoming_normal_mem_uncut_closure
+#print axioms Markov.traceBoundary_outgoing_normal_mem_uncut_closure_Ioc
+#print axioms Markov.isTraceUnresolvedNormal_of_mem_normal_closure
+#print axioms Markov.trace_support_point_mem_cutoff_of_not_unresolved
+#print axioms Markov.traceBoundary_support_exists_Ioc_of_unit_normal
+#print axioms Markov.trace_resolved_normal_exists_same_cutoff_support
+#print axioms Markov.traceBoundaryTurn_singleton_toReal_eq_incoming_jump
+#print axioms Markov.trace_unresolved_component_supporting_points
+#print axioms Markov.trace_unresolved_actual_component_supporting_points
+#print axioms Markov.IsTraceUnresolvedNormal.supporting_points
+#print axioms Markov.norm_eq_one_of_mem_closure_trace_component
+#print axioms Markov.traceConvexCap_unresolved_component_bound
+#print axioms Markov.traceConvexCap_unresolved_covector_bound
+#print axioms Markov.norm_eq_one_of_mem_real_traceCutoffCorners
+#print axioms Markov.traceConvexCap_resolved_bound
+#print axioms Markov.trace_lemma8
+#print axioms Markov.trace_lemma8_covector
+
+-- Analytic continuation: exact lattice, smoothing, sampling and strict normal order.
+#print axioms Markov.concave_zero_endpoints_nonneg
+#print axioms Markov.concave_chord_lower_bound
+#print axioms Markov.concave_sampling_left_endpoint_bound
+#print axioms Markov.concave_reflect_unit_interval
+#print axioms Markov.concave_sampling_right_endpoint_bound
+#print axioms Markov.concave_sampling_cell_point_bounds
+#print axioms Markov.sampling_cell_linear_integral
+#print axioms Markov.concave_sampling_cell_integral_bounds
+#print axioms Markov.continuous_zero_off_unit_endpoints
+#print axioms Markov.continuous_zero_off_unit_integral
+#print axioms Markov.sampling_mesh_mem_Icc_iff
+#print axioms Markov.sampling_finite_support
+#print axioms Markov.sampling_summable
+#print axioms Markov.sampling_tsum_eq_int_Icc
+#print axioms Markov.sampling_int_Icc_eq_nat_Icc
+#print axioms Markov.exists_integer_sampling_mesh
+#print axioms Markov.fourier_modulation_convolution
+#print axioms Markov.l1_fourier_convolution
+#print axioms Markov.fourier_comp_positive_smul_plane
+#print axioms Markov.exists_positive_primitive_profileParameter_between
+#print axioms Markov.exists_nonnegativePrimitive_profileParameter_between
+#print axioms Markov.quadrantCoordinates_seededDirection
+#print axioms Markov.quadrantCoordinates_coprime_iff
+#print axioms Markov.exists_primitive_traceRationalQuarterParameter_between
+#print axioms Markov.exists_primitive_traceRationalParameter_between_in_quarter
+#print axioms Markov.exists_primitive_traceRationalParameter_between
+#print axioms Markov.sampling_mesh_core_bounds
+#print axioms Markov.traceEuclideanGauge
+#print axioms Markov.traceEuclideanGauge_coordinates
+#print axioms Markov.traceEuclideanGauge_zero
+#print axioms Markov.traceEuclideanGauge_nonneg
+#print axioms Markov.traceEuclideanGauge_add_le
+#print axioms Markov.traceEuclideanGauge_smul
+#print axioms Markov.mem_traceEuclideanBall_iff
+#print axioms Markov.mem_smul_traceEuclideanBall_iff
+#print axioms Markov.traceEuclideanCoordinates_intVector
+#print axioms Markov.traceEuclideanGauge_intDirection
+#print axioms Markov.traceEuclideanGaugeConstant
+#print axioms Markov.traceEuclideanGaugeConstant_pos
+#print axioms Markov.traceEuclideanGauge_le
+#print axioms Markov.traceEuclideanInradius
+#print axioms Markov.traceEuclideanInradius_pos
+#print axioms Markov.closedBall_subset_traceEuclideanBall
+#print axioms Markov.traceLatticeCoordinateBound
+#print axioms Markov.traceLatticeCoordinateBox
+#print axioms Markov.intVector_mem_traceLatticeCoordinateBox
+#print axioms Markov.traceLatticePoints
+#print axioms Markov.mem_traceLatticePoints
+#print axioms Markov.traceEuclideanLatticeSet
+#print axioms Markov.traceLatticePoints_eq_actual
+#print axioms Markov.traceEuclideanLatticeSet_finite
+#print axioms Markov.traceLatticeCount
+#print axioms Markov.traceLatticeCount_eq_ncard_actual
+#print axioms Markov.traceEuclideanArea
+#print axioms Markov.traceEuclideanBall_volume_lt_top
+#print axioms Markov.traceEuclideanBall_volume_pos
+#print axioms Markov.traceEuclideanArea_pos
+#print axioms Markov.concave_sampling_finite_mesh_bound
+#print axioms Markov.traceRadialBump
+#print axioms Markov.traceRadialBump_nonneg
+#print axioms Markov.traceRadialBump_contDiff
+#print axioms Markov.traceRadialBump_radial
+#print axioms Markov.traceRadialBump_support_eq
+#print axioms Markov.traceRadialBump_hasCompactSupport
+#print axioms Markov.traceRadialBump_integrable
+#print axioms Markov.traceRadialBump_integral_pos
+#print axioms Markov.traceRadialMollifier
+#print axioms Markov.traceRadialMollifier_nonneg
+#print axioms Markov.traceRadialMollifier_contDiff
+#print axioms Markov.traceRadialMollifier_radial
+#print axioms Markov.traceRadialMollifier_support_eq
+#print axioms Markov.traceRadialMollifier_tsupport_eq
+#print axioms Markov.traceRadialMollifier_hasCompactSupport
+#print axioms Markov.traceRadialMollifier_integrable
+#print axioms Markov.traceRadialMollifier_integral
+#print axioms Markov.traceRadialMollifier_eq_zero_of_one_le_norm
+#print axioms Markov.traceScaledMollifier
+#print axioms Markov.traceScaledMollifier_nonneg
+#print axioms Markov.traceScaledMollifier_contDiff
+#print axioms Markov.traceScaledMollifier_radial
+#print axioms Markov.traceScaledMollifier_eq_zero_of_inv_le_norm
+#print axioms Markov.traceScaledMollifier_integral
+#print axioms Markov.traceScaledMollifier_support_eq
+#print axioms Markov.traceScaledMollifier_tsupport_eq
+#print axioms Markov.traceScaledMollifier_hasCompactSupport
+#print axioms Markov.traceScaledMollifier_integrable
+#print axioms Markov.traceCyclicAngleLift_lt_leftLim
+#print axioms Markov.traceCyclicAngleLift_strictMonoOn
+#print axioms Markov.trace_complete_normal_angles_lt
+#print axioms Markov.trace_complete_normal_angles_sub_lt_two_pi
+#print axioms Markov.circleNormal_ne_of_lt_of_sub_lt_two_pi
+#print axioms Markov.traceBoundaryPath_normals_disjoint
+#print axioms Markov.traceBoundary_normal_point_unique
+#print axioms Markov.concave_sampling_lemma9
+#print axioms Markov.concave_sampling_lemma9_with_summability
+#print axioms Markov.isCompact_smul_traceEuclideanBall
+#print axioms Markov.measurableSet_smul_traceEuclideanBall
+#print axioms Markov.traceBallIndicator
+#print axioms Markov.traceBallIndicator_nonneg
+#print axioms Markov.traceBallIndicator_le_one
+#print axioms Markov.traceBallIndicator_integrable
+#print axioms Markov.traceBallIndicator_hasCompactSupport
+#print axioms Markov.traceSmoothedIndicator
+#print axioms Markov.traceSmoothedIndicator_apply
+#print axioms Markov.traceSmoothedIndicator_integrand_integrable
+#print axioms Markov.traceSmoothedIndicator_nonneg
+#print axioms Markov.traceSmoothedIndicator_le_one
+#print axioms Markov.traceSmoothedIndicator_integrable
+#print axioms Markov.traceSmoothedIndicator_hasCompactSupport
+#print axioms Markov.traceSmoothedIndicator_contDiff
+#print axioms Markov.traceEuclideanGauge_sub_le
+#print axioms Markov.traceScaledMollifier_gauge_le
+#print axioms Markov.traceSmoothedIndicator_eq_zero_of_gauge_lt
+#print axioms Markov.traceSmoothedIndicator_eq_one_of_gauge_le
+#print axioms Markov.traceSmoothingSandwich
+#print axioms Markov.traceSmoothingSandwich_finset
+#print axioms Markov.traceBallIndicator_intDirection
+#print axioms Markov.sum_traceBallIndicator_eq_count
+#print axioms Markov.traceLatticePoints_mono
+#print axioms Markov.traceSmoothedIndicator_intDirection_eq_zero
+#print axioms Markov.traceSmoothedLatticeCount
+#print axioms Markov.traceSmoothedLatticeCount_hasSum
+#print axioms Markov.traceSmoothedLatticeCount_eq_tsum
+#print axioms Markov.traceSmoothedLatticeCount_eq_sum
+#print axioms Markov.traceSmoothingSandwich_latticeCount
+#print axioms Markov.tracePlane_strictConvexSpace
+#print axioms Markov.strictConvex_traceUnitBall
+#print axioms Markov.strictConvex_traceEuclideanBall
+#print axioms Markov.traceEuclideanBall_supporting_points_unique
+#print axioms Markov.traceEuclideanSupportHeight_exists_unique
+#print axioms Markov.concave_sampling_affine_unit
+#print axioms Markov.concave_sampling_interval
+#print axioms Markov.sampling_interval_summable
+#print axioms Markov.concave_sampling_interval_with_summability
+#print axioms Markov.traceComplexBallIndicator
+#print axioms Markov.traceComplexBallIndicator_eq
+#print axioms Markov.traceComplexBallIndicator_integrable
+#print axioms Markov.traceComplexScaledMollifier
+#print axioms Markov.traceComplexScaledMollifier_integrable
+#print axioms Markov.traceComplexScaledMollifier_integral
+#print axioms Markov.trace_indicator_mollifier_fourier
+#print axioms Markov.traceComplexSmoothedIndicator_eq
+#print axioms Markov.trace_smoothed_indicator_fourier
+#print axioms Markov.traceEuclideanBall_dilate_volume
+#print axioms Markov.traceBallIndicator_integral
+#print axioms Markov.traceSmoothedIndicator_integral
+#print axioms Markov.traceSmoothedIndicator_fourier_zero
+#print axioms Markov.traceComplexSmoothedIndicator_hasCompactSupport
+#print axioms Markov.traceComplexSmoothedIndicator_contDiff
+#print axioms Markov.traceSmoothedSchwartz
+#print axioms Markov.traceSmoothedSchwartz_apply
+#print axioms Markov.traceComplexMollifier
+#print axioms Markov.traceComplexMollifier_integrable
+#print axioms Markov.fourier_real_const_mul_plane
+#print axioms Markov.traceComplexBallIndicator_dilate
+#print axioms Markov.trace_indicator_fourier_scaling
+#print axioms Markov.traceComplexScaledMollifier_eq
+#print axioms Markov.trace_mollifier_fourier_scaling
+#print axioms Markov.trace_smoothed_indicator_fourier_scaling
+#print axioms Markov.trace_mollifier_fourier_scaling_at_scaled_frequency
+
+-- Poisson continuation: exact two-dimensional summation and actual sections.
+#print axioms Markov.compact_pair_coordinate_window
+#print axioms Markov.compactPairPeriodization
+#print axioms Markov.compactPairPeriodization_contDiff
+#print axioms Markov.compactPairPeriodization_hasCompactSupport
+#print axioms Markov.compact_pair_periodization_poisson
+#print axioms Markov.compact_pair_slice_integrable
+#print axioms Markov.compact_pair_periodization_fourier
+#print axioms Markov.euclideanPairEquiv
+#print axioms Markov.euclideanPairContinuousLinearEquiv
+#print axioms Markov.euclideanPairEquiv_apply
+#print axioms Markov.euclideanPairContinuousLinearEquiv_apply
+#print axioms Markov.euclideanPairEquiv_apply_zero
+#print axioms Markov.euclideanPairEquiv_apply_one
+#print axioms Markov.euclideanPairEquiv_symm_apply
+#print axioms Markov.euclideanPairEquiv_int
+#print axioms Markov.euclideanPairEquiv_measurePreserving
+#print axioms Markov.euclideanPairEquiv_continuous
+#print axioms Markov.euclideanPairEquiv_symm_continuous
+#print axioms Markov.euclideanPairEquiv_contDiff
+#print axioms Markov.euclideanPairEquiv_symm_contDiff
+#print axioms Markov.euclideanPairEquiv_isClosedEmbedding
+#print axioms Markov.euclideanPairEquiv_norm_sq
+#print axioms Markov.euclideanPairEquiv_inner
+#print axioms Markov.euclideanPairEquiv_fourier_phase
+#print axioms Markov.integral_euclidean_eq_integral_pair
+#print axioms Markov.integral_euclidean_eq_integral_integral
+#print axioms Markov.summable_integer_quadratic_weight
+#print axioms Markov.schwartz_lattice_product_weight_bound
+#print axioms Markov.schwartz_lattice_norm_summable
+#print axioms Markov.schwartz_lattice_summable
+#print axioms Markov.schwartz_lattice_row_norm_summable
+#print axioms Markov.schwartz_lattice_row_summable
+#print axioms Markov.schwartz_lattice_tsum_prod
+#print axioms Markov.schwartz_fourier_lattice_norm_summable
+#print axioms Markov.schwartz_fourier_lattice_summable
+#print axioms Markov.schwartz_lattice_reindex_norm_summable
+#print axioms Markov.schwartz_lattice_tsum_reindex
+#print axioms Markov.traceEuclideanBall_near_support_localization
+#print axioms Markov.traceConvexCap_subset_ball_of_depth_le
+#print axioms Markov.traceConvexCap_diam_small
+#print axioms Markov.traceConvexCap_diam_tendsto_zero
+#print axioms Markov.orientedPlaneBasis
+#print axioms Markov.orientedPlaneBasis_zero
+#print axioms Markov.orientedPlaneBasis_one
+#print axioms Markov.orientedPlaneRotation
+#print axioms Markov.orientedPlaneRotation_apply
+#print axioms Markov.orientedPlaneCoordinates
+#print axioms Markov.orientedPlaneContinuousLinearEquiv
+#print axioms Markov.orientedPlaneContinuousLinearEquiv_apply
+#print axioms Markov.orientedPlaneCoordinates_apply
+#print axioms Markov.orientedPlaneCoordinates_measurePreserving
+#print axioms Markov.orientedPlaneCoordinates_continuous
+#print axioms Markov.orientedPlaneCoordinates_symm_continuous
+#print axioms Markov.orientedPlaneCoordinates_contDiff
+#print axioms Markov.orientedPlaneCoordinates_symm_contDiff
+#print axioms Markov.orientedPlaneCoordinates_isClosedEmbedding
+#print axioms Markov.orientedPlaneCoordinates_norm_sq
+#print axioms Markov.orientedPlaneCoordinates_inner
+#print axioms Markov.orientedPlaneCoordinates_inner_normal
+#print axioms Markov.orientedPlaneCoordinates_inner_transverse
+#print axioms Markov.orientedPlaneCoordinates_inner_smul_normal
+#print axioms Markov.orientedPlaneCoordinates_symm_apply
+#print axioms Markov.integral_orientedPlaneCoordinates
+#print axioms Markov.integral_orientedPlaneCoordinates_double
+#print axioms Markov.partialFourierPlane
+#print axioms Markov.hasCompactSupport_comp_euclideanPairEquiv
+#print axioms Markov.partialFourierPlane_eq_zero_of_not_mem_fst_tsupport
+#print axioms Markov.partialFourierPlane_hasCompactSupport
+#print axioms Markov.partialFourierPlane_continuous
+#print axioms Markov.partialFourierPlane_integrable
+#print axioms Markov.partialFourierPlane_isBigO
+#print axioms Markov.partialFourierPlane_fourier
+#print axioms Markov.traceSectionPoint
+#print axioms Markov.traceSection
+#print axioms Markov.traceSectionProfile
+#print axioms Markov.continuous_traceSectionPoint
+#print axioms Markov.traceSectionPoint_inner_normal
+#print axioms Markov.traceSectionPoint_inner_transverse
+#print axioms Markov.norm_le_trace_coordinate_norm_of_mem
+#print axioms Markov.traceSection_subset_Icc
+#print axioms Markov.isClosed_traceSection
+#print axioms Markov.isCompact_traceSection
+#print axioms Markov.convex_traceSection
+#print axioms Markov.traceSection_eq_Icc
+#print axioms Markov.traceSectionProfile_nonneg
+#print axioms Markov.traceSectionProfile_eq_integral_indicator
+#print axioms Markov.traceSectionProfile_eq_volume
+#print axioms Markov.traceSection_indicator_integrable
+#print axioms Markov.traceSection_eq_empty_of_outside_support
+#print axioms Markov.traceSectionProfile_eq_zero_of_outside_support
+#print axioms Markov.dist_traceSectionPoint
+#print axioms Markov.traceSection_subsingleton_of_support_value
+#print axioms Markov.traceSectionProfile_support_endpoints
+#print axioms Markov.traceSectionProfile_eq_length
+#print axioms Markov.traceSectionProfile_le_diam_of_image_subset
+#print axioms Markov.traceSectionProfile_le_cap_diam
+#print axioms Markov.traceSectionProfile_le_opposite_cap_diam
+#print axioms Markov.traceSectionProfile_continuousAt_support_endpoints
+#print axioms Markov.compact_schwartz_plane_poisson
+#print axioms Markov.traceProjectedMollifier
+#print axioms Markov.traceProjectedMollifier_nonneg
+#print axioms Markov.traceScaledMollifier_oriented_eq_zero_of_inv_le_abs_normal
+#print axioms Markov.traceScaledMollifier_oriented_eq_zero_of_inv_le_abs_transverse
+#print axioms Markov.traceProjectedMollifier_eq_zero_of_inv_le_abs
+#print axioms Markov.traceProjectedMollifier_support_subset
+#print axioms Markov.traceProjectedMollifier_tsupport_subset
+#print axioms Markov.traceProjectedMollifier_hasCompactSupport
+#print axioms Markov.traceProjectedMollifier_continuous
+#print axioms Markov.traceScaledMollifier_oriented_integrable
+#print axioms Markov.traceProjectedMollifier_integrable
+#print axioms Markov.traceProjectedMollifier_integral
+#print axioms Markov.traceSection_nonempty_of_mem_support
+#print axioms Markov.traceSection_convex_combination
+#print axioms Markov.concaveOn_traceSectionProfile
+#print axioms Markov.continuousOn_traceSectionProfile_interior
+#print axioms Markov.continuous_traceSectionProfile
+#print axioms Markov.traceSectionProfile_integrable
+#print axioms Markov.traceSectionProfile_integral
+#print axioms Markov.traceSectionProfile_fourier
+#print axioms Markov.trace_smoothed_fourier_lattice_norm_summable
+#print axioms Markov.trace_smoothed_fourier_lattice_summable
+#print axioms Markov.trace_smoothed_lattice_poisson
+#print axioms Markov.traceFourierLatticeTerm
+#print axioms Markov.traceFourierLatticeTerm_eq
+#print axioms Markov.traceFourierLatticeTerm_norm_summable
+#print axioms Markov.trace_smoothed_lattice_fourier_expansion
+#print axioms Markov.traceFourierLatticeTerm_zero
+#print axioms Markov.trace_smoothed_lattice_poisson_nonzero
+#print axioms Markov.trace_smoothed_lattice_discrepancy_le
+#print axioms Markov.traceEuclideanInradius_le_supportHeight
+#print axioms Markov.traceSection_support_interval_lt
+#print axioms Markov.traceSectionProfile_sampling
+#print axioms Markov.traceFourierError
+#print axioms Markov.traceFourierError_nonneg
+#print axioms Markov.smoothing_quadratic_mainterm_bounds
+#print axioms Markov.trace_lattice_discrepancy_fourier_bound
+
+-- Lemma 10 continuation: complete radial blocks and actual sampling.
+#print axioms Markov.summable_norm_positive_of_summable_norm
+#print axioms Markov.tsum_int_even_eq_zero_add_two_mul_tsum_positive
+#print axioms Markov.tsum_int_even_sub_zero_eq_two_mul_tsum_positive
+#print axioms Markov.fourier_even_of_even
+#print axioms Markov.normalProjection
+#print axioms Markov.normalProjection_integrable
+#print axioms Markov.normalProjection_fourier
+#print axioms Markov.normalProjection_ofReal
+#print axioms Markov.normalProjection_traceComplexScaledMollifier
+#print axioms Markov.traceProjectedMollifier_fourier
+#print axioms Markov.compact_shifted_sampling_window
+#print axioms Markov.smoothed_sampling_bound
+#print axioms Markov.one_le_norm_euclideanIntDirection
+#print axioms Markov.trace_radial_scale_pos_of_threshold
+#print axioms Markov.trace_radial_sampling_step_bounds
+#print axioms Markov.neg_mem_traceEuclideanBall_iff
+#print axioms Markov.neg_traceEuclideanBall
+#print axioms Markov.traceEuclideanSupportHeight_neg
+#print axioms Markov.traceConvexCap_neg_normal
+#print axioms Markov.traceConvexCap_diam_neg_normal
+#print axioms Markov.traceSectionProfile_even
+#print axioms Markov.traceProjectedMollifier_even
+#print axioms Markov.convolution_even_real
+#print axioms Markov.traceSectionProfile_hasCompactSupport
+#print axioms Markov.traceSmoothedSection
+#print axioms Markov.traceSmoothedSection_apply
+#print axioms Markov.traceSmoothedSection_nonneg
+#print axioms Markov.traceSmoothedSection_continuous
+#print axioms Markov.traceSmoothedSection_hasCompactSupport
+#print axioms Markov.traceSmoothedSection_integrable
+#print axioms Markov.traceSmoothedSection_integral
+#print axioms Markov.traceSmoothedSection_eq_plane_integral
+#print axioms Markov.traceSmoothedSection_complex_eq
+#print axioms Markov.traceSmoothedSection_fourier_product
+#print axioms Markov.traceSmoothedSection_fourier
+#print axioms Markov.traceSmoothedSection_fourier_at_ray
+#print axioms Markov.traceRadialMesh
+#print axioms Markov.traceRadialNormal
+#print axioms Markov.traceRadialFourierTerm
+#print axioms Markov.traceRadialMesh_pos
+#print axioms Markov.traceRadialNormal_norm
+#print axioms Markov.integerRay_injective
+#print axioms Markov.euclideanIntDirection_integerRay
+#print axioms Markov.trace_indicator_fourier_norm_le_area
+#print axioms Markov.traceScaledMollifierSchwartz
+#print axioms Markov.trace_mollifier_ray_norm_summable
+#print axioms Markov.traceRadialFourierTerm_norm_summable
+#print axioms Markov.traceRadialFourierTerm_summable
+#print axioms Markov.traceSmoothedSection_radial_fourier
+#print axioms Markov.traceSmoothedSection_radial_fourier_norm_summable
+#print axioms Markov.fourier_comp_positive_mul_real
+#print axioms Markov.compact_scaled_real_poisson
+#print axioms Markov.trace_radial_poisson
+#print axioms Markov.traceSmoothedSection_sampling_bound
+#print axioms Markov.traceSmoothedSection_sampling_cap_bound
+#print axioms Markov.traceRadialBlock
+#print axioms Markov.traceSmoothedSection_even
+#print axioms Markov.traceRadialFourierTerm_even
+#print axioms Markov.traceRadialFourierTerm_zero
+#print axioms Markov.traceRadialBlock_eq_discrepancy
+#print axioms Markov.trace_lemma10_first
+#print axioms Markov.trace_lemma10_covector
+#print axioms Markov.trace_lemma10_resolved
+#print axioms Markov.trace_lemma10_unresolved
+
+-- Corollary 11, primitive rays, quantitative tails and trace-ball lattice asymptotic.
+#print axioms Markov.corollary11_split_log_cutoff
+#print axioms Markov.corollary11_split_radius_one_le
+#print axioms Markov.finset_interval_packing_mul
+#print axioms Markov.finset_interval_packing
+#print axioms Markov.primitive_finset_card_le_of_real_angle_lifts
+#print axioms Markov.primitive_finset_card_le_trace_arc_neighborhood
+#print axioms Markov.primitive_finset_card_le_trace_component_neighborhood
+#print axioms Markov.finite_sum_component_div_le
+#print axioms Markov.finite_sum_reciprocal_square_le_of_quadratic_count
+#print axioms Markov.integerDirectionsEuclideanBox
+#print axioms Markov.integerDirectionsEuclideanUpTo
+#print axioms Markov.integerDirection_mem_euclideanBox
+#print axioms Markov.mem_integerDirectionsEuclideanUpTo
+#print axioms Markov.finite_integer_direction_count_le_quadratic
+#print axioms Markov.finite_integer_reciprocal_square_le_log
+#print axioms Markov.integerDirectionsEuclideanUpTo_reciprocal_square_le_log
+#print axioms Markov.inv_eq_integral_Ioi_rpow_neg_two
+#print axioms Markov.finite_sum_inv_le_of_count_quadratic
+#print axioms Markov.norm_integral_exp_imaginary_le
+#print axioms Markov.norm_setIntegral_Icc_exp_imaginary_le
+#print axioms Markov.norm_setIntegral_Icc_fourierChar_le
+#print axioms Markov.logarithmic_height_error_eq
+#print axioms Markov.logarithmic_height_error_isBigO
+#print axioms Markov.logarithmic_square_error_isBigO
+#print axioms Markov.PrimitiveIntegerRay
+#print axioms Markov.NonzeroIntegerDirection
+#print axioms Markov.coprime_integerPair_ne_zero
+#print axioms Markov.integerPair_gcd_pos
+#print axioms Markov.primitiveRayCompose
+#print axioms Markov.primitiveRayDecompose
+#print axioms Markov.primitiveRayCompose_decompose
+#print axioms Markov.primitiveRayCompose_gcd
+#print axioms Markov.primitiveRayDecompose_compose
+#print axioms Markov.primitiveRayEquiv
+#print axioms Markov.primitiveRayEquiv_apply
+#print axioms Markov.primitiveRayEquiv_symm_apply
+#print axioms Markov.primitiveRayEquiv_symm_val
+#print axioms Markov.primitiveRayEquiv_multiplicity
+#print axioms Markov.primitiveRayEquiv_factorization
+#print axioms Markov.exists_unique_positive_primitive_ray
+#print axioms Markov.eVariationOn_sum_Icc_le_of_ordered
+#print axioms Markov.slopeBoundaryArc_parameters_ordered_of_disjoint
+#print axioms Markov.traceSignedBoundaryVariation
+#print axioms Markov.signedTraceEuclideanRadialSection_unit_variation_ne_top
+#print axioms Markov.traceSignedBoundaryVariation_ne_top
+#print axioms Markov.traceComponentVariationConstant
+#print axioms Markov.traceComponentVariationConstant_pos
+#print axioms Markov.signedTraceCutoffArcLength_sum_le
+#print axioms Markov.signedTraceCutoffArcLength_toReal_sum_le
+#print axioms Markov.trace_actual_component_variation_sum_le
+#print axioms Markov.traceUnresolvedArcLength_sum_le_of_distinct_components
+#print axioms Markov.trace_radial_block_finite_sum_le
+#print axioms Markov.isTraceUnresolved_cutoff_iff
+#print axioms Markov.traceUnresolvedComponentData_cutoff_eq
+#print axioms Markov.traceUnresolvedComponent_cutoff_eq
+#print axioms Markov.traceUnresolvedArcLength_cutoff_eq
+#print axioms Markov.primitiveUnresolvedUpTo_filter_min
+#print axioms Markov.trace_unresolved_small_weighted_sum_eq
+#print axioms Markov.trace_unresolved_small_weighted_bound
+#print axioms Markov.trace_unresolved_small_weighted_bound_of_split_cutoff
+#print axioms Markov.finite_sum_component_div_le_of_representative_sums
+#print axioms Markov.inv_fourth_eq_four_integral_Ioi_rpow_neg_five
+#print axioms Markov.finite_sum_reciprocal_fourth_le_of_quadratic_count
+#print axioms Markov.finite_integer_fourth_power_tail_le
+#print axioms Markov.integer_fourth_power_tail_summable
+#print axioms Markov.integer_fourth_power_tail_le
+#print axioms Markov.primitiveEuclideanDirectionsUpTo
+#print axioms Markov.mem_primitiveEuclideanDirectionsUpTo
+#print axioms Markov.primitiveEuclideanDirectionsUpTo_filter_unresolved
+#print axioms Markov.primitiveEuclideanDirectionsUpTo_reciprocal_square_le_log
+#print axioms Markov.primitiveRayNatEquiv
+#print axioms Markov.primitiveRayNatEquiv_symm_val
+#print axioms Markov.primitiveRay_product_norm_summable
+#print axioms Markov.primitiveRay_inner_norm_summable
+#print axioms Markov.primitiveRay_inner_summable
+#print axioms Markov.primitiveRay_outer_tsum_norm_summable
+#print axioms Markov.primitiveRay_outer_norm_summable
+#print axioms Markov.primitiveRay_outer_summable
+#print axioms Markov.tsum_nonzero_eq_tsum_primitiveRay
+#print axioms Markov.tsum_sub_zero_eq_tsum_primitiveRay
+#print axioms Markov.theoremTwelveQ
+#print axioms Markov.theoremTwelveK
+#print axioms Markov.theoremTwelveH
+#print axioms Markov.theoremTwelveEta
+#print axioms Markov.theoremTwelveQ_tendsto
+#print axioms Markov.theoremTwelveK_tendsto
+#print axioms Markov.theoremTwelveH_tendsto
+#print axioms Markov.theoremTwelve_corner_exp
+#print axioms Markov.theoremTwelve_eventually_basic
+#print axioms Markov.theoremTwelve_eventually_positive
+#print axioms Markov.theoremTwelve_log_power_decay
+#print axioms Markov.theoremTwelve_smoothing_tail_identity
+#print axioms Markov.theoremTwelve_power_log_isLittleO
+#print axioms Markov.theoremTwelve_exponential_error_isLittleO
+#print axioms Markov.theoremTwelve_eventually_admissible
+#print axioms Markov.theoremTwelve_angular_error_isLittleO
+#print axioms Markov.theoremTwelve_total_error_isBigO
+#print axioms Markov.trace_component_sum_inv_le
+#print axioms Markov.trace_component_sum_inv_le_of_turn_bound
+#print axioms Markov.trace_component_sum_inv_le_exp_width
+#print axioms Markov.trace_indicator_fourier_decay
+#print axioms Markov.exists_trace_indicator_fourier_decay_constant
+#print axioms Markov.exists_trace_mollifier_fourier_decay_three
+#print axioms Markov.trace_fourier_lattice_term_decay_four
+#print axioms Markov.trace_fourier_tail_bound
+#print axioms Markov.euclideanIntDirection_zsmul
+#print axioms Markov.traceFourierLatticeTerm_integer_multiple
+#print axioms Markov.traceRadialBlock_eq_tsum_latticeTerms
+#print axioms Markov.traceRadialBlock_primitive_norm_summable
+#print axioms Markov.traceRadialBlock_primitive_summable
+#print axioms Markov.trace_smoothed_lattice_poisson_primitiveRays
+#print axioms Markov.trace_smoothed_lattice_discrepancy_primitiveRay_bound
+#print axioms Markov.trace_weighted_unresolved_annulus_bound
+#print axioms Markov.trace_weighted_unresolved_general
+#print axioms Markov.trace_radial_block_full_sum_le
+#print axioms Markov.trace_corollary11
+#print axioms Markov.trace_smoothed_lattice_discrepancy_primitive_cutoff_bound
+#print axioms Markov.trace_smoothed_lattice_sharp_parameter_bound
+#print axioms Markov.trace_lattice_sharp_parameter_bound
+#print axioms Markov.trace_lattice_asymptotic
+
+-- Actual modular action, congruence exclusions, covering and metric geometry.
+#print axioms Markov.sl_fixed_point_trace_identity
+#print axioms Markov.sl_fixed_point_trace_sq_le_four
+#print axioms Markov.sl_fixed_point_eq_one_or_neg_one_of_trace_sq_eq_four
+#print axioms Markov.hyperbolicTranslationLength
+#print axioms Markov.hyperbolicTranslationLength_nonneg
+#print axioms Markov.hyperbolicTranslationLength_le_displacement
+#print axioms Markov.le_hyperbolicTranslationLength
+#print axioms Markov.hyperbolicTranslationLength_eq_of_attained_lower_bound
+#print axioms Markov.hyperbolicTranslationLength_conjugate
+#print axioms Markov.hyperbolicPositiveDiagonal
+#print axioms Markov.hyperbolicPositiveDiagonal_coe_smul
+#print axioms Markov.hyperbolicPositiveDiagonal_im
+#print axioms Markov.hyperbolicPositiveDiagonal_re
+#print axioms Markov.hyperbolicPositiveDiagonal_displacement_lower_bound
+#print axioms Markov.hyperbolicVerticalAxis
+#print axioms Markov.hyperbolicVerticalAxis_isometry
+#print axioms Markov.hyperbolicPositiveDiagonal_axis_displacement
+#print axioms Markov.hyperbolicTranslationLength_positiveDiagonal
+#print axioms Markov.hyperbolicPositiveDiagonal_axis_action
+#print axioms Markov.hyperbolic_matrix_trace_conjugate
+#print axioms Markov.hyperbolicPositiveDiagonal_trace
+#print axioms Markov.hyperbolicTranslationLength_trace_of_diagonal_conjugacy
+#print axioms Markov.hyperbolicTranslationLength_attained_of_diagonal_conjugacy
+#print axioms Markov.modularInteger_smul_eq_real
+#print axioms Markov.modularInteger_isometry
+#print axioms Markov.modularInteger_isIsometricSMul
+#print axioms Markov.modularSubgroup_isometry
+#print axioms Markov.modularSubgroup_isIsometricSMul
+#print axioms Markov.modularSubgroup_dist_invariant
+#print axioms Markov.modularSubgroup_smul_continuous
+#print axioms Markov.modularSubgroup_smul_complex
+#print axioms Markov.paperSeedConjugator
+#print axioms Markov.paperSeedConjugator_det
+#print axioms Markov.paperSeedConjugator_mul_adjugate
+#print axioms Markov.paperSeedConjugator_adjugate_mul
+#print axioms Markov.paperSeedConjugator_conjugates_paperA
+#print axioms Markov.paperSeedConjugator_conjugates_paperB
+#print axioms Markov.paperSeedConjugator_inverse_conjugates_modularA
+#print axioms Markov.paperSeedConjugator_inverse_conjugates_modularB
+#print axioms Markov.paperSeedConjugator_trace_conjugate
+#print axioms Markov.paperSeedConjugator_trace_inverse_conjugate
+#print axioms Markov.paperGeneratorASL
+#print axioms Markov.paperGeneratorBSL
+#print axioms Markov.modularGeneratorASL
+#print axioms Markov.modularGeneratorBSL
+#print axioms Markov.paperSeedConjugatorSL
+#print axioms Markov.coe_paperGeneratorASL
+#print axioms Markov.coe_paperGeneratorBSL
+#print axioms Markov.coe_modularGeneratorASL
+#print axioms Markov.coe_modularGeneratorBSL
+#print axioms Markov.coe_paperSeedConjugatorSL
+#print axioms Markov.paperSeedConjugatorSL_conjugates_paperA
+#print axioms Markov.paperSeedConjugatorSL_conjugates_paperB
+#print axioms Markov.paperSeedConjugatorSL_inverse_conjugates_modularA
+#print axioms Markov.paperSeedConjugatorSL_inverse_conjugates_modularB
+#print axioms Markov.paperSeedConjugation
+#print axioms Markov.paperSeedConjugation_apply
+#print axioms Markov.paperSeedConjugation_paperA
+#print axioms Markov.paperSeedConjugation_paperB
+#print axioms Markov.paperSeedConjugation_symm_modularA
+#print axioms Markov.paperSeedConjugation_symm_modularB
+#print axioms Markov.paperSeedConjugation_trace
+#print axioms Markov.rational_pair_eq_smul_integer
+#print axioms Markov.homogeneous_pair_eq_on_integer_of_primitive
+#print axioms Markov.continuous_homogeneous_pair_ext_of_primitive
+#print axioms Markov.continuous_homogeneous_euclidean_ext_of_primitive
+#print axioms Markov.modularTraceSubgroup
+#print axioms Markov.paperTraceSubgroup
+#print axioms Markov.modularGeneratorASL_mem_modularTraceSubgroup
+#print axioms Markov.modularGeneratorBSL_mem_modularTraceSubgroup
+#print axioms Markov.modularTraceSubgroup_le_iff
+#print axioms Markov.paperTraceSubgroup_map_conjugation
+#print axioms Markov.mem_modularTraceSubgroup_conjugate_iff
+#print axioms Markov.modularTraceProjectiveSubgroup
+#print axioms Markov.modularTraceSubgroup_isometry
+#print axioms Markov.modularTraceSubgroup_dist_invariant
+#print axioms Markov.ModularTraceQuotient
+#print axioms Markov.modularTraceQuotientMk
+#print axioms Markov.modularTraceQuotientMk_eq_iff
+#print axioms Markov.modularTraceQuotientMk_eq_iff_ambient
+#print axioms Markov.modularTraceQuotientMk_smul
+#print axioms Markov.modularTraceQuotientMk_ambient_smul
+#print axioms Markov.modularTraceQuotientMk_surjective
+#print axioms Markov.modularTraceQuotientMk_isOpenQuotientMap
+#print axioms Markov.modularTraceQuotientMk_continuous
+#print axioms Markov.modularTraceQuotientMk_isOpenMap
+#print axioms Markov.modularTraceQuotientMk_isQuotientMap
+#print axioms Markov.modularTraceQuotientLift
+#print axioms Markov.modularTraceQuotientLift_mk
+#print axioms Markov.modularTraceQuotientLift_continuous
+#print axioms Markov.eq_traceEuclideanGauge_of_primitive_values
+#print axioms Markov.unitSublevel_eq_traceEuclideanBall_of_primitive_values
+#print axioms Markov.lattice_asymptotic_of_primitive_values
+#print axioms Markov.modularInteger_finite_preimage_verticalStrip
+#print axioms Markov.modularInteger_finite_preimage_compact
+#print axioms Markov.modularInteger_properlyDiscontinuousSMul
+#print axioms Markov.modularSubgroup_properlyDiscontinuousSMul
+#print axioms Markov.modularTraceQuotient_isT2
+#print axioms Markov.traceMatrixReduction
+#print axioms Markov.traceMatrixReduction_trace
+#print axioms Markov.traceModFourImage
+#print axioms Markov.traceModFourImage_one
+#print axioms Markov.traceModFourImage_mul
+#print axioms Markov.traceModFourImage_adjugate
+#print axioms Markov.traceModFourImage_neg_one
+#print axioms Markov.traceModFourImage_trace
+#print axioms Markov.traceModFourPreimage
+#print axioms Markov.modularTraceSubgroup_le_traceModFourPreimage
+#print axioms Markov.modularTraceSubgroup_reduction_four_mem
+#print axioms Markov.neg_one_not_mem_modularTraceSubgroup
+#print axioms Markov.modularTraceSubgroup_trace_ne_zero
+#print axioms Markov.modularTraceSubgroup_trace_ne_one
+#print axioms Markov.traceModThreeImage
+#print axioms Markov.traceModThreeImage_one
+#print axioms Markov.traceModThreeImage_mul
+#print axioms Markov.traceModThreeImage_adjugate
+#print axioms Markov.traceModThreeImage_trace_two
+#print axioms Markov.traceModThreePreimage
+#print axioms Markov.modularTraceSubgroup_le_traceModThreePreimage
+#print axioms Markov.modularTraceSubgroup_reduction_three_mem
+#print axioms Markov.trace_ne_neg_one_of_reduction_three_eq_one
+#print axioms Markov.modularTraceSubgroup_trace_ne_neg_one
+#print axioms Markov.modularTraceSubgroup_trace_not_elliptic
+#print axioms Markov.modularTraceSubgroup_trace_abs_ge_two
+#print axioms Markov.modularInteger_real_injective
+#print axioms Markov.modularTraceSubgroup_eq_one_of_fixed_point
+#print axioms Markov.modularTraceSubgroup_isCancelSMul
+#print axioms Markov.modularTraceSubgroup_stabilizer_eq_bot
+#print axioms Markov.modularTraceQuotientMk_isQuotientCoveringMap
+#print axioms Markov.modularTraceQuotientMk_isCoveringMap
+
+-- Actual modular action, congruence exclusions, covering and metric geometry.
+#print axioms Markov.exists_hyperbolicPositiveDiagonal_conjugacy_of_trace
+#print axioms Markov.exists_hyperbolicPositiveDiagonal_conjugacy
+#print axioms Markov.hyperbolicTranslationLength_trace_of_trace_gt_two
+#print axioms Markov.hyperbolicTranslationLength_attained_of_trace_gt_two
+#print axioms Markov.hyperbolic_neg_smul
+#print axioms Markov.hyperbolicTranslationLength_neg
+#print axioms Markov.hyperbolicTranslationLength_trace
+#print axioms Markov.hyperbolicTranslationLength_pos
+#print axioms Markov.hyperbolicTranslationLength_attained
+#print axioms Markov.hyperbolicTranslationLength_axis_of_trace_gt_two
+#print axioms Markov.hyperbolicTranslationLength_axis
+#print axioms Markov.modularInteger_mem_center_iff
+#print axioms Markov.modularIntegralProjectivization
+#print axioms Markov.modularIntegralProjectivization_eq_iff
+#print axioms Markov.modularIntegralProjectivization_mem_trace_iff
+#print axioms Markov.paperGeneratorASL_eq_commutator
+#print axioms Markov.paperGeneratorBSL_eq_commutator
+#print axioms Markov.modularGeneratorASL_eq_paperGeneratorASL_inv
+#print axioms Markov.modularGeneratorBSL_eq_paperGeneratorBSL_inv
+#print axioms Markov.S_conjugates_paperA
+#print axioms Markov.S_conjugates_paperB
+#print axioms Markov.S_inv_conjugates_paperA
+#print axioms Markov.S_inv_conjugates_paperB
+#print axioms Markov.T_conjugates_paperA
+#print axioms Markov.T_conjugates_paperB
+#print axioms Markov.T_inv_conjugates_paperA
+#print axioms Markov.T_inv_conjugates_paperB
+#print axioms Markov.paperGeneratorASL_mem_paperTraceSubgroup
+#print axioms Markov.paperGeneratorBSL_mem_paperTraceSubgroup
+#print axioms Markov.paperTraceSubgroup_le_iff
+#print axioms Markov.paperTraceSubgroup_eq_modularTraceSubgroup
+#print axioms Markov.S_mem_paperTraceSubgroup_normalizer
+#print axioms Markov.T_mem_paperTraceSubgroup_normalizer
+#print axioms Markov.paperTraceSubgroup_normal
+#print axioms Markov.modularTraceSubgroup_normal
+#print axioms Markov.modularQuotient_commutative_of_commutatorST_mem
+#print axioms Markov.modular_commutator_map_projectivization
+#print axioms Markov.modularTraceSubgroup_le_commutator
+#print axioms Markov.modularTraceGroupQuotient_commutative
+#print axioms Markov.commutator_le_modularTraceSubgroup
+#print axioms Markov.modularTraceSubgroup_eq_commutator
+#print axioms Markov.paperTraceSubgroup_eq_commutator
+#print axioms Markov.modularTraceProjectiveSubgroup_eq_commutator
+#print axioms Markov.modularTraceProjectiveSubgroup_normal
+#print axioms Markov.modularT_nat_pow_matrix
+#print axioms Markov.modularT_pow_not_mem_modularTraceSubgroup
+#print axioms Markov.modular_neg_T_pow_not_mem_modularTraceSubgroup
+#print axioms Markov.modularT_projectivization_pow_not_mem_trace
+#print axioms Markov.modularT_projective_pow_not_mem_trace
+#print axioms Markov.paperFreeGenerators
+#print axioms Markov.paperPingPongX
+#print axioms Markov.paperPingPongY
+#print axioms Markov.paperFreeGenerators_lift_injective
+#print axioms Markov.paperFreeGenerators_range
+#print axioms Markov.paperFreeGenerators_lift_range
+#print axioms Markov.paperFreeGroupLift
+#print axioms Markov.paperFreeGroupLift_injective
+#print axioms Markov.paperFreeGroupLift_surjective
+#print axioms Markov.paperTraceFreeGroupEquiv
+#print axioms Markov.paperTraceFreeGroupBasis
+#print axioms Markov.paperTraceFreeGroupBasis_zero
+#print axioms Markov.paperTraceFreeGroupBasis_one
+#print axioms Markov.modularTraceSubgroup_isFreeGroup
+#print axioms Markov.primitiveSeedHolonomy
+#print axioms Markov.primitiveSeedHolonomy_coe
+#print axioms Markov.primitiveSeedHolonomy_real_trace
+#print axioms Markov.primitiveSeedHolonomy_real_trace_gt_two
+#print axioms Markov.primitiveSeedLength_eq_metricTranslationLength
+#print axioms Markov.primitiveSeedHolonomy_metric_length_attained
+#print axioms Markov.primitiveSeedHolonomy_metric_axis
+#print axioms Markov.quadrantPrimitiveSeedLength_eq_metricTranslationLength
+#print axioms Markov.SeededFarey.quadrant_primitiveSeedHolonomy_left
+#print axioms Markov.SeededFarey.quadrant_primitiveSeedHolonomy_right
+#print axioms Markov.SeededFarey.quadrant_metricTranslationLengths
+#print axioms Markov.modularProjectiveActionHom
+#print axioms Markov.modularProjective_mulAction
+#print axioms Markov.modularProjectivization_smul
+#print axioms Markov.modularProjective_isometry
+#print axioms Markov.modularTraceProjective_orbit_iff
+#print axioms Markov.modularTraceQuotientMk_eq_iff_projective_commutator
+#print axioms Markov.ModularTraceProjectiveQuotient
+#print axioms Markov.modularTraceProjectiveQuotientMap
+#print axioms Markov.modularTraceProjectiveQuotientS
+#print axioms Markov.modularTraceProjectiveQuotientT
+#print axioms Markov.modularTraceProjectiveQuotientMap_surjective
+#print axioms Markov.modularTraceProjectiveQuotient_commutative
+#print axioms Markov.modularTraceProjectiveQuotientMap_neg_one
+#print axioms Markov.modularIntegral_S_pow_two
+#print axioms Markov.modularIntegral_ST_pow_three
+#print axioms Markov.modularTraceProjectiveQuotientS_pow_two
+#print axioms Markov.modularTraceProjectiveQuotientST_pow_three
+#print axioms Markov.modularTraceProjectiveQuotientS_eq_inv_T_pow_three
+#print axioms Markov.modularTraceProjectiveQuotientT_pow_six
+#print axioms Markov.modularTraceProjectiveQuotient_generators
+#print axioms Markov.modularTraceProjectiveQuotient_zpowers_T_eq_top
+#print axioms Markov.modularTraceProjectiveQuotient_isCyclic
+#print axioms Markov.modularTraceProjectiveQuotient_finite
+#print axioms Markov.modularTraceProjectiveQuotient_card_le_six
+#print axioms Markov.modularTraceProjectiveQuotientT_pow_ne_one
+#print axioms Markov.modularTraceProjectiveQuotientT_orderOf
+#print axioms Markov.modularTraceProjectiveQuotient_card
+#print axioms Markov.modularTraceProjectiveSubgroup_index
+#print axioms Markov.modularProjectiveCommutator_index
+#print axioms Markov.paperCuspHolonomy
+#print axioms Markov.paperCuspHolonomy_mem_modularTraceSubgroup
+#print axioms Markov.coe_paperCuspHolonomy
+#print axioms Markov.paperCuspHolonomy_eq_neg_conjugate_T_pow_six
+#print axioms Markov.paperCuspHolonomy_trace
+#print axioms Markov.paperCuspHolonomy_ne_one
+#print axioms Markov.paperCuspHolonomy_ne_neg_one
+#print axioms Markov.paperCuspHolonomy_isParabolic
+#print axioms Markov.paperCuspHolonomy_projective
+#print axioms Markov.paperCuspHolonomy_smul_S
+#print axioms Markov.paperCuspHolonomy_no_fixed_point
+#print axioms Markov.modular_T_pow_six_displacement_bound
+#print axioms Markov.paperCuspHolonomy_translationLength_zero
+#print axioms Markov.modularInteger_center_card
+#print axioms Markov.modularTraceSubgroup_inf_center
+#print axioms Markov.modularTraceSubgroup_relIndex_center
+#print axioms Markov.modularTraceSubgroup_sup_center_index
+#print axioms Markov.modularTraceSubgroup_index
+#print axioms Markov.modularIntegralCommutator_index
+#print axioms Markov.paperTraceSubgroup_index
+
+-- Actual modular action, congruence exclusions, covering and metric geometry.
+#print axioms Markov.coveringLoopEndpoint
+#print axioms Markov.coveringLoopEndpoint_mk_val
+#print axioms Markov.coveringLoopEndpoint_projectedPath
+#print axioms Markov.coveringLoopEndpoint_surjective
+#print axioms Markov.coveringLoopEndpoint_injective
+#print axioms Markov.coveringLoopEndpointEquiv
+#print axioms Markov.coveringLoopEndpointEquiv_apply
+#print axioms Markov.coveringFundamentalGroupEndpointEquiv
+#print axioms Markov.freeBasisFareyLeftAutomorphism
+#print axioms Markov.freeBasisFareyRightAutomorphism
+#print axioms Markov.freeBasisFareyLeft
+#print axioms Markov.freeBasisFareyRight
+#print axioms Markov.freeBasisFareyLeft_zero
+#print axioms Markov.freeBasisFareyLeft_one
+#print axioms Markov.freeBasisFareyRight_zero
+#print axioms Markov.freeBasisFareyRight_one
+#print axioms Markov.freeBasisInvertAt
+#print axioms Markov.freeBasisInvertAt_apply
+#print axioms Markov.freeBasisSwap
+#print axioms Markov.freeBasisSwap_zero
+#print axioms Markov.freeBasisSwap_one
+#print axioms Markov.modularTraceQuotient_T_pow_representative
+#print axioms Markov.modularTrace_action_coset_decomposition
+#print axioms Markov.modularTrace_six_fd_coverage
+#print axioms Markov.modularTraceClosedCell
+#print axioms Markov.modularTraceOpenCell
+#print axioms Markov.modularTraceSixRegion
+#print axioms Markov.modularTraceSixOpenRegion
+#print axioms Markov.modularStandardClosedCell_isClosed
+#print axioms Markov.modularStandardOpenCell_isOpen
+#print axioms Markov.modularTraceClosedCell_isClosed
+#print axioms Markov.modularTraceOpenCell_isOpen
+#print axioms Markov.modularTraceSixRegion_isClosed
+#print axioms Markov.modularTraceSixOpenRegion_isOpen
+#print axioms Markov.modularTraceOpenCell_subset_closedCell
+#print axioms Markov.modularTraceSixOpenRegion_subset_sixRegion
+#print axioms Markov.modularTraceSixRegion_coverage
+#print axioms Markov.modularTraceSixRegion_smul_iUnion_eq_univ
+#print axioms Markov.modularTraceQuotient_fd_representative
+#print axioms Markov.modularInteger_eq_one_or_neg_one_of_mem_fdo_smul_mem_fdo
+#print axioms Markov.modularTrace_openCell_orbit_separation
+#print axioms Markov.modularTraceQuotientMk_openCell_eq_iff
+#print axioms Markov.modularTraceQuotientMk_injOn_sixOpenRegion
+#print axioms Markov.modularTraceOpenCell_projected_pairwise_disjoint
+#print axioms Markov.ModularTraceFibre
+#print axioms Markov.modularTraceFibreOrbit
+#print axioms Markov.modularTraceFibreOrbit_injective
+#print axioms Markov.modularTraceFibreOrbit_surjective
+#print axioms Markov.modularTraceFibreEquiv
+#print axioms Markov.modularTraceFibreEquiv_apply
+#print axioms Markov.modularTraceFibreTranslate
+#print axioms Markov.modularTraceFibreTranslate_val
+#print axioms Markov.modularTraceFibreEquiv_mul
+#print axioms Markov.modularTraceMonodromy_translate
+#print axioms Markov.modularTrace_orbit_isClosed
+#print axioms Markov.modularTraceOrbitDist
+#print axioms Markov.modularTraceOrbitDist_nonneg
+#print axioms Markov.modularTraceOrbitDist_le
+#print axioms Markov.modularTraceOrbitDist_attained
+#print axioms Markov.modularTraceOrbitDist_smul_left
+#print axioms Markov.modularTraceOrbitDist_smul_right
+#print axioms Markov.modularTraceOrbitDist_comm
+#print axioms Markov.modularTraceOrbitDist_self
+#print axioms Markov.modularTraceOrbitDist_triangle
+#print axioms Markov.modularTraceOrbitDist_eq_zero_iff
+#print axioms Markov.modularTraceQuotientDist
+#print axioms Markov.modularTraceQuotientDist_mk
+#print axioms Markov.modularTraceQuotientDist_isOpen_iff
+#print axioms Markov.modularTraceQuotientMetricSpace
+#print axioms Markov.modularTraceQuotient_dist_mk
+#print axioms Markov.modularTraceQuotientMk_dist_le
+#print axioms Markov.modularTraceQuotient_dist_attained
+#print axioms Markov.modularTraceQuotientMk_local_dist_eq
+#print axioms Markov.modularTraceQuotientMk_local_isometry
+#print axioms Markov.modularTraceQuotient_dist_eq_sInf
+#print axioms Markov.modularTraceQuotientMk_image_ball
+#print axioms Markov.modularTraceQuotientMk_image_closedBall
+#print axioms Markov.modularTraceQuotientProperSpace
+#print axioms Markov.modularTraceQuotientCompleteSpace
+#print axioms Markov.paperTraceAbelianizationEquiv
+#print axioms Markov.paperTraceAbelianizationEquiv_basis_zero
+#print axioms Markov.paperTraceAbelianizationEquiv_basis_one
+#print axioms Markov.paperTraceAbelianizationEquiv_generatorA
+#print axioms Markov.paperTraceAbelianizationEquiv_generatorB
+#print axioms Markov.paperTraceAbelianizationCoordinates
+#print axioms Markov.paperTraceAbelianizationCoordinates_basis_zero
+#print axioms Markov.paperTraceAbelianizationCoordinates_basis_one
+#print axioms Markov.modularClosedGeodesicPeriod
+#print axioms Markov.modularHyperbolicAxis
+#print axioms Markov.modularHyperbolicAxis_isometry
+#print axioms Markov.modularHyperbolicAxis_action
+#print axioms Markov.modularClosedGeodesicPeriod_pos
+#print axioms Markov.modularClosedGeodesic
+#print axioms Markov.modularClosedGeodesic_periodic
+#print axioms Markov.modularClosedGeodesic_continuous
+#print axioms Markov.modularClosedGeodesic_lipschitz
+#print axioms Markov.modularClosedGeodesic_local_dist_eq
+#print axioms Markov.variation_eq_sub_of_local_unit_speed
+#print axioms Markov.modularClosedGeodesic_eVariation
+#print axioms Markov.modularClosedGeodesic_period_length
+#print axioms Markov.modularHyperbolicAxis_period_endpoint
+#print axioms Markov.modularHyperbolicAxisSegment
+#print axioms Markov.modularClosedGeodesicLoop
+#print axioms Markov.modularClosedGeodesicLoop_lift
+#print axioms Markov.modularClosedGeodesicPeriod_trace
+#print axioms Markov.modularTraceLoopDeckEquiv
+#print axioms Markov.modularTraceLoopDeckEquiv_fibre
+#print axioms Markov.modularTraceLoopDeckEquiv_trans
+#print axioms Markov.modularTraceFundamentalGroupEquiv
+#print axioms Markov.modularTraceFundamentalGroupEquiv_apply
+#print axioms Markov.modularTraceDeckLoop
+#print axioms Markov.modularTraceFundamentalGroupEquiv_deckLoop
+#print axioms Markov.modularTraceFundamentalGroupBasis
+#print axioms Markov.modularTraceFundamentalGroupBasis_generator
+#print axioms Markov.PaperWordCoordinates
+#print axioms Markov.PaperWordCoordinates.mul
+#print axioms Markov.PaperWordCoordinates.inv
+#print axioms Markov.modularGeneratorA_paperWordCoordinates
+#print axioms Markov.modularGeneratorB_paperWordCoordinates
+#print axioms Markov.SeededFarey.paperWordCoordinates
+#print axioms Markov.quadrantSeed_paperWordCoordinates
+#print axioms Markov.SeededFarey.quadrant_paperWordCoordinates
+#print axioms Markov.primitive_exists_paperWordCoordinates
+#print axioms Markov.quadrantPrimitiveSeedMatrix_paperWordCoordinates
+#print axioms Markov.quadrantPrimitiveSeedHolonomy_mem
+#print axioms Markov.quadrantPrimitiveTraceWord
+#print axioms Markov.quadrantPrimitiveTraceWord_coordinates
+#print axioms Markov.modularTraceSeedConjugation
+#print axioms Markov.modularTraceSeedConjugation_coe
+#print axioms Markov.modularTraceSeedConjugation_basis
+#print axioms Markov.modularTraceSeedConjugation_inv_basis
+#print axioms Markov.modularTraceForwardLoop
+#print axioms Markov.modularTraceForwardLoop_eq_deckLoop
+#print axioms Markov.modularTraceForwardLoop_apply
+#print axioms Markov.modularTraceMarkedFundamentalGroupEquiv
+#print axioms Markov.modularTraceMarkedFundamentalGroupEquiv_forwardLoop
+#print axioms Markov.modularTraceMarkedFundamentalGroupEquiv_forward_basis
+#print axioms Markov.modularTraceMarkedFundamentalGroupBasis
+#print axioms Markov.modularTraceMarkedFundamentalGroupBasis_generator
+#print axioms Markov.modularTraceMarkedFundamentalGroupEquiv_forward_zero
+#print axioms Markov.modularTraceMarkedFundamentalGroupEquiv_forward_one
+#print axioms Markov.modularTraceForwardLoop_zero_apply
+#print axioms Markov.modularTraceForwardLoop_one_apply
+#print axioms Markov.paperTraceAbelianizationCoordinates_seedConjugation
+#print axioms Markov.modularTraceMarkedCoordinates
+#print axioms Markov.modularTraceMarkedCoordinates_forwardLoop
+#print axioms Markov.modularTraceMarkedCoordinates_basis_zero
+#print axioms Markov.modularTraceMarkedCoordinates_basis_one
+#print axioms Markov.modularTraceMarkedAbelianizationEquiv
+#print axioms Markov.modularTraceMarkedAbelianizationEquiv_of
+#print axioms Markov.paperPrimitiveHolonomy
+#print axioms Markov.paperPrimitiveHolonomy_coordinates
+#print axioms Markov.paperPrimitiveHolonomy_trace
+#print axioms Markov.paperPrimitiveHolonomy_hyperbolic
+#print axioms Markov.paperPrimitiveHolonomy_period
+#print axioms Markov.paperPrimitiveClosedGeodesic
+#print axioms Markov.paperPrimitiveClosedGeodesic_periodic
+#print axioms Markov.paperPrimitiveClosedGeodesic_period_length
+#print axioms Markov.modularTraceMarkedCoordinates_projectedPath
+#print axioms Markov.paperPrimitiveClosedGeodesicLoop_coordinates
+#print axioms Markov.TraceFreeBasisPair
+#print axioms Markov.quadrantSeed_freeBasisPair
+#print axioms Markov.SeededFarey.freeBasisPair
+#print axioms Markov.SeededFarey.quadrant_freeBasisPair
+#print axioms Markov.TraceFreeBasisGenerator
+#print axioms Markov.quadrantPrimitiveTraceWord_freeBasisGenerator
+#print axioms Markov.TraceFreeBasisGenerator.map
+#print axioms Markov.paperPrimitiveHolonomy_freeBasisGenerator
+
+-- Actual modular action, congruence exclusions, covering and metric geometry.
+#print axioms Markov.modular_normSq_int_linear
+#print axioms Markov.modularClosedDomain_twice_re_abs_le
+#print axioms Markov.modularClosedDomain_normSq_linear_ge_one
+#print axioms Markov.modularClosedDomain_normSq_denom_ge_one
+#print axioms Markov.modularClosedDomain_im_smul_le
+#print axioms Markov.modularClosedReturn_im_eq
+#print axioms Markov.modularClosedReturn_normSq_denom_eq_one
+#print axioms Markov.modularClosedReturn_abs_c_le_one
+#print axioms Markov.modularClosedDomain_unit_translate_bounds
+#print axioms Markov.modular_S_re_of_normSq_eq_one
+#print axioms Markov.modularClosedReturn_c_one_data
+#print axioms Markov.modularClosedReturnWords
+#print axioms Markov.modularClosedReturn_c_one_mem
+#print axioms Markov.modularInteger_eq_signed_T_zpow_of_c_eq_zero
+#print axioms Markov.modularClosedReturn_c_zero_word
+#print axioms Markov.modularClosedReturn_signed_word
+#print axioms Markov.modular_T_pow_three_mul_S
+#print axioms Markov.modular_T_pow_three_mul_S_mem_modularTraceSubgroup
+#print axioms Markov.neg_T_pow_six_mem_modularTraceSubgroup
+#print axioms Markov.modularCircleSideWord
+#print axioms Markov.modularCircleSideWord_coe
+#print axioms Markov.modularCircleSideWord_smul
+#print axioms Markov.modularCircleSideWord_quotient
+#print axioms Markov.modularVerticalSideWord
+#print axioms Markov.modularVerticalSideWord_coe
+#print axioms Markov.modularVerticalSideWord_smul
+#print axioms Markov.modularVerticalSideWord_quotient
+#print axioms Markov.paperIdealQuadrilateral
+#print axioms Markov.paperRightVerticalSide
+#print axioms Markov.paperLeftVerticalSide
+#print axioms Markov.paperLeftSemicircleSide
+#print axioms Markov.paperRightSemicircleSide
+#print axioms Markov.paperLeftSemicircleSide_re_bounds
+#print axioms Markov.paperRightSemicircleSide_re_bounds
+#print axioms Markov.paperGeneratorA_moebius
+#print axioms Markov.paperGeneratorB_moebius
+#print axioms Markov.paperGeneratorA_circle_identity
+#print axioms Markov.paperGeneratorB_circle_identity
+#print axioms Markov.paperGeneratorA_side_iff
+#print axioms Markov.paperGeneratorB_side_iff
+#print axioms Markov.paperGeneratorA_inv_side_iff
+#print axioms Markov.paperGeneratorB_inv_side_iff
+#print axioms Markov.paperGeneratorA_sideHomeomorph
+#print axioms Markov.paperGeneratorB_sideHomeomorph
+#print axioms Markov.paperGeneratorA_quotient
+#print axioms Markov.paperGeneratorB_quotient
+#print axioms Markov.modularCircleSideWord_inv_smul
+#print axioms Markov.paperGeneratorA_sideHomeomorph_apply
+#print axioms Markov.paperGeneratorA_sideHomeomorph_symm_apply
+#print axioms Markov.paperGeneratorB_sideHomeomorph_apply
+#print axioms Markov.paperGeneratorB_sideHomeomorph_symm_apply
+#print axioms Markov.paperGeneratorA_image_side
+#print axioms Markov.paperGeneratorB_image_side
+#print axioms Markov.paperRightVerticalSide_subset_quadrilateral
+#print axioms Markov.paperLeftVerticalSide_subset_quadrilateral
+#print axioms Markov.paperLeftSemicircleSide_subset_quadrilateral
+#print axioms Markov.paperRightSemicircleSide_subset_quadrilateral
+#print axioms Markov.pathSimplexMap
+#print axioms Markov.pathSimplexMap_apply
+#print axioms Markov.triangleFaceMap
+#print axioms Markov.triangleFaceMap_zero_coordinates
+#print axioms Markov.triangleFaceMap_one_coordinates
+#print axioms Markov.triangleFaceMap_two_coordinates
+#print axioms Markov.pathConcatTriangleMap
+#print axioms Markov.pathConcatTriangleMap_face_zero
+#print axioms Markov.pathConcatTriangleMap_face_one
+#print axioms Markov.pathConcatTriangleMap_face_two
+#print axioms Markov.simplexTailTime
+#print axioms Markov.simplexLastTime
+#print axioms Markov.triangleLowerSquare
+#print axioms Markov.triangleUpperSquare
+#print axioms Markov.triangleLowerSquare_face_zero
+#print axioms Markov.triangleLowerSquare_face_one
+#print axioms Markov.triangleLowerSquare_face_two
+#print axioms Markov.pathHomotopyDiagonal
+#print axioms Markov.pathHomotopyLowerTriangle
+#print axioms Markov.pathHomotopyUpperTriangle
+#print axioms Markov.pathHomotopyLowerTriangle_face_zero
+#print axioms Markov.pathHomotopyLowerTriangle_face_one
+#print axioms Markov.pathHomotopyLowerTriangle_face_two
+#print axioms Markov.pathHomotopyUpperTriangle_face_zero
+#print axioms Markov.pathHomotopyUpperTriangle_face_one
+#print axioms Markov.pathHomotopyUpperTriangle_face_two
+#print axioms Markov.integralSingularChainComplex
+#print axioms Markov.integralSingularH1
+#print axioms Markov.IntegralSingularSimplex
+#print axioms Markov.singularSimplexChain
+#print axioms Markov.singularSimplexOfMap
+#print axioms Markov.singularSimplexOfMap_face
+#print axioms Markov.singularPointSimplex
+#print axioms Markov.singularPathSimplex
+#print axioms Markov.singularPointChain
+#print axioms Markov.singularPathChain
+#print axioms Markov.singularFaceHom
+#print axioms Markov.integralSingularChainComplex_d_eq
+#print axioms Markov.singularFaceHom_simplexChain
+#print axioms Markov.singularPathSimplex_face_zero
+#print axioms Markov.singularPathSimplex_face_one
+#print axioms Markov.singularSimplexChain_boundary_one
+#print axioms Markov.singularSimplexChain_boundary_two
+#print axioms Markov.singularPathChain_boundary
+#print axioms Markov.singularLoopChain_boundary
+#print axioms Markov.singularLoopCycle
+#print axioms Markov.singularLoopCycle_iCycles
+#print axioms Markov.singularLoopClass
+#print axioms Markov.singularConcatTriangleChain
+#print axioms Markov.singularConcatTriangleChain_boundary
+#print axioms Markov.singularHomotopyLowerChain
+#print axioms Markov.singularHomotopyUpperChain
+#print axioms Markov.singularHomotopyLowerChain_boundary
+#print axioms Markov.singularHomotopyUpperChain_boundary
+#print axioms Markov.singularHomotopyChain_difference_boundary
+#print axioms Markov.singularConstantTwoChain
+#print axioms Markov.singularConstantTwoChain_boundary
+#print axioms Markov.singularHomotopyDifferenceChain
+#print axioms Markov.singularHomotopyDifferenceChain_boundary
+#print axioms Markov.singularLoopClass_homotopy
+#print axioms Markov.singularLoopClass_refl
+#print axioms Markov.singularLoopClass_trans
+
+-- Actual modular action, congruence exclusions, covering and metric geometry.
+#print axioms Markov.modular_normSq_T_smul
+#print axioms Markov.modular_normSq_T_inv_smul
+#print axioms Markov.modular_normSq_S_smul
+#print axioms Markov.modularClosedDomain_T_return_iff
+#print axioms Markov.modularClosedDomain_T_inv_return_iff
+#print axioms Markov.modularClosedDomain_S_return_iff
+#print axioms Markov.modularClosedDomain_T_unit_iff
+#print axioms Markov.modularClosedDomain_T_inv_unit_iff
+#print axioms Markov.modularClosedReturn_TST_unit
+#print axioms Markov.modularClosedDomain_TS_return_iff
+#print axioms Markov.modularClosedDomain_T_inv_S_return_iff
+#print axioms Markov.modularClosedDomain_ST_return_iff
+#print axioms Markov.modularClosedDomain_ST_inv_return_iff
+#print axioms Markov.modularClosedDomain_TST_return_iff
+#print axioms Markov.modularClosedDomain_T_inv_S_T_inv_return_iff
+#print axioms Markov.ModularClosedAdmissible
+#print axioms Markov.ModularClosedAdmissible.word_mem
+#print axioms Markov.ModularClosedAdmissible.returns
+#print axioms Markov.modularClosedDomain_return_admissible_of_word
+#print axioms Markov.modularClosedDomain_word_return_iff_admissible
+#print axioms Markov.modularClosedDomain_neg_return_iff
+#print axioms Markov.modularClosedDomain_signed_return_iff
+#print axioms Markov.singularLoopClassQuotient
+#print axioms Markov.singularLoopClassQuotient_mk
+#print axioms Markov.singularLoopClassQuotient_refl
+#print axioms Markov.singularLoopClassQuotient_trans
+#print axioms Markov.singularHurewiczMap
+#print axioms Markov.singularHurewiczMap_loop
+#print axioms Markov.singularHurewiczAbelianization
+#print axioms Markov.singularHurewiczAbelianization_of
+#print axioms Markov.singularHurewiczAbelianization_loop
+#print axioms Markov.singularHurewiczAbelianizationAdd
+#print axioms Markov.singularHurewiczAbelianizationAdd_loop
+
+-- Actual modular action, congruence exclusions, covering and metric geometry.
+#print axioms Markov.modularClosedReturnWordAt
+#print axioms Markov.modularClosedReturnResidue
+#print axioms Markov.modularTraceProjectiveQuotientT_inv_eq_pow_five
+#print axioms Markov.modularTraceProjectiveQuotientS_eq_T_pow_three
+#print axioms Markov.modularTraceProjectiveQuotientT_pow_mod_six
+#print axioms Markov.modularClosedReturnWordAt_mem
+#print axioms Markov.modularClosedReturnWords_mem_iff
+#print axioms Markov.modularClosedReturnWordAt_quotient
+#print axioms Markov.modularTraceProjectiveQuotientMap_neg
+#print axioms Markov.modularTraceProjectiveQuotientMap_eq_one_iff
+#print axioms Markov.modularTraceProjectiveQuotientMap_subgroup
+#print axioms Markov.modularTraceSixCell_action_iff
+#print axioms Markov.modularTraceSixCell_quotient_eq_iff
+#print axioms Markov.modularTraceSixCell_closed_quotient_eq_iff
+#print axioms Markov.modularTraceSixCell_label_pow_iff
+#print axioms Markov.modularTraceSixCell_closed_quotient_eq_iff_residue
+#print axioms Markov.modularTraceSixCell_closed_quotient_eq_iff_word_index
+#print axioms Markov.singularSimplexMap
+#print axioms Markov.singularSimplexMap_ofMap
+#print axioms Markov.singularSimplexOfMap_map
+#print axioms Markov.singularSimplexVertex
+#print axioms Markov.standardOneSimplexPath
+#print axioms Markov.singularEdgePath
+#print axioms Markov.singularEdgePath_apply
+#print axioms Markov.singularPathSimplex_edgePath
+#print axioms Markov.singularPathChain_edgePath
+#print axioms Markov.singularSimplexVertex_path_zero
+#print axioms Markov.singularSimplexVertex_path_one
+#print axioms Markov.singularEdgePath_path_toContinuousMap
+#print axioms Markov.singularSimplexChain_boundary_edge
+#print axioms Markov.singularPointSimplex_vertex
+#print axioms Markov.singularSimplexMap_face
+#print axioms Markov.singularSimplexVertex_face
+#print axioms Markov.standardTriangleEdgePath
+#print axioms Markov.standardTriangleEdgePath_concat_homotopic
+#print axioms Markov.singularTriangleEdgePath
+#print axioms Markov.singularTriangleEdgePath_concat_homotopic
+#print axioms Markov.singularEdgePath_face_toContinuousMap
+#print axioms Markov.singularOrientedFacePath
+#print axioms Markov.singularOrientedFacePath_eq
+#print axioms Markov.singularOrientedFacePath_concat_homotopic
+
+-- Actual modular action, congruence exclusions, covering and metric geometry.
+#print axioms Markov.BasedLoopAbelianGroup
+#print axioms Markov.loopAbelianClass
+#print axioms Markov.loopAbelianClass_trans
+#print axioms Markov.loopAbelianClass_symm
+#print axioms Markov.basedPathLoopQuotient
+#print axioms Markov.basedPathLoopQuotient_trans
+#print axioms Markov.basedPathAbelianization
+#print axioms Markov.basedPathAbelianization_trans
+#print axioms Markov.basedPathAbelianization_homotopic
+#print axioms Markov.basedPathAbelianization_cast
+#print axioms Markov.basedPathAbelianization_ext
+#print axioms Markov.basedPathAbelianization_triangle
+#print axioms Markov.basedPathAbelianization_loop
+#print axioms Markov.modular_I_mem_fd
+#print axioms Markov.modularIntegral_smul_I_im_le_one
+#print axioms Markov.modularTrace_im_le_exp_quotient_dist
+#print axioms Markov.modularTrace_log_im_le_quotient_dist
+#print axioms Markov.modularTrace_im_le_exp_of_quotient_dist_le
+#print axioms Markov.modularTruncatedCell_ambient_im_pos
+#print axioms Markov.modularStandardCell_im_le_isCompact
+#print axioms Markov.modularStandardCell_subtype_im_le_isCompact
+#print axioms Markov.ModularTraceSixCellSpace
+#print axioms Markov.modularTraceSixCellMap
+#print axioms Markov.modularTraceSixCellMap_continuous
+#print axioms Markov.modularTraceSixCellMap_surjective
+#print axioms Markov.modularTraceSixCellMap_isCompact_preimage
+#print axioms Markov.modularTraceSixCellMap_isProperMap
+#print axioms Markov.modularTraceSixCellMap_isQuotientMap
+#print axioms Markov.modularTraceSixCellBoundarySetoid
+#print axioms Markov.modularTraceSixCellBoundarySetoid_iff
+#print axioms Markov.ModularTraceSixCellGluing
+#print axioms Markov.modularTraceSixCellGluingHomeomorph
+#print axioms Markov.modularTraceSixCellGluingHomeomorph_mk
+#print axioms Markov.singularReversalTwoChain
+#print axioms Markov.singularReversalTwoChain_boundary
+#print axioms Markov.singularBasedLoopTwoChain
+#print axioms Markov.singularBasedLoopTwoChain_boundary
+#print axioms Markov.singularEdgeLoopClass
+#print axioms Markov.singularEdgeLoopCoefficient
+#print axioms Markov.singularOneChainToAbelianization
+#print axioms Markov.singularOneChainToAbelianization_simplex
+#print axioms Markov.singularOneChainToAbelianization_path
+#print axioms Markov.singularOneChainToAbelianization_two_boundary
+#print axioms Markov.singularOneChainToAbelianization_d_two
+#print axioms Markov.singularHomologyToAbelianization
+#print axioms Markov.singularHomologyToAbelianization_projection
+#print axioms Markov.singularHomologyToAbelianization_loop
+#print axioms Markov.singularHomologyToAbelianization_hurewicz
+#print axioms Markov.singularHomologyToAbelianization_hurewiczAbelianization
+#print axioms Markov.singularHomologyToAbelianization_leftInverse
+#print axioms Markov.singularConnectedLoop
+#print axioms Markov.singularLoopCycleClosure
+#print axioms Markov.singularLoopCycleClosure_simplex
+#print axioms Markov.singularConnectorZeroChain
+#print axioms Markov.singularConnectorZeroChain_simplex
+#print axioms Markov.singularConnectorZeroChain_point
+#print axioms Markov.singularLoopClosureTwoChain
+#print axioms Markov.singularLoopClosureTwoChain_simplex
+#print axioms Markov.singularLoopClosure_chain_identity_simplex
+#print axioms Markov.singularLoopClosure_chain_identity
+#print axioms Markov.singularHurewiczAddHom
+#print axioms Markov.singularOneChainToAbelianization_hurewicz
+#print axioms Markov.singularLoopClosure_cycle_difference
+#print axioms Markov.singularHurewicz_reverse_projection
+#print axioms Markov.singularHurewicz_reverse_morphism
+#print axioms Markov.singularHomologyToAbelianization_rightInverse
+#print axioms Markov.singularHurewiczAddEquiv
+#print axioms Markov.singularHurewiczAddEquiv_loop
+#print axioms Markov.modularTraceSingularRepresentative
+#print axioms Markov.modularTraceSingularRepresentative_spec
+#print axioms Markov.modularTraceSingularConnector
+#print axioms Markov.modularTraceMarkedAbelianizationAddEquiv
+#print axioms Markov.modularTraceSingularH1Equiv
+#print axioms Markov.modularTraceSingularH1Equiv_loop
+#print axioms Markov.modularTraceSingularH1Equiv_forwardLoop
+#print axioms Markov.modularTraceSingularH1Equiv_basis_zero
+#print axioms Markov.modularTraceSingularH1Equiv_basis_one
+#print axioms Markov.modularTraceSingularH1Equiv_generatorA
+#print axioms Markov.modularTraceSingularH1Equiv_generatorB
+
+-- Actual modular action, congruence exclusions, covering and metric geometry.
+#print axioms Markov.paperIdealQuadrilateral_mem_iff_abs_re
+#print axioms Markov.modular_S_re_div_normSq
+#print axioms Markov.paperIdealQuadrilateral_S_mem_iff
+#print axioms Markov.paperIdealQuadrilateral_isClosed
+#print axioms Markov.paperIdealQuadrilateral_mem_of_fd
+#print axioms Markov.paperIdealQuadrilateral_T_mem_of_fd_left
+#print axioms Markov.paperIdealQuadrilateral_T_inv_mem_of_fd_right
+#print axioms Markov.paperIdealQuadrilateral_TS_mem_of_fd_right
+#print axioms Markov.paperIdealQuadrilateral_T_inv_S_mem_of_fd_left
+#print axioms Markov.paperQuadrilateralCutWord
+#print axioms Markov.paperQuadrilateralCutWord_mem
+#print axioms Markov.paperQuadrilateralCutWord_quotient
+#print axioms Markov.modularTraceQuotientMk_smul_eq_of_label_eq
+#print axioms Markov.paperIdealQuadrilateral_quotient_coverage
+#print axioms Markov.modular_S_smul_involutive
+#print axioms Markov.paperIdealQuadrilateral_upper_coverage
+#print axioms Markov.paperQuadrilateralUpperWords
+#print axioms Markov.paperQuadrilateralCoverWords
+#print axioms Markov.paperIdealQuadrilateral_upper_word_coverage
+#print axioms Markov.paperIdealQuadrilateral_finite_word_coverage
+#print axioms Markov.modularTrace_im_le_exp_translated_quotient_dist
+#print axioms Markov.modularTrace_im_le_exp_of_translated_quotient_dist_le
+#print axioms Markov.paperQuadrilateralQuotientMap
+#print axioms Markov.paperQuadrilateralQuotientMap_continuous
+#print axioms Markov.paperQuadrilateralQuotientMap_surjective
+#print axioms Markov.paperQuadrilateralQuotientMap_isCompact_preimage
+#print axioms Markov.paperQuadrilateralQuotientMap_isProperMap
+#print axioms Markov.paperQuadrilateralQuotientMap_isQuotientMap
+#print axioms Markov.paperQuadrilateralBoundarySetoid
+#print axioms Markov.paperQuadrilateralBoundarySetoid_iff
+#print axioms Markov.PaperQuadrilateralKernelQuotient
+#print axioms Markov.paperQuadrilateralKernelQuotientHomeomorph
+#print axioms Markov.paperQuadrilateralKernelQuotientHomeomorph_mk
+
+-- Actual modular action, congruence exclusions, covering and metric geometry.
+#print axioms Markov.singularLoopClass_conjugate
+#print axioms Markov.modularTraceSingularH1Equiv_projectedPath
+#print axioms Markov.modularTraceForwardTransportPath
+#print axioms Markov.modularTraceForwardTransportPath_projected
+#print axioms Markov.modularTraceForwardLoop_singularClass_basepoint
+#print axioms Markov.modularTraceSingularH1Equiv_basepoint
+#print axioms Markov.modularTraceFixedSingularH1Equiv
+#print axioms Markov.modularTraceFixedSingularH1Equiv_loop
+#print axioms Markov.modularTraceFixedSingularH1Equiv_projectedPath
+#print axioms Markov.modularClosedGeodesicLoop_fixedSingularCoordinates
+#print axioms Markov.paperPrimitiveClosedGeodesicLoop_fixedSingularCoordinates
+#print axioms Markov.paperGeneratorA_quadrilateral_return_iff
+#print axioms Markov.paperGeneratorB_quadrilateral_return_iff
+#print axioms Markov.paperGeneratorA_inv_quadrilateral_return_iff
+#print axioms Markov.paperGeneratorB_inv_quadrilateral_return_iff
+#print axioms Markov.paperIdealQuadrilateral_T_three_not_mem
+#print axioms Markov.paperIdealQuadrilateral_T_three_inv_not_mem
+#print axioms Markov.paperIdealQuadrilateral_T_three_S_not_mem
+#print axioms Markov.paperIdealQuadrilateral_T_three_inv_S_not_mem
+#print axioms Markov.paperIdealQuadrilateral_S_T_three_not_mem
+#print axioms Markov.paperIdealQuadrilateral_S_T_three_inv_not_mem
+#print axioms Markov.paperQuadrilateralCoverWordAt
+#print axioms Markov.paperQuadrilateralCoverResidue
+#print axioms Markov.paperQuadrilateralReturnCandidateAt
+#print axioms Markov.paperQuadrilateralReturn_finite_enumeration
+#print axioms Markov.PaperQuadrilateralSideStep
+#print axioms Markov.PaperQuadrilateralSideRel
+#print axioms Markov.paperQuadrilateralSideSetoid
+#print axioms Markov.paperQuadrilateralSideStep_quotient_eq
+#print axioms Markov.paperQuadrilateralSideRel_quotient_eq
+#print axioms Markov.paperQuadrilateralSideRel_boundary
+#print axioms Markov.paperQuadrilateralSideRel_refl
+#print axioms Markov.paperQuadrilateralSideRel_symm
+#print axioms Markov.paperQuadrilateralSideRel_trans
+#print axioms Markov.paperQuadrilateralSideRel_of_eq
+#print axioms Markov.paperQuadrilateralSideRel_of_A
+#print axioms Markov.paperQuadrilateralSideRel_of_B
+#print axioms Markov.paperQuadrilateralSideRel_of_A_inv
+#print axioms Markov.paperQuadrilateralSideRel_of_B_inv
+#print axioms Markov.paperQuadrilateralCoverWords_mem_iff
+#print axioms Markov.paperIdealQuadrilateral_index_coverage
+#print axioms Markov.paperQuadrilateralCoverWordAt_eq_cutWord
+#print axioms Markov.paperQuadrilateralCoverWordAt_quotient
+#print axioms Markov.paperIdealQuadrilateral_signed_return_candidate
+#print axioms Markov.modularTraceSubgroup_neg_not_mem
+#print axioms Markov.paperQuadrilateralSideReturnWordAt
+#print axioms Markov.paperQuadrilateralSideReturnWordAt_mem
+#print axioms Markov.paperIdealQuadrilateral_return_word
+#print axioms Markov.paperQuadrilateral_quotient_eq_iff_sideRel
+#print axioms Markov.paperQuadrilateralSideSetoid_eq_boundarySetoid
+#print axioms Markov.paperIdealQuadrilateral_return_iff
+#print axioms Markov.PaperQuadrilateralSideQuotient
+#print axioms Markov.paperQuadrilateralSideKernelHomeomorph
+#print axioms Markov.paperQuadrilateralSideQuotientHomeomorph
+#print axioms Markov.paperQuadrilateralSideQuotientHomeomorph_mk
+
+-- Explicit standard punctured-torus model and genuine primitive axis least periods.
+#print axioms Markov.primitiveDirection_nat_smul_eq_one
+#print axioms Markov.quadrantPrimitiveDirection_nat_smul_eq_one
+#print axioms Markov.paperTraceAbelianizationCoordinates_pow_toAdd
+#print axioms Markov.paperPrimitiveHolonomy_pow_eq_one
+#print axioms Markov.paperPrimitiveHolonomy_not_proper_pow
+#print axioms Markov.realCurvePeriodSubgroup
+#print axioms Markov.realCurvePeriodSubgroup_mem_iff
+#print axioms Markov.realCurvePeriodSubgroup_isolated_zero
+#print axioms Markov.realCurvePeriodGenerator_of_injOn_nhds
+#print axioms Markov.realCurvePeriodGenerator_of_isLocallyInjective
+#print axioms Markov.realCurvePeriodGenerator_of_local_dist_eq
+#print axioms Markov.squareChart_den_pos
+#print axioms Markov.squareChart_forward_den
+#print axioms Markov.squareChart_forward_radicand
+#print axioms Markov.squareChart_forward_inverse_x
+#print axioms Markov.squareChart_forward_inverse_y
+#print axioms Markov.squareChart_inverse_norm
+#print axioms Markov.squareChart_inverse_forward_a
+#print axioms Markov.squareChart_inverse_forward_b
+#print axioms SquareSideNormalizer.UnitInterval
+#print axioms SquareSideNormalizer.SignedInterval
+#print axioms SquareSideNormalizer.Square
+#print axioms SquareSideNormalizer.h
+#print axioms SquareSideNormalizer.k
+#print axioms SquareSideNormalizer.h_den_pos
+#print axioms SquareSideNormalizer.k_den_pos
+#print axioms SquareSideNormalizer.h_mem
+#print axioms SquareSideNormalizer.k_mem
+#print axioms SquareSideNormalizer.h_k
+#print axioms SquareSideNormalizer.k_h
+#print axioms SquareSideNormalizer.hI
+#print axioms SquareSideNormalizer.kI
+#print axioms SquareSideNormalizer.continuous_hI
+#print axioms SquareSideNormalizer.continuous_kI
+#print axioms SquareSideNormalizer.intervalHomeomorph
+#print axioms SquareSideNormalizer.parameter
+#print axioms SquareSideNormalizer.continuous_parameter
+#print axioms SquareSideNormalizer.horizontalHomeomorph
+#print axioms SquareSideNormalizer.verticalHomeomorph
+#print axioms SquareSideNormalizer.squareHomeomorph
+#print axioms SquareSideNormalizer.lo
+#print axioms SquareSideNormalizer.hi
+#print axioms SquareSideNormalizer.zero
+#print axioms SquareSideNormalizer.one
+#print axioms SquareSideNormalizer.h_zero
+#print axioms SquareSideNormalizer.h_lo
+#print axioms SquareSideNormalizer.h_hi
+#print axioms SquareSideNormalizer.parameter_lo
+#print axioms SquareSideNormalizer.parameter_hi
+#print axioms SquareSideNormalizer.hI_zero
+#print axioms SquareSideNormalizer.hI_lo
+#print axioms SquareSideNormalizer.hI_hi
+#print axioms SquareSideNormalizer.square_top
+#print axioms SquareSideNormalizer.square_right
+#print axioms SquareSideNormalizer.square_bottom
+#print axioms SquareSideNormalizer.square_left
+#print axioms SquareSideNormalizer.IsCorner
+#print axioms SquareSideNormalizer.corner_fixed
+#print axioms SquareSideNormalizer.corner_iff
+#print axioms SquareSideNormalizer.PuncturedSquare
+#print axioms SquareSideNormalizer.puncturedSquareHomeomorph
+#print axioms SquareSideNormalizer.h_den_ge_two
+#print axioms SquareSideNormalizer.k_den_ge_two
+#print axioms SquareSideNormalizer.hI_kI
+#print axioms SquareSideNormalizer.kI_hI
+#print axioms SquareSideNormalizer.kI_one_coe
+#print axioms SquareSideNormalizer.square_bottom_paired
+#print axioms SquareSideNormalizer.square_left_paired
+#print axioms Markov.standardCircleSquareScalar
+#print axioms Markov.standardCircleSquareScalar_neg_one
+#print axioms Markov.standardCircleSquareScalar_one
+#print axioms Markov.standardCircleSquareScalar_surjective
+#print axioms Markov.standardCircleSquareScalar_eq_zero_iff
+#print axioms Markov.standardCircleSquareScalar_eq_iff
+#print axioms Markov.paperPuncturedSquare
+#print axioms Markov.paperSquareCorners
+#print axioms Markov.paperSquare_coord_sq_le_one
+#print axioms Markov.paperPuncturedSquare_eq_square_diff_corners
+#print axioms Markov.paperPuncturedSquare_den_pos
+#print axioms Markov.paperPuncturedSquare_rad_pos
+#print axioms Markov.paperSquareChartA
+#print axioms Markov.paperSquareChartB
+#print axioms Markov.paperSquareChart_mem
+#print axioms Markov.paperQuadrilateralToSquare
+#print axioms Markov.paperSquareInverseX
+#print axioms Markov.paperSquareInverseY
+#print axioms Markov.paperSquareInverseY_pos
+#print axioms Markov.paperSquareInversePoint
+#print axioms Markov.paperSquareInversePoint_normSq
+#print axioms Markov.paperSquareInversePoint_mem
+#print axioms Markov.paperSquareToQuadrilateral
+#print axioms Markov.paperSquareToQuadrilateral_leftInverse
+#print axioms Markov.paperQuadrilateralToSquare_leftInverse
+#print axioms Markov.continuous_paperSquareChartA
+#print axioms Markov.continuous_paperSquareChartB
+#print axioms Markov.continuous_paperQuadrilateralToSquare
+#print axioms Markov.continuous_paperSquareInverseX
+#print axioms Markov.continuous_paperSquareInverseY
+#print axioms Markov.continuous_paperSquareInversePoint
+#print axioms Markov.continuous_paperSquareToQuadrilateral
+#print axioms Markov.paperQuadrilateralSquareHomeomorph
+#print axioms Markov.paperSquareSideParameter
+#print axioms Markov.paperSquareRawFirst
+#print axioms Markov.paperSquareRawSecond
+#print axioms Markov.paperSquare_A_re
+#print axioms Markov.paperSquare_A_im
+#print axioms Markov.paperSquare_B_re
+#print axioms Markov.paperSquare_B_im
+#print axioms Markov.paperSquareSideParameter_height
+#print axioms Markov.paperSquare_rightVertical_coordinates
+#print axioms Markov.paperSquare_leftVertical_coordinates
+#print axioms Markov.paperSquare_A_coordinates
+#print axioms Markov.paperSquare_B_coordinates
+#print axioms Markov.paperSquareSideParameterInverse
+#print axioms Markov.paperSquareSideParameter_den_pos
+#print axioms Markov.paperSquareSideParameterInverse_den_pos
+#print axioms Markov.paperSquareSideParameter_mem_Icc
+#print axioms Markov.paperSquareSideParameterInverse_mem_Icc
+#print axioms Markov.paperSquareSideParameter_mem_Ioo
+#print axioms Markov.paperSquareSideParameterInverse_mem_Ioo
+#print axioms Markov.paperSquareSideParameter_left_inv
+#print axioms Markov.paperSquareSideParameter_right_inv
+#print axioms Markov.paperSquareSideParameter_strictMonoOn
+#print axioms Markov.paperSquareSideParameter_neg_one
+#print axioms Markov.paperSquareSideParameter_one
+#print axioms Markov.paperSquareSideParameterHomeomorph
+#print axioms Markov.paperSquareOpenSideParameterHomeomorph
+#print axioms Markov.modularClosedGeodesic_isLocallyInjective
+#print axioms Markov.modularHyperbolicAxis_deck_of_period
+#print axioms Markov.modularHyperbolicAxis_pow_action
+#print axioms Markov.modularHyperbolicAxis_power_of_period_multiple
+#print axioms Markov.modularClosedGeodesic_period_isLeast_of_noProperPower
+#print axioms Markov.modularClosedGeodesic_period_isLeast_of_primitive_coordinates
+#print axioms Markov.modularClosedGeodesic_period_isLeast_of_primitive_fixedSingularCoordinates
+#print axioms Markov.paperPrimitiveClosedGeodesic_period_isLeast
+#print axioms Markov.paperPrimitiveClosedGeodesic_least_period
+#print axioms Markov.paperPrimitiveClosedGeodesic_periodSubgroup
+#print axioms SquareSideNormalizer.isCorner_iff_mem_paperSquareCorners
+#print axioms SquareSideNormalizer.toPaperPuncturedSquare
+#print axioms SquareSideNormalizer.fromPaperPuncturedSquare
+#print axioms SquareSideNormalizer.paperPuncturedSquareCoordinatesHomeomorph
+#print axioms SquareSideNormalizer.paperPuncturedSquareHomeomorph
+#print axioms SquareSideNormalizer.paper_normalizer_val
+#print axioms SquareSideNormalizer.paper_normalizer_top
+#print axioms SquareSideNormalizer.paper_normalizer_right
+#print axioms SquareSideNormalizer.paper_normalizer_bottom
+#print axioms SquareSideNormalizer.paper_normalizer_left
+#print axioms SquareSideNormalizer.paper_normalizer_bottom_paired
+#print axioms SquareSideNormalizer.paper_normalizer_left_paired
+#print axioms Markov.paperSquareChartB_eq_one_iff
+#print axioms Markov.paperSquareChartA_eq_one_iff
+#print axioms Markov.paperSquareChartA_eq_neg_one_iff
+#print axioms Markov.paperSquareChartB_eq_neg_one_iff
+#print axioms Markov.paperPuncturedSquare_horizontal_param
+#print axioms Markov.paperPuncturedSquare_vertical_param
+#print axioms Markov.paperQuadrilateralToSquare_top_iff
+#print axioms Markov.paperQuadrilateralToSquare_right_iff
+#print axioms Markov.paperQuadrilateralToSquare_left_iff
+#print axioms Markov.paperQuadrilateralToSquare_bottom_iff
+#print axioms Markov.standardSquareOppositeEdgeStep
+#print axioms Markov.standardSquareOppositeEdgeRel
+#print axioms Markov.standardSquareOppositeEdgeSetoid
+#print axioms Markov.standardSquareOppositeEdgeStep_scalar_eq
+#print axioms Markov.standardSquareOppositeEdgeRel_scalar_eq
+#print axioms Markov.standardSquare_scalar_kernel_iff
+#print axioms Markov.standardClosedSquare
+#print axioms Markov.StandardTorus
+#print axioms Markov.standardTorusPunctureComplement
+#print axioms Markov.StandardPuncturedTorus
+#print axioms Markov.standardClosedSquare_isCompact
+#print axioms Markov.standardClosedSquare_compactSpace
+#print axioms Markov.standardTorusSquareMap
+#print axioms Markov.continuous_standardTorusSquareMap
+#print axioms Markov.standardTorusSquareMap_surjective
+#print axioms Markov.standardTorusSquareMap_isClosedMap
+#print axioms Markov.standardTorusSquareMap_isQuotientMap
+#print axioms Markov.standardTorusSquareMap_eq_zero_iff
+#print axioms Markov.standardClosedSquare_punctured_iff
+#print axioms Markov.standardTorusPunctureComplement_isOpen
+#print axioms Markov.standardPuncturedSquarePreimageHomeomorph
+#print axioms Markov.standardPuncturedTorusMap
+#print axioms Markov.standardPuncturedTorusMap_coe
+#print axioms Markov.standardPuncturedTorusMap_isQuotientMap
+#print axioms Markov.continuous_standardPuncturedTorusMap
+#print axioms Markov.standardPuncturedTorusMap_surjective
+#print axioms Markov.paperSquareRawFirst_eq_chartA
+#print axioms Markov.paperSquareRawSecond_eq_chartB
+#print axioms Markov.paperSquareChart_A_side
+#print axioms Markov.paperSquareChart_B_side
+#print axioms Markov.paperSquareChart_A_pair
+#print axioms Markov.paperSquareChart_B_pair
+#print axioms Markov.paperSquareChart_A_top
+#print axioms Markov.paperSquareChart_B_right
+#print axioms Markov.standardPuncturedTorusMap_eq_iff_edgeRel
+#print axioms Markov.StandardPuncturedSquareSideQuotient
+#print axioms Markov.standardPuncturedSquareSideKernelHomeomorph
+#print axioms Markov.standardPuncturedSquareQuotientHomeomorph
+#print axioms Markov.standardPuncturedSquareQuotientHomeomorph_mk
+#print axioms Markov.standardPuncturedSquareQuotientHomeomorph_mk_coe
+#print axioms Markov.paperMarkedQuadrilateralSquareHomeomorph
+#print axioms Markov.paperMarkedSquare_A_pair
+#print axioms Markov.paperMarkedSquare_B_pair
+#print axioms Markov.PaperSquareSideStep
+#print axioms Markov.paperMarkedSquare_top_iff
+#print axioms Markov.paperMarkedSquare_right_iff
+#print axioms Markov.paperMarkedSquare_A_pair_iff
+#print axioms Markov.paperMarkedSquare_B_pair_iff
+#print axioms Markov.paperMarkedSquare_sideStep_iff
+#print axioms Markov.PaperSquareSideRel
+#print axioms Markov.paperSquareSideSetoid
+#print axioms Markov.paperMarkedSquare_sideRel_forward
+#print axioms Markov.paperMarkedSquare_sideRel_inverse
+#print axioms Markov.paperMarkedSquare_sideRel_iff
+#print axioms Markov.paperSquareSideStep_standard
+#print axioms Markov.standardSquareOppositeEdgeStep_paperSideRel
+#print axioms Markov.paperSquareSideRel_iff_standard
+#print axioms Markov.paperMarkedSquare_standardRel_iff
+#print axioms Markov.paperMarkedSquareSideQuotientHomeomorph
+#print axioms Markov.paperSideQuotientPuncturedTorusHomeomorph
+#print axioms Markov.modularTraceQuotientPuncturedTorusHomeomorph
+#print axioms Markov.paperSideQuotientPuncturedTorusHomeomorph_mk
+#print axioms Markov.modularTraceQuotientPuncturedTorusHomeomorph_mk
+
+-- Actual embedded circle, winding and original marking comparison.
+#print axioms Markov.NormalizedCircle
+#print axioms Markov.normalizedCircleCover
+#print axioms Markov.normalizedCircleCover_isCoveringMap
+#print axioms Markov.normalizedCircleCover_intCast
+#print axioms Markov.NormalizedCircleFibre
+#print axioms Markov.normalizedCircleIntegerFibre
+#print axioms Markov.normalizedCircleIntegerFibre_injective
+#print axioms Markov.normalizedCircleIntegerFibre_surjective
+#print axioms Markov.normalizedCircleIntegerFibreEquiv
+#print axioms Markov.normalizedCircleWindingEquiv
+#print axioms Markov.normalizedCircleWindingEquiv_fibre
+#print axioms Markov.normalizedCircleCover_add
+#print axioms Markov.normalizedCircleFibreTranslate
+#print axioms Markov.normalizedCircleIntegerFibreEquiv_add
+#print axioms Markov.normalizedCircleMonodromy_translate
+#print axioms Markov.normalizedCircleWindingEquiv_trans
+#print axioms Markov.normalizedCircleWindingEquiv_refl
+#print axioms Markov.normalizedCircleWinding
+#print axioms Markov.normalizedCircleWinding_eq_liftPath_endpoint
+#print axioms Markov.normalizedCircleWinding_homotopic_iff
+#print axioms Markov.normalizedCircleWinding_homotopic
+#print axioms Markov.normalizedCircleWinding_refl
+#print axioms Markov.normalizedCircleWinding_trans
+#print axioms Markov.normalizedCircleFundamentalGroupEquiv
+#print axioms Markov.normalizedCircleIntegerLoop
+#print axioms Markov.normalizedCircleIntegerLoop_apply
+#print axioms Markov.normalizedCircleWinding_integerLoop
+#print axioms Markov.normalizedCircleIntegerLoop_homotopic_refl_iff
+#print axioms Markov.normalizedCircleStandardLoop
+#print axioms Markov.normalizedCircleStandardLoop_apply
+#print axioms Markov.normalizedCircleWinding_standardLoop
+#print axioms Markov.normalizedCircleFundamentalGroupEquiv_standardLoop
+#print axioms Markov.normalizedCircleStandardLoop_not_homotopic_refl
+#print axioms Markov.standardTorusIntegerCombination
+#print axioms Markov.standardTorusFirstDual
+#print axioms Markov.standardTorusSecondDual
+#print axioms Markov.standardTorusFirstDual_integerCombination
+#print axioms Markov.standardTorusSecondDual_integerCombination
+#print axioms Markov.standardPrimitive_complement
+#print axioms Markov.standardTorusIntegerCombination_ne_zero
+#print axioms Markov.standardPuncturedAffineCircle
+#print axioms Markov.standardPuncturedAffineCircle_firstDual
+#print axioms Markov.continuous_standardTorusFirstDual
+#print axioms Markov.continuous_standardPuncturedAffineCircle
+#print axioms Markov.standardPuncturedAffineCircle_injective
+#print axioms Markov.standardPuncturedAffineCircle_isClosedEmbedding
+#print axioms Markov.standardPuncturedAffineCircle_secondDual
+#print axioms Markov.standardPuncturedTorusCircleRetraction
+#print axioms Markov.continuous_standardPuncturedTorusCircleRetraction
+#print axioms Markov.standardPuncturedAffineCircle_leftInverse
+#print axioms Markov.standardPuncturedAffineCircle_retraction_comp
+#print axioms Markov.standardCircleHalf
+#print axioms Markov.standardCircleHalf_ne_zero
+#print axioms Markov.standardPrimitive_exists_embeddedAffineCircle
+#print axioms Markov.normalizedCircleTranslatedLoop
+#print axioms Markov.normalizedCircleTranslatedLoop_apply
+#print axioms Markov.normalizedCircleFibreAtTranslate
+#print axioms Markov.normalizedCircleMonodromyAt_translate
+#print axioms Markov.normalizedCircleMonodromy_loop_eq_translate
+#print axioms Markov.normalizedCircleWinding_translated_conjugate
+#print axioms Markov.paperSquareAStart
+#print axioms Markov.paperSquareAEnd
+#print axioms Markov.paperSquareBStart
+#print axioms Markov.paperSquareBEnd
+#print axioms Markov.paperSquareAPath
+#print axioms Markov.paperSquareBPath
+#print axioms Markov.paperSquareAEnd_actual_action
+#print axioms Markov.paperSquareBEnd_actual_action
+#print axioms Markov.paperSquareALiftedPath
+#print axioms Markov.paperSquareBLiftedPath
+#print axioms Markov.paperSquareAOriginalLoop
+#print axioms Markov.paperSquareBOriginalLoop
+#print axioms Markov.paperSquareAOriginalLoop_fixedH1
+#print axioms Markov.paperSquareBOriginalLoop_fixedH1
+#print axioms Markov.paperSquareAOriginalLoop_standard
+#print axioms Markov.paperSquareBOriginalLoop_standard
+#print axioms Markov.standardTorusFirstCoordinateLoop
+#print axioms Markov.standardTorusSecondCoordinateLoop
+#print axioms Markov.standardTorusLoopWinding
+#print axioms Markov.paperSquareAMappedLoop
+#print axioms Markov.paperSquareBMappedLoop
+#print axioms Markov.paperSquareAMappedLoop_firstCoordinate
+#print axioms Markov.paperSquareAMappedLoop_secondCoordinate
+#print axioms Markov.paperSquareBMappedLoop_firstCoordinate
+#print axioms Markov.paperSquareBMappedLoop_secondCoordinate
+#print axioms Markov.paperSquareAOriginalLoop_standardWinding
+#print axioms Markov.paperSquareBOriginalLoop_standardWinding
+#print axioms Markov.fundamentalGroupCircleWinding
+#print axioms Markov.singularH1CircleWinding
+#print axioms Markov.singularH1CircleWinding_loop
+#print axioms Markov.singularH1CircleWinding_retract_standardLoop
+#print axioms Markov.singularLoopClass_retract_standardLoop_ne_zero
+#print axioms Markov.pathHomotopic_of_continuous_leftInverse
+#print axioms Markov.normalizedCircleStandardLoop_map_not_homotopic_refl
+#print axioms Markov.standardPuncturedAffineCircleLoop
+#print axioms Markov.standardPuncturedAffineCircleLoop_not_homotopic_refl
+#print axioms Markov.standardPrimitive_exists_nontrivialEmbeddedAffineCircle
+#print axioms Markov.modularAffineCircle
+#print axioms Markov.continuous_modularAffineCircle
+#print axioms Markov.modularAffineCircle_isClosedEmbedding
+#print axioms Markov.modularAffineCircleRetraction
+#print axioms Markov.continuous_modularAffineCircleRetraction
+#print axioms Markov.modularAffineCircle_leftInverse
+#print axioms Markov.modular_exists_embeddedAffineCircle
+#print axioms Markov.modularAffineCircleLoop
+#print axioms Markov.modularAffineCircleLoop_not_homotopic_refl
+#print axioms Markov.modular_exists_nontrivialEmbeddedAffineCircle
+#print axioms Markov.modularArbitraryBaseConnector
+#print axioms Markov.standardPuncturedTorusConnector
+#print axioms Markov.standardAffineCircleH1Winding
+#print axioms Markov.standardAffineCircleH1Winding_loop
+#print axioms Markov.standardAffineCircleLoop_singularH1_ne_zero
+#print axioms Markov.modularAffineCircleH1Winding
+#print axioms Markov.modularAffineCircleH1Winding_loop
+#print axioms Markov.modularAffineCircleLoop_singularH1_ne_zero
+#print axioms Markov.modular_exists_embeddedAffineCircle_nonzero_singularH1
+#print axioms Markov.modularStandardLoopWinding
+#print axioms Markov.modularAffineCircleLoop_firstCoordinate
+#print axioms Markov.modularAffineCircleLoop_secondCoordinate
+#print axioms Markov.modularAffineCircleLoop_standardWinding
+#print axioms Markov.originalToStandardCircleLabel
+#print axioms Markov.originalToStandardCircleLabel_involutive
+#print axioms Markov.originalToStandardCircleLabel_isCoprime
+#print axioms Markov.singularH1CircleWinding_loop_arbitrary
+#print axioms Markov.modularStandardFirstCoordinate
+#print axioms Markov.modularStandardSecondCoordinate
+#print axioms Markov.continuous_modularStandardFirstCoordinate
+#print axioms Markov.continuous_modularStandardSecondCoordinate
+#print axioms Markov.modularStandardFirstH1Winding
+#print axioms Markov.modularStandardSecondH1Winding
+#print axioms Markov.modularStandardFirstH1Winding_loop
+#print axioms Markov.modularStandardSecondH1Winding_loop
+#print axioms Markov.modularStandardH1Winding
+#print axioms Markov.modularStandardH1Winding_loop
+#print axioms Markov.modularStandardH1Winding_generatorA
+#print axioms Markov.modularStandardH1Winding_generatorB
+#print axioms Markov.modularStandardH1Winding_fixedCoordinates
+#print axioms Markov.modularTraceFixedSingularH1Equiv_loop_standardWinding
+#print axioms Markov.modularAffineCircleLoop_fixedSingularCoordinates
+#print axioms Markov.modular_exists_embeddedAffineCircle_originalSingularClass
+#print axioms Markov.modular_originalPrimitiveClass_has_closedEmbeddedRepresentative
+
+-- Actual Farey geometry, simple generator calibration and based shear action.
+#print axioms Markov.standardTorusSecondAffineCircle_ne_zero
+#print axioms Markov.standardPuncturedSecondAffineCircle
+#print axioms Markov.standardPuncturedSecondAffineCircle_firstDual
+#print axioms Markov.standardPuncturedSecondAffineCircle_secondDual
+#print axioms Markov.continuous_standardTorusSecondDual
+#print axioms Markov.continuous_standardPuncturedSecondAffineCircle
+#print axioms Markov.standardPuncturedSecondAffineCircle_injective
+#print axioms Markov.standardPuncturedSecondAffineCircle_isClosedEmbedding
+#print axioms Markov.standardPuncturedAffineCircle_eq_second_iff
+#print axioms Markov.standardPuncturedAffineCircle_range_inter_second
+#print axioms Markov.modularSecondAffineCircle
+#print axioms Markov.continuous_modularSecondAffineCircle
+#print axioms Markov.modularSecondAffineCircle_isClosedEmbedding
+#print axioms Markov.modularAffineCircle_eq_second_iff
+#print axioms Markov.modularAffineCircle_range_inter_second
+#print axioms Markov.paperGeneratorSquareCenter
+#print axioms Markov.paperGeneratorCenterLift
+#print axioms Markov.paperGeneratorCenterPoint
+#print axioms Markov.paperGeneratorCenterPoint_standard
+#print axioms Markov.paperGeneratorCenterToA
+#print axioms Markov.paperGeneratorCenterToB
+#print axioms Markov.paperGeneratorCenterToALift
+#print axioms Markov.paperGeneratorCenterToBLift
+#print axioms Markov.paperGeneratorCenterAConnector
+#print axioms Markov.paperGeneratorCenterBConnector
+#print axioms Markov.paperGeneratorCenterALoop
+#print axioms Markov.paperGeneratorCenterBLoop
+#print axioms Markov.modularTraceMarkedFundamentalGroupEquiv_projectedPath
+#print axioms Markov.paperGeneratorCenterALoop_marked
+#print axioms Markov.paperGeneratorCenterBLoop_marked
+#print axioms Markov.paperGeneratorCenterALoop_first
+#print axioms Markov.paperGeneratorCenterBLoop_second
+#print axioms Markov.paperSimpleACircle
+#print axioms Markov.paperSimpleBCircle
+#print axioms Markov.continuous_paperSimpleACircle
+#print axioms Markov.continuous_paperSimpleBCircle
+#print axioms Markov.paperSimpleACircle_isClosedEmbedding
+#print axioms Markov.paperSimpleBCircle_isClosedEmbedding
+#print axioms Markov.paperSimpleACircle_zero
+#print axioms Markov.paperSimpleBCircle_zero
+#print axioms Markov.paperSimpleALoop
+#print axioms Markov.paperSimpleBLoop
+#print axioms Markov.paperSimpleALoop_standard
+#print axioms Markov.paperSimpleBLoop_standard
+#print axioms Markov.paperGeneratorCenterALoop_homotopic_simple
+#print axioms Markov.paperGeneratorCenterBLoop_homotopic_simple
+#print axioms Markov.paperSimpleALoop_marked
+#print axioms Markov.paperSimpleBLoop_marked
+#print axioms Markov.standardSignedSwapTorusHomeomorph
+#print axioms Markov.standardSignedSwapTorusHomeomorph_apply
+#print axioms Markov.standardSignedSwapTorusHomeomorph_zero
+#print axioms Markov.standardSignedSwapTorusHomeomorph_involutive
+#print axioms Markov.standardSignedSwapPuncturedTorusHomeomorph
+#print axioms Markov.standardSignedSwapPuncturedTorusHomeomorph_coe
+#print axioms Markov.standardSignedSwapPuncturedTorusHomeomorph_involutive
+#print axioms Markov.modularSignedSwapTorusHomeomorph
+#print axioms Markov.modularSignedSwapTorusHomeomorph_standard
+#print axioms Markov.modularSignedSwapTorusHomeomorph_involutive
+#print axioms Markov.signedSwap_originalGeneratorColumns
+#print axioms Markov.originalToStandardCircleLabel_intDet
+#print axioms Markov.signedSwapAffinePartner_intDet
+#print axioms Markov.standardSignedSwapTorusHomeomorph_integerCombination
+#print axioms Markov.standardSignedSwapPuncturedTorusHomeomorph_affineCircle
+#print axioms Markov.modularSignedSwapTorusHomeomorph_affineCircle
+#print axioms Markov.modularSignedSwapTorusHomeomorph_affineCircleLoop_fixedH1
+#print axioms Markov.modularSignedSwapTorusHomeomorph_originalAffineCircleLoop_fixedH1
+#print axioms Markov.SurgeryLiftPlane
+#print axioms Markov.surgeryBaseLift
+#print axioms Markov.surgeryMiddleLift
+#print axioms Markov.surgeryEndLift
+#print axioms Markov.surgeryDiagonalStartLift
+#print axioms Markov.surgeryDiagonalEndLift
+#print axioms Markov.surgeryHorizontalLift
+#print axioms Markov.surgeryVerticalLift
+#print axioms Markov.surgeryProductLift
+#print axioms Markov.surgeryConnectorLift
+#print axioms Markov.surgeryDiagonalLift
+#print axioms Markov.surgeryReturnLift
+#print axioms Markov.surgerySmoothedLift
+#print axioms Markov.surgeryLiftHomotopy
+#print axioms Markov.surgeryPlaneProjection
+#print axioms Markov.surgeryLiftHomotopy_avoids_puncture
+#print axioms Markov.surgeryBasePoint
+#print axioms Markov.surgeryHorizontalLoop
+#print axioms Markov.surgeryVerticalLoop
+#print axioms Markov.surgeryProductLoop
+#print axioms Markov.surgeryProductLoop_eq_trans
+#print axioms Markov.surgerySmoothedLoop
+#print axioms Markov.surgeryProductHomotopy
+#print axioms Markov.surgeryHorizontal_trans_vertical_homotopic
+#print axioms Markov.surgeryReturnLift_eq_translated_reverse
+#print axioms Markov.surgeryDiagonalLift_projection_affine
+#print axioms Markov.surgeryDiagonalBasePoint
+#print axioms Markov.surgeryConnector
+#print axioms Markov.surgeryDiagonalLoop
+#print axioms Markov.surgerySmoothedLoop_eq_connector_diagonal_reverse
+#print axioms Markov.surgeryPositiveProduct_homotopic_embeddedDiagonal
+#print axioms Markov.standardTorusColumnMap
+#print axioms Markov.standardTorusColumnDualMap
+#print axioms Markov.standardTorusColumnDualMap_columnMap
+#print axioms Markov.standardTorusColumnMap_dualMap
+#print axioms Markov.standardUnimodularTorusHomeomorph
+#print axioms Markov.standardUnimodularTorusHomeomorph_zero
+#print axioms Markov.standardUnimodularPuncturedTorusHomeomorph
+#print axioms Markov.standardUnimodularPuncturedTorusHomeomorph_coe
+#print axioms Markov.modularUnimodularTorusHomeomorph
+#print axioms Markov.modularUnimodularTorusHomeomorph_standard
+#print axioms Markov.integerColumnMap
+#print axioms Markov.integerColumnMap_intDet
+#print axioms Markov.integerColumnMap_unimodular
+#print axioms Markov.standardTorusColumnMap_integerCombination
+#print axioms Markov.standardUnimodularPuncturedTorusHomeomorph_affineCircle
+#print axioms Markov.modularUnimodularTorusHomeomorph_affineCircle
+#print axioms Markov.singularLoopClass_pointwise_eq
+#print axioms Markov.modularUnimodularTorusHomeomorph_affineCircleLoop_fixedH1
+#print axioms Markov.originalUnimodularCircleAction
+#print axioms Markov.originalUnimodularCircleAction_formula
+#print axioms Markov.modularUnimodularTorusHomeomorph_originalAffineCircleLoop_fixedH1
+#print axioms Markov.shearSurgeryDiagonalStartLift
+#print axioms Markov.shearSurgeryDiagonalEndLift
+#print axioms Markov.shearSurgeryConnectorLift
+#print axioms Markov.shearSurgeryDiagonalLift
+#print axioms Markov.shearSurgeryReturnLift
+#print axioms Markov.shearSurgeryTargetLift
+#print axioms Markov.shearSurgeryLiftHomotopy
+#print axioms Markov.shearSurgeryLiftHomotopy_avoids_puncture
+#print axioms Markov.shearSurgeryTargetLoop
+#print axioms Markov.shearSurgeryProductHomotopy
+#print axioms Markov.shearSurgeryHorizontal_trans_vertical_homotopic
+#print axioms Markov.shearSurgeryReturnLift_eq_translated_reverse
+#print axioms Markov.shearSurgeryDiagonalLift_projection_affine
+#print axioms Markov.shearSurgeryDiagonalBasePoint
+#print axioms Markov.shearSurgeryConnector
+#print axioms Markov.shearSurgeryDiagonalLoop
+#print axioms Markov.shearSurgeryTargetLoop_eq_connector_diagonal_reverse
+#print axioms Markov.shearSurgeryPositiveProduct_homotopic_embeddedDiagonal
+#print axioms Markov.surgeryColumnShear
+#print axioms Markov.surgeryColumnShear_coe
+#print axioms Markov.surgeryColumnShear_base
+#print axioms Markov.surgeryShearMappedHorizontal
+#print axioms Markov.surgeryShearMappedVertical
+#print axioms Markov.surgeryShearMappedVertical_eq_diagonal
+#print axioms Markov.surgeryShearHorizontalBasedLoop
+#print axioms Markov.surgeryShearVerticalBasedLoop
+#print axioms Markov.surgeryShearVerticalBasedLoop_homotopic
+#print axioms Markov.surgeryShearHorizontalBasedLoop_homotopic
+
+-- Actual homeomorphism-induced original marked Farey left automorphism.
+#print axioms Markov.homeomorphFundamentalGroupEquiv
+#print axioms Markov.homeomorphFundamentalGroupEquiv_loop
+#print axioms Markov.homeomorphFundamentalGroupEquiv_symm_loop
+#print axioms Markov.basedHomeomorphFundamentalGroupEquiv
+#print axioms Markov.basedHomeomorphFundamentalGroupEquiv_loop
+#print axioms Markov.basedHomeomorphFundamentalGroupEquiv_symm_loop
+#print axioms Markov.standardCircleHalf_neg
+#print axioms Markov.originalNielsenChart
+#print axioms Markov.originalNielsenChart_standard
+#print axioms Markov.originalNielsenChart_base
+#print axioms Markov.originalNielsenHomeomorph
+#print axioms Markov.originalNielsenHomeomorph_chart
+#print axioms Markov.originalNielsenHomeomorph_base
+#print axioms Markov.originalNielsenConnector
+#print axioms Markov.originalNielsenHorizontalLoop
+#print axioms Markov.originalNielsenVerticalLoop
+#print axioms Markov.originalNielsenHorizontalLoop_eq_A
+#print axioms Markov.originalNielsenVerticalLoop_eq_B
+#print axioms Markov.originalNielsenRawLoop
+#print axioms Markov.originalNielsenRawLoop_transport
+#print axioms Markov.originalNielsenRawLoop_A_homotopic
+#print axioms Markov.originalNielsenRawLoop_B_homotopic
+#print axioms Markov.originalNielsenRawLoop_A_marked
+#print axioms Markov.originalNielsenRawLoop_B_marked
+#print axioms Markov.originalNielsenConnectorCorrected
+#print axioms Markov.originalNielsenCorrectedLoop
+#print axioms Markov.originalNielsenCorrectedLoop_conjugate
+#print axioms Markov.originalNielsenCorrectedLoop_A_marked
+#print axioms Markov.originalNielsenCorrectedLoop_B_marked
+#print axioms Markov.originalNielsenRawFundamentalGroupEquiv
+#print axioms Markov.originalNielsenFundamentalGroupEquiv
+#print axioms Markov.originalNielsenRawFundamentalGroupEquiv_loop
+#print axioms Markov.originalNielsenFundamentalGroupEquiv_loop
+#print axioms Markov.originalNielsenRawMarkedEquiv
+#print axioms Markov.originalNielsenMarkedEquiv
+#print axioms Markov.originalNielsenRawMarkedEquiv_A
+#print axioms Markov.originalNielsenRawMarkedEquiv_B
+#print axioms Markov.originalNielsenMarkedEquiv_A
+#print axioms Markov.originalNielsenMarkedEquiv_B
+#print axioms Markov.originalNielsenMarkedEquiv_eq_fareyLeft
+
+-- Actual signed geometric Farey recursion and exact canonical embedded representatives.
+#print axioms Markov.basedHomeomorphCompositeConnector
+#print axioms Markov.basedHomeomorphFundamentalGroupEquiv_comp
+#print axioms Markov.basedHomeomorphInverseConnector
+#print axioms Markov.basedHomeomorphFundamentalGroupEquiv_inverse
+#print axioms Markov.basedHomeomorphFundamentalGroupEquiv_refl
+#print axioms Markov.standardCoordinateSwapTorusHomeomorph
+#print axioms Markov.standardCoordinateSwapPuncturedTorusHomeomorph
+#print axioms Markov.standardCoordinateSwapPuncturedTorusHomeomorph_coe
+#print axioms Markov.modularCoordinateSwapHomeomorph
+#print axioms Markov.modularCoordinateSwapHomeomorph_standard
+#print axioms Markov.modularCoordinateSwapHomeomorph_center
+#print axioms Markov.modularCoordinateSwapHomeomorph_A
+#print axioms Markov.modularCoordinateSwapHomeomorph_B
+#print axioms Markov.modularCoordinateSwapFundamentalGroupEquiv
+#print axioms Markov.originalCoordinateSwapMarkedEquiv
+#print axioms Markov.originalCoordinateSwapMarkedEquiv_A
+#print axioms Markov.originalCoordinateSwapMarkedEquiv_B
+#print axioms Markov.standardFirstReflectionTorusHomeomorph
+#print axioms Markov.standardFirstReflectionPuncturedTorusHomeomorph
+#print axioms Markov.standardFirstReflectionPuncturedTorusHomeomorph_coe
+#print axioms Markov.modularFirstReflectionHomeomorph
+#print axioms Markov.modularFirstReflectionHomeomorph_standard
+#print axioms Markov.modularFirstReflectionHomeomorph_center
+#print axioms Markov.modularFirstReflectionHomeomorph_A
+#print axioms Markov.modularFirstReflectionHomeomorph_B
+#print axioms Markov.modularFirstReflectionFundamentalGroupEquiv
+#print axioms Markov.originalFirstReflectionMarkedEquiv
+#print axioms Markov.originalFirstReflectionMarkedEquiv_A
+#print axioms Markov.originalFirstReflectionMarkedEquiv_B
+#print axioms Markov.originalMarkedHomeomorphEquiv
+#print axioms Markov.originalMarkedHomeomorphEquiv_comp
+#print axioms Markov.originalMarkedHomeomorphEquiv_inverse
+#print axioms Markov.originalMarkedHomeomorphEquiv_refl
+#print axioms Markov.OriginalGeometricAutomorphism
+#print axioms Markov.OriginalPairGeometricallyRealized
+#print axioms Markov.originalPairGeometricallyRealized_iff
+#print axioms Markov.OriginalGeometricAutomorphism.refl
+#print axioms Markov.OriginalGeometricAutomorphism.trans
+#print axioms Markov.OriginalGeometricAutomorphism.symm
+#print axioms Markov.originalPairGeometricallyRealized_basis
+#print axioms Markov.originalCoordinateSwap_geometricallyRealized
+#print axioms Markov.originalFirstReflection_geometricallyRealized
+#print axioms Markov.originalNielsenLeft_geometricallyRealized
+#print axioms Markov.OriginalPairGeometricallyRealized.swap
+#print axioms Markov.OriginalPairGeometricallyRealized.invert_second
+#print axioms Markov.OriginalPairGeometricallyRealized.invert_first
+#print axioms Markov.OriginalPairGeometricallyRealized.left
+#print axioms Markov.OriginalPairGeometricallyRealized.right
+#print axioms Markov.originalNielsenRightSwapConnector
+#print axioms Markov.originalNielsenRightHomeomorph
+#print axioms Markov.originalNielsenRightConnectorRaw
+#print axioms Markov.originalNielsenRightRawFundamentalGroupEquiv
+#print axioms Markov.originalNielsenRightRawFundamentalGroupEquiv_comp
+#print axioms Markov.originalNielsenRightRawMarkedEquiv
+#print axioms Markov.originalNielsenRightRawMarkedEquiv_comp
+#print axioms Markov.originalNielsenRightRawMarkedEquiv_A
+#print axioms Markov.originalNielsenRightRawMarkedEquiv_B
+#print axioms Markov.originalNielsenRightConnectorCorrected
+#print axioms Markov.originalNielsenRightFundamentalGroupEquiv
+#print axioms Markov.originalNielsenRightFundamentalGroupEquiv_conjugate
+#print axioms Markov.originalNielsenRightMarkedEquiv
+#print axioms Markov.originalNielsenRightMarkedEquiv_conjugate
+#print axioms Markov.originalNielsenRightMarkedEquiv_A
+#print axioms Markov.originalNielsenRightMarkedEquiv_B
+#print axioms Markov.originalNielsenRightMarkedEquiv_eq_fareyRight
+#print axioms Markov.originalSimpleGeneratorCircle
+#print axioms Markov.originalSimpleGeneratorCircle_isClosedEmbedding
+#print axioms Markov.originalSimpleGeneratorCircle_zero
+#print axioms Markov.originalSimpleGeneratorLoop
+#print axioms Markov.originalSimpleGeneratorLoop_zero
+#print axioms Markov.originalSimpleGeneratorLoop_one
+#print axioms Markov.originalSimpleGeneratorLoop_marked
+#print axioms Markov.realizedGeneratorCircle
+#print axioms Markov.realizedGeneratorCircle_isClosedEmbedding
+#print axioms Markov.realizedGeneratorCircle_zero
+#print axioms Markov.realizedGeneratorCircleConnector
+#print axioms Markov.realizedGeneratorCircleBasedLoop
+#print axioms Markov.realizedGeneratorCircleBasedLoop_eq
+#print axioms Markov.realizedGeneratorCircleBasedLoop_marked
+#print axioms Markov.originalMarkedHomeomorph_generator_has_embeddedRepresentative
+#print axioms Markov.OriginalGeometricAutomorphism.generator_has_embeddedRepresentative
+#print axioms Markov.OriginalPairGeometricallyRealized.left_has_embeddedRepresentative
+#print axioms Markov.OriginalPairGeometricallyRealized.right_has_embeddedRepresentative
+#print axioms Markov.OriginalGeometricGenerator
+#print axioms Markov.OriginalPairGeometricallyRealized.first
+#print axioms Markov.OriginalPairGeometricallyRealized.second
+#print axioms Markov.TraceGeometricBasisPair
+#print axioms Markov.quadrantSeed_geometricBasisPair
+#print axioms Markov.SeededFarey.geometricBasisPair
+#print axioms Markov.SeededFarey.quadrant_geometricBasisPair
+#print axioms Markov.quadrantPrimitiveTraceWord_geometricGenerator
+#print axioms Markov.OriginalGeometricGenerator.has_embeddedRepresentative
+#print axioms Markov.quadrantPrimitiveTraceWord_has_embeddedRepresentative
+
+#print axioms Markov.modularTraceSeedConjugation_involutive
+#print axioms Markov.modularAxisCenterConnector
+#print axioms Markov.modularAxisProjectedCenterConnector
+#print axioms Markov.modularAxisCenterTransportLift
+#print axioms Markov.modularAxisCenterTransportLoop
+#print axioms Markov.modularAxisCenterTransportLoop_eq_conjugate
+#print axioms Markov.modularAxisCenterTransportLoop_marked
+#print axioms Markov.paperPrimitiveAxisProjectedConnector
+#print axioms Markov.paperPrimitiveAxisTransportLoop
+#print axioms Markov.paperPrimitiveAxisTransportLoop_eq_conjugate
+#print axioms Markov.paperPrimitiveAxisTransportLoop_marked
+#print axioms Markov.reversedEmbeddedCircle
+#print axioms Markov.reversedEmbeddedCircle_zero
+#print axioms Markov.reversedEmbeddedCircle_isClosedEmbedding
+#print axioms Markov.reversedEmbeddedCircleConnector
+#print axioms Markov.embeddedCircleBasedLoop
+#print axioms Markov.normalizedCircleStandardLoop_symm_apply
+#print axioms Markov.reversedEmbeddedCircleBasedLoop_class
+#print axioms Markov.reversedEmbeddedCircleBasedLoop_marked
+#print axioms Markov.quadrantPrimitiveTraceWord_inverse_has_embeddedRepresentative
+#print axioms Markov.paperPrimitiveAxisTransportLoop_has_embeddedRepresentative
+#print axioms Markov.hyperbolicPositiveDiagonal_displacement_eq_iff
+#print axioms Markov.hyperbolicPositiveDiagonal_minimizingLocus
+#print axioms Markov.hyperbolicPositiveDiagonal_invariantAxis_eq
+#print axioms Markov.hyperbolicPositiveDiagonal_invariantAxis_range
+#print axioms Markov.exists_hyperbolicPositiveDiagonal_action_conjugacy
+#print axioms Markov.hyperbolicTranslationLength_minimizer_iff_of_diagonal_action
+#print axioms Markov.hyperbolicTranslationLength_invariantAxis_eq_of_diagonal_action
+#print axioms Markov.hyperbolicTranslationLength_minimizingLocus_eq_axis_range
+#print axioms Markov.hyperbolicTranslationLength_invariantAxis_eq
+#print axioms Markov.hyperbolicTranslationLength_invariantAxis_range_unique
+#print axioms Markov.modularHyperbolicAxis_eq_of_isometry_equivariant
+#print axioms Markov.modularTraceSubgroup_trace_conjugate
+#print axioms Markov.modularTraceSubgroup_hyperbolic_conjugate
+#print axioms Markov.modularClosedGeodesicPeriod_conjugate
+#print axioms Markov.modularHyperbolicAxis_conjugate
+#print axioms Markov.modularClosedGeodesic_conjugate
+#print axioms Markov.modularClosedGeodesic_range_conjugate
+#print axioms Markov.modularTraceSubgroup_trace_inv
+#print axioms Markov.modularTraceSubgroup_hyperbolic_inv
+#print axioms Markov.modularClosedGeodesicPeriod_inv
+#print axioms Markov.modularHyperbolicAxis_inv
+#print axioms Markov.modularClosedGeodesic_inv
+#print axioms Markov.modularClosedGeodesic_range_inv
+#print axioms Markov.embeddedCircleRealParam
+#print axioms Markov.embeddedCircleRealParam_periodic
+#print axioms Markov.embeddedCircleRealParam_eq_iff
+#print axioms Markov.embeddedCircleRealLift
+#print axioms Markov.embeddedCircleRealLift_zero
+#print axioms Markov.embeddedCircleRealLift_project
+#print axioms Markov.embeddedCircleRealLift_unique
+#print axioms Markov.embeddedCircleRealLift_project_eq_iff
+#print axioms Markov.embeddedCircleRealLift_eq_imp_integer
+#print axioms Markov.embeddedCircleRealLift_one_fiber
+#print axioms Markov.embeddedCircleRealLiftDeck
+#print axioms Markov.embeddedCircleRealLiftDeck_one
+#print axioms Markov.embeddedCircleRealLift_add_one
+#print axioms Markov.embeddedCircleRealLiftUnitPath
+#print axioms Markov.embeddedCircleUnitLoop
+#print axioms Markov.embeddedCircleRealLiftUnitPath_projected
+#print axioms Markov.embeddedCircleUnitLoop_deck
+#print axioms Markov.embeddedCircleUnitLoop_marked
+#print axioms Markov.equivariant_curves_distance_periodic
+#print axioms Markov.equivariant_curves_uniform_distance
+#print axioms Markov.isProperMap_of_uniform_distance_to_scaled_isometry
+#print axioms Markov.equivariant_curve_isProperMap_of_isometric_axis
+#print axioms Markov.modularEquivariantComparisonAxis
+#print axioms Markov.modularEquivariantComparisonAxis_continuous
+#print axioms Markov.modularEquivariantComparisonAxis_period
+#print axioms Markov.modularEquivariantComparisonAxis_dist
+#print axioms Markov.modularEquivariantCurve_uniform_distance
+#print axioms Markov.modularEquivariantCurve_isProperMap
+#print axioms Markov.upperHalfPlane_dist_log_im_eq_iff
+#print axioms Markov.upperHalfPlane_vertical_triangle_eq_iff
+#print axioms Markov.embeddedCircleRealLift_sub_one
+#print axioms Markov.embeddedCircleRealLift_add_int
+#print axioms Markov.embeddedCircleRealLift_eq_iff_deck_power
+#print axioms Markov.embeddedCircleRealLift_injective_of_infiniteOrder
+
+#print axioms Markov.modularHyperbolic_not_isOfFinOrder
+#print axioms Markov.embeddedCircleRealLift_isProperMap_of_hyperbolicDeck
+#print axioms Markov.embeddedCircleRealLift_injective_of_hyperbolicDeck
+#print axioms Markov.embeddedCircleRealLift_isClosedEmbedding_of_hyperbolicDeck
+#print axioms Markov.embeddedCircleRealLift_deck_intersection_iff
+#print axioms Markov.embeddedCircleRealLift_translated_range_inter_iff
+#print axioms Markov.embeddedCircleRealLift_range_translate_eq_iff
+#print axioms Markov.embeddedCircleRealLift_translates_disjoint_of_not_mem
+#print axioms Markov.embeddedCircleRealLift_translate_disjoint_of_not_mem
+#print axioms Markov.embeddedCircleConnectorLiftPoint
+#print axioms Markov.embeddedCircleConnectorLift
+#print axioms Markov.embeddedCircleConnectorLiftPoint_project
+#print axioms Markov.embeddedCircleConnectorLift_project
+#print axioms Markov.embeddedCircleConnectorDeck
+#print axioms Markov.embeddedCircleConnectorTransportLift
+#print axioms Markov.embeddedCircleConnectorTransportLoop
+#print axioms Markov.embeddedCircleConnectorTransportLoop_eq
+#print axioms Markov.embeddedCircleConnectorDeck_marked
+#print axioms Markov.embeddedCircleConnectorDeck_eq_paperPrimitiveHolonomy
+#print axioms Markov.paperPrimitiveHolonomy_has_embeddedCircle_monodromy
+#print axioms Markov.embeddedCircleConnectorRealLift
+#print axioms Markov.embeddedCircleConnectorRealLift_project
+#print axioms Markov.embeddedCircleConnectorRealLift_add_one
+#print axioms Markov.paperPrimitiveHolonomy_has_properEmbeddedLift
+#print axioms Markov.upperHalfPlane_eq_vertical_of_two_dist_eq
+#print axioms Markov.upperHalfPlane_isometryOn_vertical_eq
+#print axioms Markov.upperHalfPlane_locally_unit_speed_vertical_continuation
+#print axioms Markov.upperHalfPlaneTranslateSL
+#print axioms Markov.upperHalfPlaneTranslateSL_re
+#print axioms Markov.upperHalfPlaneCircleVerticalizer
+#print axioms Markov.upperHalfPlaneCircleVerticalizer_re_zero
+#print axioms Markov.upperHalfPlane_pair_exists_verticalizer
+#print axioms Markov.upperHalfPlane_distinct_pair_exists_verticalizer
+#print axioms Markov.upperHalfPlaneVerticalFlipSL
+#print axioms Markov.upperHalfPlaneVerticalFlipSL_on_imaginary
+#print axioms Markov.upperHalfPlane_distinct_pair_exists_ordered_verticalizer
+#print axioms Markov.upperHalfPlane_vertical_interval_eq
+#print axioms Markov.upperHalfPlane_locally_unit_speed_eq_conjugate_vertical
+#print axioms Markov.upperHalfPlane_isometry_of_locally_unit_speed
+#print axioms Markov.invariantIsometricAxis_period_le_displacement
+#print axioms Markov.hyperbolicTranslationLength_eq_invariantIsometricAxis_period
+#print axioms Markov.modularTraceQuotientLift_locally_unit_speed
+#print axioms Markov.modularTraceQuotientLift_isometry
+#print axioms Markov.modularTraceQuotientLift_deck_action_of_period
+#print axioms Markov.modularTraceQuotientLift_period_eq_translationLength
+#print axioms Markov.modularTraceQuotientLift_eq_closedGeodesic
+
+#print axioms Markov.ComplexClosedUnitDisk
+#print axioms Markov.complexUnitCircleClosedDisk
+#print axioms Markov.continuous_complexUnitCircleClosedDisk
+#print axioms Markov.normalizedCircleDiskBoundaryExtension_homotopy
+#print axioms Markov.normalizedCircle_no_continuous_disk_boundary_extension
+#print axioms Markov.diskArcChord
+#print axioms Markov.diskArcChordHomotopy
+#print axioms Markov.diskArcChordHomotopy_continuous
+#print axioms Markov.diskArcChordHomotopy_fixed_endpoints
+#print axioms Markov.diskArcChord_norm_lt
+#print axioms Markov.diskArcChordHomotopy_norm_lt
+#print axioms Markov.diskArcChordHomotopy_boundary_ne
+#print axioms Markov.convexDiskRadialHomeomorph
+#print axioms Markov.convexDiskRadialHomeomorph_image_closedBall
+#print axioms Markov.convexDiskRadialHomeomorph_image_frontier
+#print axioms Markov.convexDiskRadialHomeomorph_circle_factor_pos
+#print axioms Markov.convexDiskRadialHomeomorph_circle_apply
+#print axioms Markov.convexDiskRadialHomeomorph_normalize_circle
+#print axioms Markov.convexDiskRadialClosedDiskHomeomorph
+#print axioms Markov.convexDiskRadialBoundaryHomeomorph
+#print axioms Markov.convexDisk_no_continuous_normalized_boundary_extension
+#print axioms Markov.upperHalfPlaneCayley
+#print axioms Markov.upperHalfPlaneCayley_den_ne_zero
+#print axioms Markov.continuous_upperHalfPlaneCayley
+#print axioms Markov.upperHalfPlaneCayley_norm_lt_one
+#print axioms Markov.upperHalfPlaneCayley_add_one
+#print axioms Markov.upperHalfPlaneCayley_sub_one
+#print axioms Markov.upperHalfPlaneCayley_den_norm_lower
+#print axioms Markov.upperHalfPlaneCayley_norm_add_one_le
+#print axioms Markov.upperHalfPlaneCayley_norm_sub_one_le
+#print axioms Markov.hyperbolicVerticalAxis_complex_norm
+#print axioms Markov.upperHalfPlane_complex_norm_le_of_dist_vertical
+#print axioms Markov.upperHalfPlane_im_lower_of_dist_vertical
+#print axioms Markov.upperHalfPlaneCayley_norm_add_one_le_of_dist_vertical
+#print axioms Markov.upperHalfPlaneCayley_norm_sub_one_le_of_dist_vertical
+#print axioms Markov.upperHalfPlaneCayley_tendsto_atBot_of_dist_vertical
+#print axioms Markov.upperHalfPlaneCayley_tendsto_atTop_of_dist_vertical
+#print axioms Markov.complexUnitDirection
+#print axioms Markov.convexFrontierBasedLoop
+#print axioms Markov.convexFrontierBasedLoop_normalize
+#print axioms Markov.convexFrontier_boundary_homotopy_has_zero
+#print axioms Markov.diskArcs_intersect_of_transverse_interior_chords
+#print axioms Markov.real_isometry_translation_or_reflection
+#print axioms Markov.isometricLine_smul_translation
+#print axioms Markov.modularHyperbolicAxis_add_int_period
+#print axioms Markov.modularHyperbolicAxis_translation_of_range_preserving
+#print axioms Markov.modularHyperbolicAxis_range_translate_eq_iff_of_periodSubgroup
+#print axioms Markov.paperPrimitiveHyperbolicAxis_range_translate_eq_iff
+#print axioms Markov.paperPrimitiveHyperbolicAxis_stabilizer
+#print axioms Markov.hyperbolicEquivariantCurve_normalized_uniform_distance
+#print axioms Markov.hyperbolicEquivariantCurve_has_normalized_cayley_endpoints
+#print axioms Markov.modularEquivariantCurve_has_normalized_cayley_endpoints
+#print axioms Markov.paperPrimitiveHolonomy_has_properEmbeddedLift_cayley_endpoints
+#print axioms Markov.realOpenIntervalParameter
+#print axioms Markov.realOpenIntervalParameter_continuousOn
+#print axioms Markov.realOpenIntervalParameter_tendsto_left
+#print axioms Markov.realOpenIntervalParameter_tendsto_right
+#print axioms Markov.realOpenIntervalInverse
+#print axioms Markov.realOpenIntervalInverse_interior
+#print axioms Markov.realOpenIntervalParameter_inverse
+#print axioms Markov.realCurveCompactifiedPath
+#print axioms Markov.realCurveCompactifiedPath_apply_of_interior
+#print axioms Markov.realCurveCompactifiedPath_norm_lt_one
+#print axioms Markov.realCurveCompactifiedPath_interior_range
+#print axioms Markov.realCurveCompactifiedPath_norm_le_one
+
+#print axioms Markov.upperHalfPlaneCayleySLZero
+#print axioms Markov.upperHalfPlaneCayleySLInfinity
+#print axioms Markov.upperHalfPlaneCayleySLZero_den_ne_zero
+#print axioms Markov.upperHalfPlaneCayleySLInfinity_den_ne_zero
+#print axioms Markov.upperHalfPlaneCayleySLZero_norm
+#print axioms Markov.upperHalfPlaneCayleySLInfinity_norm
+#print axioms Markov.upperHalfPlaneCayleySLZero_ne_infinity
+#print axioms Markov.upperHalfPlaneCayley_smul_den_ne_zero
+#print axioms Markov.upperHalfPlaneCayley_smul
+#print axioms Markov.upperHalfPlaneCayley_smul_inv_form
+#print axioms Markov.upperHalfPlaneCayley_smul_tendsto_zero
+#print axioms Markov.upperHalfPlaneCayley_smul_tendsto_infinity
+#print axioms Markov.upperHalfPlaneCayley_smul_tendsto_atBot_of_dist_vertical
+#print axioms Markov.upperHalfPlaneCayley_smul_tendsto_atTop_of_dist_vertical
+#print axioms Markov.upperHalfPlaneSL_vertical_re
+#print axioms Markov.upperHalfPlaneCayleySLZero_im
+#print axioms Markov.upperHalfPlaneCayleySLInfinity_im
+#print axioms Markov.upperHalfPlaneSL_vertical_range_of_products_zero
+#print axioms Markov.upperHalfPlaneCayleySL_opposite_im_of_axis_intersection
+#print axioms Markov.upperHalfPlaneCayleySL_opposite_im_of_axes_intersect
+#print axioms Markov.upperHalfPlaneCayleySL_endpoint_im_ne_zero_of_axes_intersect
+#print axioms Markov.hyperbolicInvariantAxis_normalized_vertical_of_diagonal_action
+#print axioms Markov.hyperbolicInvariantAxis_normalized_cayley_endpoints_of_diagonal_action
+#print axioms Markov.modularHyperbolicAxis_normalized_cayley_endpoints
+#print axioms Markov.paperPrimitiveHolonomy_has_properEmbeddedLift_common_axis_endpoints
+#print axioms Markov.realDiskCurves_intersect_of_transverse_endpoint_chords
+#print axioms Markov.upperHalfPlaneCayley_injective
+#print axioms Markov.unitDisk_opposite_imaginary_chord_crossing
+#print axioms Markov.integerPeriodEquality_periodic
+#print axioms Markov.integerPeriodCircleMap
+#print axioms Markov.integerPeriodCircleMap_coe
+#print axioms Markov.integerPeriodCircleMap_injective
+#print axioms Markov.integerPeriodCircleMap_isClosedEmbedding
+#print axioms Markov.integerPeriodCircleMap_range
+#print axioms Markov.hyperbolicAxis_chart_translate_apply
+#print axioms Markov.hyperbolicAxis_chart_point_eq_iff
+#print axioms Markov.hyperbolicAxis_chart_range
+#print axioms Markov.hyperbolicAxis_chart_translate_range
+#print axioms Markov.hyperbolicAxis_chart_range_eq_iff
+#print axioms Markov.hyperbolicAxis_chart_ranges_disjoint_iff
+#print axioms Markov.hyperbolicAxis_chart_ranges_intersect_iff
+#print axioms Markov.normalizedCurve_axes_eq_of_intersect
+#print axioms Markov.normalizedCurve_axes_disjoint_or_eq
+#print axioms Markov.paperPrimitiveHyperbolicAxis_translate_disjoint_of_not_mem
+#print axioms Markov.modularClosedGeodesic_eq_iff_int_period_of_axis_separation
+#print axioms Markov.paperPrimitiveClosedGeodesic_eq_iff_int_period
+#print axioms Markov.paperPrimitiveClosedGeodesic_eq_iff_int_length
+#print axioms Markov.paperPrimitiveSimpleGeodesicCircle
+#print axioms Markov.paperPrimitiveSimpleGeodesicCircle_coe
+#print axioms Markov.paperPrimitiveSimpleGeodesicCircle_isClosedEmbedding
+#print axioms Markov.paperPrimitiveSimpleGeodesicCircle_range
+#print axioms Markov.paperPrimitiveSimpleGeodesicCircle_local_dist_eq
+#print axioms Markov.paperPrimitiveSimpleGeodesicCircle_period_length
+#print axioms Markov.paperPrimitiveSimpleGeodesicCircleLoop
+#print axioms Markov.paperPrimitiveSimpleGeodesicCircleLoop_eq
+#print axioms Markov.paperPrimitiveSimpleGeodesicCircleLoop_fixedSingularCoordinates
+#print axioms Markov.norm_intVector_quadrant
+#print axioms Markov.paperPrimitiveHolonomy_period_eq_trace_norm
+#print axioms Markov.paperPrimitiveClosedGeodesic_trace_norm_variation
+#print axioms Markov.primitive_signedClass_has_canonical_simpleGeodesicCircle
+
+#print axioms Markov.normalizedCircle_compl_singleton_isPathConnected
+#print axioms Markov.standardTorus_horizontal_complement_isPathConnected
+#print axioms Markov.standardPrimitiveAffineCircle_range_eq_secondDual
+#print axioms Markov.standardTorus_primitiveAffineCircle_complement_isPathConnected
+#print axioms Markov.standardPuncturedAffineCircle_filled_complement_isPathConnected
+#print axioms Markov.standardPuncturedTorus_homotopic_of_filled_family_and_complement_path
+#print axioms Markov.standardPuncturedTorus_homotopic_of_filled_family_and_pathConnected_complement
+#print axioms Markov.standardPuncturedTorus_homotopic_of_filled_family_affine_target
+#print axioms Markov.standardPuncturedGraphCircle
+#print axioms Markov.continuous_standardPuncturedGraphCircle
+#print axioms Markov.standardPuncturedGraphCircle_isClosedEmbedding
+#print axioms Markov.standardPuncturedGraphLoop
+#print axioms Markov.standardGraphSecondBasedLoop
+#print axioms Markov.standardGraphCircleWinding
+#print axioms Markov.standardPuncturedGraphAffineLoop
+#print axioms Markov.normalizedCircleStandardLoop_eq_zero_iff
+#print axioms Markov.standardPuncturedGraphLoop_homotopic_affine
+#print axioms Markov.paperCuspDeckElement
+#print axioms Markov.paperCuspDeckElement_eq_original_commutator
+#print axioms Markov.paperCuspDeckElement_coordinates
+#print axioms Markov.paperCuspDeckElement_conjugate_zpow_coordinates
+#print axioms Markov.paperPrimitiveDirection_ne_zero
+#print axioms Markov.paperPrimitiveHolonomy_ne_one
+#print axioms Markov.paperPrimitiveHolonomy_ne_conjugate_cusp_zpow
+#print axioms Markov.paperPrimitiveHolonomy_not_isConj_cusp_zpow
+#print axioms Markov.paperPrimitiveClosedGeodesicLoop_singularClass_ne_zero
+#print axioms Markov.paperPrimitiveClosedGeodesicLoop_not_homotopic_refl
+#print axioms Markov.continuousMapHomotopy_loop_conjugate
+#print axioms Markov.normalizedCircleHomotopyBasePath
+#print axioms Markov.normalizedCircleHomotopyBasePath_apply
+#print axioms Markov.normalizedCircleHomotopy_positiveLoop_conjugate
+#print axioms Markov.normalizedCircleHomotopy_positiveLoop_quotient
+#print axioms Markov.normalizedCircleStandardLoop_surjective
+#print axioms Markov.normalizedCircleStandardLoop_eq_iff
+#print axioms Markov.normalizedCircleHomotopyOfIntervalData
+#print axioms Markov.normalizedCircleMapWinding
+#print axioms Markov.normalizedCircleMap_homotopic_of_winding_eq
+#print axioms Markov.standardTorusCircleMapWinding
+#print axioms Markov.standardTorusCircleMap_homotopic_of_winding_eq
+#print axioms Markov.modularMetricCirclePositiveLoop
+#print axioms Markov.modularMetricCirclePositiveLoop_apply
+#print axioms Markov.modularSimpleGeodesicLengthSet
+#print axioms Markov.modularSimpleGeodesicLengthSet_metric_variation
+#print axioms Markov.trace_norm_mem_modularSimpleGeodesicLengthSet
+#print axioms Markov.modularSimpleGeodesicLengthSet_nonempty
+#print axioms Markov.modularSimpleGeodesicLengthSet_bddBelow
+#print axioms Markov.modularSimpleGeodesicLengthInf
+#print axioms Markov.modularSimpleGeodesicLengthInf_nonneg
+#print axioms Markov.modularSimpleGeodesicLengthInf_le_trace_norm
+#print axioms Markov.normalizedCirclePunctureWindow
+#print axioms Markov.normalizedCirclePunctureWindow_isOpen
+#print axioms Markov.normalizedCirclePunctureWindow_zero
+#print axioms Markov.normalizedCirclePunctureWindow_avoids_cut
+#print axioms Markov.normalizedCircleWinding_translated_eq_zero_of_avoids_cut
+#print axioms Markov.standardTorusPunctureBox
+#print axioms Markov.standardTorusPunctureBox_isOpen
+#print axioms Markov.standardTorusPunctureBox_zero
+#print axioms Markov.standardPunctureNeighborhood
+#print axioms Markov.standardPunctureNeighborhood_isOpen
+#print axioms Markov.modularPunctureNeighborhood
+#print axioms Markov.modularPunctureNeighborhood_isOpen
+#print axioms Markov.standardTorusLoopWinding_eq_zero_of_punctureNeighborhood
+#print axioms Markov.modularStandardLoopWinding_eq_zero_of_punctureNeighborhood
+#print axioms Markov.modularPunctureNeighborhood_loop_fixedSingularCoordinates_zero
+#print axioms Markov.modularPunctureNeighborhood_loop_singularClass_zero
+#print axioms Markov.modularPunctureNeighborhood_circle_fixedSingularCoordinates_zero
+#print axioms Markov.modularPunctureNeighborhood_circle_singularClass_zero
+#print axioms Markov.singularLoopClass_map_eq_of_explicit_homotopy
+#print axioms Markov.paperPrimitiveSimpleGeodesicCircle_not_homotopic_into_punctureNeighborhood
+#print axioms Markov.paperPrimitiveSimpleGeodesicCircle_not_contained_in_punctureNeighborhood
+#print axioms Markov.normalizedCircleTranslateComplementHomeomorph
+#print axioms Markov.normalizedCircleCutHomeomorph
+#print axioms Markov.standardHorizontalComplementCylinderHomeomorph
+#print axioms Markov.standardHorizontalComplementRetract
+#print axioms Markov.standardHorizontalComplementRetract_idem
+#print axioms Markov.standardHorizontalComplementRetract_range
+#print axioms Markov.standardHorizontalComplementDeformation
+#print axioms Markov.standardHorizontalComplementDeformation_fix_retract
+#print axioms Markov.modularMetricCircle_real_lift_exists
+#print axioms Markov.modularMetricCircle_deck_eq_of_loop_homotopy
+#print axioms Markov.modularMetricCircle_period_eq_of_axis_loop_homotopy
+#print axioms Markov.modularMetricCircle_length_eq_trace_norm_of_canonical_loop_homotopy
+#print axioms Markov.standardPrimitiveZeroComplementHomeomorph
+#print axioms Markov.standardPrimitiveZeroComplementInclusion
+#print axioms Markov.standardPrimitiveZeroComplementLongitudinal
+#print axioms Markov.standardPrimitiveZeroComplementParallel
+#print axioms Markov.standardPrimitiveZeroComplementRetract
+#print axioms Markov.standardPrimitiveZeroComplementDeformation
+#print axioms Markov.standardPrimitiveZeroComplementRetract_eq_parallel_comp
+#print axioms Markov.standardPrimitiveZeroComplement_homotopic_of_longitudinal_winding_eq
+#print axioms Markov.standardPrimitiveZeroComplement_punctured_homotopic_of_longitudinal_winding_eq
+
+#print axioms Markov.paperIdealQuadrilateral_compact_over_compact_image
+#print axioms Markov.paperIdealQuadrilateral_finite_translates_meeting_compact
+#print axioms Markov.paperIdealQuadrilateral_curve_segment_finite_cells
+#print axioms Markov.paperIdealQuadrilateral_axis_segment_finite_cells
+#print axioms Markov.paperIdealQuadrilateral_closedBall_finite_cells
+#print axioms Markov.upperHalfPlaneSL_vertical_intersection_parameter_unique
+#print axioms Markov.upperHalfPlaneSL_vertical_range_eq_of_two_intersections
+#print axioms Markov.upperHalfPlaneSL_distinct_axes_intersection_subsingleton
+#print axioms Markov.upperHalfPlane_distinct_isometric_lines_intersection_subsingleton
+#print axioms Markov.upperHalfPlane_distinct_isometric_lines_intersection_parameters_unique
+#print axioms Markov.originalNielsenChart_symm_standard
+#print axioms Markov.originalNielsenHomeomorph_standard_linear
+#print axioms Markov.originalNielsenRightHomeomorph_standard_linear
+#print axioms Markov.FinMatchingNoncrossing
+#print axioms Markov.finMatching_interval_closed
+#print axioms Markov.finMatching_exists_consecutive
+#print axioms Markov.finiteRealCutPoints
+#print axioms Markov.mem_finiteRealCutPoints
+#print axioms Markov.finiteRealCutPoints_card_pos
+#print axioms Markov.finiteRealCutTable
+#print axioms Markov.finiteRealCutTable_strictMono
+#print axioms Markov.finiteRealCutTable_range
+#print axioms Markov.finiteRealCutTable_bounds
+#print axioms Markov.finiteRealCutTable_first
+#print axioms Markov.finiteRealCutTable_last
+#print axioms Markov.finiteRealCutTable_gap_not_mem
+#print axioms Markov.normalizedCircleWinding_integer_linear
+#print axioms Markov.standardTorusCircleMap_firstDual_winding
+#print axioms Markov.hyperbolic_trace_of_positive_vertical_shift
+#print axioms Markov.hyperbolic_trace_of_invariant_isometric_axis
+#print axioms Markov.periodicIsometricLine_not_contained_quadrilateral_translate
+#print axioms Markov.modularHyperbolicAxis_not_contained_quadrilateral_translate
+#print axioms Markov.OriginalPairLinearMap
+#print axioms Markov.OriginalPairLinearlyRealized
+#print axioms Markov.originalPairLinearlyRealized_basis
+#print axioms Markov.OriginalPairLinearlyRealized.swap
+#print axioms Markov.OriginalPairLinearlyRealized.invert_second
+#print axioms Markov.OriginalPairLinearlyRealized.invert_first
+#print axioms Markov.OriginalPairLinearlyRealized.left
+#print axioms Markov.OriginalPairLinearlyRealized.right
+#print axioms Markov.upperHalfPlaneSL_vertical_crossing_sign_mul_neg
+#print axioms Markov.upperHalfPlane_isometric_line_crosses_SL_axis
+#print axioms Markov.upperHalfPlane_distinct_isometric_lines_cross_in_axis_chart
+#print axioms Markov.standardPrimitiveAnnulusModularInclusion
+#print axioms Markov.modularCircleMap_standard_winding
+#print axioms Markov.standardPrimitiveZeroComplementLongitudinal_apply
+#print axioms Markov.standardPrimitiveAnnulus_longitudinal_winding_eq_one
+#print axioms Markov.standardPrimitiveAnnulusAffineMap
+#print axioms Markov.standardPrimitiveAnnulusAffineMap_longitudinal_winding
+#print axioms Markov.standardPrimitiveAnnulus_homotopic_affine_of_original_H1
+#print axioms Markov.modularCircleMap_homotopic_affine_of_annular_containment
+#print axioms Markov.modularTraceQuotientLift_hyperbolic_of_positive_period
+#print axioms Markov.modularMetricCircle_axis_normalization
+#print axioms Markov.modularMetricCircle_positiveLoop_marked_of_lift
+#print axioms Markov.paperQuadrilateralGeodesicSide
+#print axioms Markov.paperQuadrilateralGeodesicSideLine
+#print axioms Markov.paperQuadrilateralGeodesicSideLine_isometry
+#print axioms Markov.paperQuadrilateralGeodesicSideLine_range
+#print axioms Markov.paperQuadrilateralGeodesicSide_subset
+#print axioms Markov.paperQuadrilateralGeodesicSideLine_translate_range
+#print axioms Markov.modularHyperbolicAxis_ne_translated_paper_side_range
+#print axioms Markov.modularHyperbolicAxis_paper_side_cut_subsingleton
+#print axioms Markov.modularHyperbolicAxis_finite_paper_side_cuts
+#print axioms Markov.TraceLinearBasisPair
+#print axioms Markov.quadrantSeed_linearBasisPair
+#print axioms Markov.SeededFarey.linearBasisPair
+#print axioms Markov.SeededFarey.to_quadrant_directions
+#print axioms Markov.quadrantPrimitiveTraceWord_linear_pair
+#print axioms Markov.modularHyperbolicAxis_exists_phase_off_paper_sides
+#print axioms Markov.modularHyperbolicAxis_exists_strict_paper_representative
+#print axioms Markov.originalLinear_firstAffinePartner_det
+#print axioms Markov.originalLinear_secondAffinePartner_det
+#print axioms Markov.OriginalPairLinearMap.first_reversed_affine
+#print axioms Markov.OriginalPairLinearMap.second_reversed_affine
+#print axioms Markov.realizedGenerator_reversed_affine_marked
+#print axioms Markov.quadrantPrimitiveTraceWord_inverse_has_affineRepresentative
+#print axioms Markov.paperPrimitiveAxisTransportLoop_has_affineRepresentative
+#print axioms Markov.paperIdealQuadrilateralStrictRegion
+#print axioms Markov.paperIdealQuadrilateralStrictRegion_isOpen
+#print axioms Markov.paperIdealQuadrilateralStrictRegion_subset
+#print axioms Markov.paperIdealQuadrilateralStrictRegion_subset_interior
+#print axioms Markov.paperIdealQuadrilateral_frontier_subset_sides
+#print axioms Markov.modularHyperbolicAxis_finite_paper_frontier_cuts
+#print axioms Markov.modularHyperbolicAxis_exists_interior_paper_representative
+#print axioms Markov.circleHomotopy_basedLoop_connector
+#print axioms Markov.modularCircleMap_annular_canonical_marked
+#print axioms Markov.modularCircleMap_annular_canonical_homotopy
+#print axioms Markov.paperIdealQuadrilateralStrictRegion_return_eq_one
+#print axioms Markov.paperIdealQuadrilateralStrictRegion_quotient_unique
+#print axioms Markov.periodicIsometricLine_period_endpoint_outside_start_cell
+#print axioms Markov.modularHyperbolicAxis_exists_strict_phase_with_period_exit
+#print axioms Markov.paperQuadrilateralGeodesicSide_subset_frontier
+#print axioms Markov.paperIdealQuadrilateral_frontier_eq_sides
+#print axioms Markov.paperIdealQuadrilateral_interior_eq_strictRegion
+#print axioms Markov.paperCellPullbackPoint
+#print axioms Markov.paperCellSubarc
+#print axioms Markov.paperCellSubarc_val
+#print axioms Markov.paperCellSubarc_smul
+#print axioms Markov.paperCellSubarc_project
+#print axioms Markov.paperCellSubarc_strict_of_interior
+#print axioms Markov.paperCellSubarc_interior_of_interior
+#print axioms Markov.paperCellSubarc_injective_of_isometry
+#print axioms Markov.paperCellSubarc_isClosedEmbedding_of_isometry
+#print axioms Markov.modularMetricCircleNormalize
+#print axioms Markov.modularMetricCircleNormalize_coe
+#print axioms Markov.modularMetricCircleNormalize_zero
+#print axioms Markov.modularMetricCircleNormalize_positiveLoop
+#print axioms Markov.modularMetricCircleNormalize_original_H1
+#print axioms Markov.basedLoop_conjugacy_rebase
+#print axioms Markov.modularMetricCircle_length_eq_trace_norm_of_annular_containment
+#print axioms Markov.paperQuadrilateralGeodesicSides_disjoint
+#print axioms Markov.paperQuadrilateralSideNeighbor
+#print axioms Markov.paperQuadrilateral_side_point_cell_iff
+#print axioms Markov.paperQuadrilateral_side_local_two_cells
+#print axioms Markov.paperQuadrilateral_side_local_adjacent_cover
+#print axioms Markov.continuous_interval_frontier_witness
+#print axioms Markov.paperQuadrilateral_frontier_cut_of_strict_start_exit
+#print axioms Markov.periodicIsometricLine_period_frontier_cut
+#print axioms Markov.modularHyperbolicAxis_exists_strict_phase_with_frontier_cut
+#print axioms Markov.paperStrictCell_label_unique
+#print axioms Markov.paperStrictCell_existsUnique_of_off_sides
+#print axioms Markov.paperStrictCell_exists_of_off_sides
+#print axioms Markov.continuous_paper_cutFree_gap_cell
+#print axioms Markov.paperAxisSideCuts
+#print axioms Markov.paperAxisSideCuts_finite_Icc
+#print axioms Markov.paperAxisSideCuts_finite_Ioo
+#print axioms Markov.paperAxisSideCuts_period_iff
+#print axioms Markov.paperAxisSideCuts_exists_period_base_off
+#print axioms Markov.paperQuadrilateralSideFunction
+#print axioms Markov.paperQuadrilateralSideFunction_continuous
+#print axioms Markov.paperQuadrilateralSideFunction_nonneg
+#print axioms Markov.paperQuadrilateralSideFunction_eq_zero_iff
+#print axioms Markov.paperQuadrilateralSideFunction_nonpos_neighbor
+#print axioms Markov.paperQuadrilateral_side_local_strict_halfplanes
+#print axioms Markov.paperAxisPeriodInteriorCuts
+#print axioms Markov.paperAxisPeriodInteriorCuts_finite
+#print axioms Markov.paperAxisPeriodCutPoints
+#print axioms Markov.paperAxisPeriodCutTable
+#print axioms Markov.paperAxisPeriodCutPoints_card_pos
+#print axioms Markov.paperAxisPeriodCutTable_strictMono
+#print axioms Markov.paperAxisPeriodCutTable_range
+#print axioms Markov.paperAxisPeriodCutTable_bounds
+#print axioms Markov.paperAxisPeriodCutTable_endpoints
+#print axioms Markov.paperAxisPeriodCutTable_gap_off_sides
+#print axioms Markov.paperAxisPeriodCutTable_gap_nonempty
+#print axioms Markov.paperQuadrilateralSideChart
+#print axioms Markov.paperQuadrilateralSideChart_vertical
+#print axioms Markov.paperQuadrilateralSideFunction_isometric_crossing
+#print axioms Markov.paperAxisPeriodCutPoints_two_le
+#print axioms Markov.paperAxisPeriodGap_count_pos
+#print axioms Markov.paperAxisGapLeftIndex
+#print axioms Markov.paperAxisGapRightIndex
+#print axioms Markov.paperAxisPeriodCutTable_consecutive_cell
+#print axioms Markov.paperAxisPeriodGapCellLabel
+#print axioms Markov.paperAxisPeriodGapCellLabel_spec
+#print axioms Markov.paperAxisPeriodGapCellLabel_unique
+#print axioms Markov.paperQuadrilateral_isometric_side_cell_transition
+#print axioms Markov.modularHyperbolicAxis_paper_side_cell_transition
+#print axioms Markov.paperAxisPeriodGapParameter
+#print axioms Markov.paperAxisPeriodGapParameter_mem_gap
+#print axioms Markov.paperAxisPeriodGapParameter_mem_period
+#print axioms Markov.paperAxisPeriodGapSubarc
+#print axioms Markov.paperAxisPeriodGapSubarc_val
+#print axioms Markov.paperAxisPeriodGapSubarc_smul
+#print axioms Markov.paperAxisPeriodGapSubarc_project
+#print axioms Markov.paperAxisPeriodGapSubarc_strict
+#print axioms Markov.paperAxisPeriodGapSubarc_interior
+#print axioms Markov.paperAxisPeriodGapSubarc_injective
+#print axioms Markov.paperAxisPeriodGapSubarc_isClosedEmbedding
+#print axioms Markov.paperAxisPeriodGapParameter_ne_of_ne_gap
+#print axioms Markov.paperAxisPeriodGapSubarc_ne_of_projected_period_injective
+#print axioms Markov.paperAxisPeriodGapSubarc_interiors_disjoint_of_projected_period_injective
+#print axioms Markov.paperAxisPeriodCutTable_internal_mem_sideCuts
+#print axioms Markov.paperAxisPeriodGapCellLabel_adjacent_side_witness
+#print axioms Markov.paperAxisPeriodGapCellLabel_adjacent_step
+#print axioms Markov.paperAxisFirstGapIndex
+#print axioms Markov.paperAxisLastGapIndex
+#print axioms Markov.paperAxisPeriodGapCellLabel_last_eq_period_mul_first
+#print axioms Markov.paperAxisPeriodCellWord
+#print axioms Markov.paperAxisPeriodCellWord_length
+#print axioms Markov.paperAxisPeriodCellWord_prod
+
+#print axioms Markov.modularMetricCircle_eq_iff_int_period
+#print axioms Markov.modularSimpleMetricCircle_axis_normalization
+#print axioms Markov.integerPeriodEquality_injOn_Ioo
+#print axioms Markov.paperQuadrilateral_frontier_existsUnique_side
+#print axioms Markov.paperQuadrilateral_point_frontier_of_translated_side
+#print axioms Markov.paperAxisPeriodGapSubarc_frontier_of_cut
+#print axioms Markov.paperAxisPeriodGapSubarc_endpoints_not_same_side
+#print axioms Markov.paperAxisPeriodGapSubarc_internal_endpoint_sides
+#print axioms Markov.paperQuadrilateralComplexSquare
+#print axioms Markov.continuous_paperQuadrilateralComplexSquare
+#print axioms Markov.paperQuadrilateralDiskCoordinate
+#print axioms Markov.continuous_paperQuadrilateralDiskCoordinate
+#print axioms Markov.paperQuadrilateralDiskCoordinate_injective
+#print axioms Markov.paperQuadrilateralDiskCoordinate_norm_le_one
+#print axioms Markov.paperQuadrilateralDiskCoordinate_norm_eq_one_of_frontier
+#print axioms Markov.paperQuadrilateralDiskCoordinate_norm_lt_one_of_strict
+#print axioms Markov.paperAxisCellLetterCoordinates
+#print axioms Markov.paperQuadrilateralSideNeighbor_coordinates
+#print axioms Markov.paperAxisPeriodCellWord_signedSum
+#print axioms Markov.paperAxisPeriodCellWord_fixedSingularCoordinates
+#print axioms Markov.diskArcChord_cross_endpoints_ne_of_transverse_interior_intersection
+#print axioms Markov.modularSimpleMetricCircle_finite_Q_itinerary
+#print axioms Markov.paperQuadrilateral_disjoint_proper_arcs_no_transverse_chord_crossing
+#print axioms Markov.paperAxisCellWordBase
+#print axioms Markov.paperAxisCellWordLift
+#print axioms Markov.paperAxisCellWordProjectedLoop
+#print axioms Markov.paperAxisCellWordProjectedLoop_apply
+#print axioms Markov.paperAxisCellWordProjectedLoop_marked
+#print axioms Markov.paperAxisCellWordProjectedLoop_marked_reverseWord
+#print axioms Markov.paperAxisCellWordProjectedLoop_fixedSingularCoordinates
+#print axioms Markov.modularMetricCircle_positiveLoop_fixedCoordinates_of_axis_phase
+#print axioms Markov.modularMetricCircle_positiveLoop_cellWord_coordinates_of_axis_phase
+#print axioms Markov.paperAxisPeriodCutPoints_three_le_of_off_sides
+#print axioms Markov.paperAxisWrapLeftTime
+#print axioms Markov.paperAxisWrapRightTime
+#print axioms Markov.paperAxisWrapTimes_straddle
+#print axioms Markov.paperAxisWrapInterval_cell
+#print axioms Markov.paperAxisWrapTimes_sideCuts
+#print axioms Markov.paperAxisPeriodWrapSubarc
+#print axioms Markov.paperAxisPeriodWrapSubarc_smul
+#print axioms Markov.paperAxisPeriodWrapSubarc_project
+#print axioms Markov.paperAxisPeriodWrapSubarc_isClosedEmbedding
+#print axioms Markov.paperAxisPeriodWrapSubarc_strict
+#print axioms Markov.paperAxisPeriodWrapSubarc_endpoint_sides
+#print axioms Markov.modularSimpleMetricCircle_finite_Q_itinerary_coordinates
+#print axioms Markov.paperAxisPeriodWrapParameter
+#print axioms Markov.paperAxisPeriodWrapParameter_mem_interval
+#print axioms Markov.paperAxisWrap_internalGap_parameters_one_period
+#print axioms Markov.paperAxisPeriodWrapSubarc_ne_internalGap_of_projected_period_injective
+#print axioms Markov.paperAxisPeriodWrapSubarc_internalGap_interiors_disjoint
+#print axioms Markov.paperQuadrilateralSideNeighbor_ne_one
+#print axioms Markov.paperAxisPeriodGapCellLabel_adjacent_ne
+#print axioms Markov.paperAxisPeriodGapParameter_mem_closed_gap
+#print axioms Markov.paperAxisPeriodGapParameter_internal_mem_period
+#print axioms Markov.paperAxisPeriodGapSubarc_internal_points_ne
+#print axioms Markov.paperAxisPeriodGapDiskArc
+#print axioms Markov.paperAxisPeriodGapDiskArc_no_transverse_chord_crossing
+#print axioms Markov.paperAxisProperArcIndex
+#print axioms Markov.paperAxisProperArc
+#print axioms Markov.paperAxisProperArcParameter
+#print axioms Markov.paperAxisProperArcCellLabel
+#print axioms Markov.paperAxisProperArc_card
+#print axioms Markov.paperAxisProperArc_isClosedEmbedding
+#print axioms Markov.paperAxisProperArc_strict
+#print axioms Markov.paperAxisProperArc_endpoint_sides
+#print axioms Markov.paperAxisProperArc_smul
+#print axioms Markov.paperAxisProperArc_project
+#print axioms Markov.paperAxisPeriodWrapDiskArc
+#print axioms Markov.paperAxisPeriodWrapDiskArc_no_transverse_chord_crossing
+#print axioms Markov.paperAxisProperArc_interiors_disjoint
+#print axioms Markov.paperAxisProperArcNextIndex
+#print axioms Markov.paperAxisProperArc_projected_gluing
+#print axioms Markov.modularSimpleMetricCircle_proper_Q_arc_family
+
+#print axioms Markov.paperAxisPeriodWrapSubarc_ne_internalGap_closed
+#print axioms Markov.paperAxisPeriodWrapSubarc_internalGap_ranges_disjoint
+#print axioms Markov.paperQuadrilateral_neighbor_intersection_eq_side
+#print axioms Markov.modularHyperbolicAxis_neighbor_cell_intersection_subsingleton
+#print axioms Markov.paperAxisPeriodGapCut_mem_both_label_cells
+#print axioms Markov.paperAxisPeriodGapCellLabel_ne_two_steps
+#print axioms Markov.paperQuadrilateralOppositeSide
+#print axioms Markov.paperQuadrilateralOppositeSide_apply_apply
+#print axioms Markov.paperQuadrilateralMarkedSideCoordinate
+#print axioms Markov.paperQuadrilateral_distinct_projected_eq_opposite_and_coordinate
+#print axioms Markov.paperAxisPeriodCellLabelNat
+#print axioms Markov.paperAxisPeriodCellWord_getElem_ratio
+#print axioms Markov.paperAxisPeriodCellWord_no_immediate_inverse
+#print axioms Markov.paperAxisProperEndpointTag
+#print axioms Markov.paperAxisProperEndpointParameter
+#print axioms Markov.paperAxisProperEndpointPoint
+#print axioms Markov.paperAxisProperArc_points_ne
+#print axioms Markov.paperAxisProperEndpointPoint_injective
+#print axioms Markov.paperAxisProperEndpointSide
+#print axioms Markov.paperAxisProperEndpointSide_spec
+#print axioms Markov.paperAxisProperEndpointSide_unique
+#print axioms Markov.paperAxisProperEndpointTag_card
+#print axioms Markov.paperQuadrilateralMarkedSidePoint
+#print axioms Markov.paperQuadrilateralMarkedSideCoordinate_shape
+#print axioms Markov.paperQuadrilateralMarkedSideCoordinate_bounds
+#print axioms Markov.paperQuadrilateralMarkedSideCoordinate_injective
+#print axioms Markov.paperAxisPeriodCellWord_length_pos_of_off_sides
+#print axioms Markov.paperAxisPeriodCellLabelNat_wrap_no_backtrack
+#print axioms Markov.paperAxisPeriodCellWord_no_cyclic_inverse
+#print axioms Markov.paperAxisProperArcEndpointPair
+#print axioms Markov.paperAxisProperArcEndpointPair_involutive
+#print axioms Markov.paperAxisProperArcEndpointPair_ne
+#print axioms Markov.paperAxisProperArcPrevIndex
+#print axioms Markov.paperAxisProperArcPrevIndex_next
+#print axioms Markov.paperAxisProperArcNextIndex_prev
+#print axioms Markov.paperAxisProperEdgePair
+#print axioms Markov.paperAxisProperEdgePair_involutive
+#print axioms Markov.paperAxisProperEdgePair_ne
+#print axioms Markov.paperAxisProperEdgePair_project
+#print axioms Markov.paperAxisProperEdgePair_points_ne
+#print axioms Markov.paperAxisProperEndpointCoordinate
+#print axioms Markov.paperAxisProperEndpointSideTags
+#print axioms Markov.paperAxisProperEndpointSideCoordinates
+#print axioms Markov.paperAxisProperEndpointCoordinate_bounds
+#print axioms Markov.paperAxisProperEndpointCoordinate_injOn_side
+#print axioms Markov.paperAxisProperEndpointSideCoordinates_card
+#print axioms Markov.paperAxisProperEndpointSideOrder
+#print axioms Markov.paperAxisProperEndpointSortedTag
+#print axioms Markov.paperAxisProperEndpointSortedTag_spec
+#print axioms Markov.paperAxisProperEndpointSortedTag_strictMono
+#print axioms Markov.paperAxisProperEndpointSortedTag_range
+#print axioms Markov.paperAxisProperEndpoint_cyclic_gluing_opposite_and_coordinate
+#print axioms Markov.paperAxisProperEdgePair_opposite_and_coordinate
+#print axioms Markov.paperAxisProperOppositeEndpointEquiv
+#print axioms Markov.paperAxisProperEndpointSideCount
+#print axioms Markov.paperAxisProperEndpointSideCount_eq_opposite
+#print axioms Markov.paperAxisProperEndpointStep
+#print axioms Markov.paperAxisProperEndpointStep_symmetric
+#print axioms Markov.paperAxisProperEndpointTraversal_source_next
+#print axioms Markov.paperAxisProperEndpoint_pairings_connected
+#print axioms Markov.paperAxisProperEndpoint_pair_closed_subset_eq_univ
+#print axioms Markov.paperAxisProperEndpointSideCoordinates_eq_opposite
+#print axioms Markov.paperAxisProperEndpointSortedTag_edgePair
+#print axioms Markov.paperAxisProperArcEndpointPair_sides_ne
+#print axioms Markov.modularSimpleMetricCircle_tagged_sorted_paired_endpoint_data
+
+#print axioms Markov.paperAxisProperArc_endpointSide_ne
+#print axioms Markov.paperAxisProperArcPairCount
+#print axioms Markov.paperAxisProperArcPairCount_comm
+#print axioms Markov.paperAxisProperArcPairCount_pos_iff
+#print axioms Markov.paperAxisProperArcPairCount_self
+#print axioms Markov.paperAxisProperArcSixCount
+#print axioms Markov.paperAxisProperEndpointSideCount_eq_pairSum
+#print axioms Markov.paperAxisProperEndpointSideCount_six_formulas
+#print axioms Markov.paperAxisProperArcSixCount_corner_balance
+#print axioms Markov.squareOppositeChords_data
+#print axioms Markov.squareArcs_top_bottom_right_left_intersect
+#print axioms Markov.paperQuadrilateral_opposite_side_arcs_intersect
+#print axioms Markov.paperAxisProperArc_opposite_pairs_not_coexist
+#print axioms Markov.paperAxisProperArc_opposite_pairCount_mul_eq_zero
+#print axioms Markov.paperAxisProperArcSixCount_opposite_mul_eq_zero
+#print axioms Markov.paperQuadrilateralRawSideCoordinate
+#print axioms Markov.squareSideNormalizer_one_strictMonoOn
+#print axioms Markov.paperQuadrilateralMarkedSideCoordinate_raw_formula
+#print axioms Markov.paperQuadrilateralMarkedSideCoordinate_raw_lt_iff
+#print axioms Markov.paperQuadrilateralBoundarySideCoordinate
+#print axioms Markov.paperQuadrilateralBoundarySidePoint
+#print axioms Markov.paperQuadrilateralBoundarySideCoordinate_shape
+#print axioms Markov.paperQuadrilateralBoundarySideCoordinate_bounds
+#print axioms Markov.paperAxisProperEndpointBoundaryCoordinate
+#print axioms Markov.paperAxisProperEndpointBoundarySortedTag
+#print axioms Markov.paperAxisProperEndpointBoundarySortedTag_side
+#print axioms Markov.paperAxisProperEndpointBoundarySortedTag_strictMono
+#print axioms Markov.paperAxisProperEndpointBoundarySortedTag_range
+#print axioms Markov.paperAxisProperEndpointBoundaryRank
+#print axioms Markov.paperAxisProperEndpointBoundaryRank_spec
+#print axioms Markov.paperAxisProperArcPartnerBoundaryRank
+#print axioms Markov.paperAxisProperArcPartnerBoundaryRank_spec
+
+#print axioms Markov.paperAxisProperEndpointSortedTag_first_le
+#print axioms Markov.paperAxisProperEndpointSortedTag_le_last
+#print axioms Markov.paperAxisProperEndpoint_eq_first_of_minimal
+#print axioms Markov.paperAxisProperEndpoint_eq_last_of_maximal
+#print axioms Markov.paperAxisArcFromTag
+#print axioms Markov.paperAxisArcFromTag_isClosedEmbedding
+#print axioms Markov.paperAxisArcFromTag_strict
+#print axioms Markov.paperAxisProperEndpoint_same_side_arcIndex_ne
+#print axioms Markov.paperAxisArcFromTag_points_ne
+#print axioms Markov.paperQuadrilateral_raw_chord_strict_coordinates
+#print axioms Markov.paperQuadrilateral_raw_chord_crossing_intersection
+#print axioms Markov.rawSquareQuarterTurn
+#print axioms Markov.rawSquareQuarterTurn_injective
+#print axioms Markov.rawSquareQuarterTurn_sub
+#print axioms Markov.rawSquareQuarterTurn_diskArcChord
+#print axioms Markov.rawSquareQuarterTurn_det
+#print axioms Markov.rawSquareQuarterTurn_det_sub
+#print axioms Markov.rawSquareQuarterTurn_strict_coordinates
+#print axioms Markov.rawSquareQuarterTurn_closed_coordinates
+#print axioms Markov.paperAxisExtremeEndpointSet
+#print axioms Markov.paperAxisExtremeEndpointSet_nonempty
+#print axioms Markov.paperAxisExtremeEndpointSet_edge_closed
+#print axioms Markov.paperAxisExtremeEndpointSet_eq_univ_of_arc_closed
+#print axioms Markov.paperAxisPeriodCellWord_getElem_eq_targetSide
+#print axioms Markov.paperAxisPeriodCellWord_eq_targetSide_list
+#print axioms Markov.rawSquareCorner01Cap
+#print axioms Markov.rawSquareCorner01Chord_data
+#print axioms Markov.paperQuadrilateral_corner01_cap_arcs_intersect
+#print axioms Markov.paperQuadrilateral_corner01_reversed_right_order_intersect
+#print axioms Markov.paperQuadrilateralNextSide
+#print axioms Markov.paperQuadrilateralNextSide_ne
+#print axioms Markov.paperQuadrilateralRawBoundarySideCoordinate
+#print axioms Markov.paperQuadrilateralBoundarySideCoordinate_raw_lt_iff
+#print axioms Markov.paperQuadrilateralBoundarySideCoordinate_raw_le_iff
+#print axioms Markov.paperQuadrilateralRawBoundarySideCoordinate_bounds
+#print axioms Markov.paperQuadrilateralRawSideFrame
+#print axioms Markov.paperQuadrilateralRawSideFrame_re
+#print axioms Markov.paperQuadrilateralRawSideFrame_im
+#print axioms Markov.paperQuadrilateralRawSideFrame_side_iff
+#print axioms Markov.paperQuadrilateralRawSideFrame_top
+#print axioms Markov.paperQuadrilateralRawSideFrame_right
+#print axioms Markov.paperAxisProperEndpointSideCount_le_two_of_all_extreme
+#print axioms Markov.paperAxisProperEndpointSideCount_eq_two_of_corner_positive_all_extreme
+#print axioms Markov.paperAxisProperArcSixCount_eq_corner_ones_of_all_extreme
+#print axioms Markov.paperAxisProperEndpointTag_card_eq_sideCount_sum
+#print axioms Markov.paperAxisProperEndpointTag_card_eight_of_corner_positive_all_extreme
+#print axioms Markov.paperAxisPeriodCellWord_length_four_of_corner_positive_all_extreme
+#print axioms Markov.paperAxisPeriodCellWord_target_parity_step
+#print axioms Markov.paperAxisPeriodCellWord_even_coordinates_of_four_adjacent_arcs
+#print axioms Markov.paperAxisPeriodCellWord_not_primitive_of_four_adjacent_arcs
+#print axioms Markov.paperAxisCorner01_cap_partner_nonnegative
+#print axioms Markov.paperAxisCorner01_top_nearer_partner
+#print axioms Markov.paperAxisCorner01_right_nearer_partner
+#print axioms Markov.paperAxisCorner01_maxima_arc_paired
+#print axioms Markov.paperAxisCorner01_sorted_last_arc_paired
+#print axioms Markov.paperQuadrilateralFrame_nonnegative_cap_sides
+#print axioms Markov.paperAxisCorner_cap_partner_nonnegative
+#print axioms Markov.paperAxisProperArc_adjacent_sides_of_opposite_counts_zero
+#print axioms Markov.paperAxisProperArc_adjacent_sides_of_corner_positive_all_extreme
+#print axioms Markov.paperAxisProperArcEndpointPair_adjacent_of_corner_positive_all_extreme
+#print axioms Markov.paperAxisCorner_source_nearer_partner
+#print axioms Markov.paperAxisCorner_next_nearer_partner
+#print axioms Markov.paperAxisCorner_extrema_arc_paired
+#print axioms Markov.paperAxisCorner_sorted_extrema_arc_paired
+#print axioms Markov.paperAxisExtremeEndpointSet_arc_closed_of_corner_arcs
+#print axioms Markov.paperAxisExtremeEndpointSet_eq_univ_of_corner_arcs
+#print axioms Markov.paperAxisProperArcSixCount_all_corners_of_positive
+#print axioms Markov.paperAxisExtremeEndpointSet_arc_closed_of_corner_positive
+#print axioms Markov.paperAxisExtremeEndpointSet_eq_univ_of_corner_positive
+#print axioms Markov.paperAxisProperArcSixCount_corner_mul_eq_zero_of_primitive
+#print axioms Markov.paperAxisProperArcSixCount_corner_zero_or_zero_of_primitive
+
+#print axioms Markov.paperAxisNextCornerPacket_rank_strict
+#print axioms Markov.paperAxisNextCornerPacket_final
+#print axioms Markov.paperAxisPrevCornerPacket_rank_strict
+#print axioms Markov.paperAxisPrevCornerPacket_initial
+#print axioms Markov.paperAxisNextCornerPacketStart
+#print axioms Markov.paperAxisPrevCornerPacketStop
+#print axioms Markov.paperAxisNextCornerPacket_iff_start_le
+#print axioms Markov.paperAxisPrevCornerPacket_iff_lt_stop
+#print axioms Markov.paperAxisProperEndpointBoundarySortedTag_edgePair
+#print axioms Markov.paperAxisProperEdgePair_actual_boundary_rank_sum
+#print axioms Markov.rawSquareTopBottomReversedChord_data
+#print axioms Markov.paperQuadrilateral_top_bottom_reversed_order_intersect
+#print axioms Markov.paperQuadrilateralRawSideFrame_opposite
+#print axioms Markov.paperQuadrilateral_opposite_reversed_frame_order_intersect
+#print axioms Markov.paperQuadrilateral_opposite_raw_partner_antitone
+#print axioms Markov.lowerMechanicalLetter
+#print axioms Markov.lowerMechanicalWord
+#print axioms Markov.lowerMechanicalWord_length
+#print axioms Markov.lowerMechanicalWord_seed_left
+#print axioms Markov.lowerMechanicalWord_seed_right
+#print axioms Markov.fareyLowerMechanical_quotient_prefix
+#print axioms Markov.fareyLowerMechanical_quotient_suffix
+#print axioms Markov.lowerMechanicalWord_farey_concat
+#print axioms Markov.paperAxisProperArcNextIndex_val_mod
+#print axioms Markov.paperAxisProperArcNextIndex_iterate_val
+#print axioms Markov.paperAxisPeriodCellWord_rotate_eq_sourceCycle
+#print axioms Markov.paperAxisMissingCorner_side_role_partition
+#print axioms Markov.paperAxisMissingCorner_source_side_partition
+#print axioms Markov.paperAxisMissingCorner_side_set_eq_role_set
+#print axioms Markov.paperAxisPrimitive_exists_missing_previous_corner
+#print axioms Markov.quadrantPrimitiveTraceWord_period_eq_trace_norm
+#print axioms Markov.modularClosedGeodesicPeriod_eq_trace_norm_of_canonical_word_conjugacy
+#print axioms Markov.modularClosedGeodesicPeriod_eq_trace_norm_of_cellWord_conjugacy
+#print axioms Markov.modularClosedGeodesic_trace_norm_variation_of_cellWord_conjugacy
+#print axioms Markov.paperAxisNextCornerPacketStart_le_card
+#print axioms Markov.paperAxisPrevCornerPacketStop_le_card
+#print axioms Markov.paperAxisPrevCornerPacketStop_le_nextStart
+#print axioms Markov.paperAxisOppositePacket_iff_middle
+#print axioms Markov.paperAxisCorner_actual_partner_rank_sum
+#print axioms Markov.paperAxisNextCornerPacket_actual_partner_offset
+#print axioms Markov.paperAxisOppositePartner_raw_antitone
+#print axioms Markov.paperAxisOppositePartner_boundary_antitone
+#print axioms Markov.lowerMechanicalEval
+#print axioms Markov.lowerMechanicalEval_map
+#print axioms Markov.lowerMechanicalEval_farey_concat
+#print axioms Markov.SeededFarey.coordinate_lowerMechanicalEval
+#print axioms Markov.primitiveSeedMatrix_eq_lowerMechanicalEval
+#print axioms Markov.quadrantLowerMechanicalSideWord
+#print axioms Markov.quadrantPrimitiveTraceWord_eq_lowerMechanicalSideWord_prod
+#print axioms Markov.quadrantLowerMechanicalSideWord_rotate_prod
+#print axioms Markov.lowerMechanicalLetter_mod
+#print axioms Markov.lowerMechanicalLetter_period_mod
+#print axioms Markov.lowerMechanicalRotationCode
+#print axioms Markov.lowerMechanicalWord_rotate_eq_code
+#print axioms Markov.paperQuadrilateralSideNeighbor_opposite_eq_inv
+#print axioms Markov.paperAxisSourceSide_eq_opposite_prevTarget
+#print axioms Markov.paperAxisPrevSourceCycle_eq_reverse_rotate
+#print axioms Markov.paperAxisPrevSourceCycle_eq_rotate_reverse
+#print axioms Markov.paperAxisPrevSourceCycle_neighbor_prod
+#print axioms Markov.paperAxisOppositePacket_tail_card
+#print axioms Markov.paperAxisOppositePacket_head_card
+#print axioms Markov.paperAxisActualPartnerSide_tag_card_eq_pairCount
+#print axioms Markov.paperAxisNextCornerPacket_length_eq_pairCount
+#print axioms Markov.paperAxisPrevCornerPacket_length_eq_pairCount
+#print axioms Markov.paperAxisOppositePacket_length_eq_pairCount
+#print axioms Markov.paperAxisCyclicRankStateTag
+#print axioms Markov.paperAxisCyclicRankStateTag_side
+#print axioms Markov.paperAxisCyclicRankStateTag_injective
+#print axioms Markov.paperAxisCyclicRankStateTag_range
+#print axioms Markov.paperAxisOppositePartner_boundary_strict
+#print axioms Markov.lowerMechanicalWord_count_true
+#print axioms Markov.lowerMechanicalWord_count_false
+#print axioms Markov.quadrantLowerMechanicalSideWord_coordinate_sum
+#print axioms Markov.paperAxisOpposite_actual_partner_rank_sum
+#print axioms Markov.paperAxisOppositePacket_actual_partner_offset
+#print axioms Markov.paperQuadrilateralNextSide_apply_twice
+#print axioms Markov.paperQuadrilateralOppositeNextSide
+#print axioms Markov.paperQuadrilateralOppositePrevSide
+#print axioms Markov.paperQuadrilateralPrevSide_apply_twice
+#print axioms Markov.paperAxisProperArcPairCount_corner_balance
+#print axioms Markov.paperAxisCyclic_missing_corner_actual_parameters
+#print axioms Markov.paperAxisPacketStep_next_translation
+#print axioms Markov.paperAxisPacketStep_prev_translation
+#print axioms Markov.paperAxisPacketStep_opposite_translation
+#print axioms Markov.paperAxisCyclic_missing_corner_actual_rotation
+#print axioms Markov.paperAxisCyclic_missing_corner_actual_letter
+
+#print axioms Markov.paperAxisCyclic_state_role_count
+#print axioms Markov.paperAxisCyclic_missing_corner_role0_word
+#print axioms Markov.paperAxisMissingCorner_role0_word_or_role1
+#print axioms Markov.quadrantLowerMechanicalSideWord_negative_sum_coordinates
+#print axioms Markov.quadrantLowerMechanicalSideWord_prod_eq_canonical_of_primitive
+#print axioms Markov.paperSideWord_forward_mechanical_rotation_isConj
+#print axioms Markov.paperSideWord_backward_mechanical_rotation_isConj_inverse
+#print axioms Markov.paperAxisProperEndpointTraversal_target_prev
+#print axioms Markov.paperAxisCyclic_missing_corner_role1_word
+#print axioms Markov.paperAxisCyclic_missing_corner_role1_reverse_word
+#print axioms Markov.paperAxisCyclic_missing_corner_role1_word_prod
+#print axioms Markov.paperAxisPrimitive_period_eq_trace_norm
+#print axioms Markov.modularSimpleGeodesicLengthSet_eq_singleton
+#print axioms Markov.modularSimpleGeodesicLengthInf_eq_trace_norm
+#print axioms Markov.IsModularIntrinsicNormExtension
+#print axioms Markov.existsUnique_modularIntrinsicNormExtension
+#print axioms Markov.modularMcShaneRivinNorm
+#print axioms Markov.modularMcShaneRivinNorm_spec
+#print axioms Markov.modularMcShaneRivinNorm_continuous
+#print axioms Markov.modularMcShaneRivinNorm_smul
+#print axioms Markov.modularMcShaneRivinNorm_nonneg
+#print axioms Markov.modularMcShaneRivinNorm_eq_zero_iff
+#print axioms Markov.modularMcShaneRivinNorm_zero
+#print axioms Markov.modularMcShaneRivinNorm_add_le
+#print axioms Markov.modularMcShaneRivinNorm_primitive
+#print axioms Markov.modularMcShaneRivinNorm_eq_actual_primitive_length
+#print axioms Markov.modularMcShaneRivinNorm_integer_multiple
+#print axioms Markov.modularMcShaneRivinNorm_eq_traceEuclideanGauge
+#print axioms Markov.modularMcShaneRivinNorm_primitive_trace_value
+#print axioms Markov.modularMcShaneRivinBall
+#print axioms Markov.modularMarkedHomologyVector
+#print axioms Markov.modularMarkedHomologyVector_injective
+#print axioms Markov.modularMcShaneRivinLattice
+#print axioms Markov.modularMcShaneRivinLattice_eq_standard
+#print axioms Markov.modularMcShaneRivinLatticePointSet
+#print axioms Markov.modularMcShaneRivinLatticeCount
+#print axioms Markov.modularMcShaneRivinArea
+#print axioms Markov.modularMcShaneRivinBall_eq_traceEuclideanBall
+#print axioms Markov.modularMcShaneRivinBall_isCompact
+#print axioms Markov.modularMcShaneRivinBall_strictConvex
+#print axioms Markov.modularMcShaneRivinBall_volume_pos
+#print axioms Markov.modularMcShaneRivinBall_volume_lt_top
+#print axioms Markov.modularMcShaneRivinArea_eq_traceEuclideanArea
+#print axioms Markov.modularMcShaneRivinArea_pos
+#print axioms Markov.modularMcShaneRivinCoordinateSet
+#print axioms Markov.modularMcShaneRivinLatticeCount_eq_coordinate_ncard
+#print axioms Markov.modularMcShaneRivinLatticeCount_eq_original_homology_ncard
+#print axioms Markov.modularMcShaneRivinLatticeCount_eq_traceLatticeCount
+#print axioms Markov.modularMcShaneRivinCoordinateSet_finite
+#print axioms Markov.modularMcShaneRivinLatticePointSet_finite
+#print axioms Markov.modularMcShaneRivin_lattice_asymptotic

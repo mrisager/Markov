@@ -1,0 +1,199 @@
+import RiemannGaussian.VinogradovNearOneBudget
+import RiemannGaussian.VinogradovHeightSchedule
+import RiemannGaussian.EtaOddPowerQuadrature
+import RiemannGaussian.ZetaEulerCell
+import RiemannGaussian.ZetaEulerContinuation
+import RiemannGaussian.ZetaEulerTruncation
+import RiemannGaussian.ZetaEulerBernoulli
+import RiemannGaussian.ZetaEulerFourier
+import RiemannGaussian.OscillatoryPowerPrimitive
+import RiemannGaussian.ZetaEulerOscillation
+import RiemannGaussian.ZetaEulerUniformRemainder
+import RiemannGaussian.ZetaEulerLineBound
+import RiemannGaussian.ZetaVinogradovEulerBound
+import RiemannGaussian.ZetaEulerRightStrip
+import RiemannGaussian.ZetaNearOneLocalDisc
+import RiemannGaussian.ZetaNearOneLogProfile
+import RiemannGaussian.ZetaVinogradovLocalDisc
+import RiemannGaussian.ZetaSignedPrimeSeries
+import RiemannGaussian.ZetaVinogradovSignedBudget
+import RiemannGaussian.ZetaVinogradovMargin
+import RiemannGaussian.ZetaNearOneBudgetLimit
+import RiemannGaussian.ZetaLogLogBudget
+import RiemannGaussian.ZetaVinogradovScheduledMargin
+import RiemannGaussian.ZetaVinogradovZeroFree
+
+#print axioms RiemannGaussian.VinogradovNearOneBudget.delta_le
+#print axioms RiemannGaussian.VinogradovNearOneBudget.middle_block_bound
+#print axioms RiemannGaussian.VinogradovNearOneBudget.line
+#print axioms RiemannGaussian.VinogradovNearOneBudget.delta_le_four_succ
+#print axioms RiemannGaussian.VinogradovNearOneBudget.block_bound
+#print axioms RiemannGaussian.VinogradovNearOneBudget.delta
+#print axioms RiemannGaussian.VinogradovNearOneBudget.saving_ge
+#print axioms RiemannGaussian.VinogradovNearOneBudget.delta.eq_1
+#print axioms RiemannGaussian.VinogradovNearOneBudget.canonical_block_bound
+#print axioms RiemannGaussian.VinogradovNearOneBudget.growth
+#print axioms RiemannGaussian.VinogradovNearOneBudget.growth.eq_1
+#print axioms RiemannGaussian.VinogradovNearOneBudget.line_bounds
+#print axioms RiemannGaussian.VinogradovNearOneBudget.growth_le_displacement_power
+#print axioms RiemannGaussian.VinogradovNearOneBudget.growth_pos
+#print axioms RiemannGaussian.VinogradovNearOneBudget.delta_pos
+#print axioms RiemannGaussian.VinogradovHeightSchedule.threshold_envelope_tendsto
+#print axioms RiemannGaussian.VinogradovHeightSchedule.inverse_delta_le
+#print axioms RiemannGaussian.VinogradovHeightSchedule.log_inverse_delta_le
+#print axioms RiemannGaussian.VinogradovScaleSelection.rootBase.eq_1
+#print axioms RiemannGaussian.VinogradovHeightSchedule.size_upper
+#print axioms RiemannGaussian.VinogradovHeightSchedule.size_cube
+#print axioms RiemannGaussian.VinogradovHeightSchedule.growth_mul_le
+#print axioms RiemannGaussian.VinogradovHeightSchedule.size
+#print axioms RiemannGaussian.VinogradovHeightSchedule.index
+#print axioms RiemannGaussian.VinogradovHeightSchedule.balanced_identity
+#print axioms RiemannGaussian.VinogradovHeightSchedule.log_threshold_le
+#print axioms RiemannGaussian.VinogradovHeightSchedule.size_atTop
+#print axioms RiemannGaussian.VinogradovHeightSchedule.index_atTop
+#print axioms RiemannGaussian.VinogradovHeightSchedule.eventually_threshold
+#print axioms RiemannGaussian.VinogradovHeightSchedule.rounding
+#print axioms RiemannGaussian.VinogradovHeightSchedule.growth_cubic_bound
+#print axioms RiemannGaussian.norm_cpow_sub_cpow_le_above
+#print axioms RiemannGaussian.ZetaEulerCell.cell
+#print axioms RiemannGaussian.ZetaEulerCell.summable_envelope
+#print axioms RiemannGaussian.ZetaEulerCell.partialSum.eq_1
+#print axioms RiemannGaussian.ZetaEulerCell.sum_regularizedCell
+#print axioms RiemannGaussian.ZetaEulerCell.regularizedCell
+#print axioms RiemannGaussian.ZetaEulerCell.intervalIntegrable_power
+#print axioms RiemannGaussian.ZetaEulerCell.differentiable_regularizedCell
+#print axioms RiemannGaussian.ZetaEulerCell.regularizedCell_eq
+#print axioms RiemannGaussian.ZetaEulerCell.norm_cell_le
+#print axioms RiemannGaussian.ZetaEulerCell.summable_cell
+#print axioms RiemannGaussian.ZetaEulerCell.summable_regularizedCell
+#print axioms RiemannGaussian.ZetaEulerCell.integral_power
+#print axioms RiemannGaussian.ZetaEulerCell.partialSum
+#print axioms RiemannGaussian.ZetaEulerCell.regularizedCell.eq_1
+#print axioms RiemannGaussian.ZetaEulerContinuation.analyticOnNhd_regularizedSum
+#print axioms RiemannGaussian.ZetaEulerContinuation.differentiableOn_regularizedSum
+#print axioms RiemannGaussian.ZetaEulerContinuation.regularizedSum_eq_of_one_lt_re
+#print axioms RiemannGaussian.ZetaEulerContinuation.regularizedSum_eq
+#print axioms RiemannGaussian.ZetaEulerContinuation.tsum_cell_eq
+#print axioms RiemannGaussian.ZetaEulerContinuation.regularizedSum.eq_1
+#print axioms RiemannGaussian.ZetaEulerContinuation.endpoint_tendsto_zero
+#print axioms RiemannGaussian.ZetaEulerContinuation.regularizedSum
+#print axioms RiemannGaussian.ZetaEulerTruncation.tsum_envelope_tail_le
+#print axioms RiemannGaussian.ZetaEulerTruncation.sum_cell
+#print axioms RiemannGaussian.ZetaEulerTruncation.summable_remainder
+#print axioms RiemannGaussian.ZetaEulerTruncation.norm_zeta_sub_partialSum_le
+#print axioms RiemannGaussian.ZetaEulerTruncation.norm_remainder_le
+#print axioms RiemannGaussian.ZetaEulerTruncation.zeta_eq_partialSum_add_endpoint_add_remainder
+#print axioms RiemannGaussian.ZetaEulerTruncation.remainder
+#print axioms RiemannGaussian.ZetaEulerBernoulli.cell_eq
+#print axioms RiemannGaussian.ZetaEulerBernoulli.tail.eq_1
+#print axioms RiemannGaussian.ZetaEulerBernoulli.summable_block
+#print axioms RiemannGaussian.ZetaEulerBernoulli.sum_cell_eq
+#print axioms RiemannGaussian.ZetaEulerTruncation.remainder.eq_1
+#print axioms RiemannGaussian.ZetaEulerBernoulli.remainder_eq
+#print axioms RiemannGaussian.ZetaEulerBernoulli.kernel.eq_1
+#print axioms RiemannGaussian.ZetaEulerBernoulli.norm_block_le
+#print axioms RiemannGaussian.ZetaEulerBernoulli.sum_norm_block_le
+#print axioms RiemannGaussian.ZetaEulerBernoulli.norm_tail_le
+#print axioms RiemannGaussian.ZetaEulerBernoulli.kernel
+#print axioms RiemannGaussian.ZetaEulerBernoulli.zeta_eq
+#print axioms RiemannGaussian.ZetaEulerBernoulli.abs_kernel_le
+#print axioms RiemannGaussian.ZetaEulerBernoulli.tail
+#print axioms RiemannGaussian.ZetaEulerBernoulli.block
+#print axioms RiemannGaussian.ZetaEulerFourier.intervalIntegrable_channel
+#print axioms RiemannGaussian.ZetaEulerFourier.weight_zero
+#print axioms RiemannGaussian.ZetaEulerFourier.hasSum_weight
+#print axioms RiemannGaussian.ZetaEulerFourier.channel
+#print axioms RiemannGaussian.ZetaEulerFourier.norm_channel_le
+#print axioms RiemannGaussian.ZetaEulerFourier.weight.eq_1
+#print axioms RiemannGaussian.ZetaEulerFourier.cosine_cell_shift
+#print axioms RiemannGaussian.ZetaEulerFourier.hasSum_kernel_global
+#print axioms RiemannGaussian.ZetaEulerFourier.hasSum_kernel
+#print axioms RiemannGaussian.ZetaEulerFourier.hasSum_blocks
+#print axioms RiemannGaussian.ZetaEulerFourier.hasSum_channel
+#print axioms RiemannGaussian.ZetaEulerFourier.weight_nonneg
+#print axioms RiemannGaussian.ZetaEulerFourier.weight
+#print axioms RiemannGaussian.ZetaEulerFourier.hasSum_block
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.integral_eq
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.mode
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.norm_cosine_integral_le
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.denominator_ne_zero
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.hasDerivAt_primitive
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.denominator
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.denominator_lower
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.cosine_eq_modes
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.norm_defect_le
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.mode.eq_1
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.norm_integral_le
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.denominator.eq_1
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.intervalIntegrable_mode
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.norm_primitive_le
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.primitive
+#print axioms RiemannGaussian.OscillatoryPowerPrimitive.norm_mode
+#print axioms RiemannGaussian.ZetaEulerOscillation.norm_channel_integral_le
+#print axioms RiemannGaussian.ZetaEulerOscillation.norm_blocks_le
+#print axioms RiemannGaussian.ZetaEulerOscillation.envelope
+#print axioms RiemannGaussian.ZetaEulerOscillation.norm_tail_le
+#print axioms RiemannGaussian.ZetaEulerFourier.channel.eq_1
+#print axioms RiemannGaussian.ZetaEulerUniformRemainder.norm_remainder_le_power
+#print axioms RiemannGaussian.ZetaEulerUniformRemainder.norm_tail_le_scaled
+#print axioms RiemannGaussian.ZetaEulerUniformRemainder.norm_zeta_sub_partialSum_le
+#print axioms RiemannGaussian.ZetaEulerLineBound.norm_lt_endpoint
+#print axioms RiemannGaussian.ZetaEulerLineBound.endpoint_le_five_height
+#print axioms RiemannGaussian.ZetaEulerLineBound.norm_le_prefix_add_six
+#print axioms RiemannGaussian.ZetaEulerLineBound.partialSum_eq_positivePrefix
+#print axioms RiemannGaussian.ZetaVinogradovEulerBound.bound_strip
+#print axioms RiemannGaussian.ZetaVinogradovEulerBound.bound_strip_abs
+#print axioms RiemannGaussian.ZetaVinogradovEulerBound.bound_band_abs
+#print axioms RiemannGaussian.ZetaVinogradovEulerBound.bound_abs
+#print axioms RiemannGaussian.ZetaEulerRightStrip.bound
+#print axioms RiemannGaussian.ZetaEulerRightStrip.partialSum_le_harmonic
+#print axioms RiemannGaussian.ZetaEulerRightStrip.bound_abs
+#print axioms RiemannGaussian.ZetaNearOneLocalDisc.center
+#print axioms RiemannGaussian.ZetaNearOneLogProfile.two_le_height
+#print axioms RiemannGaussian.ZetaNearOneLogProfile.height
+#print axioms RiemannGaussian.ZetaVinogradovLocalDisc.disc_geometry
+#print axioms RiemannGaussian.ZetaVinogradovLocalDisc.disc_norm_bound
+#print axioms RiemannGaussian.ZetaVinogradovLocalDisc.profile_nonneg
+#print axioms RiemannGaussian.ZetaVinogradovLocalDisc.local_norm_bound
+#print axioms RiemannGaussian.ZetaNearOneLocalDisc.center.eq_1
+#print axioms RiemannGaussian.ZetaVinogradovLocalDisc.profile
+#print axioms RiemannGaussian.ZetaVinogradovLocalDisc.strip_bound_abs
+#print axioms RiemannGaussian.ZetaVinogradovLocalDisc.profile_eq_log
+#print axioms RiemannGaussian.vonMangoldt_LSeries_term_eq_phase
+#print axioms RiemannGaussian.neg_logDeriv_riemannZeta_eq_vonMangoldt
+#print axioms RiemannGaussian.neg_logDeriv_riemannZeta_three_height_nonneg
+#print axioms RiemannGaussian.vonMangoldt_LSeries_term_re
+#print axioms RiemannGaussian.ZetaVinogradovSignedBudget.margin_of_budget
+#print axioms RiemannGaussian.ZetaVinogradovSignedBudget.allowance
+#print axioms RiemannGaussian.ZetaVinogradovSignedBudget.budget
+#print axioms RiemannGaussian.ZetaVinogradovSignedBudget.source_le_budget
+#print axioms RiemannGaussian.ZetaVinogradovMargin.nonvanishing
+#print axioms RiemannGaussian.ZetaVinogradovMargin.width
+#print axioms RiemannGaussian.ZetaVinogradovMargin.budget_paid
+#print axioms RiemannGaussian.ZetaVinogradovMargin.center_log_le
+#print axioms RiemannGaussian.ZetaVinogradovMargin.width_lt_radius
+#print axioms RiemannGaussian.ZetaVinogradovMargin.reserve_bounds
+#print axioms RiemannGaussian.ZetaVinogradovMargin.reserve
+#print axioms RiemannGaussian.ZetaVinogradovMargin.width_pos
+#print axioms RiemannGaussian.ZetaVinogradovMargin.budget_le
+#print axioms RiemannGaussian.ZetaNearOneBudgetLimit.scale_atTop
+#print axioms RiemannGaussian.ZetaNearOneBudgetLimit.scale_pos
+#print axioms RiemannGaussian.ZetaNearOneBudgetLimit.scale
+#print axioms RiemannGaussian.ZetaLogLogBudget.scale_double_bounds
+#print axioms RiemannGaussian.ZetaNearOneLogProfile.height.eq_1
+#print axioms RiemannGaussian.ZetaVinogradovScheduledMargin.order
+#print axioms RiemannGaussian.ZetaVinogradovScheduledMargin.width.eq_1
+#print axioms RiemannGaussian.ZetaVinogradovScheduledMargin.order.eq_1
+#print axioms RiemannGaussian.ZetaVinogradovScheduledMargin.width
+#print axioms RiemannGaussian.ZetaVinogradovMargin.width.eq_1
+#print axioms RiemannGaussian.ZetaNearOneBudgetLimit.scale.eq_1
+#print axioms RiemannGaussian.ZetaVinogradovScheduledMargin.reserve_le
+#print axioms RiemannGaussian.ZetaVinogradovScheduledMargin.eventually_parameters
+#print axioms RiemannGaussian.ZetaVinogradovScheduledMargin.width_le_margin
+#print axioms RiemannGaussian.ZetaVinogradovScheduledMargin.reserveConstant
+#print axioms RiemannGaussian.ZetaVinogradovScheduledMargin.width_pos
+#print axioms RiemannGaussian.ZetaVinogradovScheduledMargin.abs_invariance
+#print axioms RiemannGaussian.ZetaVinogradovMargin.reserve.eq_1
+#print axioms RiemannGaussian.ZetaVinogradovLocalDisc.profile.eq_1
+#print axioms Markov.t1_VKZeroFreeRegion_proved
+#print axioms RiemannGaussian.ZetaVinogradovZeroFree.exists_eventual_nonvanishing

@@ -1,0 +1,1263 @@
+{
+  "created_utc": "2026-10-02T22:28:54.181233+00:00",
+  "maximum_cutoff": "10^30000",
+  "sample_count": 30000,
+  "sample_step": 1,
+  "sampling_definition": "exact counts at the listed integer exponents k; x=10**k",
+  "plot_interpolation": "straight lines connect samples; the continuous error function is not computed",
+  "counting_definition": "positive Markov triples a <= b <= c <= x",
+  "exceptional_triples_included": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      2
+    ]
+  ],
+  "uniqueness_checked": false,
+  "cutoff_comparisons": "exact integer arithmetic",
+  "partition_weight": "1/(ln(3a)*ln(3b)); floating point affects scheduling only",
+  "constant": "0.18071710471180647805779264904916762147630562767088273",
+  "constant_source": "https://oeis.org/A261613",
+  "main_term": "C * (k * ln(10) + ln(3))**2 at x=10**k",
+  "main_term_decimal_precision": 70,
+  "normalization": "error / sqrt(k * ln(10))",
+  "python_version": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "backend": "gmpy2",
+  "backend_version": "2.3.1",
+  "strict_triples": 862356771,
+  "triples_including_exceptions": 862356773,
+  "pruned_children": 862356772,
+  "completed": true,
+  "products_avoided_by_bit_length_guard": 862335291,
+  "maximum_pending_stack_entries_per_task": 18,
+  "counting_seconds": 4343.846914624999,
+  "counting_seconds_definition": "current coordinator session wall time",
+  "previous_recorded_coordinator_seconds": 0.0,
+  "total_recorded_coordinator_seconds": 4343.846914624999,
+  "workers_requested": 6,
+  "multiprocessing_start_method": "spawn",
+  "requested_tasks": 64,
+  "task_count": 64,
+  "prefix_strict_triples": 63,
+  "partition_checksum": "4aa641890673392bb92e2bf4b9bbfeed44d281bf165172c1f43499b175ee3d0c",
+  "configuration_id": "badd2ef360152cd505cdc8ce8e0ab99f6c81380b8c19cb6a66ea0db6dffc87ac",
+  "checkpoint_directory": ".markov-error-10e30000-checkpoints",
+  "resumed": false,
+  "tasks_reused_from_completed_results": 0,
+  "worker_statistics_by_pid": {
+    "43360": {
+      "jobs": 11,
+      "strict_triples": 143889583,
+      "summed_task_seconds": 4339.115931749016
+    },
+    "43359": {
+      "jobs": 10,
+      "strict_triples": 143029694,
+      "summed_task_seconds": 4317.055220628019
+    },
+    "43358": {
+      "jobs": 11,
+      "strict_triples": 143949760,
+      "summed_task_seconds": 4340.830358792002
+    },
+    "43356": {
+      "jobs": 11,
+      "strict_triples": 144270406,
+      "summed_task_seconds": 4342.686216666043
+    },
+    "43357": {
+      "jobs": 10,
+      "strict_triples": 142860183,
+      "summed_task_seconds": 4313.610432082023
+    },
+    "43355": {
+      "jobs": 11,
+      "strict_triples": 144357082,
+      "summed_task_seconds": 4340.580881333983
+    }
+  },
+  "task_statistics": [
+    {
+      "job_id": "job-00000",
+      "root": [
+        1,
+        806515533049393,
+        2111485077978050
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 42546675,
+      "triples_including_exceptions": 42546675,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 42546676,
+      "products_avoided_by_bit_length_guard": 42545612,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 1285.9384493749967
+    },
+    {
+      "job_id": "job-00001",
+      "root": [
+        308061521170129,
+        806515533049393,
+        745369205875600370486739545090
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 1188232,
+      "triples_including_exceptions": 1188232,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 1188233,
+      "products_avoided_by_bit_length_guard": 1188202,
+      "maximum_pending_stack_entries": 15,
+      "counting_seconds": 29.544300499997917
+    },
+    {
+      "job_id": "job-00002",
+      "root": [
+        117669030460994,
+        308061521170129,
+        108747901555284171885517344677
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 1256575,
+      "triples_including_exceptions": 1256575,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 1256576,
+      "products_avoided_by_bit_length_guard": 1256548,
+      "maximum_pending_stack_entries": 15,
+      "counting_seconds": 31.155928499996662
+    },
+    {
+      "job_id": "job-00003",
+      "root": [
+        44945570212853,
+        117669030460994,
+        15866105011388832711881867645
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 1330897,
+      "triples_including_exceptions": 1330897,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 1330898,
+      "products_avoided_by_bit_length_guard": 1330864,
+      "maximum_pending_stack_entries": 15,
+      "counting_seconds": 33.287855375005165
+    },
+    {
+      "job_id": "job-00004",
+      "root": [
+        17167680177565,
+        44945570212853,
+        2314833524437657097655728834
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 1412050,
+      "triples_including_exceptions": 1412050,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 1412051,
+      "products_avoided_by_bit_length_guard": 1412020,
+      "maximum_pending_stack_entries": 15,
+      "counting_seconds": 35.10399191599572
+    },
+    {
+      "job_id": "job-00005",
+      "root": [
+        6557470319842,
+        17167680177565,
+        337729659674766971708234189
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 1500805,
+      "triples_including_exceptions": 1500805,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 1500806,
+      "products_avoided_by_bit_length_guard": 1500767,
+      "maximum_pending_stack_entries": 15,
+      "counting_seconds": 45.00086924999778
+    },
+    {
+      "job_id": "job-00006",
+      "root": [
+        2504730781961,
+        6557470319842,
+        49274093285711704301910485
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 1598261,
+      "triples_including_exceptions": 1598261,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 1598262,
+      "products_avoided_by_bit_length_guard": 1598223,
+      "maximum_pending_stack_entries": 15,
+      "counting_seconds": 47.91059225000208
+    },
+    {
+      "job_id": "job-00007",
+      "root": [
+        956722026041,
+        2504730781961,
+        7188993325214958405139202
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 1705522,
+      "triples_including_exceptions": 1705522,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 1705523,
+      "products_avoided_by_bit_length_guard": 1705486,
+      "maximum_pending_stack_entries": 15,
+      "counting_seconds": 50.910376166997594
+    },
+    {
+      "job_id": "job-00008",
+      "root": [
+        365435296162,
+        956722026041,
+        1048859990793004534063925
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 1823981,
+      "triples_including_exceptions": 1823981,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 1823982,
+      "products_avoided_by_bit_length_guard": 1823935,
+      "maximum_pending_stack_entries": 15,
+      "counting_seconds": 54.74458095799491
+    },
+    {
+      "job_id": "job-00009",
+      "root": [
+        139583862445,
+        365435296162,
+        153026610336073333308269
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 1955098,
+      "triples_including_exceptions": 1955098,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 1955099,
+      "products_avoided_by_bit_length_guard": 1955053,
+      "maximum_pending_stack_entries": 15,
+      "counting_seconds": 58.62556233300711
+    },
+    {
+      "job_id": "job-00010",
+      "root": [
+        53316291173,
+        139583862445,
+        22326281559508799093954
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 2100949,
+      "triples_including_exceptions": 2100949,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 2100950,
+      "products_avoided_by_bit_length_guard": 2100901,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 62.605892083010986
+    },
+    {
+      "job_id": "job-00011",
+      "root": [
+        20365011074,
+        53316291173,
+        3257360580488260349405
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 2263868,
+      "triples_including_exceptions": 2263868,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 2263869,
+      "products_avoided_by_bit_length_guard": 2263811,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 68.04423041701375
+    },
+    {
+      "job_id": "job-00012",
+      "root": [
+        7778742049,
+        20365011074,
+        475242503909023351877
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 2446393,
+      "triples_including_exceptions": 2446393,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 2446394,
+      "products_avoided_by_bit_length_guard": 2446337,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 73.55742245800502
+    },
+    {
+      "job_id": "job-00013",
+      "root": [
+        2971215073,
+        7778742049,
+        69336946874903113730
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 2651912,
+      "triples_including_exceptions": 2651912,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 2651913,
+      "products_avoided_by_bit_length_guard": 2651841,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 79.77683808300935
+    },
+    {
+      "job_id": "job-00014",
+      "root": [
+        1134903170,
+        2971215073,
+        10116124215298444229
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 2884480,
+      "triples_including_exceptions": 2884480,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 2884481,
+      "products_avoided_by_bit_length_guard": 2884412,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 86.74256637500366
+    },
+    {
+      "job_id": "job-00015",
+      "root": [
+        433494437,
+        1134903170,
+        1475922632185995869
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 3148984,
+      "triples_including_exceptions": 3148984,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 3148985,
+      "products_avoided_by_bit_length_guard": 3148906,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 94.49071124999318
+    },
+    {
+      "job_id": "job-00016",
+      "root": [
+        165580141,
+        433494437,
+        215334210003526850
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 3451715,
+      "triples_including_exceptions": 3451715,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 3451716,
+      "products_avoided_by_bit_length_guard": 3451632,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 103.68795866699656
+    },
+    {
+      "job_id": "job-00017",
+      "root": [
+        63245986,
+        165580141,
+        31416837838692077
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 3800280,
+      "triples_including_exceptions": 3800280,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 3800281,
+      "products_avoided_by_bit_length_guard": 3800192,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 114.06916120801179
+    },
+    {
+      "job_id": "job-00018",
+      "root": [
+        24157817,
+        63245986,
+        4583654867317685
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 4204499,
+      "triples_including_exceptions": 4204499,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 4204500,
+      "products_avoided_by_bit_length_guard": 4204392,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 126.38315799999691
+    },
+    {
+      "job_id": "job-00019",
+      "root": [
+        9227465,
+        24157817,
+        668746232531714
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 4676744,
+      "triples_including_exceptions": 4676744,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 4676745,
+      "products_avoided_by_bit_length_guard": 4676638,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 140.51020066600177
+    },
+    {
+      "job_id": "job-00020",
+      "root": [
+        3524578,
+        9227465,
+        97568760404309
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 5233312,
+      "triples_including_exceptions": 5233312,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 5233313,
+      "products_avoided_by_bit_length_guard": 5233174,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 157.6813738750061
+    },
+    {
+      "job_id": "job-00021",
+      "root": [
+        1346269,
+        3524578,
+        14235090298445
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 5895572,
+      "triples_including_exceptions": 5895572,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 5895573,
+      "products_avoided_by_bit_length_guard": 5895435,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 178.21289587501087
+    },
+    {
+      "job_id": "job-00022",
+      "root": [
+        514229,
+        1346269,
+        2076871684802
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 6691957,
+      "triples_including_exceptions": 6691957,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 6691958,
+      "products_avoided_by_bit_length_guard": 6691796,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 201.99404975000652
+    },
+    {
+      "job_id": "job-00023",
+      "root": [
+        196418,
+        514229,
+        303011495165
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 7661438,
+      "triples_including_exceptions": 7661438,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 7661439,
+      "products_avoided_by_bit_length_guard": 7661247,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 228.46564249999938
+    },
+    {
+      "job_id": "job-00024",
+      "root": [
+        75025,
+        196418,
+        44208781349
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 8857993,
+      "triples_including_exceptions": 8857993,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 8857994,
+      "products_avoided_by_bit_length_guard": 8857773,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 264.0216053329932
+    },
+    {
+      "job_id": "job-00025",
+      "root": [
+        28657,
+        75025,
+        6449974274
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 10358698,
+      "triples_including_exceptions": 10358698,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 10358699,
+      "products_avoided_by_bit_length_guard": 10358439,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 309.3559329589916
+    },
+    {
+      "job_id": "job-00026",
+      "root": [
+        10946,
+        28657,
+        941038565
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 12276040,
+      "triples_including_exceptions": 12276040,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 12276041,
+      "products_avoided_by_bit_length_guard": 12275730,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 366.0968238750065
+    },
+    {
+      "job_id": "job-00027",
+      "root": [
+        4181,
+        10946,
+        137295677
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 14779987,
+      "triples_including_exceptions": 14779987,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 14779988,
+      "products_avoided_by_bit_length_guard": 14779620,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 442.7781363749964
+    },
+    {
+      "job_id": "job-00028",
+      "root": [
+        1597,
+        4181,
+        20031170
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 18136958,
+      "triples_including_exceptions": 18136958,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 18136959,
+      "products_avoided_by_bit_length_guard": 18136515,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 545.2042942920016
+    },
+    {
+      "job_id": "job-00029",
+      "root": [
+        610,
+        1597,
+        2922509
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 22784263,
+      "triples_including_exceptions": 22784263,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 22784264,
+      "products_avoided_by_bit_length_guard": 22783683,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 685.9840443749999
+    },
+    {
+      "job_id": "job-00030",
+      "root": [
+        233,
+        610,
+        426389
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 29480334,
+      "triples_including_exceptions": 29480334,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 29480335,
+      "products_avoided_by_bit_length_guard": 29479588,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 894.1259827920003
+    },
+    {
+      "job_id": "job-00031",
+      "root": [
+        89,
+        62210,
+        16609837
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 21389675,
+      "triples_including_exceptions": 21389675,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 21389676,
+      "products_avoided_by_bit_length_guard": 21389135,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 643.6447767089994
+    },
+    {
+      "job_id": "job-00032",
+      "root": [
+        233,
+        62210,
+        43484701
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 18246671,
+      "triples_including_exceptions": 18246671,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 18246672,
+      "products_avoided_by_bit_length_guard": 18246205,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 549.3719852500071
+    },
+    {
+      "job_id": "job-00033",
+      "root": [
+        34,
+        9077,
+        925765
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 30710941,
+      "triples_including_exceptions": 30710941,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 30710942,
+      "products_avoided_by_bit_length_guard": 30710180,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 934.8910281659992
+    },
+    {
+      "job_id": "job-00034",
+      "root": [
+        89,
+        9077,
+        2423525
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 25421286,
+      "triples_including_exceptions": 25421286,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 25421287,
+      "products_avoided_by_bit_length_guard": 25420651,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 770.7801102079975
+    },
+    {
+      "job_id": "job-00035",
+      "root": [
+        13,
+        51641,
+        2012674
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 33135308,
+      "triples_including_exceptions": 33135308,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 33135309,
+      "products_avoided_by_bit_length_guard": 33134482,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 1008.2392555840052
+    },
+    {
+      "job_id": "job-00036",
+      "root": [
+        1325,
+        51641,
+        205272962
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 14644628,
+      "triples_including_exceptions": 14644628,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 14644629,
+      "products_avoided_by_bit_length_guard": 14644277,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 437.3236399580055
+    },
+    {
+      "job_id": "job-00037",
+      "root": [
+        34,
+        135137,
+        13782649
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 24288114,
+      "triples_including_exceptions": 24288114,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 24288115,
+      "products_avoided_by_bit_length_guard": 24287513,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 731.8258257919952
+    },
+    {
+      "job_id": "job-00038",
+      "root": [
+        1325,
+        135137,
+        537169541
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 13553653,
+      "triples_including_exceptions": 13553653,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 13553654,
+      "products_avoided_by_bit_length_guard": 13553311,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 404.6667093339929
+    },
+    {
+      "job_id": "job-00039",
+      "root": [
+        5,
+        646018,
+        9647009
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 37058357,
+      "triples_including_exceptions": 37058357,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 37058358,
+      "products_avoided_by_bit_length_guard": 37057427,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 1124.9554453330056
+    },
+    {
+      "job_id": "job-00040",
+      "root": [
+        43261,
+        646018,
+        83842154089
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 8509717,
+      "triples_including_exceptions": 8509717,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 8509718,
+      "products_avoided_by_bit_length_guard": 8509518,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 254.09168208298797
+    },
+    {
+      "job_id": "job-00041",
+      "root": [
+        2897,
+        43261,
+        375981346
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 13582834,
+      "triples_including_exceptions": 13582834,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 13582835,
+      "products_avoided_by_bit_length_guard": 13582499,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 405.6282726250065
+    },
+    {
+      "job_id": "job-00042",
+      "root": [
+        194,
+        2897,
+        1686049
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 25118927,
+      "triples_including_exceptions": 25118927,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 25118928,
+      "products_avoided_by_bit_length_guard": 25118304,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 758.0946707910043
+    },
+    {
+      "job_id": "job-00043",
+      "root": [
+        13,
+        294685,
+        11485154
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 28920633,
+      "triples_including_exceptions": 28920633,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 28920634,
+      "products_avoided_by_bit_length_guard": 28919908,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 876.981388041997
+    },
+    {
+      "job_id": "job-00044",
+      "root": [
+        7561,
+        294685,
+        6684339842
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 10562339,
+      "triples_including_exceptions": 10562339,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 10562340,
+      "products_avoided_by_bit_length_guard": 10562083,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 315.39873862500826
+    },
+    {
+      "job_id": "job-00045",
+      "root": [
+        194,
+        7561,
+        4400489
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 22716249,
+      "triples_including_exceptions": 22716249,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 22716250,
+      "products_avoided_by_bit_length_guard": 22715690,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 684.0173525830032
+    },
+    {
+      "job_id": "job-00046",
+      "root": [
+        2,
+        1311738121,
+        7645370045
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 37244354,
+      "triples_including_exceptions": 37244354,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 37244355,
+      "products_avoided_by_bit_length_guard": 37243435,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 1130.8505357500035
+    },
+    {
+      "job_id": "job-00047",
+      "root": [
+        225058681,
+        1311738121,
+        885654153989035201
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 3229213,
+      "triples_including_exceptions": 3229213,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 3229214,
+      "products_avoided_by_bit_length_guard": 3229132,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 97.12795937499322
+    },
+    {
+      "job_id": "job-00048",
+      "root": [
+        38613965,
+        225058681,
+        26071224093240493
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 3842373,
+      "triples_including_exceptions": 3842373,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 3842374,
+      "products_avoided_by_bit_length_guard": 3842289,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 115.45945633300289
+    },
+    {
+      "job_id": "job-00049",
+      "root": [
+        6625109,
+        38613965,
+        767465181141553
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 4648504,
+      "triples_including_exceptions": 4648504,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 4648505,
+      "products_avoided_by_bit_length_guard": 4648387,
+      "maximum_pending_stack_entries": 16,
+      "counting_seconds": 139.85679900000105
+    },
+    {
+      "job_id": "job-00050",
+      "root": [
+        1136689,
+        6625109,
+        22592065572301
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 5737985,
+      "triples_including_exceptions": 5737985,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 5737986,
+      "products_avoided_by_bit_length_guard": 5737841,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 172.6874093330116
+    },
+    {
+      "job_id": "job-00051",
+      "root": [
+        195025,
+        1136689,
+        665048316673
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 7261303,
+      "triples_including_exceptions": 7261303,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 7261304,
+      "products_avoided_by_bit_length_guard": 7261130,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 218.84897270900547
+    },
+    {
+      "job_id": "job-00052",
+      "root": [
+        33461,
+        195025,
+        19577194573
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 9484122,
+      "triples_including_exceptions": 9484122,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 9484123,
+      "products_avoided_by_bit_length_guard": 9483874,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 283.0405787089985
+    },
+    {
+      "job_id": "job-00053",
+      "root": [
+        5741,
+        33461,
+        576298801
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 12912104,
+      "triples_including_exceptions": 12912104,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 12912105,
+      "products_avoided_by_bit_length_guard": 12911804,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 385.1708497090003
+    },
+    {
+      "job_id": "job-00054",
+      "root": [
+        985,
+        5741,
+        16964653
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 18608503,
+      "triples_including_exceptions": 18608503,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 18608504,
+      "products_avoided_by_bit_length_guard": 18608021,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 560.1490784169946
+    },
+    {
+      "job_id": "job-00055",
+      "root": [
+        169,
+        985,
+        499393
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 29141446,
+      "triples_including_exceptions": 29141446,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 29141447,
+      "products_avoided_by_bit_length_guard": 29140737,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 885.2661518750028
+    },
+    {
+      "job_id": "job-00056",
+      "root": [
+        29,
+        14701,
+        1278818
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 30371102,
+      "triples_including_exceptions": 30371102,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 30371103,
+      "products_avoided_by_bit_length_guard": 30370367,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 920.7100068340005
+    },
+    {
+      "job_id": "job-00057",
+      "root": [
+        169,
+        14701,
+        7453378
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 21775762,
+      "triples_including_exceptions": 21775762,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 21775763,
+      "products_avoided_by_bit_length_guard": 21775211,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 654.5360215000037
+    },
+    {
+      "job_id": "job-00058",
+      "root": [
+        5,
+        1441889,
+        21531778
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 35111169,
+      "triples_including_exceptions": 35111169,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 35111170,
+      "products_avoided_by_bit_length_guard": 35110298,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 1068.3689097919996
+    },
+    {
+      "job_id": "job-00059",
+      "root": [
+        96557,
+        1441889,
+        417673428514
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 7547832,
+      "triples_including_exceptions": 7547832,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 7547833,
+      "products_avoided_by_bit_length_guard": 7547642,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 227.83077533300093
+    },
+    {
+      "job_id": "job-00060",
+      "root": [
+        6466,
+        96557,
+        1873012681
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 11681635,
+      "triples_including_exceptions": 11681635,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 11681636,
+      "products_avoided_by_bit_length_guard": 11681340,
+      "maximum_pending_stack_entries": 17,
+      "counting_seconds": 348.81140237499494
+    },
+    {
+      "job_id": "job-00061",
+      "root": [
+        433,
+        6466,
+        8399329
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 20491934,
+      "triples_including_exceptions": 20491934,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 20491935,
+      "products_avoided_by_bit_length_guard": 20491407,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 616.9988444170085
+    },
+    {
+      "job_id": "job-00062",
+      "root": [
+        29,
+        37666,
+        3276509
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 27915202,
+      "triples_including_exceptions": 27915202,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 27915203,
+      "products_avoided_by_bit_length_guard": 27914508,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 848.5103039999958
+    },
+    {
+      "job_id": "job-00063",
+      "root": [
+        433,
+        37666,
+        48928105
+      ],
+      "backend": "gmpy2",
+      "backend_version": "2.3.1",
+      "strict_triples": 17388361,
+      "triples_including_exceptions": 17388361,
+      "initial_root_count": 1,
+      "completed": true,
+      "pruned_children": 17388362,
+      "products_avoided_by_bit_length_guard": 17387913,
+      "maximum_pending_stack_entries": 18,
+      "counting_seconds": 523.7326768750063
+    }
+  ],
+  "last_sample": {
+    "k": 30000,
+    "x": "10^30000",
+    "strict_triples": 862356771,
+    "M_x": 862356773,
+    "main_term": "862356737.6632782951423753077519251022761825363677612163726310524871187",
+    "error": "35.3367217048576246922480748977238174636322387836273689475128813"
+  },
+  "minimum_sampled_error": {
+    "k": 28838,
+    "x": "10^28838",
+    "strict_triples": 796847385,
+    "M_x": 796847387,
+    "main_term": "796847625.9037770450878365939840183695171753301869099567799687939367866",
+    "error": "-238.9037770450878365939840183695171753301869099567799687939367866"
+  },
+  "maximum_sampled_error": {
+    "k": 23442,
+    "x": "10^23442",
+    "strict_triples": 526547867,
+    "M_x": 526547869,
+    "main_term": "526547601.8791480123559639601223181630489912819035471645280099165632089",
+    "error": "267.1208519876440360398776818369510087180964528354719900834367911"
+  },
+  "maximum_absolute_normalized_error": "1.149747876365809588022746292941861255416215945469740303668482752377840"
+}

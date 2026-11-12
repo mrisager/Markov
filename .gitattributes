@@ -1,0 +1,2 @@
+# Keep saved numerical CSVs byte-identical to the original outputs.
+numerics/*.csv -text

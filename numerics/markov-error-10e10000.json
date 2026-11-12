@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-10-02T20:48:56.653995+00:00",
+  "maximum_cutoff": "10^10000",
+  "sample_count": 10000,
+  "sample_step": 1,
+  "sampling_definition": "exact counts at the listed integer exponents k; x=10**k",
+  "plot_interpolation": "straight lines connect samples; the continuous error function is not computed",
+  "counting_definition": "positive Markov triples a <= b <= c <= x",
+  "exceptional_triples_included": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      2
+    ]
+  ],
+  "uniqueness_checked": false,
+  "cutoff_comparisons": "exact integer arithmetic",
+  "constant": "0.18071710471180647805779264904916762147630562767088273",
+  "constant_source": "https://oeis.org/A261613",
+  "main_term": "C * (k * ln(10) + ln(3))**2 at x=10**k",
+  "main_term_decimal_precision": 70,
+  "python_version": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "backend": "gmpy2",
+  "backend_version": "2.3.1",
+  "strict_triples": 95823444,
+  "triples_including_exceptions": 95823446,
+  "pruned_children": 95823445,
+  "products_avoided_by_bit_length_guard": 95813028,
+  "maximum_pending_stack_entries": 19,
+  "counting_seconds": 476.02282483300223,
+  "last_sample": {
+    "k": 10000,
+    "x": "10^10000",
+    "strict_triples": 95823444,
+    "M_x": 95823446,
+    "main_term": "95823510.83263960005564871985714368940204491592988101826439291641136736",
+    "error": "-64.83263960005564871985714368940204491592988101826439291641136736"
+  },
+  "minimum_sampled_error": {
+    "k": 7947,
+    "x": "10^7947",
+    "strict_triples": 60518525,
+    "M_x": 60518527,
+    "main_term": "60518647.02405256161138765713825622138893507508334520124238316576481124",
+    "error": "-120.02405256161138765713825622138893507508334520124238316576481124"
+  },
+  "maximum_sampled_error": {
+    "k": 9472,
+    "x": "10^9472",
+    "strict_triples": 85972280,
+    "M_x": 85972282,
+    "main_term": "85972145.98946948391313275521251139703502919043495126775951764097423194",
+    "error": "136.01053051608686724478748860296497080956504873224048235902576806"
+  }
+}

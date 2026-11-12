@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "scope": "arXiv:2610.36069v1, Theorem 12 only",
+  "paperTitle": "Counting Markov triples and simple geodesics",
+  "paperAuthor": "Morten S. Risager",
+  "theorem": "Markov.modularMcShaneRivin_lattice_asymptotic",
+  "status": "verified in original workspace; proof sources copied byte-for-byte",
+  "originalVerificationCompleted": "2026-11-09T23:37:00+01:00",
+  "presentationFinalized": "2026-11-09T23:41:08+01:00",
+  "leanToolchain": "leanprover/lean4:v4.28.0",
+  "mathlibRevision": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+  "registeredModules": 558,
+  "auditedDeclarations": 4433,
+  "sourceLines": 72574,
+  "sourceLineCounting": "Canonical Markov/*.lean and Markov.lean, including comments and blank lines; excludes mathlib and packaging utilities.",
+  "allowedAxioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "manuscriptSHA256": "5e7f4c8de5c7fcfdc98e2cbe1828e83bd820f1f77cf962b056fea95f272e1f8b",
+  "originalRootObjectSHA256": "830a2f2450e38962fa7caeea946706a0573948604dae6d940b9c44e7915de6a1",
+  "originalRootLogSHA256": "0f9bca52805b3f81d7b8e981cc169a97c8e211f4e0d5a7c45ca84fbb576af6c0",
+  "originalIntegratedLogSHA256": "0f9bca52805b3f81d7b8e981cc169a97c8e211f4e0d5a7c45ca84fbb576af6c0",
+  "originalFullAuditLogSHA256": "3e25e30ca53b0b91b5754966b68f9e6a6eee92e4f85263e0d539a870448e5a73",
+  "provenanceNote": "The original root-object and original log hashes identify historical artifacts in the development workspace; those artifacts are not distributed. The included axiom reports are extracted and whitespace-normalized, not original log bytes. Rebuild using scripts/verify.py.",
+  "canonicalSourceManifestSHA256": "ec8211d634ef4937e7b954cda3d8aff04337458ec4d7472ff7215303a41f4718"
+}

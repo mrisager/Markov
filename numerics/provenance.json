@@ -1,0 +1,81 @@
+{
+  "paperVersion": "arXiv:2610.36069v1",
+  "paperFigure": {
+    "file": "markov-error-normalized-10e30000.pdf",
+    "sha256": "bda6f7f4b9185d6f7cc26f2a6a15be46e87c81b4a5aa122b564f6859cf326964",
+    "matchesArXivSubmission": true
+  },
+  "filesAdjustedForPublication": {
+    "frobenius-10e30000-run.log": {
+      "originalSHA256": "2e4b4a4e454437a631170c63d8231e3dd4366f67d243a99edbb3ff799ed2419f",
+      "publishedSHA256": "8e5f6b1939ff94fffe3b10373b8f184865dd3c501a28b60aa7d2b644a853bcd2",
+      "changes": [
+        "Use paths relative to numerics and its historical evidence directory."
+      ]
+    },
+    "frobenius-10e30000-validation.json": {
+      "originalSHA256": "7bdea508c70f2ac3fd316df37f6a4ec26cd3950f5f36df48567d3306f2ddc4b7",
+      "publishedSHA256": "46b63d15ff11d5c2e19be51347255d23946f64b0a5fce2dc824a121b7499a033",
+      "changes": [
+        "Use paths relative to numerics and its historical evidence directory."
+      ]
+    },
+    "frobenius-10e30000.json": {
+      "originalSHA256": "d7b1a3314aa5a4a5593e03067dbd201ad5366c6cf2d3cd3669290816304c784e",
+      "publishedSHA256": "104a8847d556840807ed8b8db9d5000c4f71c8ef82c1863d7fdaee188a80d8f8",
+      "changes": [
+        "Use paths relative to numerics and its historical evidence directory."
+      ]
+    },
+    "frobenius-10e30000.txt": {
+      "originalSHA256": "283d6e66d84f300d12551887b2334b6fb85060e6c4f95030a58a2af7af632a8e",
+      "publishedSHA256": "555f24de93f2776563c2429cea627941d1d1fcf90a9fde5c558e404f5a5066af",
+      "changes": [
+        "Use paths relative to numerics and its historical evidence directory."
+      ]
+    },
+    "markov-error-10e30000-run.log": {
+      "originalSHA256": "a473928f08a09b26fbfc7931768970f4f2b07ce9d76a04a44a259a098b3a04ed",
+      "publishedSHA256": "64a1d7372d3e885b8c95a50a5bf3a5bb429174ab73af1797e0653aa788cd5999",
+      "changes": [
+        "Use paths relative to numerics and its historical evidence directory."
+      ]
+    },
+    "markov-error-10e30000.json": {
+      "originalSHA256": "5c18c473ec51b9950cbc919d7c3237bb3900731af14baf95cb57293ea88af8b4",
+      "publishedSHA256": "65b3e2b1cf2f973e077664630effa9b668e09dedd8a90fce8aa948c9f13e7eb3",
+      "changes": [
+        "Use paths relative to numerics and its historical evidence directory."
+      ]
+    },
+    "markov_error_plot.py": {
+      "originalSHA256": "107119f7a2b2dd95f1d339b5685b3ef5814c3a2dc1c6110fa27639d6fe39b5b4",
+      "publishedSHA256": "578a6b5aebc59eec5b753374c62e4ff9cdd8b2a639d83fe05c6a9ed7865a07ff",
+      "changes": [
+        "Use the platform temporary directory for the default plotting caches."
+      ]
+    },
+    "evidence/frobenius-10e30000/manifest.json": {
+      "originalSHA256": "738180c91ee40956aa3183c5e683f57c99504302f9ced9229bcdcb102517434c",
+      "publishedSHA256": "b2776bdde507738e59cc08ff72b004747f73547034eeb1f37134723fb30f2380",
+      "changes": [
+        "Use paths relative to numerics and its historical evidence directory."
+      ]
+    },
+    "evidence/frobenius-10e30000/sort/manifest.json": {
+      "originalSHA256": "3d84af4e9665142df5eef9b4667043ab6fd51107b53f1404314d1968fa27bc77",
+      "publishedSHA256": "5e47137137f888f3966c1ea51272831835e001057109ab12575b2e3775d44400",
+      "changes": [
+        "Use paths relative to numerics and its historical evidence directory."
+      ]
+    },
+    "evidence/frobenius-10e30000/sort/report.json": {
+      "originalSHA256": "8b1f198bcac0a7ddd5476ba5a971e583204d60e86f0348a033799df314960bf9",
+      "publishedSHA256": "9c9a3c95ade233d9b84831b93a7eabff97aaf61ad112bbe169bbcf787140584e",
+      "changes": [
+        "Use paths relative to numerics and its historical evidence directory."
+      ]
+    }
+  },
+  "historicalHashes": "Values inside the saved run reports describe the original run and refer to original bytes. This table links the original and public copies when they differ."
+}

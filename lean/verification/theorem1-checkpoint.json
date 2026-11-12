@@ -1,0 +1,1291 @@
+{
+  "scope": "arXiv:2610.36069v1, Theorem 1, both branches",
+  "originalVerificationCompletedUTC": "2026-11-11T00:41:30.803877+00:00",
+  "originalReceiptSHA256": "0650db7b6e1721eff37f0e03ccb03a2be9498d9843e36d8b2eeccd072191e981",
+  "originalRoot": "T1ExactTheoremOneFoundations",
+  "originalEndpointArtifacts": {
+    "T1ExactTheoremOne": {
+      "sourceSHA256": "63572ab25af8fbd73063d04726d83ea69691fdcc5514098579e10932664a16dc",
+      "objectSHA256": "bea98fb7f4781ee2225cbb82a618dd2d009838be7fabc8300aad162c026f98dc",
+      "strictLogSHA256": "b2b603d4b9e4f34769c21d436b79811cf74dc9f635d47ff9dae0df0f187a8ae3"
+    },
+    "T1ExactTheoremOneAudit": {
+      "sourceSHA256": "306bd8d37a807d94b8205277ec79839afa770c82a837ee26c321ea89dd91149b",
+      "objectSHA256": "202b350c34afa543bc679d83902bc2a959b6125e79e61066cc761816a3ad12db",
+      "strictLogSHA256": "a14bf72b1d947f8a657195f45f27bd758a17b91ee455045db2ede1e3c925d350"
+    },
+    "T1ExactTheoremOneFoundations": {
+      "sourceSHA256": "849bde47c15233fa620b719a051d7daf3fc6b3e5242bd0631e74df8bc7014ee3",
+      "objectSHA256": "604d65a74f8395011d8f56dfbbbac2c7faf985df14f02ac777544305b74265cb",
+      "strictLogSHA256": "f56d4a2ad0ad3a699f925bdae0dd7f8e546cb36b8a7e56c9c8f96d8159ed2b3c"
+    }
+  },
+  "endpoints": [
+    "Markov.t1_VKZeroFreeRegion_proved",
+    "Markov.t1_mertens_vk",
+    "Markov.t1_markovUnconditional",
+    "Markov.t1_markovConditional_of_QRH",
+    "Markov.t1_mainTheorem"
+  ],
+  "vkUpstreamRevision": "f5fd3ddb407972f9ca65298fbe9be3225fe06635",
+  "mathematicalSourceModules": 323,
+  "uniqueAuditedDeclarations": 2426,
+  "proofSourceProvenance": {
+    "Theorem1/RiemannGaussian/AnalyticDerivativeCutoff.lean": {
+      "verifiedSHA256": "a32e3ae31da6072fa986e766d689dea63530da8d9b2b0d544582eca39546e3d3",
+      "upstreamSHA256": "a32e3ae31da6072fa986e766d689dea63530da8d9b2b0d544582eca39546e3d3"
+    },
+    "Theorem1/RiemannGaussian/DerivativePowerEnvelope.lean": {
+      "verifiedSHA256": "f9ea17965b03bfc44b8785d91805ce72132162ef2502f49739956d99a716e635",
+      "upstreamSHA256": "d7cecdb566dd7e751afcb44e74667a71ff8018ca7e92b142b32fc8d820c3db3e",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/DerivativePowerExponents.lean": {
+      "verifiedSHA256": "dd5b4fcb73167aef9b1d3ca44230465fa4ca285e7d6c5624b560da82ba1a8b8b",
+      "upstreamSHA256": "dd5b4fcb73167aef9b1d3ca44230465fa4ca285e7d6c5624b560da82ba1a8b8b"
+    },
+    "Theorem1/RiemannGaussian/DerivativePowerStep.lean": {
+      "verifiedSHA256": "e1c044caabfc616ef4458c31f6ec2eb8f16cc6732f3ff7765d188c86edaa664f",
+      "upstreamSHA256": "e1c044caabfc616ef4458c31f6ec2eb8f16cc6732f3ff7765d188c86edaa664f"
+    },
+    "Theorem1/RiemannGaussian/DerivativeRecursionBudget.lean": {
+      "verifiedSHA256": "d93e112b40ff6eb7898e428b6478dccebbd8340d8831ff3441995294cbbc8cfa",
+      "upstreamSHA256": "76725ecdadd141ae727798029cda8baf91068c6a2a9c80f1216c6cd814940615",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/DirichletBlockPowerProfile.lean": {
+      "verifiedSHA256": "6d8fad55fd34c0191d900d14113c463005a2fbec03048e74029f8d306f53b2bb",
+      "upstreamSHA256": "9f02d1dba591a37dad0f174da5380dfcae9fb1f494d539d566c3309cf00707cc",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/DirichletDyadicBlocks.lean": {
+      "verifiedSHA256": "31f278b76aef780931a36b4b647d6167cadc00c7fcfbc1e00b7481c0e4d41030",
+      "upstreamSHA256": "9e6c51aad80baa85e28fb688714f91898ad59c854a548610653bf8b095986930",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/DirichletHigherDerivativeBound.lean": {
+      "verifiedSHA256": "aadac7503731afda0167e69712bdd674f6bb65f6bd2051d90aa18019c177456c",
+      "upstreamSHA256": "aadac7503731afda0167e69712bdd674f6bb65f6bd2051d90aa18019c177456c"
+    },
+    "Theorem1/RiemannGaussian/DirichletPowerCoefficients.lean": {
+      "verifiedSHA256": "c0a7387fe842061f122eb8513c6286cfe8c94fe3c4751b87e5fc0772c602711d",
+      "upstreamSHA256": "c0a7387fe842061f122eb8513c6286cfe8c94fe3c4751b87e5fc0772c602711d"
+    },
+    "Theorem1/RiemannGaussian/DirichletPowerParameters.lean": {
+      "verifiedSHA256": "79bfc8ec12d584d0fd1f74602dd1a6db313c65da2c273e887d0586bd2fdfbf9e",
+      "upstreamSHA256": "79bfc8ec12d584d0fd1f74602dd1a6db313c65da2c273e887d0586bd2fdfbf9e"
+    },
+    "Theorem1/RiemannGaussian/DirichletSecondDerivativeBound.lean": {
+      "verifiedSHA256": "fa52bf30f28ca6d1d70c390751a6a0d24b05bb9f616af9e399795a016e2e88da",
+      "upstreamSHA256": "fa52bf30f28ca6d1d70c390751a6a0d24b05bb9f616af9e399795a016e2e88da"
+    },
+    "Theorem1/RiemannGaussian/DiscreteSecondDerivativeTest.lean": {
+      "verifiedSHA256": "f51b7a30593769bb4359f8185da0ea02dbcee648adf690b2be9cd10952c1aa78",
+      "upstreamSHA256": "f51b7a30593769bb4359f8185da0ea02dbcee648adf690b2be9cd10952c1aa78"
+    },
+    "Theorem1/RiemannGaussian/EtaCubicBoundaryTest.lean": {
+      "verifiedSHA256": "b8836ab91b5aa7a26c388da98e531e3d0c697a2c400d496ed3349d171a96e79c",
+      "upstreamSHA256": "c9ea62b19d859baeec4fd4d3f43f9ee4570392596647855631aa88efe5e66b56",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/EtaOddPowerQuadrature.lean": {
+      "verifiedSHA256": "b6980f128b17519e3c33fb294bbe542172014faea46dc5f05f33f00b31a65e11",
+      "upstreamSHA256": "bbf9267e17401a5f50aac5102f2f1edd70de8f866f812453dfcaf03aaea9ce73",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/FiniteAbelVariation.lean": {
+      "verifiedSHA256": "cb23c463ac3f6f8471c9d12531307680cfd439e7573586e4a9012cc02c67dc6d",
+      "upstreamSHA256": "cb23c463ac3f6f8471c9d12531307680cfd439e7573586e4a9012cc02c67dc6d"
+    },
+    "Theorem1/RiemannGaussian/FiniteDiscreteSobolev.lean": {
+      "verifiedSHA256": "cd51ea3b0da15d69acc7d2dd94edb5533db411a1fdb3d0722192bb598f566474",
+      "upstreamSHA256": "45b143fe3cb4a198b7c76ad9296ae4dea932ed9be75204ccf19d5b08fff41d62",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/FiniteKuzminLandau.lean": {
+      "verifiedSHA256": "9ea10a0c702fe1ef057115f1ad85afca704e1db944f770ea70e7c2b69ed9e7b9",
+      "upstreamSHA256": "9ea10a0c702fe1ef057115f1ad85afca704e1db944f770ea70e7c2b69ed9e7b9"
+    },
+    "Theorem1/RiemannGaussian/FiniteKuzminLandauPeriodic.lean": {
+      "verifiedSHA256": "b3e6bd82bec51f74c38614cfcfd50860c7f75439f2c264442ba6115247f2b721",
+      "upstreamSHA256": "b3e6bd82bec51f74c38614cfcfd50860c7f75439f2c264442ba6115247f2b721"
+    },
+    "Theorem1/RiemannGaussian/FiniteLagPowerBounds.lean": {
+      "verifiedSHA256": "f80edff3d6e3477c628a8eda17c0300521cba00c778a27c09f4ef5d3c84d6c3d",
+      "upstreamSHA256": "f80edff3d6e3477c628a8eda17c0300521cba00c778a27c09f4ef5d3c84d6c3d"
+    },
+    "Theorem1/RiemannGaussian/FiniteResonancePartition.lean": {
+      "verifiedSHA256": "f97f1651ffc3af9650d11c421c3016bb3ffd274e51a21d0d05e260683e6fcbef",
+      "upstreamSHA256": "f97f1651ffc3af9650d11c421c3016bb3ffd274e51a21d0d05e260683e6fcbef"
+    },
+    "Theorem1/RiemannGaussian/FiniteShiftCorrelation.lean": {
+      "verifiedSHA256": "672bee40453dc7d4c9689320860634a55ea2cee5a634daf3ee1946e8bc141389",
+      "upstreamSHA256": "5935a6e00ad5bdd0cd092cae4ed6e92c68e6541c9bd9a188f472c32bfe6a885b",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/FiniteVanDerCorput.lean": {
+      "verifiedSHA256": "a7a39bf36efe93299389bd3114290b16b7f9ff24b12fdf111ca06d137223d690",
+      "upstreamSHA256": "a7a39bf36efe93299389bd3114290b16b7f9ff24b12fdf111ca06d137223d690"
+    },
+    "Theorem1/RiemannGaussian/FiniteVanDerCorputPhase.lean": {
+      "verifiedSHA256": "237c9ebedc6016d92a08712208fe67e1db7ca5a9fd80e2cfc0251d859e44aca7",
+      "upstreamSHA256": "7f24d1740e95ec4df09dda3b89e1e22953434f31fba06a89799c1d8644ff1b79",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/FirstDerivativeTest.lean": {
+      "verifiedSHA256": "b573f215647e2104b7b416fc0a5bfb7d34f58a8cd1f0ed618603fbc2fb0ff282",
+      "upstreamSHA256": "b573f215647e2104b7b416fc0a5bfb7d34f58a8cd1f0ed618603fbc2fb0ff282"
+    },
+    "Theorem1/RiemannGaussian/HigherDerivativeTest.lean": {
+      "verifiedSHA256": "6ee300c411ede67188ec647352c30e3f697f8b16f663125487694b1619bd8541",
+      "upstreamSHA256": "d136b23b5430124443e250f950884630cd54c4b3946b4fdf3c721a9cece60238",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/HigherLogarithmicDerivativeBound.lean": {
+      "verifiedSHA256": "66bbb1e6ed66c365b44be7f55c8fc28df7f5cabaa1f624271905db079eb93fc6",
+      "upstreamSHA256": "66bbb1e6ed66c365b44be7f55c8fc28df7f5cabaa1f624271905db079eb93fc6"
+    },
+    "Theorem1/RiemannGaussian/LogarithmicDerivativeFamily.lean": {
+      "verifiedSHA256": "f1df77150eb6f1224ca95d4533c5252a23dff9b4cc2491d5c2a53e04df81b898",
+      "upstreamSHA256": "fa5dc6e710aeeda5c5c4726fd6eb7ef6f114c0087bccbc4d12f2b16f47e8b39a",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/LogarithmicSecondDerivativeTest.lean": {
+      "verifiedSHA256": "7035eb02f7cc957c828f3c9df168b8ef173be0fab39a64756d70ab77067271fc",
+      "upstreamSHA256": "719f3578ce32d94bd20a27224f3760adef3b7f5eabfe436c5bb66bffa71f25ef",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/LogarithmicShiftPhase.lean": {
+      "verifiedSHA256": "9c3946912db917d934fbc10a228d444d2848ca4c981424192cd8dfa547baf726",
+      "upstreamSHA256": "69fdc51f3ac18b5be9a9b8a69e1854234f4338c936af47c4797daa67882f8be5",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/MonotonePhaseBlocks.lean": {
+      "verifiedSHA256": "a6c6aa0a715a99444be92ef68b1b86377d2f96b1469db8d8cfde0ca8ff2b1657",
+      "upstreamSHA256": "a6c6aa0a715a99444be92ef68b1b86377d2f96b1469db8d8cfde0ca8ff2b1657"
+    },
+    "Theorem1/RiemannGaussian/NatPhaseDifferencing.lean": {
+      "verifiedSHA256": "475e4bdcf303da71a3ae88ea8efa3992a152561f45958771670dad427cd0109e",
+      "upstreamSHA256": "475e4bdcf303da71a3ae88ea8efa3992a152561f45958771670dad427cd0109e"
+    },
+    "Theorem1/RiemannGaussian/OscillatoryPowerPrimitive.lean": {
+      "verifiedSHA256": "a5e8c5f94df1082b294e6802757e35157f0b0399b232c63e00d77aaad0156b1d",
+      "upstreamSHA256": "a5e8c5f94df1082b294e6802757e35157f0b0399b232c63e00d77aaad0156b1d"
+    },
+    "Theorem1/RiemannGaussian/PhaseConjugation.lean": {
+      "verifiedSHA256": "90090f2be61d484e75689d230e12ebee5145f055ca3fb11371832a275b647496",
+      "upstreamSHA256": "90090f2be61d484e75689d230e12ebee5145f055ca3fb11371832a275b647496"
+    },
+    "Theorem1/RiemannGaussian/PhaseIncrementInverse.lean": {
+      "verifiedSHA256": "2365c187728fd58eb8c4d64b5fba840564066666b7222388a2842493683fa626",
+      "upstreamSHA256": "0eafc8e5b9a153f92195733a9f9aa1d4d369b5b52650d1eafba716e4e89b3d8d",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/RiemannXiSuzukiPositiveCriticalStripEtaFiniteApproximation.lean": {
+      "verifiedSHA256": "e36ccdd6b801c2a02ee86f21c8b24dc4fd48f46671ff99806c93ca4efee76b3c",
+      "upstreamSHA256": "e12fec7b953a81fce57dbe0ac5a8a5b2cfef13906312303dd558196d09eff3b2",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/SecondDerivativeIncrements.lean": {
+      "verifiedSHA256": "79a1d9713afcc841a76b17c8e88ad99d4f09ec46b0e6ee5b4923066cc0109301",
+      "upstreamSHA256": "10c4645652b65b35ad9ec532756df5d0e9163e88a1693e90932867a8cd3e9abe",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/SecondDerivativeTest.lean": {
+      "verifiedSHA256": "30a02193c1ecb0beacf4431c7125808dd5acc22489a71f71a21bbe8c8116b690",
+      "upstreamSHA256": "30a02193c1ecb0beacf4431c7125808dd5acc22489a71f71a21bbe8c8116b690"
+    },
+    "Theorem1/RiemannGaussian/ShiftedDerivativeFamily.lean": {
+      "verifiedSHA256": "133a080204ec8d513198fd159d6417cd1755b03d0fe078d0f1f612a11096289a",
+      "upstreamSHA256": "876d9d2db424584c9a651e9dc5028292f9ac0edb94afcc2644c9910758e561ab",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/SuzukiProperPrimePowerWork.lean": {
+      "verifiedSHA256": "284721e4a04189e2c2a554fe371cd6f9cc87763fd0f138782f30625ad037efa5",
+      "upstreamSHA256": "4b531c30b9cc15d6bd67d84c823056b954dfbeecca48aaa0648c30bee041a750",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/UniformDerivativePowerBound.lean": {
+      "verifiedSHA256": "4036153f3017f3f27a7b86249d0daf259431c7742abf0e5f495f947bd0c16ea6",
+      "upstreamSHA256": "4036153f3017f3f27a7b86249d0daf259431c7742abf0e5f495f947bd0c16ea6"
+    },
+    "Theorem1/RiemannGaussian/UniformDirichletPowerBound.lean": {
+      "verifiedSHA256": "9002b5cf1bb41fecffaa7b893da3b507ccbd315a7212f035d35c67e713164d54",
+      "upstreamSHA256": "9002b5cf1bb41fecffaa7b893da3b507ccbd315a7212f035d35c67e713164d54"
+    },
+    "Theorem1/RiemannGaussian/VinogradovAffineMoment.lean": {
+      "verifiedSHA256": "cd8e20fe060c1a6fae5190bfbb59143399b1db81fc3f919fafd2fa22060696cb",
+      "upstreamSHA256": "cd8e20fe060c1a6fae5190bfbb59143399b1db81fc3f919fafd2fa22060696cb"
+    },
+    "Theorem1/RiemannGaussian/VinogradovAnisotropicCongruence.lean": {
+      "verifiedSHA256": "ed6a00973cd34e76bc51f34b4f62e5ab7c9dee63166151dda1bc4f02ba226e0f",
+      "upstreamSHA256": "4aca984fafef310b6575db9a1e9ef8c380c580f8d423fd30e3b5ef03c6971c98",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovBinomialRows.lean": {
+      "verifiedSHA256": "daa0c644e6e803764ed754a2eb69f5b1f1d087f4a06dcbd5f587c762e3eaf271",
+      "upstreamSHA256": "aba63a0a7f73591ddc05b6394a6effb8b3978c44efaf5b142b4bf9e2cefe95fe",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovCoarseCongruence.lean": {
+      "verifiedSHA256": "13c046b9de2e0716a91d0dccd3e1b2e649c5948ae1ebd0ad65f5d08fe398c26f",
+      "upstreamSHA256": "9e49cea79918f7d06a5706deb6246a8cc189fc30b6af33e21fc8a1407ecc0806",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovColourProducts.lean": {
+      "verifiedSHA256": "63ba213b7392520e313e67da9b1f2fc1e817dfb6846cbb123fd1b3bb2a503e7b",
+      "upstreamSHA256": "bbcfd92dcaf766648a5300b7a72a053fe3fd4362658a50c0fa9996d184b7f7a3",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovConditionedCompletion.lean": {
+      "verifiedSHA256": "0ebb79c8dcc53ec3031baec2f88e4e25f44751f8d5d914cb94027cbfa3f00d92",
+      "upstreamSHA256": "0ebb79c8dcc53ec3031baec2f88e4e25f44751f8d5d914cb94027cbfa3f00d92"
+    },
+    "Theorem1/RiemannGaussian/VinogradovConditionedHigherMoment.lean": {
+      "verifiedSHA256": "8c18859b7ca111c8e1a5899764c54c50bea5ea4e3fad9f89cf1ba096ac7c0267",
+      "upstreamSHA256": "8c18859b7ca111c8e1a5899764c54c50bea5ea4e3fad9f89cf1ba096ac7c0267"
+    },
+    "Theorem1/RiemannGaussian/VinogradovConditionedMoment.lean": {
+      "verifiedSHA256": "828870f93012639962f48b3c7637fdd5bde19d26e38886a38fdf3d48260efbc4",
+      "upstreamSHA256": "828870f93012639962f48b3c7637fdd5bde19d26e38886a38fdf3d48260efbc4"
+    },
+    "Theorem1/RiemannGaussian/VinogradovConditionedUpper.lean": {
+      "verifiedSHA256": "8c3c6ec97452982beb26d6d89615754982486e6d3523f85d083f43ce37eee407",
+      "upstreamSHA256": "8c3c6ec97452982beb26d6d89615754982486e6d3523f85d083f43ce37eee407"
+    },
+    "Theorem1/RiemannGaussian/VinogradovConditioningHolder.lean": {
+      "verifiedSHA256": "f6540608a202a36e0b5a784edef8cc44ea4622ac4d734fa6a05d1f0b745d356c",
+      "upstreamSHA256": "f6540608a202a36e0b5a784edef8cc44ea4622ac4d734fa6a05d1f0b745d356c"
+    },
+    "Theorem1/RiemannGaussian/VinogradovConditioningPowerSaving.lean": {
+      "verifiedSHA256": "4de502d8235ad95132145685116b2c0822ff087ab52b55e05b9f3161be628f47",
+      "upstreamSHA256": "4de502d8235ad95132145685116b2c0822ff087ab52b55e05b9f3161be628f47"
+    },
+    "Theorem1/RiemannGaussian/VinogradovConditioningRemainder.lean": {
+      "verifiedSHA256": "6091a5d5d406438519cddd24f746d50bf2b6f77f687da973ea172a92df2dc08b",
+      "upstreamSHA256": "6091a5d5d406438519cddd24f746d50bf2b6f77f687da973ea172a92df2dc08b"
+    },
+    "Theorem1/RiemannGaussian/VinogradovConditioningSupport.lean": {
+      "verifiedSHA256": "98a2f85f796ca8651510ca77d6649f0280566184765212aef63aa168eca83efe",
+      "upstreamSHA256": "98a2f85f796ca8651510ca77d6649f0280566184765212aef63aa168eca83efe"
+    },
+    "Theorem1/RiemannGaussian/VinogradovCongruenceEnergy.lean": {
+      "verifiedSHA256": "c64eacebec1869b72de38c88adf8aee6fdb763b38b8b6a5d6aedbd13bb433710",
+      "upstreamSHA256": "c64eacebec1869b72de38c88adf8aee6fdb763b38b8b6a5d6aedbd13bb433710"
+    },
+    "Theorem1/RiemannGaussian/VinogradovCongruencingScaling.lean": {
+      "verifiedSHA256": "b71335e72fd3af34b622d7a2d0db5804886164baa71cf79d51a93b9ca8dfe1f0",
+      "upstreamSHA256": "b71335e72fd3af34b622d7a2d0db5804886164baa71cf79d51a93b9ca8dfe1f0"
+    },
+    "Theorem1/RiemannGaussian/VinogradovCongruencingStep.lean": {
+      "verifiedSHA256": "1858fed71c7e4ed76c0567b20f6e571900cc1a2e4ea4810ed1105c41d0a17ce7",
+      "upstreamSHA256": "1858fed71c7e4ed76c0567b20f6e571900cc1a2e4ea4810ed1105c41d0a17ce7"
+    },
+    "Theorem1/RiemannGaussian/VinogradovConstantPreservation.lean": {
+      "verifiedSHA256": "992172d8a4dd652b18882d0f8c96e32dadafb0ff6ae43dd8a125fc7438f87bba",
+      "upstreamSHA256": "992172d8a4dd652b18882d0f8c96e32dadafb0ff6ae43dd8a125fc7438f87bba"
+    },
+    "Theorem1/RiemannGaussian/VinogradovCriticalExponent.lean": {
+      "verifiedSHA256": "e8f0ac87428909360966456b0d46b6805b62084469692f94184155131356ef63",
+      "upstreamSHA256": "e8f0ac87428909360966456b0d46b6805b62084469692f94184155131356ef63"
+    },
+    "Theorem1/RiemannGaussian/VinogradovCriticalKorobov.lean": {
+      "verifiedSHA256": "189fd06153662c8fe5e3cca66fd0b553f17c886256b09af4c08f782525fa6aac",
+      "upstreamSHA256": "189fd06153662c8fe5e3cca66fd0b553f17c886256b09af4c08f782525fa6aac"
+    },
+    "Theorem1/RiemannGaussian/VinogradovCrossMoment.lean": {
+      "verifiedSHA256": "e80994640110208f17c97ec73c1733400a360be61bbb842db702672e74584d7f",
+      "upstreamSHA256": "18b0f9b0054cbf81642f763458928e5c4aff8dd42e1a0db81d392372573f01c4",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovDampedSaving.lean": {
+      "verifiedSHA256": "11a138456a563cf34a7b2bda03c550a2714a47af3a93204ef044cde86e0204d1",
+      "upstreamSHA256": "11a138456a563cf34a7b2bda03c550a2714a47af3a93204ef044cde86e0204d1"
+    },
+    "Theorem1/RiemannGaussian/VinogradovDefectRemainder.lean": {
+      "verifiedSHA256": "ef1310c4fb9d57585313d80d5f34faa74465e29be4c3c6f9f10edcc52eadaf92",
+      "upstreamSHA256": "ef1310c4fb9d57585313d80d5f34faa74465e29be4c3c6f9f10edcc52eadaf92"
+    },
+    "Theorem1/RiemannGaussian/VinogradovDegreeWindow.lean": {
+      "verifiedSHA256": "09233b9b46dba1eb18df50891df1eeb8b0292b83121642f4975b1890d984dcf7",
+      "upstreamSHA256": "09233b9b46dba1eb18df50891df1eeb8b0292b83121642f4975b1890d984dcf7"
+    },
+    "Theorem1/RiemannGaussian/VinogradovDiagonalCost.lean": {
+      "verifiedSHA256": "f4fe6d23ebf123f0c92fdccbdce46cb451ceed1d250bb09d7c4b2e45cfea02a7",
+      "upstreamSHA256": "f4fe6d23ebf123f0c92fdccbdce46cb451ceed1d250bb09d7c4b2e45cfea02a7"
+    },
+    "Theorem1/RiemannGaussian/VinogradovDiagonalExponent.lean": {
+      "verifiedSHA256": "7d4f022d4c669261f5cf5e590899d9024f9146af4508449bf5d0b68eb0d0bb32",
+      "upstreamSHA256": "7d4f022d4c669261f5cf5e590899d9024f9146af4508449bf5d0b68eb0d0bb32"
+    },
+    "Theorem1/RiemannGaussian/VinogradovDiagonalIteration.lean": {
+      "verifiedSHA256": "09280762d60b3bce6c72ebe0373a89c8160db862426531d2a9c90696c1f8da49",
+      "upstreamSHA256": "09280762d60b3bce6c72ebe0373a89c8160db862426531d2a9c90696c1f8da49"
+    },
+    "Theorem1/RiemannGaussian/VinogradovDiagonalMoment.lean": {
+      "verifiedSHA256": "887bc160e783f463090542dbfc0185b43706d570b82441810d1157bbfbd1f4d4",
+      "upstreamSHA256": "887bc160e783f463090542dbfc0185b43706d570b82441810d1157bbfbd1f4d4"
+    },
+    "Theorem1/RiemannGaussian/VinogradovDiagonalThreshold.lean": {
+      "verifiedSHA256": "57ffb0aeab496d7ab721ca8488ecbd544c57327d1e7b6bdcf0b229ab0e4f094d",
+      "upstreamSHA256": "57ffb0aeab496d7ab721ca8488ecbd544c57327d1e7b6bdcf0b229ab0e4f094d"
+    },
+    "Theorem1/RiemannGaussian/VinogradovDifferenceEnergy.lean": {
+      "verifiedSHA256": "bb0bc07c75acb51898fd460feefcacf73bfb5c0e40db99ada79b2b4fcdade73b",
+      "upstreamSHA256": "3b50b5d22510ce6a005e182d29fa7a6f2a36b13797b5d81f2cd3f41ebefc02d4",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovDirichletSaving.lean": {
+      "verifiedSHA256": "46837321faead8adbfe786453eda508bff1d92abf30dee8cf600f403b782306f",
+      "upstreamSHA256": "46837321faead8adbfe786453eda508bff1d92abf30dee8cf600f403b782306f"
+    },
+    "Theorem1/RiemannGaussian/VinogradovDyadic.lean": {
+      "verifiedSHA256": "bfcac16ae5f76999f3f6351decebfb60140c4228a158b9bd72ad7c043b9acd7e",
+      "upstreamSHA256": "bfcac16ae5f76999f3f6351decebfb60140c4228a158b9bd72ad7c043b9acd7e"
+    },
+    "Theorem1/RiemannGaussian/VinogradovEndpointDeletion.lean": {
+      "verifiedSHA256": "4c6b64350c1f2c2268ddb2d21ab67165933ad78a115e4812e774e4b0ed608872",
+      "upstreamSHA256": "4c6b64350c1f2c2268ddb2d21ab67165933ad78a115e4812e774e4b0ed608872"
+    },
+    "Theorem1/RiemannGaussian/VinogradovExplicitKorobov.lean": {
+      "verifiedSHA256": "5e2274aea9cf93b60c6875ab05d8949f75a9ec8a23b36283d0741fb4591a6e13",
+      "upstreamSHA256": "5e2274aea9cf93b60c6875ab05d8949f75a9ec8a23b36283d0741fb4591a6e13"
+    },
+    "Theorem1/RiemannGaussian/VinogradovExponentBootstrap.lean": {
+      "verifiedSHA256": "e1ef3de30e4897df13a93bbda140d6a456dbeb6b14031086454ac3db4031ded8",
+      "upstreamSHA256": "e1ef3de30e4897df13a93bbda140d6a456dbeb6b14031086454ac3db4031ded8"
+    },
+    "Theorem1/RiemannGaussian/VinogradovFiniteCritical.lean": {
+      "verifiedSHA256": "04b2dd3a295f09ce8bf526cb1760e3f57e4670b9a33f66bf4dee3b59d351d4a5",
+      "upstreamSHA256": "04b2dd3a295f09ce8bf526cb1760e3f57e4670b9a33f66bf4dee3b59d351d4a5"
+    },
+    "Theorem1/RiemannGaussian/VinogradovFirstExponent.lean": {
+      "verifiedSHA256": "fed7acf594632e266b0fb8d2e8e8c9f27ace1aab9b1d88fb2dbc7f190a87d630",
+      "upstreamSHA256": "fed7acf594632e266b0fb8d2e8e8c9f27ace1aab9b1d88fb2dbc7f190a87d630"
+    },
+    "Theorem1/RiemannGaussian/VinogradovGaussianBounds.lean": {
+      "verifiedSHA256": "da4c5cddc56b582abd8e0bd512c44062e10d109b2d91ef570971c07b96b92e50",
+      "upstreamSHA256": "5c8f289f888d7922f4eb7b4926dd83cd6184fd7edcb62ec09a3c643aaf2f7504",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovGaussianCentering.lean": {
+      "verifiedSHA256": "d96eac44a7c12b51c5452e61e43c7647209486c53b76238c8c37c3e7c79154e7",
+      "upstreamSHA256": "d96eac44a7c12b51c5452e61e43c7647209486c53b76238c8c37c3e7c79154e7"
+    },
+    "Theorem1/RiemannGaussian/VinogradovGaussianCost.lean": {
+      "verifiedSHA256": "87de1323239fd3573c23a7d56e59479c617226ca38ee5abaaf7269a606f3fa29",
+      "upstreamSHA256": "87de1323239fd3573c23a7d56e59479c617226ca38ee5abaaf7269a606f3fa29"
+    },
+    "Theorem1/RiemannGaussian/VinogradovGaussianKernel.lean": {
+      "verifiedSHA256": "30e626d6dc1a0a0f5b0951f3bb2483fd507640439708b31aadf373a1fc72de40",
+      "upstreamSHA256": "07523163a1abdd335e98cc6144e49398f7a2a1dc1ddd27153240b15859163151",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovGaussianResonance.lean": {
+      "verifiedSHA256": "4d01e70e53ab4f4f7c0249754e1ad6f61ecfcd4abfd2fde92d439dc190e3d31c",
+      "upstreamSHA256": "380ede0482f4a8b3fc4bf4812c14617246f90fd09ca32ae8a667b16b95da26c1",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovGaussianSpacing.lean": {
+      "verifiedSHA256": "f50de28dacdb30d66dce2020e73984fb7c3b547ab4ae95d54ba4f6d034638207",
+      "upstreamSHA256": "0f88fefc0f9ef089f273376a46675bf04f485e70a8a5501b821cc69258e75378",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovHeightSchedule.lean": {
+      "verifiedSHA256": "eb79bb19e31815e2e1998ee1ec1f0f6bba13b07fc4a5ce2627b703e3537111d2",
+      "upstreamSHA256": "eb79bb19e31815e2e1998ee1ec1f0f6bba13b07fc4a5ce2627b703e3537111d2"
+    },
+    "Theorem1/RiemannGaussian/VinogradovImprovedNormalization.lean": {
+      "verifiedSHA256": "69754f6946fa4696f70f59e12eda4f54101d3172c8aff6fa5161e7f4c36d0306",
+      "upstreamSHA256": "69754f6946fa4696f70f59e12eda4f54101d3172c8aff6fa5161e7f4c36d0306"
+    },
+    "Theorem1/RiemannGaussian/VinogradovInitialConditioning.lean": {
+      "verifiedSHA256": "83a42f11e27f3dad2ffe43fe30bdb19e61e230b295233e5ac903636744f4bd8c",
+      "upstreamSHA256": "83a42f11e27f3dad2ffe43fe30bdb19e61e230b295233e5ac903636744f4bd8c"
+    },
+    "Theorem1/RiemannGaussian/VinogradovInitialEnergy.lean": {
+      "verifiedSHA256": "fac9f25f90bb77fc88297909debbcf5d487d40c4b1ffe19c345b7cc8d3bfc764",
+      "upstreamSHA256": "fac9f25f90bb77fc88297909debbcf5d487d40c4b1ffe19c345b7cc8d3bfc764"
+    },
+    "Theorem1/RiemannGaussian/VinogradovInitialExceptional.lean": {
+      "verifiedSHA256": "08f7982c4fb214a470f2ce76f91d64a81b3716e05c083890ad336a97c3e80e9b",
+      "upstreamSHA256": "050bf466724fb4e08b29e86708ce5c91a13aaf786566ea33c36f44c5b19cf814",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovInitialFactor.lean": {
+      "verifiedSHA256": "2b91c58d230bc98736ce7d265ad4133763d89725e87121bfa9c9610db903c013",
+      "upstreamSHA256": "a8737db9aa2b6950618345e5a058b7f81021b6558d072cb5af0af308b54cb0c4",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovInitialIteration.lean": {
+      "verifiedSHA256": "5da36af41a463b98dd9c406585c4e94b26e4c6377d8e99f206a7f70bdc8bc71e",
+      "upstreamSHA256": "5da36af41a463b98dd9c406585c4e94b26e4c6377d8e99f206a7f70bdc8bc71e"
+    },
+    "Theorem1/RiemannGaussian/VinogradovInitialPrimeTransfer.lean": {
+      "verifiedSHA256": "a28f480d85327eedd47c9c72f081eeef3ec86a328799d51ce9b9418b7691bd81",
+      "upstreamSHA256": "a28f480d85327eedd47c9c72f081eeef3ec86a328799d51ce9b9418b7691bd81"
+    },
+    "Theorem1/RiemannGaussian/VinogradovInitialSaving.lean": {
+      "verifiedSHA256": "612fc5e75b54a5f1b2fd7ee12c3c120a96f9c259e828d24a0dfd01bbe26a36d8",
+      "upstreamSHA256": "612fc5e75b54a5f1b2fd7ee12c3c120a96f9c259e828d24a0dfd01bbe26a36d8"
+    },
+    "Theorem1/RiemannGaussian/VinogradovInterpolation.lean": {
+      "verifiedSHA256": "7ec2dd8a248b056fc498ad707ee2b5ab72a7b5ae439ad76ee583289ed45ab757",
+      "upstreamSHA256": "7ec2dd8a248b056fc498ad707ee2b5ab72a7b5ae439ad76ee583289ed45ab757"
+    },
+    "Theorem1/RiemannGaussian/VinogradovIntervalResonance.lean": {
+      "verifiedSHA256": "e3c79754a0e7457a5e6d9ffc839a435c87416e5f32714e3dfc98ddf330d39f38",
+      "upstreamSHA256": "e3c79754a0e7457a5e6d9ffc839a435c87416e5f32714e3dfc98ddf330d39f38"
+    },
+    "Theorem1/RiemannGaussian/VinogradovIteratedCongruencing.lean": {
+      "verifiedSHA256": "ee5a62e0d0b8a3abc9cde029d9f514598406dbfcd5a0be11a3cc038b9e229b60",
+      "upstreamSHA256": "2e5beb44604bae93135c3dba6b247657b37879a81e3b1ed8346bb6911533f99e",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovKorobovBilinearPhase.lean": {
+      "verifiedSHA256": "b71480b1de947a1e180d4499f5fea7a0b12f72a617e6dcb119ecf0a7d4e10fb7",
+      "upstreamSHA256": "b71480b1de947a1e180d4499f5fea7a0b12f72a617e6dcb119ecf0a7d4e10fb7"
+    },
+    "Theorem1/RiemannGaussian/VinogradovKorobovBlock.lean": {
+      "verifiedSHA256": "7eea16330a6526af70e7ca61fb8f53ef803a11029490db1d9bb1463e38f39efb",
+      "upstreamSHA256": "7eea16330a6526af70e7ca61fb8f53ef803a11029490db1d9bb1463e38f39efb"
+    },
+    "Theorem1/RiemannGaussian/VinogradovKorobovDamping.lean": {
+      "verifiedSHA256": "3ba34fa24c76a89c197067944c4e1532e230d0d7131a4d88132507be4a07705c",
+      "upstreamSHA256": "4515643aab11282a76dfbcc979a36a81f54285112deaee404b05c3716330af0f",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovKorobovLogPhase.lean": {
+      "verifiedSHA256": "51d4fcc34c48410a12213858a47567f098c3754cacddc53a2ced4e4397dc8cc7",
+      "upstreamSHA256": "51d4fcc34c48410a12213858a47567f098c3754cacddc53a2ced4e4397dc8cc7"
+    },
+    "Theorem1/RiemannGaussian/VinogradovKorobovMoment.lean": {
+      "verifiedSHA256": "4da6ed34470ea3e6d974c46c694171592784efc12a34bb0fd0d6982b650edc73",
+      "upstreamSHA256": "4da6ed34470ea3e6d974c46c694171592784efc12a34bb0fd0d6982b650edc73"
+    },
+    "Theorem1/RiemannGaussian/VinogradovKorobovPowerSaving.lean": {
+      "verifiedSHA256": "5d8951961b94013944b0e2eb086ad9e4ef004aaf73aab5746a854c65951d001f",
+      "upstreamSHA256": "267a314a9dd006c8e6fec0cad88ef26eaa0677b3a053ec3b809832911dd57566",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovLinearExponent.lean": {
+      "verifiedSHA256": "eb5f84866ae18b8a5ded97862224b3351968f1a3c99043fea4a7d48e8a430570",
+      "upstreamSHA256": "eb5f84866ae18b8a5ded97862224b3351968f1a3c99043fea4a7d48e8a430570"
+    },
+    "Theorem1/RiemannGaussian/VinogradovLinearProfile.lean": {
+      "verifiedSHA256": "422a8bd40c529bacf9d1113ab21bad71adb1540b89fe192aad80ab8175640935",
+      "upstreamSHA256": "422a8bd40c529bacf9d1113ab21bad71adb1540b89fe192aad80ab8175640935"
+    },
+    "Theorem1/RiemannGaussian/VinogradovLinearSaving.lean": {
+      "verifiedSHA256": "aaae5d4534f31de126d99f753b0ff38982ddf5d20b41e3dbdf1e03b0fa557a96",
+      "upstreamSHA256": "aaae5d4534f31de126d99f753b0ff38982ddf5d20b41e3dbdf1e03b0fa557a96"
+    },
+    "Theorem1/RiemannGaussian/VinogradovLongBlocks.lean": {
+      "verifiedSHA256": "070a87b2e0f7d4bd136e42c4eb0f67870163aa759d3d66ed866148d491fd35e2",
+      "upstreamSHA256": "070a87b2e0f7d4bd136e42c4eb0f67870163aa759d3d66ed866148d491fd35e2"
+    },
+    "Theorem1/RiemannGaussian/VinogradovLowDegreeTail.lean": {
+      "verifiedSHA256": "80e5379b08efae0fa1785e7735eb75d55a852a0ef6278fd18ade0d5e01c5c6e5",
+      "upstreamSHA256": "21c4d331cf45ff5d44b27b6c1f4f56c3e9c4a3c0480d294e3cc6fa739856965a",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovMeanValue.lean": {
+      "verifiedSHA256": "fd274bf3d7e3284e56d539522a1023c1c3f8f1f61014c1889cb33db8017ce30d",
+      "upstreamSHA256": "26a505712508c1e95e56facdb88fd713a050ceb3c794931dd99cee9352d1bad6",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovMixedDifferencing.lean": {
+      "verifiedSHA256": "7b078d9811d78cd2a048df5b4a7a02acf847e0c7f0aade2a3febbdc2a99bc848",
+      "upstreamSHA256": "97575731a5846b87aa693a25c38144ef7da5794cc47381ea13b0494dc1f4270e",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovMixedExceptional.lean": {
+      "verifiedSHA256": "26b266d8aaab5cc63ebdd4f5648de855fd5933c7c8b709ef1577561e0c49cada",
+      "upstreamSHA256": "37f2b1060acdc6f723876382845520251d867119e2255871c47d7bcef900f511",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovMixedMoments.lean": {
+      "verifiedSHA256": "f8925c31f1d96fcec1d5fccfb99313dcd262718aa26d4c62b61d42f0323628aa",
+      "upstreamSHA256": "f8925c31f1d96fcec1d5fccfb99313dcd262718aa26d4c62b61d42f0323628aa"
+    },
+    "Theorem1/RiemannGaussian/VinogradovMixedRepeated.lean": {
+      "verifiedSHA256": "dae3a26525567c504296e0493388df23d3d5d69701dd39dd534974e1dc185974",
+      "upstreamSHA256": "dae3a26525567c504296e0493388df23d3d5d69701dd39dd534974e1dc185974"
+    },
+    "Theorem1/RiemannGaussian/VinogradovMomentPartition.lean": {
+      "verifiedSHA256": "a24277cc00f350797a70c8c91bc8dfc0c50275887e1c6e4d9d3e4ba5d6450273",
+      "upstreamSHA256": "a24277cc00f350797a70c8c91bc8dfc0c50275887e1c6e4d9d3e4ba5d6450273"
+    },
+    "Theorem1/RiemannGaussian/VinogradovMomentReduction.lean": {
+      "verifiedSHA256": "363d00793d12b8a4c617afda3294c5c515596ca7226356b597a10f0f51b930ed",
+      "upstreamSHA256": "363d00793d12b8a4c617afda3294c5c515596ca7226356b597a10f0f51b930ed"
+    },
+    "Theorem1/RiemannGaussian/VinogradovNarrowCost.lean": {
+      "verifiedSHA256": "932069f7cc50fbc0e1f97830c6d1ac955c1d59564014375add93505cddb8db1a",
+      "upstreamSHA256": "932069f7cc50fbc0e1f97830c6d1ac955c1d59564014375add93505cddb8db1a"
+    },
+    "Theorem1/RiemannGaussian/VinogradovNarrowDirichlet.lean": {
+      "verifiedSHA256": "f9acda89998c216e7e32aa6ce56f1bd68e5c5d5977f510e846595414c7bf8ba6",
+      "upstreamSHA256": "f9acda89998c216e7e32aa6ce56f1bd68e5c5d5977f510e846595414c7bf8ba6"
+    },
+    "Theorem1/RiemannGaussian/VinogradovNarrowGaussian.lean": {
+      "verifiedSHA256": "a2e552244e394de6ff84f9a399825ed722b55b611dd2e92b9184f69c655e545b",
+      "upstreamSHA256": "a2e552244e394de6ff84f9a399825ed722b55b611dd2e92b9184f69c655e545b"
+    },
+    "Theorem1/RiemannGaussian/VinogradovNarrowIteration.lean": {
+      "verifiedSHA256": "c0f3d4c949f4677c98d84e671b0dc33eb2c5ce2e4354d582c8672919a6131ac9",
+      "upstreamSHA256": "c0f3d4c949f4677c98d84e671b0dc33eb2c5ce2e4354d582c8672919a6131ac9"
+    },
+    "Theorem1/RiemannGaussian/VinogradovNarrowResonance.lean": {
+      "verifiedSHA256": "7fbd5ca7ff5df549550dcd46adae01d0c39f0d0b8b29f829c3d00f2127507df6",
+      "upstreamSHA256": "7fbd5ca7ff5df549550dcd46adae01d0c39f0d0b8b29f829c3d00f2127507df6"
+    },
+    "Theorem1/RiemannGaussian/VinogradovNarrowThreshold.lean": {
+      "verifiedSHA256": "c8513867ed7bb7c0975f18e33fbf3efa24a0a13fdec7d031bfdb69c876bcc533",
+      "upstreamSHA256": "edba7ce56230c9beabf8b6c9ecb0c2059a88e973a6334441fa2cf609dbc69636",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovNearOneBudget.lean": {
+      "verifiedSHA256": "13dc2f30abb41d717a608a755e5aa99df2bdaa4bdd70fbfe1a882ba1d5aba595",
+      "upstreamSHA256": "7af4b2d73febfd2e1f08ad2b1f426b6e9b9b13ed0f048475793e02b28e87a9a9",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovNegativeProfile.lean": {
+      "verifiedSHA256": "08608f04b9b016f05595f11b97a3530013f739c920c5e83e393bbfe12eb9b122",
+      "upstreamSHA256": "08608f04b9b016f05595f11b97a3530013f739c920c5e83e393bbfe12eb9b122"
+    },
+    "Theorem1/RiemannGaussian/VinogradovNonsingularConditioning.lean": {
+      "verifiedSHA256": "7101bc4e1d495f58223ef158c44d07cbb93b28c6c6c5153d988b1ce6800729c9",
+      "upstreamSHA256": "a9fb37ce64973666b308022446df092112472949ed1c0f1287178123ac24f270",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovNonsingularDescent.lean": {
+      "verifiedSHA256": "41e8176db9c9030f8f26705306ca20d7305e384d088b274b7df25b27e7874073",
+      "upstreamSHA256": "41e8176db9c9030f8f26705306ca20d7305e384d088b274b7df25b27e7874073"
+    },
+    "Theorem1/RiemannGaussian/VinogradovNonsingularSelection.lean": {
+      "verifiedSHA256": "e8fad1882feb18cecf06f11c242cfcd301c14955ae90f4139cebba11970972a1",
+      "upstreamSHA256": "e8fad1882feb18cecf06f11c242cfcd301c14955ae90f4139cebba11970972a1"
+    },
+    "Theorem1/RiemannGaussian/VinogradovNormalizedIteration.lean": {
+      "verifiedSHA256": "e6bf9523134579ae52f43ff12d21fdec5147b0e959746aded79591c46235984a",
+      "upstreamSHA256": "e6bf9523134579ae52f43ff12d21fdec5147b0e959746aded79591c46235984a"
+    },
+    "Theorem1/RiemannGaussian/VinogradovPartitionEnergy.lean": {
+      "verifiedSHA256": "fd723d8a6f6716a65c395bd67b7bbc1fadcb6d6be26e198afe8f57499c36203b",
+      "upstreamSHA256": "9b12d93155911319e8e5be2db708ce9311db19d36eb8c88b44845f326b925b03",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovPhaseRectangle.lean": {
+      "verifiedSHA256": "1ce7471cd154d35d148c16787d02a2fb3ac2e9c1f327f1bd45e81a1412f6023a",
+      "upstreamSHA256": "1ce7471cd154d35d148c16787d02a2fb3ac2e9c1f327f1bd45e81a1412f6023a"
+    },
+    "Theorem1/RiemannGaussian/VinogradovPolynomialConditionedDescent.lean": {
+      "verifiedSHA256": "d821e3eb4875c70eb313e837205921a145f4f645815a976b84df6806be8e386c",
+      "upstreamSHA256": "d821e3eb4875c70eb313e837205921a145f4f645815a976b84df6806be8e386c"
+    },
+    "Theorem1/RiemannGaussian/VinogradovPolynomialConditioning.lean": {
+      "verifiedSHA256": "99cbc25124cfa7cf82aacd62d5c7ea8399043e4be576bd30f2924f2b88cb9e7e",
+      "upstreamSHA256": "99cbc25124cfa7cf82aacd62d5c7ea8399043e4be576bd30f2924f2b88cb9e7e"
+    },
+    "Theorem1/RiemannGaussian/VinogradovPolynomialDifferencing.lean": {
+      "verifiedSHA256": "08982fb363fc76c0a7f285612afb3659fe94a4b871879c6adab64267c45e164e",
+      "upstreamSHA256": "0aa06fa3e6210c98827c48e792a87baa4bd36a97fa5d2bf67cd949f1dec433d9",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovPolynomialExceptional.lean": {
+      "verifiedSHA256": "0251c860c3afb30eebd9795be17d0003f9216a274cff8f181267346ee01b0d19",
+      "upstreamSHA256": "0251c860c3afb30eebd9795be17d0003f9216a274cff8f181267346ee01b0d19"
+    },
+    "Theorem1/RiemannGaussian/VinogradovPolynomialNonsingular.lean": {
+      "verifiedSHA256": "5504afdc408c198ae57714b5b3d90b17ec5d95b4c35b3f21167f4cbb3ccd8ef0",
+      "upstreamSHA256": "4dc99729517ad06162962a7a165e73c32e7f078f73a21a06c17e59053525de46",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovPolynomialPrimeTransfer.lean": {
+      "verifiedSHA256": "5905187e52bc93d7b2398df877b714cd47f23c0c00ccf94f5118e620f73b5c52",
+      "upstreamSHA256": "15242c8c71b64b330b3c6eb0cfc3a2ca6731f03795cd4cacc41172e47bcce432",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovPolynomialRigidity.lean": {
+      "verifiedSHA256": "293a32828adc6aa6031b0bdbc2afdeab17a4ed2db08e5d832e955c0202c2e614",
+      "upstreamSHA256": "9415fcc13b4bb914c80efadc48910b308afaf0daa3827afb89213c41706e041e",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovPolynomialSystems.lean": {
+      "verifiedSHA256": "43b66fa02b81e896f1aca143e0cbd3d764c5f2ab1415549425069c32e28e636f",
+      "upstreamSHA256": "43b66fa02b81e896f1aca143e0cbd3d764c5f2ab1415549425069c32e28e636f"
+    },
+    "Theorem1/RiemannGaussian/VinogradovPowerSumRigidity.lean": {
+      "verifiedSHA256": "deeb4aa1eb053a3415fc4d79d978774db8e419cf487cacec290066014ead5be6",
+      "upstreamSHA256": "deeb4aa1eb053a3415fc4d79d978774db8e419cf487cacec290066014ead5be6"
+    },
+    "Theorem1/RiemannGaussian/VinogradovPrimePacket.lean": {
+      "verifiedSHA256": "73109da46ab4036c8b8477cb62f8cc8f0371afe774ae8bb5aa3f2f10a35b9fd4",
+      "upstreamSHA256": "5fac4fc01ffe5909c9a3c0776ebde03e90759cb1001d4ed994bb2fbaca9d14d9",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovPrimePowerRigidity.lean": {
+      "verifiedSHA256": "12f8b1899f4ae762b14b84753e4ff1b75c20a197d34591b9184464d68e3d4c64",
+      "upstreamSHA256": "12f8b1899f4ae762b14b84753e4ff1b75c20a197d34591b9184464d68e3d4c64"
+    },
+    "Theorem1/RiemannGaussian/VinogradovProductEnergy.lean": {
+      "verifiedSHA256": "7b6f5de7c87c6b9f36720d86a5413aef5264ed334e5238af9ba7fe6a08ea4196",
+      "upstreamSHA256": "7acec5fa6de297ed0d6ba256e43b2296a5310098714acaeb7f11d45b0478e07e",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovProfileIteration.lean": {
+      "verifiedSHA256": "dc6c0c18e6daeef9865e2d2f499c700af069373fa34317a8dd5a5594cb109e44",
+      "upstreamSHA256": "deedf523a27ec4f7e1ce867413c1d69d6758d856b29fd7e619bee99d74d2ed6b",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovProfileSaving.lean": {
+      "verifiedSHA256": "2ae981936f6cad6c28504b555d588567fa3131fb182bc2a5b9f86da58c6a52e8",
+      "upstreamSHA256": "2ae981936f6cad6c28504b555d588567fa3131fb182bc2a5b9f86da58c6a52e8"
+    },
+    "Theorem1/RiemannGaussian/VinogradovQuantitativeDescent.lean": {
+      "verifiedSHA256": "2c43594cc8567fa5f4be51ca5e7b4e329d94ab739c7339a76145dbf956cca4ea",
+      "upstreamSHA256": "2c43594cc8567fa5f4be51ca5e7b4e329d94ab739c7339a76145dbf956cca4ea"
+    },
+    "Theorem1/RiemannGaussian/VinogradovQuantitativeProfile.lean": {
+      "verifiedSHA256": "4a18cfb458f2ddc7a1b597e9c256cd7d5d2d417aedf46faf6593b65b3d1ce135",
+      "upstreamSHA256": "ab108dba4f9a7ea65a02200b7711c8455677d4af871c8184cb4742fecca13ac2",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovRectanglePowerSaving.lean": {
+      "verifiedSHA256": "e65c9c521aeb1c91ee0eb8fb88b941c41c1b584bf182ff3baef2838a25019af3",
+      "upstreamSHA256": "c9ae03898d7d43627a2c789506fb1f00446ff64c805e4bc66e2a0694a2f4a3f0",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovRectangleResonance.lean": {
+      "verifiedSHA256": "e4ac2bcfb17a99331ecdcdf0d4ce41f8654993ef75aa825f0bbe2773c54f1652",
+      "upstreamSHA256": "1893a4fd9cbb710c9d0a0e03b50d11816dd43d6c6179f150b0f901895c2e64f9",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovRelativeProfile.lean": {
+      "verifiedSHA256": "54d86cba8815d2df7cad585603d9420250577f849eeae5437cc3d60fc322f7a6",
+      "upstreamSHA256": "b108dfb42cf230a6dbbbdb1e95ee276c932c6a1936f09bcbcf03465cbcd91cf2",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovRelativeResonance.lean": {
+      "verifiedSHA256": "2039893f0078ed10a990cacb2af1d0af84a85dae817055cb89421d820c017886",
+      "upstreamSHA256": "2039893f0078ed10a990cacb2af1d0af84a85dae817055cb89421d820c017886"
+    },
+    "Theorem1/RiemannGaussian/VinogradovRemainderScaling.lean": {
+      "verifiedSHA256": "f4058663e6997bee2e9ed8d934a4a55cf95d57bed10d6ebc3ce1c7917fd03c9d",
+      "upstreamSHA256": "f4058663e6997bee2e9ed8d934a4a55cf95d57bed10d6ebc3ce1c7917fd03c9d"
+    },
+    "Theorem1/RiemannGaussian/VinogradovRepeatedMoment.lean": {
+      "verifiedSHA256": "db7c68caa34320d5785baa6659fa00ef15baed27ed6c4288363f904162db3f35",
+      "upstreamSHA256": "db7c68caa34320d5785baa6659fa00ef15baed27ed6c4288363f904162db3f35"
+    },
+    "Theorem1/RiemannGaussian/VinogradovRepeatedSolutions.lean": {
+      "verifiedSHA256": "2036a11abfe97040171d27f3cb5d66efc0fc29df95bea0dcf531167be075482d",
+      "upstreamSHA256": "872ce9dca00d68386f7569bdce6908cbbddfca4fae566015b7fd383e5c98b6ed",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovResidueDigits.lean": {
+      "verifiedSHA256": "36662e17331646096344581f428ff0f578b09ea7fb5c188f26fae05db9138b6b",
+      "upstreamSHA256": "cb7820619d1f83267429bdebadcc45597963a63cb754cfb03fca80f5a006cc9f",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovResidueEndpoint.lean": {
+      "verifiedSHA256": "1f3a8b67aa43ae79d60e30fd2eb38e1ac59bb515e9aa377812f5e2dc656087d7",
+      "upstreamSHA256": "1f3a8b67aa43ae79d60e30fd2eb38e1ac59bb515e9aa377812f5e2dc656087d7"
+    },
+    "Theorem1/RiemannGaussian/VinogradovResidueEnergy.lean": {
+      "verifiedSHA256": "b51b4995f1ee19011b80f0cff4461a58dd43e223ba4ede2d065b649d2ed0cfd8",
+      "upstreamSHA256": "b51b4995f1ee19011b80f0cff4461a58dd43e223ba4ede2d065b649d2ed0cfd8"
+    },
+    "Theorem1/RiemannGaussian/VinogradovResidueMoment.lean": {
+      "verifiedSHA256": "f3d958a19d9eca49bcf74cdc58c42d8bafaf890d69257c67e1072bc46b165c4b",
+      "upstreamSHA256": "f3d958a19d9eca49bcf74cdc58c42d8bafaf890d69257c67e1072bc46b165c4b"
+    },
+    "Theorem1/RiemannGaussian/VinogradovResonancePower.lean": {
+      "verifiedSHA256": "f8374994b6311b55bfae9bd74f79c3810b20ba6ed1d5f80a493588cad1874b5b",
+      "upstreamSHA256": "9c48ac6478e1544ac49bf17391405e8cbdbf68b1c2b906f447bde60cc1e8f952",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovResonanceScaling.lean": {
+      "verifiedSHA256": "1a6aab7bad0fb2f4d26b59b2f741c032396000de9fb18de79d185b6eb7ab6175",
+      "upstreamSHA256": "1a6aab7bad0fb2f4d26b59b2f741c032396000de9fb18de79d185b6eb7ab6175"
+    },
+    "Theorem1/RiemannGaussian/VinogradovResonanceWindow.lean": {
+      "verifiedSHA256": "0394f6b683e5ab6a7ac982542154d10dce18e92f8b7ae4a3ab7741a9ad189079",
+      "upstreamSHA256": "46223bcbeb632685d6afc40c7b179f429d590f575c41e29518ece55dd55daca7",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovRowTransport.lean": {
+      "verifiedSHA256": "9a92e173f924ba22c9de73dab052821bb5af78fe9eb744122e34bf6c9be37048",
+      "upstreamSHA256": "9a92e173f924ba22c9de73dab052821bb5af78fe9eb744122e34bf6c9be37048"
+    },
+    "Theorem1/RiemannGaussian/VinogradovScaleSelection.lean": {
+      "verifiedSHA256": "bf94945dd677c11edce7362522592a28d6f7d242b00956b364eb313427e64aac",
+      "upstreamSHA256": "bf94945dd677c11edce7362522592a28d6f7d242b00956b364eb313427e64aac"
+    },
+    "Theorem1/RiemannGaussian/VinogradovShiftedMoment.lean": {
+      "verifiedSHA256": "6ff3650be98d2c1bd71420f9465c65b3b87f86093d8c991b59b77a31b0a2072e",
+      "upstreamSHA256": "82605a80528eef953f9360b67c27022c6b97c8420bcf8f5c2ef17670066b04cc",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovShortPacket.lean": {
+      "verifiedSHA256": "f981e8459e7438b8d9da8589ee40135405e7929d12b34be4c51953df582f3720",
+      "upstreamSHA256": "c7af9a4380878eaaf7dff283b7a42be3e4f74425d8e84c02b3ebe3650323aa85",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovSignedComplement.lean": {
+      "verifiedSHA256": "f76c6fa924e1adbb8e66c2fc2c57585923e9827b6ec2c8fabebaffd3e22ae6d0",
+      "upstreamSHA256": "04013fafea184cec9f18b7139bccd7ce7213fb288e531ca4d49ba0b6a20152cd",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovSignedCongruence.lean": {
+      "verifiedSHA256": "725fe1f14a36aad3969825b8d9db0f9b3e85d2dfe94411f8e0b84f7487141a4c",
+      "upstreamSHA256": "ed6738942408c0445d6af3b1325cf6709d4371fba26f3e8fcd80474b80da6b0b",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovSignedRigidity.lean": {
+      "verifiedSHA256": "dbc4f4471b45465c5a3668aa5102674c620f37fe5d0c355610f50bc4b3c93a18",
+      "upstreamSHA256": "dbc4f4471b45465c5a3668aa5102674c620f37fe5d0c355610f50bc4b3c93a18"
+    },
+    "Theorem1/RiemannGaussian/VinogradovSignedTailMoment.lean": {
+      "verifiedSHA256": "a2870615f7329583853ad135774b78fb17b3465e5cb16fc43766f4780391cd29",
+      "upstreamSHA256": "a2870615f7329583853ad135774b78fb17b3465e5cb16fc43766f4780391cd29"
+    },
+    "Theorem1/RiemannGaussian/VinogradovSingularConditioning.lean": {
+      "verifiedSHA256": "1032a18b4a73d453a1f60d954b295f2c6e9e45c1f041847d062675013a102270",
+      "upstreamSHA256": "55afacf588a8f443fa478249315f9417be39f4bd4851225a65d2fcd133b7cf3d",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovTwoBlockPacket.lean": {
+      "verifiedSHA256": "a5dbbc9e9688e5249d2c361bf9985fb5159b797772e338a06ac15103c96abf43",
+      "upstreamSHA256": "c5d5e68e60a4c797f768f625326a8b1b2f2a6d74c5030f56546c27114a20c2cc",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovTypeMaximum.lean": {
+      "verifiedSHA256": "1a1fb37942209f1c5582d3fb041ab639ba5b2f8eee42aaf49f5b76fa6be4c338",
+      "upstreamSHA256": "1a1fb37942209f1c5582d3fb041ab639ba5b2f8eee42aaf49f5b76fa6be4c338"
+    },
+    "Theorem1/RiemannGaussian/VinogradovUniformExponent.lean": {
+      "verifiedSHA256": "fb9bbb727347c6bbf2dd7a1bc7457781c1c1ce107dc93e080f412bd2af1251d9",
+      "upstreamSHA256": "fb9bbb727347c6bbf2dd7a1bc7457781c1c1ce107dc93e080f412bd2af1251d9"
+    },
+    "Theorem1/RiemannGaussian/VinogradovUniformProfile.lean": {
+      "verifiedSHA256": "edce1d295ce1d55a7e98ae4bc252a2a42b388c7e4142e672e30f31eee84938df",
+      "upstreamSHA256": "b4fb7cd35a11689ef2f17910bb8ce238f7e65d1e9fd9003dfcc1bcad0a00de99",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/VinogradovUniformSaving.lean": {
+      "verifiedSHA256": "2325b2e3a4f3b3efae3c391b606a7bc0fc46eb25824c1d00b4cb5198723a111b",
+      "upstreamSHA256": "2325b2e3a4f3b3efae3c391b606a7bc0fc46eb25824c1d00b4cb5198723a111b"
+    },
+    "Theorem1/RiemannGaussian/VinogradovUnrestrictedConditioning.lean": {
+      "verifiedSHA256": "5a24a9fcbb5d6a411494310759801eae6fa29e5a065d3fda0ea51f1a68d2272a",
+      "upstreamSHA256": "5a24a9fcbb5d6a411494310759801eae6fa29e5a065d3fda0ea51f1a68d2272a"
+    },
+    "Theorem1/RiemannGaussian/VinogradovWeightedLifting.lean": {
+      "verifiedSHA256": "a5bf92a67ea2847033ec25b83bc48e808edd967e23cb4f0d23a5a72cf9e27b10",
+      "upstreamSHA256": "a5bf92a67ea2847033ec25b83bc48e808edd967e23cb4f0d23a5a72cf9e27b10"
+    },
+    "Theorem1/RiemannGaussian/ZetaDyadicPowerBound.lean": {
+      "verifiedSHA256": "a3cd69f41fa30f8065e2a21676a4cdb3a96c4aa1c470ba5b2469ed172f61d7a3",
+      "upstreamSHA256": "cd1ef0a0f5d43d6df9cb1957df077f689c8dd5812477e298abe52cfe5d2c3c97",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaDyadicTruncation.lean": {
+      "verifiedSHA256": "85bdbbfb6126b27452f17cc0d9b67d6a1581c92751944e7b32ba30da42035f8d",
+      "upstreamSHA256": "492b52e599289e0d523eeed8bfd3b5038236631b0c06f522a80785d651f3297d",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaEulerBernoulli.lean": {
+      "verifiedSHA256": "c4a31e5b667a12560866212285baa23cfb5b85b0266511f291b8217754669c3d",
+      "upstreamSHA256": "7a5e84a12b3b9d7871d38c32197c308844039827bce125a1f092469509ec9c32",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaEulerCell.lean": {
+      "verifiedSHA256": "e1a95a2ebd3639c154141246d24823ea26ef3b0db867c658336312138403bf6c",
+      "upstreamSHA256": "a6d6da89551983062d986c83af1e04fee86efe5033efd68435453e53ee3818b2",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaEulerContinuation.lean": {
+      "verifiedSHA256": "3380428ad5def03d7070e5087249c02dce4d89abf88e833b0f42575fafb793cb",
+      "upstreamSHA256": "27efa420eaef16b1d5da038ebfb5ec4953e20f04beff72f0cf4625e87e274efe",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaEulerFourier.lean": {
+      "verifiedSHA256": "ccb271ac98bb0518429d1f6162d23222b6db9363b38bf6b9e0d6b563ec25317a",
+      "upstreamSHA256": "dcf33a6a8e6e9c0bdd6af1a81ef060dc8ea3545832202b7d4fbfa90c8f4e28b5",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaEulerLineBound.lean": {
+      "verifiedSHA256": "03b727588ecfa39ceea13000a0dd9747d7e23f97c1d8de1ae2f382e530df69a9",
+      "upstreamSHA256": "89e7fca5309ba311f83b49ef9c6d8e2cddb221219181a473bab05f56131fd443",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaEulerOscillation.lean": {
+      "verifiedSHA256": "1e3258d0d5141cbe7b86d1b69842813a47bc4f485f0bf7abd4a7c6366956864e",
+      "upstreamSHA256": "8d9ef4b249b21b183640e339ae203b0620eef2b75b6f948351a6a1b93824a4a3",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaEulerRightStrip.lean": {
+      "verifiedSHA256": "827f0bf22db73a5cc9f862e6e98aa4050b00609e7ee6beb35e1f73500eff3d81",
+      "upstreamSHA256": "7da488dad8559b323a9c385093b1e6aaf1b008a0c72da3ef1835f66a2d04759a",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaEulerTruncation.lean": {
+      "verifiedSHA256": "8bb887ba921f2d0a3f3fa9c3e7edb4015d640cb5519e0d8727784e206ab3913e",
+      "upstreamSHA256": "d5596bfd730b43c2692f1d8146b0700048badac2b882bf74b133b7b280b9449a",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaEulerUniformRemainder.lean": {
+      "verifiedSHA256": "dd6dcd5a4124a2d6a269f32e4c11d49d6aba795bb1286150df715144a90c7be1",
+      "upstreamSHA256": "dd6dcd5a4124a2d6a269f32e4c11d49d6aba795bb1286150df715144a90c7be1"
+    },
+    "Theorem1/RiemannGaussian/ZetaFiniteDifferencing.lean": {
+      "verifiedSHA256": "0ef710206b561ddb97a04b50d576ea40df50b92bc0caff97538d095ebdc1b617",
+      "upstreamSHA256": "f9849dd64c0e8a7805df438b20600b0cb0b3ae3c79a6c6efaa9ee864dc1d6d97",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaLogLogBudget.lean": {
+      "verifiedSHA256": "3c42b2b20a7f88982d16800946d6303888c32178022477578ffd956d38ef6262",
+      "upstreamSHA256": "40e83b14007e3227f56a6a2f3f642545787d535590e1ac578365823969596bb2",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaNearOneBudgetLimit.lean": {
+      "verifiedSHA256": "bad6d5aff4f78871843e9e1f4a1011de9af26fec4d6d142d6dcd33a6d067ccec",
+      "upstreamSHA256": "04278e6ffcb970dfb313848732d07fea37e9d4abff0d802e0371560515089a69",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaNearOneLineBudget.lean": {
+      "verifiedSHA256": "4a2891a102f43c7eaa5cb971d33c76303e250d5f30ec891acc096837feac027a",
+      "upstreamSHA256": "5f9fe4abb5a2a7b8501e3d103bf796c505e11c5bb300c63adf2777169eaba19f",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaNearOneLocalDisc.lean": {
+      "verifiedSHA256": "4e06aec90a1ef4d0476b3bebb96c6056df1b954b9fb10db28604e0711dfc2698",
+      "upstreamSHA256": "5a46ef6bdbb13a86750012bd9c88a893772407101f4a9519b06182d289b707c0",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaNearOneLogProfile.lean": {
+      "verifiedSHA256": "ce069264aee9afe6a606619b8e0075c30d2f970ccde8b51840f7c976b5359aa8",
+      "upstreamSHA256": "bee53c80ed12b38c1c67d1d9fabd2a03747e56af561816f353aa43a05ffe2405",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaPrimeGram.lean": {
+      "verifiedSHA256": "03b3eb5a2020709221b69e2c021d31e1b177cff91a1f85c59e47dd4062b20447",
+      "upstreamSHA256": "dd8077f2d8bd04227f9aec2f313c5a032d612910d709caf2e8d5bd7ce5ccbe96",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaPrimeMomentEnvelope.lean": {
+      "verifiedSHA256": "a1ab9fcc5352eb496623f421b69d607a423c1d5475327630862da090743affc4",
+      "upstreamSHA256": "fa365028df97a9587baad8cafd84f787df047d9330ff4e9b183b1a475a7fe07e",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaSignedPrimeSeries.lean": {
+      "verifiedSHA256": "9aa94b3f3815981f8872d4d94248eb2b2040aea8ed6e4aac4dd52ad84b09dcae",
+      "upstreamSHA256": "38aeffedb1c80fc7d99481ea0cedf56a236ca59fae5a52493cf1c7e3ca7ab082",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaVinogradovEulerBound.lean": {
+      "verifiedSHA256": "b40fdc3b4ccc0c07baf70812f409fc5c52596e5c2049d8b5b09edce0440fd9b3",
+      "upstreamSHA256": "908d4dc398a65cea3ac1f4d4699c1a1869ec29ad47801009938881ed0b27d28c",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaVinogradovLocalDisc.lean": {
+      "verifiedSHA256": "2f3de4a772d45e3b7bcae627534edfb1f2ad95c5a45f5671aec572985cd21702",
+      "upstreamSHA256": "bb152147fc7a684aa89ace5a3d7a6a68274f4c25c934a995678c81c8a3e3ef27",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaVinogradovMargin.lean": {
+      "verifiedSHA256": "1486e053f3114d3c51888be289b6d648960f5878cf76d348a7a863dc398b2e41",
+      "upstreamSHA256": "3f9701933ce4453d7ede59ed0fb934d0e23f95778cfcf798af263e3c7a889f1f",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaVinogradovScheduledMargin.lean": {
+      "verifiedSHA256": "1dec4560cc4fc87c1fcc15c0abee6336c096c6c382e3bc2502edc97120f051b1",
+      "upstreamSHA256": "4842aefd103d97654ee986cdbc31c0438f53223d06d0facdb7d35dec14b98a6a",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaVinogradovSignedBudget.lean": {
+      "verifiedSHA256": "a57de32f93c8672680c94d4a2cd18c402eda05c4182d084a0b1798c833dbbfed",
+      "upstreamSHA256": "196412ed83a810da52041cc185e830bd87e360bdf0387badd4653646ff3398c0",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/RiemannGaussian/ZetaVinogradovZeroFree.lean": {
+      "verifiedSHA256": "37c89df56f9205f22f03da908267c5a10f7b6c1aaed0fdbe53ce94df8452b8a9",
+      "upstreamSHA256": "d8bfe8f57f5b3e2609bfc5193ad1ba54313483a621b4148700e52b8805ca9702",
+      "appendedNotice": "\n-- Modified from David Sanftenberg\u2019s RiemannGaussian for the Lean 4.28.0 certificate.\n"
+    },
+    "Theorem1/T1ActualMarkovCountIdentity.lean": {
+      "verifiedSHA256": "de4c048452061f93d4ee80a721c6d227e3f9b9bfaab6930a04c8a95052af67c8"
+    },
+    "Theorem1/T1AmbientAxisSimplicity.lean": {
+      "verifiedSHA256": "66ddd52133afa004b78983d607b3e2d6c0c9e67659df1adad8b648c348cfa419"
+    },
+    "Theorem1/T1AmbientConjugation.lean": {
+      "verifiedSHA256": "106aacd6df69e7e28ce6a5ca12abe0ef91111c0fb93c59dfbb620f64aed47715"
+    },
+    "Theorem1/T1AnalyticDiskZeros.lean": {
+      "verifiedSHA256": "954da8396183692a51edb663245f04349675b05e9d684da0331cc21d6e6816d9"
+    },
+    "Theorem1/T1BlaschkeFactor.lean": {
+      "verifiedSHA256": "884ebc6ddae63fa0c3bbeed52a8658e77b5e3e05ef306e1a0621e93959ecc47d"
+    },
+    "Theorem1/T1BoundaryOrbits.lean": {
+      "verifiedSHA256": "7310717cc2940107671589428e006adf9fddc5763bdf3a14f59cd2533a9a5dbd"
+    },
+    "Theorem1/T1ChebyshevLower.lean": {
+      "verifiedSHA256": "b3de967ddc47630199734c22794900cfd254b0595c5e9d7a27c8b7abb6a0f86f"
+    },
+    "Theorem1/T1ChebyshevPrimePowers.lean": {
+      "verifiedSHA256": "bd905245cbd04256a16e61b64e7f2c8dcac083e371fcba741302d1d3eb031260"
+    },
+    "Theorem1/T1DiskAnalyticLog.lean": {
+      "verifiedSHA256": "4405a1f804a6fc2907963a8037a0a48d2f5cdf749cbd3fc172b3d6807dc0c103"
+    },
+    "Theorem1/T1DiskCanonicalProduct.lean": {
+      "verifiedSHA256": "154cac7ee4bb0f17b50a186a0f5af1ffe7794281c5b1c391338769c844baf543"
+    },
+    "Theorem1/T1DiskLogDerivBound.lean": {
+      "verifiedSHA256": "6fae3703811f6dd8c166b8997a0648716c22fd5c0d6fc1352cbbecbb2d3078b0"
+    },
+    "Theorem1/T1DiskLogDerivativeDecomposition.lean": {
+      "verifiedSHA256": "66c8f5df347dd34a96b509da6098bf2160b71bbd9905f9db5313d7331bfa5ffc"
+    },
+    "Theorem1/T1DiskReciprocalBound.lean": {
+      "verifiedSHA256": "58bbbe0b6a5243925fd374be1d24646e621afe3f0ddb5fd9fc5f3c9227be3fc4"
+    },
+    "Theorem1/T1ExactTheoremOne.lean": {
+      "verifiedSHA256": "63572ab25af8fbd73063d04726d83ea69691fdcc5514098579e10932664a16dc"
+    },
+    "Theorem1/T1FareyGeometricLength.lean": {
+      "verifiedSHA256": "6c565c7decf3e62136582a965de183c5003f1e8803a664cf632edffacd84de52"
+    },
+    "Theorem1/T1FareyMarkovWordMap.lean": {
+      "verifiedSHA256": "5b67d648767fadfa140598e269a7b0d2da094cf50dc65eac2e49fedf08583c5f"
+    },
+    "Theorem1/T1FareyTraceOrder.lean": {
+      "verifiedSHA256": "189c24cc331c002b4897b73e4d697b29b39e1042bf60c798f330d51f7bba2dd9"
+    },
+    "Theorem1/T1FareyTraceTriples.lean": {
+      "verifiedSHA256": "5f9ea048ac95ae381d4fe31ea2c90786ee04cc9d44141f8e5e8aeda39e8e1e6a"
+    },
+    "Theorem1/T1FareyWordCoverage.lean": {
+      "verifiedSHA256": "691d635200a69bd44853f203bf82790cd659049f769729a12b497d2018c9f937"
+    },
+    "Theorem1/T1FareyWordUnique.lean": {
+      "verifiedSHA256": "a5b6dadf10f669745305dcbd8fc1b856a97fb076205bc7d6601f8335b8301930"
+    },
+    "Theorem1/T1FareyWords.lean": {
+      "verifiedSHA256": "eb314121a8cb227ec4a322ef3b1ca70073f224adad2837b1fe688e57ad0bfc18"
+    },
+    "Theorem1/T1FinalScaleTransfer.lean": {
+      "verifiedSHA256": "adba3646385ab234aad0491ef7377182c15bdb01d6fb05b37ecda6fd08b0a5a3"
+    },
+    "Theorem1/T1FiniteContourShift.lean": {
+      "verifiedSHA256": "4b4b5345b0a58889ed738137b273879e01a18fcab22f5d070f912978437f05e3"
+    },
+    "Theorem1/T1FrickeNumbers.lean": {
+      "verifiedSHA256": "c954b1ca5e23b6e64c119bb7fb00546c23a1698e9f313d63b8d63ac55a539fa4"
+    },
+    "Theorem1/T1GeometricBoundaryOrbits.lean": {
+      "verifiedSHA256": "75d236db18b3211e7ea8b6e5bd9297cbcda2570eab9279bc7fa741a074e2a7ec"
+    },
+    "Theorem1/T1GeometricCountingBounds.lean": {
+      "verifiedSHA256": "b176a1201f7f1468df1ca255045f5536d450319f937837c51bfe64a3128cbdaa"
+    },
+    "Theorem1/T1GeometricCutoff.lean": {
+      "verifiedSHA256": "befece85d5cecbe45a3fad5c915fea622482310021375d41ce73fcf02ed61b9d"
+    },
+    "Theorem1/T1GeometricDihedral.lean": {
+      "verifiedSHA256": "800a512330657c425f62d38e661ac45f385a9f820663bf423f3309dc6134250d"
+    },
+    "Theorem1/T1GeometricHyperbola.lean": {
+      "verifiedSHA256": "f3fe4f8c56a7b0a79efee2cebb67fbee3a3e8423e98f905d10e0e88e06ea8e4e"
+    },
+    "Theorem1/T1GeometricMobius.lean": {
+      "verifiedSHA256": "60034471cd3f51302748cf596ea4bbd110d48a3e947f1a359318e77f0f559be8"
+    },
+    "Theorem1/T1GeometricPartialCutoff.lean": {
+      "verifiedSHA256": "5f7db5279897b5ae30940659453f3fc3a21084719e86866433601aff455f2a14"
+    },
+    "Theorem1/T1GeometricPrimitiveCount.lean": {
+      "verifiedSHA256": "5cc975ba41ddaea71ff87a451e1fce67faf356241a609cad092c5bf374f10031"
+    },
+    "Theorem1/T1GeometricReflection.lean": {
+      "verifiedSHA256": "12cbc008389d1849edd230f2a8937ba31de208a9bba28c8dc5a4d8747409fbcd"
+    },
+    "Theorem1/T1GeometricRotation.lean": {
+      "verifiedSHA256": "adf8f60a83f4e4e14435a6eff333e6bc89e60c9d3964554ea93fccd767183d76"
+    },
+    "Theorem1/T1GeometricTailBound.lean": {
+      "verifiedSHA256": "356123f0c114b1e8cba95ef118418509aad23bb33f025b1f1f208dbdbbcac8e7"
+    },
+    "Theorem1/T1GeometricThreshold.lean": {
+      "verifiedSHA256": "1a5c05c6e08fbc618f72f26b86f62e15b9004be403a5815516f74e526551ad53"
+    },
+    "Theorem1/T1GeometricYCutoff.lean": {
+      "verifiedSHA256": "c77bf431cbf9870b476a3961785f45cc8960188d23d5e9ea97ac7ac4b308781f"
+    },
+    "Theorem1/T1IntegerDivisibility.lean": {
+      "verifiedSHA256": "539560ba4328cf94c560301fe17fed8398593a94e60fac448e54b8c2222b9384"
+    },
+    "Theorem1/T1LatticeOrbitCoverage.lean": {
+      "verifiedSHA256": "c52b300acfb1292b3bcb51797253ac123255d4acbf0f47b99a1b2ef1a37ee08c"
+    },
+    "Theorem1/T1LatticeOrbitUnique.lean": {
+      "verifiedSHA256": "168fbdf7230e5ac942607399d4386c25c777f6ecaae605a859219b73f4ae4cdc"
+    },
+    "Theorem1/T1LatticeRotationCoordinates.lean": {
+      "verifiedSHA256": "83f0cba57999a6b3a13129c56dbf60fd5b20db4b616cdc8c7bb35c976725da02"
+    },
+    "Theorem1/T1LatticeTurns.lean": {
+      "verifiedSHA256": "2fea16de9e52ccd9275e75192b1ee72c2888dd04d180662d6ee05870dd68423c"
+    },
+    "Theorem1/T1LengthAsymptotics.lean": {
+      "verifiedSHA256": "888319d8b8f3a08eba6c3f63dcf146ab18afad64e1dc92a77e37d459d1872df5"
+    },
+    "Theorem1/T1LengthVariable.lean": {
+      "verifiedSHA256": "9421bf78c19c3a085d65208fe7f767f9424de29064efb06a8676e60506553278"
+    },
+    "Theorem1/T1LogarithmicHeadSum.lean": {
+      "verifiedSHA256": "b5e0afba517ef195efb259a5846da1a3bea2a04f912098e5d4d02c2df15cbdfc"
+    },
+    "Theorem1/T1MarkovChildren.lean": {
+      "verifiedSHA256": "400de46f837c12b6ae8b2de1f853490f7994978fbb30b26c8b206dd0ec1e0db0"
+    },
+    "Theorem1/T1MarkovDescent.lean": {
+      "verifiedSHA256": "8a69f2996aca49c4c50e76e01610ac01235e4334943d688bf8cd89c8ad4e7c52"
+    },
+    "Theorem1/T1MarkovExceptionalCount.lean": {
+      "verifiedSHA256": "cd14a1bc93d48feecd3ea54323f8a49fee95da1dae3b8cddcc45f8d002dc27eb"
+    },
+    "Theorem1/T1MarkovGeneration.lean": {
+      "verifiedSHA256": "a6960fab6f25f5c8e25ceb7c17622a7413be34d39c0e993730ffeac6c251e674"
+    },
+    "Theorem1/T1MarkovTreeParent.lean": {
+      "verifiedSHA256": "fb6fab84a1e2933b19329f5ff4ef0ae415fd303e558621b4874672b6e19cdac4"
+    },
+    "Theorem1/T1MarkovWords.lean": {
+      "verifiedSHA256": "ac029bb6a1468222017b1563a72e30816a604679d5601bb6f6d4299a2044280a"
+    },
+    "Theorem1/T1MertensEnvelope.lean": {
+      "verifiedSHA256": "dc6aec8ce50c2c20ea2c8422744f9fa7ef1df59c62edc09bc637959f440be9b5"
+    },
+    "Theorem1/T1MertensFinite.lean": {
+      "verifiedSHA256": "82ed3e5eb792305bf35432c5ced9b1310fc49040cee77c8160e15b8344ccde01"
+    },
+    "Theorem1/T1MertensPowerEnvelope.lean": {
+      "verifiedSHA256": "99b914bc5b399a3b2101c88e6292d1035942a1a4d0f2d4c6bfc56eb4027160bd"
+    },
+    "Theorem1/T1MertensSquareAbel.lean": {
+      "verifiedSHA256": "c1e8b84998f92d27ecd92c56f04648ba6363d516d74b0d2e1b8b1b2243b86111"
+    },
+    "Theorem1/T1MertensSquareFiniteBound.lean": {
+      "verifiedSHA256": "c9201c7d610e972fc6a54e3dcbb14fea8d7614ca13a600b45a9d13095bf953f1"
+    },
+    "Theorem1/T1MertensVKEnvelope.lean": {
+      "verifiedSHA256": "79769eefcd17aad20217e4ef3449516a2b8b186674e414096b1bc30a0ea88c9e"
+    },
+    "Theorem1/T1MertensVKFromRegion.lean": {
+      "verifiedSHA256": "214452db31bc7b0feb891e1776be9ebd2176c8ba4aa405babe18ecad9103a494"
+    },
+    "Theorem1/T1MobiusFinite.lean": {
+      "verifiedSHA256": "6d924664edae7b3752268831aabbbbcd277b1e0dc134f9c9530432e36feb0622"
+    },
+    "Theorem1/T1MoebiusSquareCoefficient.lean": {
+      "verifiedSHA256": "fc857d31f36d9f944a4f2ea7cb822cdc6dfc0351b1ec6c582dd9515bdcfc63e0"
+    },
+    "Theorem1/T1MoebiusSquareTail.lean": {
+      "verifiedSHA256": "f6433704c38b29c7a1a357dcbe8aa286e7f06b18deefb73d8909f3287fd7f412"
+    },
+    "Theorem1/T1PowerCutoffAlgebra.lean": {
+      "verifiedSHA256": "a666c42d3c4bce15e73838ba683dd58d47ab505adbd70b53be5aec5288d677b7"
+    },
+    "Theorem1/T1PowerCutoffEnvelopeTerm.lean": {
+      "verifiedSHA256": "ae1150be261999883044b25a5332c1bd30eb636311c9391c6b3fc4d6020564f9"
+    },
+    "Theorem1/T1PowerPrimitiveEstimate.lean": {
+      "verifiedSHA256": "2672cb879a91aa4f2e39c270289fb272044e84492441eae39960354583bd798f"
+    },
+    "Theorem1/T1PrimitiveErrorScales.lean": {
+      "verifiedSHA256": "91667838e4d1e1a3e8ae5c41e4d6fb879557f2c917b76f9c7d6d2d4e08dc45cc"
+    },
+    "Theorem1/T1PrimitiveOrbitBijection.lean": {
+      "verifiedSHA256": "8a462b99aea19a47ba79e94108f88eaacdd4d7fea325226d90ec75fc9c345df1"
+    },
+    "Theorem1/T1PrimitiveOrbitMap.lean": {
+      "verifiedSHA256": "9dbe43176e976e1a435a024c4628f4699af4e901613e00f72d6c470abfc8f8b4"
+    },
+    "Theorem1/T1QRHMertensPower.lean": {
+      "verifiedSHA256": "6c9e888c2e5827edf08d0f79b29e2f422ec1f67dc5923e0594320630d6668a42"
+    },
+    "Theorem1/T1QRHStrip.lean": {
+      "verifiedSHA256": "eaf740d13fc0a5f1da7dbcf4138949c8f3479993dac97b0f422bb46833c7872b"
+    },
+    "Theorem1/T1RealCutoffSelection.lean": {
+      "verifiedSHA256": "d8e9a1682c21ee32472ce66643e6167784ebe3a51f4933f3e8f3a6abe867f034"
+    },
+    "Theorem1/T1ReciprocalZeta.lean": {
+      "verifiedSHA256": "55b86872aadad4ac783f5e16b18a0e5db5d06ad2e3b73f95c1d662e88994479e"
+    },
+    "Theorem1/T1ReciprocalZetaRightBound.lean": {
+      "verifiedSHA256": "7287aa4e1cd607045362fd1ad6b208f9f195fa95a18f7d4d0f2eac94de25f28d"
+    },
+    "Theorem1/T1ReciprocalZetaStripBound.lean": {
+      "verifiedSHA256": "97915556f30071101379b6c9f0db57b4bdeb0fd72de18ff328e8f8b9c779968f"
+    },
+    "Theorem1/T1ReflectionAlgebra.lean": {
+      "verifiedSHA256": "c0e41a02ee251dd2ec1830ff6ceff70ce04555d5a7b88c351315dd3dcfc203be"
+    },
+    "Theorem1/T1RieszDenominator.lean": {
+      "verifiedSHA256": "ee04563a9a53c54d59c73e640ed99ec8a135a5c32827ef5b420d5d669c226a49"
+    },
+    "Theorem1/T1RieszDesmoothing.lean": {
+      "verifiedSHA256": "68e25f022f67e242c6a32a85e6ae1deba0922c7012f4873f178efb3f70958a26"
+    },
+    "Theorem1/T1RieszDifferenceError.lean": {
+      "verifiedSHA256": "c4d9ec847116042385a461177ba45484156aa406233c56f2a60845e5473cd5b1"
+    },
+    "Theorem1/T1RieszDifferenceKernel.lean": {
+      "verifiedSHA256": "03c12faade2f9846ffdcd45959b5794c416d72df0af68a1140810a935bd164f0"
+    },
+    "Theorem1/T1RieszDifferenceSum.lean": {
+      "verifiedSHA256": "6d7b16474a55902b9498dfa416df5fc235ec110da95564e348cf5acf7e80b74c"
+    },
+    "Theorem1/T1RieszKernelInversion.lean": {
+      "verifiedSHA256": "e654e5139451fc94799c093614a29f5715b4517ab4f1037ef2fc4422e5963103"
+    },
+    "Theorem1/T1RieszLineTerm.lean": {
+      "verifiedSHA256": "d8c117a8a57db69752e0daee9a0171691ca022282693c817168bc586c87560ea"
+    },
+    "Theorem1/T1RieszMellinKernel.lean": {
+      "verifiedSHA256": "9effa4cfdc77b5dab19340e44eedbf4e2ffd2121d7e27782204a1d590b636e37"
+    },
+    "Theorem1/T1RieszMertensContour.lean": {
+      "verifiedSHA256": "3ddcf8eac51f4e59b0ffb695bf0cd524893b904d714d603378f46a93d6d7a68c"
+    },
+    "Theorem1/T1RieszMertensGrowth.lean": {
+      "verifiedSHA256": "aa27b10457a1b1a6e598c44e181138351064ab260024c70ac9e7e25f58d5bf5e"
+    },
+    "Theorem1/T1RieszMertensInversion.lean": {
+      "verifiedSHA256": "84a84416f3767b408706601a01478204ecfcf99135fdda592a1e6675aec0aabc"
+    },
+    "Theorem1/T1RieszMertensSum.lean": {
+      "verifiedSHA256": "c3e9ead3e1a091b21194886b769237699bd805cdda0c188ca4eb14799fea78de"
+    },
+    "Theorem1/T1RieszStripIntegrand.lean": {
+      "verifiedSHA256": "6c47761fc24b74ccb91e00c14d6d462e63804e2731613c3ea3719446efb39d84"
+    },
+    "Theorem1/T1ScaleComparison.lean": {
+      "verifiedSHA256": "520e7bf506a5c1b360c6d49b6055a1fd0957e8c714727d8213bf551af44d31a9"
+    },
+    "Theorem1/T1ScaleComposition.lean": {
+      "verifiedSHA256": "6f01e6bf8779ebc3877be5a75dadb2f6f8990182ef1f85c9b448d65a852a6b81"
+    },
+    "Theorem1/T1ScaleGrowth.lean": {
+      "verifiedSHA256": "b892b450cc71a0a1c044b714a2730ca112973db0a059968b425f9598e218aebd"
+    },
+    "Theorem1/T1SectorCounting.lean": {
+      "verifiedSHA256": "6c0ee31c66ebddbd82d1db97b8653de5be4b9b6203b6d3c922dc00a0974779eb"
+    },
+    "Theorem1/T1SectorMarkovEquiv.lean": {
+      "verifiedSHA256": "628804fb10b4112333aa6a40807fe660724f34af2d7bc47d40d6dda701313966"
+    },
+    "Theorem1/T1SmallDivisorHead.lean": {
+      "verifiedSHA256": "75a600e6480b9207fa75fa0dce22962dfd5545db11ad65483aac6eb1b49af151"
+    },
+    "Theorem1/T1UniformLatticeError.lean": {
+      "verifiedSHA256": "ddf6d8206208ab3c0abe3486fad948fb958444e6ee780cd70561d8c888551269"
+    },
+    "Theorem1/T1VKAnalyticRegion.lean": {
+      "verifiedSHA256": "9c8cdef02efe1f64675e52da28d07bad183fb9c7a67fa0a6ab3940b0ce8eb0ef"
+    },
+    "Theorem1/T1VKContourScales.lean": {
+      "verifiedSHA256": "92c4b83c9695e3f15cd6244bcf16befbe4917bbb15569a1a1201a43a74a2b627"
+    },
+    "Theorem1/T1VKCutoffSelection.lean": {
+      "verifiedSHA256": "a1a6d2f7078771b97154f2a44297ab4939d6a447863589038e41db115181a43d"
+    },
+    "Theorem1/T1VKCutoffTerms.lean": {
+      "verifiedSHA256": "1b0990e3e41fa96815deeec8810f3d2c5cb56800dedf1eee016fe44b2b1b3363"
+    },
+    "Theorem1/T1VKDesmoothing.lean": {
+      "verifiedSHA256": "77d00e2a9cda6dc71bfd6ae6a3aa4b085e86d9606b807578c21de8f58eb07934"
+    },
+    "Theorem1/T1VKDiskGeometry.lean": {
+      "verifiedSHA256": "1e7b29da60da2909438bcb36717fcd03f7b03216be8b6c42476a1c3de8373ea9"
+    },
+    "Theorem1/T1VKFiniteRieszContour.lean": {
+      "verifiedSHA256": "dd6d551f23800b2080fdcb265752e42293b7d7d7847506608b1a9d0f1c3cf0e8"
+    },
+    "Theorem1/T1VKHeightSchedule.lean": {
+      "verifiedSHA256": "e84e59790702d1dea0c612b53d310710fa048f3feac14ac2ced8135e0d5a293f"
+    },
+    "Theorem1/T1VKHeightWidth.lean": {
+      "verifiedSHA256": "fcded886fde74f95d5d973a1e698468b14f6bcab2dca88823e4ce8aa8f9647ea"
+    },
+    "Theorem1/T1VKPrimitiveEstimate.lean": {
+      "verifiedSHA256": "25510218b1922c59cc311a41e78f56141fbb1a2ac000b78d907cfc2bb4aa9c29"
+    },
+    "Theorem1/T1VKRawRegionInterface.lean": {
+      "verifiedSHA256": "7eec116d26675b91ef0026be32a1fe4fd45d01af68f3a990b56cc992431f8f37"
+    },
+    "Theorem1/T1VKReciprocalBound.lean": {
+      "verifiedSHA256": "a5932dcb1312f23ed0c046818b7319d3754cf22012810c30d8f2c0fdefda2ec9"
+    },
+    "Theorem1/T1VKReciprocalCenter.lean": {
+      "verifiedSHA256": "cc20818a6196c215bb83435d4b6a2ae47cbc86c29560ffe7e469a1cae4656f54"
+    },
+    "Theorem1/T1VKRegion.lean": {
+      "verifiedSHA256": "865da0e7b3a9805d5b0e2c3fa0777a479a138e59bb4ea259f6505c65940e43ad"
+    },
+    "Theorem1/T1VKRieszGrowth.lean": {
+      "verifiedSHA256": "a38408bbf38c73a9b620c2d61c3b77bd2064f4b5d266ea03844d24ccf8ab9858"
+    },
+    "Theorem1/T1VKScaleAlgebra.lean": {
+      "verifiedSHA256": "24ba72ca720d86e65f9a0ffc5cb5882d20bb1ab83632124660648fc096d873c2"
+    },
+    "Theorem1/T1VKWeight.lean": {
+      "verifiedSHA256": "0e608d7e67bc5fa0fe41d115659b160cfb61970f266e474ea54b31f322717c46"
+    },
+    "Theorem1/T1VKWeightGrowth.lean": {
+      "verifiedSHA256": "0ffb285cf84cd7af1b78807c5e2c97c147f4fb394580c0325969c29d63eb25a9"
+    },
+    "Theorem1/T1VerticalContourShift.lean": {
+      "verifiedSHA256": "a520e097cea0a102108b055cb2e3ba8369d26a25df7894650fe60516b3bdbcd6"
+    },
+    "Theorem1/T1VerticalPower.lean": {
+      "verifiedSHA256": "05a7d20fa6325907676ba8ec6b04ab6075f7383264a30763cd91b82dc23b3f70"
+    },
+    "Theorem1/T1VerticalTail.lean": {
+      "verifiedSHA256": "a605e3e6cca82c78228ef969cfe3a6931b52b2697787456d8e75bcdeee597036"
+    },
+    "Theorem1/T1ZetaConjugation.lean": {
+      "verifiedSHA256": "aefedb0469685d1bcd3aae869c72cfadbb5c73faa3fd3a3ed2c838fc07d9f6ae"
+    },
+    "Theorem1/T1ZetaDiskDerivativeBounds.lean": {
+      "verifiedSHA256": "e317302a31c985e63424267d4c766b36a36fa2d1fccde0ecde3eba48bb3a3bfb"
+    },
+    "Theorem1/T1ZetaDiskLogDerivative.lean": {
+      "verifiedSHA256": "50d7e7bf18f07db5ce2a44a38a4cc5f7d7ec86dca5d7539bda9a4f53a0cad3eb"
+    },
+    "Theorem1/T1ZetaFractionalBound.lean": {
+      "verifiedSHA256": "e8c2774c23488b162ed8531cffcdcf56813baa9104e1cdf6fb625ec66dff3f21"
+    },
+    "Theorem1/T1ZetaFractionalFormula.lean": {
+      "verifiedSHA256": "5fef9ba23014d0a3b9b766c5d59fd685c934930f5a4892056c63130e8915cb54"
+    },
+    "Theorem1/T1ZetaFractionalMellin.lean": {
+      "verifiedSHA256": "ca7b323d0ade5acf1d0f97943defba423d1bf0cad2a7e167e5d2eaaa013e3994"
+    },
+    "Theorem1/T1ZetaGrowth.lean": {
+      "verifiedSHA256": "f4277607b6ed0bb401f9d45bd0b8656f23b6776308565374630314b9196fcc24"
+    },
+    "Theorem1/T1ZetaPoleLogDerivative.lean": {
+      "verifiedSHA256": "0ddbef3efdaf082195c025e775e09cf696f20245878541d1d8d99cc5664949c3"
+    },
+    "Theorem1/T1ZetaStripDisk.lean": {
+      "verifiedSHA256": "6373cffec07a5254a49a7b0c095ea0f720f8be28f6dc6a541fca363dd24c0a6a"
+    }
+  }
+}

@@ -1,0 +1,207 @@
+import RiemannGaussian.DerivativePowerExponents
+import RiemannGaussian.AnalyticDerivativeCutoff
+import RiemannGaussian.DerivativePowerEnvelope
+import RiemannGaussian.FiniteLagPowerBounds
+import RiemannGaussian.DerivativePowerStep
+import RiemannGaussian.FiniteDiscreteSobolev
+import RiemannGaussian.FiniteShiftCorrelation
+import RiemannGaussian.FiniteVanDerCorput
+import RiemannGaussian.FiniteVanDerCorputPhase
+import RiemannGaussian.NatPhaseDifferencing
+import RiemannGaussian.ShiftedDerivativeFamily
+import RiemannGaussian.HigherDerivativeTest
+import RiemannGaussian.UniformDerivativePowerBound
+import RiemannGaussian.PhaseConjugation
+import RiemannGaussian.LogarithmicDerivativeFamily
+import RiemannGaussian.HigherLogarithmicDerivativeBound
+import RiemannGaussian.DirichletHigherDerivativeBound
+import RiemannGaussian.UniformDirichletPowerBound
+import RiemannGaussian.DirichletPowerParameters
+import RiemannGaussian.DirichletPowerCoefficients
+import RiemannGaussian.DirichletBlockPowerProfile
+import RiemannGaussian.VinogradovLongBlocks
+import RiemannGaussian.ZetaDyadicTruncation
+import RiemannGaussian.ZetaNearOneLineBudget
+import RiemannGaussian.ZetaDyadicPowerBound
+
+#print axioms RiemannGaussian.DerivativePowerExponents.beta_succ
+#print axioms RiemannGaussian.DerivativePowerExponents.alpha_le_half
+#print axioms RiemannGaussian.DerivativePowerExponents.alpha_zero
+#print axioms RiemannGaussian.DerivativePowerExponents.beta
+#print axioms RiemannGaussian.DerivativePowerExponents.amp_zero
+#print axioms RiemannGaussian.DerivativePowerExponents.beta.eq_1
+#print axioms RiemannGaussian.DerivativePowerExponents.beta_nonneg
+#print axioms RiemannGaussian.DerivativePowerExponents.amp_le_one
+#print axioms RiemannGaussian.DerivativePowerExponents.amp_succ
+#print axioms RiemannGaussian.DerivativePowerExponents.alpha_succ
+#print axioms RiemannGaussian.DerivativePowerExponents.alpha_balance
+#print axioms RiemannGaussian.DerivativePowerExponents.amp.eq_1
+#print axioms RiemannGaussian.DerivativePowerExponents.alpha.eq_1
+#print axioms RiemannGaussian.DerivativePowerExponents.amp_pos
+#print axioms RiemannGaussian.DerivativePowerExponents.beta_zero
+#print axioms RiemannGaussian.DerivativePowerExponents.beta_le_one
+#print axioms RiemannGaussian.DerivativePowerExponents.amp
+#print axioms RiemannGaussian.DerivativePowerExponents.alpha
+#print axioms RiemannGaussian.DerivativePowerExponents.alpha_pos
+#print axioms RiemannGaussian.DerivativePowerExponents.denominator_ge_two
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.length_lt_ideal
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.ideal
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.ideal_positive_power
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.one_le_ideal
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.count_negative_power
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.ideal_le_count
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.cutoffs
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.inv_count_le
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.ideal_pos
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.count_le_twice
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.count_eq
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.ideal_mul
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.ideal_negative_power
+#print axioms RiemannGaussian.AnalyticDerivativeCutoff.count_positive_power
+#print axioms RiemannGaussian.DerivativePowerEnvelope.main_square
+#print axioms RiemannGaussian.DerivativePowerEnvelope.nonneg
+#print axioms RiemannGaussian.DerivativePowerEnvelope.error_square
+#print axioms RiemannGaussian.DerivativePowerEnvelope.error_nonneg
+#print axioms RiemannGaussian.DerivativePowerEnvelope.mainTerm
+#print axioms RiemannGaussian.DerivativePowerEnvelope.base_bound
+#print axioms RiemannGaussian.DerivativePowerEnvelope.error_ge_length
+#print axioms RiemannGaussian.DerivativePowerEnvelope.errorTerm
+#print axioms RiemannGaussian.DerivativePowerEnvelope.main_ge_length
+#print axioms RiemannGaussian.DerivativePowerEnvelope.envelope
+#print axioms RiemannGaussian.DerivativePowerEnvelope.main_nonneg
+#print axioms RiemannGaussian.FiniteLagPowerBounds.weighted_negative
+#print axioms RiemannGaussian.FiniteLagPowerBounds.weighted_positive
+#print axioms RiemannGaussian.FiniteLagPowerBounds.negative_sum
+#print axioms RiemannGaussian.FiniteLagPowerBounds.negative_sum_integral
+#print axioms RiemannGaussian.FiniteLagPowerBounds.positive_sum
+#print axioms RiemannGaussian.DerivativePowerStep.argument_le_squares
+#print axioms RiemannGaussian.DerivativePowerStep.weighted_budget_le
+#print axioms RiemannGaussian.DerivativePowerStep.argument_le
+#print axioms RiemannGaussian.DerivativePowerStep.successor_bound
+#print axioms RiemannGaussian.DerivativePowerStep.argument
+#print axioms RiemannGaussian.norm_sq_le_later_add_differences
+#print axioms RiemannGaussian.norm_sq_le_discrete_block_sobolev
+#print axioms RiemannGaussian.norm_sum_sq_le_card_mul_sum_norm_sq
+#print axioms RiemannGaussian.norm_sub_sq_le_two_mul_norm_sq
+#print axioms RiemannGaussian.norm_sq_le_block_point_add_differences
+#print axioms RiemannGaussian.FiniteShiftCorrelation.shiftedSum_eq_zero_outside
+#print axioms RiemannGaussian.FiniteShiftCorrelation.correlation
+#print axioms RiemannGaussian.FiniteShiftCorrelation.shiftedSum_energy
+#print axioms Function.HasFiniteSupport
+#print axioms RiemannGaussian.FiniteShiftCorrelation.correlation_neg
+#print axioms RiemannGaussian.FiniteShiftCorrelation.norm_sq_shiftedSum_eq
+#print axioms Function.HasFiniteSupport.fun_comp_of_injective
+#print axioms RiemannGaussian.FiniteShiftCorrelation.correlation.eq_1
+#print axioms RiemannGaussian.FiniteShiftCorrelation.mixed_shift_eq
+#print axioms RiemannGaussian.FiniteShiftCorrelation.finite_shiftedSum
+#print axioms RiemannGaussian.FiniteShiftCorrelation.shiftedSum.eq_1
+#print axioms RiemannGaussian.FiniteShiftCorrelation.norm_sum_sq_le_correlation_matrix
+#print axioms Function.HasFiniteSupport.sum
+#print axioms RiemannGaussian.FiniteShiftCorrelation.correlation_re
+#print axioms RiemannGaussian.FiniteShiftCorrelation.shiftedSum_mass
+#print axioms RiemannGaussian.FiniteShiftCorrelation.summable_correlation
+#print axioms Function.HasFiniteSupport.fun_mul_left
+#print axioms RiemannGaussian.FiniteShiftCorrelation.correlation_zero
+#print axioms RiemannGaussian.FiniteShiftCorrelation.shiftedSum
+#print axioms RiemannGaussian.FiniteShiftCorrelation.correlation_neg_re
+#print axioms RiemannGaussian.FiniteVanDerCorput.toeplitz_sum_eq
+#print axioms RiemannGaussian.FiniteVanDerCorput.triangular_form_nonneg
+#print axioms RiemannGaussian.FiniteVanDerCorput.shifted_energy_eq
+#print axioms RiemannGaussian.FiniteVanDerCorput.signed_bound
+#print axioms RiemannGaussian.FiniteVanDerCorput.absolute_bound
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.real_phaseTerm_pair_re
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.unit_phase_bound
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.finite_windowed
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.windowed
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.sum_windowed
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.phaseTerm
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.windowed_on
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.energy_windowed
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.windowed_outside
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.phaseTerm_pair
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.correlation_windowed
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.phaseTerm.eq_1
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.phaseTerm_pair_re
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.signed_window_bound
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.absolute_phase_bound
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.windowed.eq_1
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.signed_phase_bound
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.norm_phaseTerm
+#print axioms RiemannGaussian.FiniteVanDerCorputPhase.absolute_window_bound
+#print axioms RiemannGaussian.NatPhaseDifferencing.sum_Ico_zero
+#print axioms RiemannGaussian.NatPhaseDifferencing.overlap_eq
+#print axioms RiemannGaussian.NatPhaseDifferencing.trivial_bound
+#print axioms RiemannGaussian.NatPhaseDifferencing.bound
+#print axioms RiemannGaussian.ShiftedDerivativeFamily.difference.eq_1
+#print axioms RiemannGaussian.ShiftedDerivativeFamily.overlap_subset
+#print axioms RiemannGaussian.ShiftedDerivativeFamily.hasDerivAt_difference
+#print axioms RiemannGaussian.ShiftedDerivativeFamily.derivative_family
+#print axioms RiemannGaussian.ShiftedDerivativeFamily.difference
+#print axioms RiemannGaussian.ShiftedDerivativeFamily.top_bounds
+#print axioms RiemannGaussian.HigherDerivativeTest.bound
+#print axioms RiemannGaussian.UniformDerivativePowerBound.phase_bound
+#print axioms RiemannGaussian.UniformDerivativePowerBound.budget_bound
+#print axioms RiemannGaussian.PhaseConjugation.norm_sum_neg
+#print axioms RiemannGaussian.PhaseConjugation.norm_sum_neg_one_pow
+#print axioms RiemannGaussian.PhaseConjugation.neg_one_pow_mul_self
+#print axioms RiemannGaussian.PhaseConjugation.rotation_neg
+#print axioms RiemannGaussian.PhaseConjugation.weighted_sum_conj
+#print axioms RiemannGaussian.LogarithmicDerivativeFamily.jet.eq_2
+#print axioms RiemannGaussian.LogarithmicDerivativeFamily.oriented
+#print axioms RiemannGaussian.LogarithmicDerivativeFamily.jet
+#print axioms RiemannGaussian.LogarithmicDerivativeFamily.hasDerivAt_oriented
+#print axioms RiemannGaussian.LogarithmicDerivativeFamily.hasDerivAt_jet
+#print axioms RiemannGaussian.LogarithmicDerivativeFamily.lowerScale
+#print axioms RiemannGaussian.LogarithmicDerivativeFamily.ratio
+#print axioms RiemannGaussian.LogarithmicDerivativeFamily.jet.match_1
+#print axioms RiemannGaussian.LogarithmicDerivativeFamily.dyadic_bounds
+#print axioms RiemannGaussian.LogarithmicDerivativeFamily.ratio_pos
+#print axioms RiemannGaussian.LogarithmicDerivativeFamily.lowerScale_pos
+#print axioms RiemannGaussian.LogarithmicDerivativeFamily.oriented_top
+#print axioms RiemannGaussian.LogarithmicDerivativeFamily.jet.eq_1
+#print axioms RiemannGaussian.HigherLogarithmicDerivativeBound.bound
+#print axioms RiemannGaussian.DirichletHigherDerivativeBound.damped_bound
+#print axioms RiemannGaussian.DirichletHigherDerivativeBound.feature_bound
+#print axioms RiemannGaussian.UniformDirichletPowerBound.feature_bound
+#print axioms RiemannGaussian.UniformDirichletPowerBound.uniform_bound
+#print axioms RiemannGaussian.UniformDirichletPowerBound.ratio_amp_le_four
+#print axioms RiemannGaussian.DirichletPowerParameters.transition_balance
+#print axioms RiemannGaussian.DirichletPowerParameters.amp_alpha_identity
+#print axioms RiemannGaussian.DirichletPowerParameters.transition.eq_1
+#print axioms RiemannGaussian.DirichletPowerParameters.line
+#print axioms RiemannGaussian.DirichletPowerParameters.line_nonneg
+#print axioms RiemannGaussian.DirichletPowerParameters.order_mul_alpha_le_one
+#print axioms RiemannGaussian.DirichletPowerParameters.slope_pos
+#print axioms RiemannGaussian.DirichletPowerParameters.slope_eq
+#print axioms RiemannGaussian.DirichletPowerParameters.transition_pos
+#print axioms RiemannGaussian.DirichletPowerParameters.slope
+#print axioms RiemannGaussian.DirichletPowerParameters.denominator_ge_order
+#print axioms RiemannGaussian.DirichletPowerParameters.half_le_line_succ
+#print axioms RiemannGaussian.DirichletPowerParameters.transition
+#print axioms RiemannGaussian.DirichletPowerParameters.line_lt_one
+#print axioms RiemannGaussian.DirichletPowerCoefficients.factor_positive_power_le_two
+#print axioms RiemannGaussian.DirichletPowerCoefficients.scale_power
+#print axioms RiemannGaussian.DirichletPowerCoefficients.factor
+#print axioms RiemannGaussian.DirichletPowerCoefficients.factor_negative_power_le_two
+#print axioms RiemannGaussian.DirichletPowerCoefficients.factorial_le_double_power
+#print axioms RiemannGaussian.DirichletPowerCoefficients.double_power_exponent_le_one
+#print axioms RiemannGaussian.DirichletPowerCoefficients.lowerScale_eq_factor
+#print axioms RiemannGaussian.DirichletPowerCoefficients.factor_pos
+#print axioms RiemannGaussian.DirichletBlockPowerProfile.exactProfile_le
+#print axioms RiemannGaussian.DirichletBlockPowerProfile.bound
+#print axioms RiemannGaussian.DirichletBlockPowerProfile.profile
+#print axioms RiemannGaussian.DirichletBlockPowerProfile.profile_nonneg
+#print axioms RiemannGaussian.DirichletBlockPowerProfile.exact_bound
+#print axioms RiemannGaussian.DirichletBlockPowerProfile.exactProfile
+#print axioms RiemannGaussian.DirichletBlockPowerProfile.profile.eq_1
+#print axioms RiemannGaussian.VinogradovLongBlocks.fourth_profile_le
+#print axioms RiemannGaussian.VinogradovLongBlocks.sixth_profile_le
+#print axioms RiemannGaussian.VinogradovLongBlocks.profile_antitone_sigma
+#print axioms RiemannGaussian.ZetaDyadicTruncation.depth_length_lt
+#print axioms RiemannGaussian.ZetaDyadicTruncation.depth_scale
+#print axioms RiemannGaussian.ZetaDyadicTruncation.depth
+#print axioms RiemannGaussian.ZetaDyadicTruncation.depth_le_log
+#print axioms RiemannGaussian.ZetaNearOneLineBudget.canonical_count_le
+#print axioms RiemannGaussian.ZetaNearOneLineBudget.canonical_scale_le
+#print axioms RiemannGaussian.ZetaNearOneLineBudget.norm_le_height_add_one
+#print axioms RiemannGaussian.ZetaDyadicPowerBound.trivial_block_bound

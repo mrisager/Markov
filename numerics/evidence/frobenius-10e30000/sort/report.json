@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+  "completed": true,
+  "total_records": 862356773,
+  "duplicate_signature_count": 0,
+  "repeated_record_count": 0,
+  "records_in_duplicate_groups": 0,
+  "repeated_record_count_definition": "sum(occurrences - 1) over repeated-signature groups",
+  "candidates_path": "evidence/frobenius-10e30000/sort/candidates.bin",
+  "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "candidate_format": "24 bytes: little-endian unsigned low64, high64, occurrences64",
+  "sharding_seconds": 813.5484554209106,
+  "sorting_seconds": 386.22089136808063,
+  "max_memory_bytes": 536870912,
+  "maximum_leaf_bytes": 89478480,
+  "scratch_cleaned": true,
+  "scope": "128-bit residues only; repeated signatures require exact replay"
+}

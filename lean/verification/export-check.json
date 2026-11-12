@@ -1,0 +1,26 @@
+{
+  "scope": "Export integrity and verification-wrapper checks; not a fresh full-source rebuild",
+  "canonicalSourcesByteIdenticalToOriginalSuccessfulRootReceipt": true,
+  "canonicalSourceFiles": 559,
+  "sourceIntegrityCheck": "PASS",
+  "dependencyRevisionChecks": 9,
+  "historicalAuditInventoryAndAllowlistCheck": "PASS: all 4433 original reports",
+  "negativeAuditCasesRejected": [
+    "extra axiom",
+    "missing report",
+    "duplicate report",
+    "wrong name",
+    "reordered reports"
+  ],
+  "freshStrictChecksPassed": [
+    "Markov.IntrinsicMcShaneRivinCount"
+  ],
+  "freshFinalModuleLogSHA256": "fb017e6d617772e7eefd43595b78b0758295e4662414c5e1ce2c5f1570fd778e",
+  "freshFullAudit": "Not completed: an unnecessary duplicate audit was deliberately stopped. The original successful complete audit is preserved in normalized form.",
+  "compiledDependencies": "The exported final count module was compiled using previously verified local dependency objects and the pinned external library objects. No compiled objects are distributed.",
+  "allLocalSourcesRecompiled": false,
+  "documentationLinks": "PASS",
+  "workflowYAML": "Parsed and checked; not run on GitHub",
+  "privacyAndArtifactCheck": "No machine-specific absolute paths or compiled artifacts in upload files.",
+  "checkedUTC": "2026-11-10T09:59:50Z"
+}

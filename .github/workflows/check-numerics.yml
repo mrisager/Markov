@@ -1,0 +1,56 @@
+name: Check numerical examples
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  numerics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: numerics
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - name: Install the recorded numerical dependencies
+        run: python -m pip install -r requirements-tested.txt
+      - name: Check counting and uniqueness at 10^100
+        run: |
+          python -B markov_error_parallel.py \
+            --max-exponent 100 --workers 2 --tasks 8 --backend gmpy2 \
+            --output-prefix results/count-test --checkpoint-dir results/count-work
+          python -B frobenius_packed_verify.py \
+            --max-exponent 100 --workers 2 --tasks 8 --backend gmpy2 \
+            --output-prefix results/frobenius-test --workdir results/frobenius-work
+          python - <<'PY'
+          import csv
+          import json
+          from itertools import islice
+          from pathlib import Path
+
+          with open("results/count-test.csv", newline="") as actual, open(
+              "markov-error-10e30000.csv", newline=""
+          ) as historical:
+              rows = list(csv.DictReader(actual))
+              assert len(rows) == 100
+              assert rows == list(islice(csv.DictReader(historical), 100))
+          report = json.loads(Path("results/frobenius-test.json").read_text())
+          assert report["triples_including_exceptions"] == 9670
+          assert report["uniqueness_verified"]
+          assert report["distinct_residues_modulo_2_to_128"]
+          PY
+      - name: Reproduce the unit-ball area bounds
+        run: |
+          mkdir -p results
+          python -B unit_ball_volume.py --cutoff 1000000000000 --precision 100 > results/unit-ball-volume.txt
+          cmp unit-ball-volume.txt results/unit-ball-volume.txt

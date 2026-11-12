@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "node_id": "fb",
+  "input_records": 3368021,
+  "input_sha256": "7c80dfaefdc82ef8623b4a5d9e6f99f0c723a6a8052062cc2b0d2463dffe9919",
+  "kind": "leaf",
+  "completed": true,
+  "duplicate_signature_count": 0,
+  "repeated_record_count": 0,
+  "records_in_duplicate_groups": 0,
+  "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

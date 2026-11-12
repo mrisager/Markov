@@ -1,0 +1,933 @@
+{
+  "changedFiles": {
+    "Markov/AngleEnvelopeCutoff.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 4,
+        "previousLines": "/-! The actual support-angle envelope of a consecutive trace cutoff arc.\nIts endpoint order and containment of all actual normal directions are\nconclusions. The endpoint estimates below still require exponential decay\nof this actual envelope's width and an actual angular proximity witness.\nNo normal-turn tail or identification of the envelope width with a turn\nsum is asserted. -/\n"
+      }
+    ],
+    "Markov/Arithmetic.lean": [
+      {
+        "line": 2,
+        "publishedLineCount": 2,
+        "previousLines": "/-! The coefficients `A₊, A₋` of Proposition 4 as elements of an actual\nquadratic extension. Integers `t,b,c` stand for the three holonomy traces.\nThe geometric origin of those integers is a separate obligation. -/\n"
+      }
+    ],
+    "Markov/BirthRayConvexity.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 2,
+        "previousLines": "/-! The strict neighboring-ray inequality at a Farey birth and all of its\nfinite refinements. These are actual trace-length inequalities, independent\nof any unproved norm-interpolation property. -/\n"
+      }
+    ],
+    "Markov/CanonicalAngularNeighborhoodHeight.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 3,
+        "previousLines": "/-! The canonical-sector endpoint-height estimate from membership in the\nactual closed angular neighborhood of the actual cutoff normal set.\nThe neighborhood witness is proved by compact closure minimization, not\nassumed to be attained among interior normals. Global unresolved-component\nassociation, smaller-endpoint selection and the paper's parameter adapter\nremain separate from this local estimate. -/\n"
+      }
+    ],
+    "Markov/CanonicalTrace.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 4,
+        "previousLines": "/-! Canonical actual matrices, traces and candidate lengths on primitive\nnonnegative directions. Consistency is proved independently of the partner\nand of the side of the Farey edge. These candidate lengths are not asserted\nto extend to a norm or to equal geodesic lengths. -/\n"
+      },
+      {
+        "line": 80,
+        "publishedLineCount": 1,
+        "previousLines": "/-- These are candidate lengths on primitive directions, not yet a norm. -/\n"
+      },
+      {
+        "line": 122,
+        "publishedLineCount": 1,
+        "previousLines": "/-- Exact remaining interpolation task: if a norm agrees with the canonical\ncandidate lengths on primitive directions, trace compatibility follows. -/\n"
+      }
+    ],
+    "Markov/Covectors.lean": [
+      {
+        "line": 2,
+        "publishedLineCount": 1,
+        "previousLines": "/-! Integral covector evaluations and the logarithmic linear form in Lemma 5.\nThe supporting-functional interpretation remains a geometric obligation. -/\n"
+      }
+    ],
+    "Markov/CutoffArcs.lean": [
+      {
+        "line": 4,
+        "publishedLineCount": 4,
+        "previousLines": "/-! The actual primitive height cutoff on the unit boundary and its\n canonical-sector gaps. Consecutive cutoff endpoints give boundary arcs\n containing no cutoff point, and the constructed trace norm satisfies the\n Euclidean variation estimate with the arithmetic hypotheses discharged.\n Geometric identification with a hyperbolic surface remains separate. -/\n"
+      }
+    ],
+    "Markov/FareyHolonomy.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 2,
+        "previousLines": "/-! A concrete, labelled Farey-tree holonomy construction. The generators\nand every descendant are actual integer matrices. This is the algebraic\nassignment on the positive Farey sector, not yet the geodesic correspondence\nor a construction of the McShane–Rivin norm. -/\n"
+      }
+    ],
+    "Markov/FareyScale.lean": [
+      {
+        "line": 4,
+        "publishedLineCount": 1,
+        "previousLines": "/-! The elementary counting and denominator estimates in v1 Lemma 3.\nThe geometric boundary arcs and the assertion that cutoff neighbors are\nFarey neighbors remain separate obligations. -/\n"
+      }
+    ],
+    "Markov/FrickeLengthTriangle.lean": [
+      {
+        "line": 66,
+        "publishedLineCount": 2,
+        "previousLines": "/-- The canonical primitive candidate lengths satisfy strict triangle on\neach positive Farey edge. Global convexity remains a separate obligation. -/\n"
+      }
+    ],
+    "Markov/GlobalCutoffCount.lean": [
+      {
+        "line": 5,
+        "publishedLineCount": 2,
+        "previousLines": "/-! The actual unit-boundary complement has finitely many connected\ncomponents, bounded by the finite signed cutoff-gap indices. The count is\nan upper bound; no equality with the number of removed corners is assumed.\nThe final analytic Markov-counting asymptotic remains separate. -/\n"
+      }
+    ],
+    "Markov/GlobalSeparation.lean": [
+      {
+        "line": 25,
+        "publishedLineCount": 2,
+        "previousLines": "/-- The global positive-orientation estimate. The compatibility input is\nstill unproved for the actual modular-torus norm. -/\n"
+      }
+    ],
+    "Markov/IntrinsicMcShaneRivinNorm.lean": [
+      {
+        "line": 45,
+        "publishedLineCount": 2,
+        "previousLines": "/-- Existence is proved AFTER the future unconditional geometric primitive\nagreement theorem, and uniqueness is intrinsic primitive-value uniqueness.\nNo agreement or classification premise is supplied by the caller. -/\n"
+      },
+      {
+        "line": 96,
+        "publishedLineCount": 2,
+        "previousLines": "/-- Every ACTUAL admissible primitive geodesic period has the value of the\nchosen intrinsic norm. The future geometric singleton theorem is invoked\nexplicitly; no arbitrary-class property is assumed in a structure. -/\n"
+      }
+    ],
+    "Markov/IntrinsicSimpleGeodesicLengths.lean": [
+      {
+        "line": 93,
+        "publishedLineCount": 2,
+        "previousLines": "/-- The checked canonical witness proves only this direction of the genuine\ngeometric comparison. The reverse inequality still needs new geometric work. -/\n"
+      }
+    ],
+    "Markov/MatrixTraceRay.lean": [
+      {
+        "line": 82,
+        "publishedLineCount": 1,
+        "previousLines": "/-- The concrete generators have the puncture commutator trace. This is an\nalgebraic calculation, not yet an identification of the quotient surface. -/\n"
+      }
+    ],
+    "Markov/MechanicalCanonicalWords.lean": [
+      {
+        "line": 138,
+        "publishedLineCount": 2,
+        "previousLines": "/-- Every literal rotation of the explicit signed mechanical list evaluates\nto the actual canonical subgroup word with its EXPLICIT prefix conjugator.\nAn eventual geometric application must still prove the actual list rotation. -/\n"
+      }
+    ],
+    "Markov/MechanicalRotationCoding.lean": [
+      {
+        "line": 54,
+        "publishedLineCount": 2,
+        "previousLines": "/-- Every actual List.rotate is literally its modular-state threshold code.\nThus a future actual rank-rotation model can use the same concrete list that\nalready evaluates to the canonical Farey word, without any H1-only inference. -/\n"
+      }
+    ],
+    "Markov/ModularEmbeddedCircles.lean": [
+      {
+        "line": 54,
+        "publishedLineCount": 2,
+        "previousLines": "/-- Every primitive standard-model direction has an explicit embedded circle\non the actual modular surface, with a continuous left inverse. The comparison\nwith the original marked primitive class is a separate obligation. -/\n"
+      },
+      {
+        "line": 85,
+        "publishedLineCount": 2,
+        "previousLines": "/-- There are actual embedded non-nullhomotopic circles in every primitive\nstandard-model direction. The original A/B class comparison remains separate. -/\n"
+      }
+    ],
+    "Markov/ModularTraceFundamentalGroup.lean": [
+      {
+        "line": 4,
+        "publishedLineCount": 3,
+        "previousLines": "/-! The fundamental group of the actual modular orbit quotient.\nThe endpoint labelling reverses the library endomorphism multiplication;\ninversion corrects that convention explicitly. This is not yet a singular\nhomology calculation or a punctured-torus/simple-curve classification. -/\n"
+      }
+    ],
+    "Markov/ModularTraceQuotient.lean": [
+      {
+        "line": 6,
+        "publishedLineCount": 4,
+        "previousLines": "/-! The genuine upper-half-plane orbit quotient by the subgroup generated\nby the trace construction's two integral modular matrices. The topology is\nthe ordinary orbit-quotient topology. Seed conjugacy transports the actual\ngenerated subgroups. Identification of the projective image with the modular\ncommutator, exclusion of central elements, freeness and proper discontinuity,\nand the punctured-torus/geodesic marking remain separate proof obligations.\nNo geometric norm or `B_X` identification is asserted. -/\n"
+      }
+    ],
+    "Markov/NormLimit.lean": [
+      {
+        "line": 146,
+        "publishedLineCount": 2,
+        "previousLines": "/-- The decreasing fan limit is an actual group norm once three eventual\nbasis values satisfy the strict triangles. This does not construct the fan\napproximants, which remain a separate geometric/combinatorial obligation. -/\n"
+      }
+    ],
+    "Markov/NormalClosureProximity.lean": [
+      {
+        "line": 57,
+        "publishedLineCount": 2,
+        "previousLines": "/-- An angular witness in the closure gives exact Euclidean proximity,\nwithout replacing it by an unproved actual-normal witness. -/\n"
+      }
+    ],
+    "Markov/NormalUnresolved.lean": [
+      {
+        "line": 77,
+        "publishedLineCount": 2,
+        "previousLines": "/-- The endpoint-height part of v1 Lemma 6, conditional on the diameter\nand nearby-normal estimates for the actual local boundary arc. The\nnormal-turn tails needed to provide those estimates remain unproved. -/\n"
+      }
+    ],
+    "Markov/NormedPlane.lean": [
+      {
+        "line": 4,
+        "publishedLineCount": 2,
+        "previousLines": "/-! Coordinate realization of the selected supporting functional in an\narbitrary real normed plane. This supplies the elementary geometric bridge;\nthe modular-torus norm and its nontrivial trace formula are still needed. -/\n"
+      }
+    ],
+    "Markov/OriginalNielsenStandardLinear.lean": [
+      {
+        "line": 2,
+        "publishedLineCount": 2,
+        "previousLines": "/-! Literal coordinate formulas for the ACTUAL original-marked Nielsen\nhomeomorphisms. These are maps, not inferred homology or metric symmetries.\nThey are inputs to a future enriched linear Farey-witness induction. -/\n"
+      },
+      {
+        "line": 28,
+        "publishedLineCount": 2,
+        "previousLines": "/-- The actual right-move S-L-S homeomorphism has literal standard-coordinate\nformula (x,y) -> (x+y,y). Its previously proved connector correction remains separate. -/\n"
+      }
+    ],
+    "Markov/PaperAxisExtremeEndpointSet.lean": [
+      {
+        "line": 5,
+        "publishedLineCount": 4,
+        "previousLines": "/-! Actual side-coordinate extrema in the constructed endpoint diagram.\nThe actual edge pairing preserves these extrema. Closure under the actual\narc pairing is retained as an explicit, unproved hypothesis in the final\nwhole-diagram consequence. No peripheral layer or classification is assumed. -/\n"
+      }
+    ],
+    "Markov/PaperAxisProperDiagramConnected.lean": [
+      {
+        "line": 87,
+        "publishedLineCount": 2,
+        "previousLines": "/-- A nonempty subset of actual tags closed under BOTH actual pairings is\nall actual tags. Future peripheral-packet arguments must genuinely prove those\nclosures; no peripheral layer or its closure is assumed in this theorem. -/\n"
+      }
+    ],
+    "Markov/PaperPrimitiveHolonomy.lean": [
+      {
+        "line": 107,
+        "publishedLineCount": 2,
+        "previousLines": "/-- The actual closed axis loop has precisely the positive primitive\nalgebraic coordinates in the original marking. This is not yet singular H1. -/\n"
+      }
+    ],
+    "Markov/PrimitiveAxisTraceNorm.lean": [
+      {
+        "line": 6,
+        "publishedLineCount": 3,
+        "previousLines": "/-! Actual primitive-axis metric periods. The checked geometric packets and\nboth actual source-role cases supply literal word identities. Primitivity is\nused only for their derived canonical parameters; it is never a substitute\nfor a nonabelian word comparison. This consumer is a draft until all imported\nnew word bridges have been checked and this source itself is strictly checked.\n"
+      }
+    ],
+    "Markov/PrimitiveCornerBounds.lean": [
+      {
+        "line": 5,
+        "publishedLineCount": 2,
+        "previousLines": "/-! The quantitative corner lower estimate of v1 Theorem 2(ii), for\nthe constructed trace norm and its actual geometric normal-turn measure.\nThe modular punctured-torus identification and the complement tail in\nTheorem 2(i) are separate obligations. -/\n"
+      }
+    ],
+    "Markov/PrimitiveSimpleGeodesicLengthAgreement.lean": [
+      {
+        "line": 4,
+        "publishedLineCount": 3,
+        "previousLines": "/-! Unconditional primitive geometric lengths, after the actual primitive-axis\nperiod theorem. This file is not checked until that genuine dependency is\nproved; its draft status is recorded separately. No class/length hypothesis\nis an input to either geometric conclusion. -/\n"
+      }
+    ],
+    "Markov/QuadrantSymmetry.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 2,
+        "previousLines": "/-! Antipodal symmetry of the actual quadrant matrix words. This is central\nnegation of both direction coordinates. No single-axis reflection symmetry\nof the candidate lengths or an eventual norm is asserted. -/\n"
+      }
+    ],
+    "Markov/SeededSeparation.lean": [
+      {
+        "line": 40,
+        "publishedLineCount": 2,
+        "previousLines": "/-- The remaining norm/trace property simultaneously for all four concrete\nquadrants. Its validity for the actual modular-torus norm remains unproved. -/\n"
+      }
+    ],
+    "Markov/SeparationBounds.lean": [
+      {
+        "line": 72,
+        "publishedLineCount": 2,
+        "previousLines": "/-- The quantitative core of Lemma 5 for the actual trace-field elements.\nUniform exponential size bounds must still be supplied from the paper's\nheight and covector estimates. -/\n"
+      }
+    ],
+    "Markov/SignedCutoffComponents.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 3,
+        "previousLines": "/-! Actual cutoff components in all eight signed coordinate sectors.\nChanging the basis leaves both the source norm and the full primitive\ncutoff set unchanged. The endpoints must be actual consecutive cutoff\nslopes in the chosen sector; global coverage remains separate. -/\n"
+      }
+    ],
+    "Markov/SingularChainAbelianization.lean": [
+      {
+        "line": 97,
+        "publishedLineCount": 2,
+        "previousLines": "/-- Descent from actual cycles through the actual singular H1 cokernel.\nThis is a constructed candidate inverse, with no bijectivity claim. -/\n"
+      },
+      {
+        "line": 150,
+        "publishedLineCount": 2,
+        "previousLines": "/-- One genuine inverse law, proved on actual loops and quotient representatives.\nThe other inverse law on arbitrary actual singular H1 remains separate. -/\n"
+      }
+    ],
+    "Markov/Statements.lean": [
+      {
+        "line": 4,
+        "publishedLineCount": 2,
+        "previousLines": "/-! Exact asymptotic targets. These are propositions, not proofs of Theorem 1.\nFractional exponents are real numbers, never natural-number division. -/\n"
+      },
+      {
+        "line": 30,
+        "publishedLineCount": 2,
+        "previousLines": "/-- Target for both assertions of Theorem 1, with the same positive constant.\nThe identification `C = 2 * area(B_X) / π²` still needs the geometric construction. -/\n"
+      },
+      {
+        "line": 40,
+        "publishedLineCount": 1,
+        "previousLines": "/-- The explicit target of Theorem 12, parametrized by the yet-to-be-constructed count. -/\n"
+      }
+    ],
+    "Markov/SupportAngleEnvelope.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 2,
+        "previousLines": "/-! Actual support angles and their bounded angular envelope. The interval\ncontainment is proved from these angles, not assumed. Equality with a genuine\nnormal arc, cyclic compatibility and exponential width estimates remain separate. -/\n"
+      }
+    ],
+    "Markov/TraceAlgebra.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 1,
+        "previousLines": "/-! Algebra in §2 and Proposition 4. These identities do not yet supply\ntheir geometric or algebraic-number-theoretic interpretations. -/\n"
+      }
+    ],
+    "Markov/TraceBirthCornerBounds.lean": [
+      {
+        "line": 5,
+        "publishedLineCount": 3,
+        "previousLines": "/-! Quantitative bounds for the actual boundary atom at every quadrant\nFarey birth. All trace compatibility and selected evaluations are discharged\nfor the constructed trace norm. The geometric torus identification remains\nseparate from this algebraic norm calculation. -/\n"
+      }
+    ],
+    "Markov/TraceBoundaryTurn.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 3,
+        "previousLines": "/-! A finite Borel measure on the actual trace boundary, obtained by\ntransporting the assembled actual support-angle period through the actual\nfour-chord boundary path. Its total mass is exactly 2π and it gives zero\nmass off the boundary. Exact open-arc and singleton preimage identities,\nand quantitative decay estimates, remain separate obligations. -/\n"
+      }
+    ],
+    "Markov/TraceFourierConvolution.lean": [
+      {
+        "line": 103,
+        "publishedLineCount": 2,
+        "previousLines": "/-- The actual smoothed indicator as a Schwartz function, for the future\ntwo-dimensional lattice Poisson step. -/\n"
+      }
+    ],
+    "Markov/TraceLatticeAsymptotic.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 3,
+        "previousLines": "/-! The paper's final parameter choice proves the full lattice estimate\nfor the constructed trace norm. Geometric identification with `B_X` is a\nseparate obligation; this theorem does not assert that identification. -/\n"
+      }
+    ],
+    "Markov/TraceLemmaSeven.lean": [
+      {
+        "line": 4,
+        "publishedLineCount": 3,
+        "previousLines": "/-! The v1 Lemma 7 logarithmic count for the actual primitive unresolved\ndirections of the constructed trace ball. The constants are uniform in\nall displayed parameters. The size cutoff may exceed the unresolved\nsize bound `K`; the unresolved predicate itself supplies the smaller\neffective cutoff. Identification with geometric `B_X` remains separate. -/\n"
+      }
+    ],
+    "Markov/TraceLemmaSix.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 3,
+        "previousLines": "/-! The v1 Lemma 6 conclusion, including the unique unresolved-component\nassociation, for the constructed trace ball. Arc size here is the actual\nEuclidean radial curve variation. Identification with the geometric norm\nball B_X remains a separate obligation for the paper's theorem. -/\n"
+      }
+    ],
+    "Markov/TraceNormTransfer.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 2,
+        "previousLines": "/-! Conditional final transfer after genuine primitive-length agreement.\nEvery agreement premise is explicit. No geometric norm is postulated or\nidentified here, and this module is not the geometric Theorem 12 certificate. -/\n"
+      },
+      {
+        "line": 34,
+        "publishedLineCount": 2,
+        "previousLines": "/-- The full count and standard Euclidean area transfer once the displayed\nprimitive-value premise is proved for an actual geometric norm. This theorem\ndoes not assert that the required geometric premise has been discharged. -/\n"
+      }
+    ],
+    "Markov/TraceRationalArcDecay.lean": [
+      {
+        "line": 4,
+        "publishedLineCount": 3,
+        "previousLines": "/-! The actual turn of an entire rational quadrant boundary arc decays\nexponentially in its two endpoint heights. Both endpoint atoms are omitted,\nand every intervening normal fibre, including any continuous residual turn,\nis included. Summation over the actual cutoff components remains separate. -/\n"
+      }
+    ],
+    "Markov/TraceSupportGap.lean": [
+      {
+        "line": 5,
+        "publishedLineCount": 2,
+        "previousLines": "/-! Exponential closeness of the two actual inward endpoint supports\nof a quadrant Farey gap. This bounds the endpoints; identification with\nthe whole normal-arc width remains a separate geometric step. -/\n"
+      },
+      {
+        "line": 67,
+        "publishedLineCount": 2,
+        "previousLines": "/-- After normalization, the actual inward endpoint normals retain a\nuniform exponential height estimate. Identifying their short angular arc\nwith a cutoff component is still a separate obligation. -/\n"
+      }
+    ],
+    "Markov/TraceTurnTail.lean": [
+      {
+        "line": 5,
+        "publishedLineCount": 3,
+        "previousLines": "/-! The exponential complementary-turn tail in v1 Theorem 2(i), and the\ncombined two-part estimate, for the constructed trace norm. The cutoff is\nthe actual real primitive-height cutoff and the measure is the actual\nboundary normal-turn measure. Identification with geometric B_X remains\nseparate from this constructed-norm theorem. -/\n"
+      },
+      {
+        "line": 74,
+        "publishedLineCount": 2,
+        "previousLines": "/-- Both quantitative conclusions of v1 Theorem 2 hold for the actual\nconstructed trace ball, its actual normal-turn measure and real cutoffs.\nThis does not yet identify the ball with the paper's geometric B_X. -/\n"
+      }
+    ],
+    "Markov/Transfer.lean": [
+      {
+        "line": 2,
+        "publishedLineCount": 2,
+        "previousLines": "/-! A checked, explicitly conditional part of the last step of the paper.\nThe actual orbit identity, length asymptotics and primitive count estimates\nare obligations, not axioms or consequences of this file. -/\n"
+      },
+      {
+        "line": 64,
+        "publishedLineCount": 2,
+        "previousLines": "/-- A paper-faithful interface for a future primitive-lattice theorem.\nThe change of variables is handled by mathlib's asymptotic composition rule. -/\n"
+      }
+    ],
+    "Markov/TurnMeasure.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 1,
+        "previousLines": "/-! Lebesgue–Stieltjes turn measure for a supplied real angle lift.\n"
+      },
+      {
+        "line": 5,
+        "publishedLineCount": 4,
+        "previousLines": "The input `F : StieltjesFunction ℝ` is an actual monotone, right-continuous\nreal function. Its Stieltjes measure is constructed by Mathlib, and its\ninterval masses, atoms and finite restrictions are computed below. Restricting\nto one parameter period gives total mass `2 * π` when the supplied lift has\nthat increment. The left endpoint of a fundamental interval is excluded and\nthe right endpoint is included, so a seam atom is counted once.\n"
+      },
+      {
+        "line": 10,
+        "publishedLineCount": 1,
+        "previousLines": "This module does not construct a support-angle lift for the trace norm.\nIn particular, identification of `F` with actual support normals, periodicity,\nand any quantitative normal-turn tail remain separate geometric obligations.\nThe final normal-diameter theorem keeps its angular containment hypothesis\nexplicit.\n"
+      }
+    ],
+    "Markov/UnresolvedSeparation.lean": [
+      {
+        "line": 25,
+        "publishedLineCount": 2,
+        "previousLines": "/-- The unresolved arc scale, relative to the actual geometric inputs still\nmissing from the original Lemma 6. No arithmetic lower bound is assumed. -/\n"
+      }
+    ],
+    "Theorem1/RiemannGaussian/DirichletHigherDerivativeBound.lean": [
+      {
+        "line": 18,
+        "publishedLineCount": 2,
+        "previousLines": "The budget still needs uniform analytic simplification to the estimates\nused by a larger zero-free region. Additional prime, sieve and moment\nweights require independent variation or correlation bounds.\n"
+      },
+      {
+        "line": 80,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/DirichletSecondDerivativeBound.lean": [
+      {
+        "line": 18,
+        "publishedLineCount": 1,
+        "previousLines": "These are ordinary Dirichlet coefficients equal to one. Additional prime,\nsieve or moment weights still require their own variation or correlation\nestimates; their cancellation is not inferred from a smooth phase.\n"
+      },
+      {
+        "line": 88,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/UniformDirichletPowerBound.lean": [
+      {
+        "line": 17,
+        "publishedLineCount": 2,
+        "previousLines": "This is a finite high-height toolbox result. Zeta line estimates and\nzero detection still have to be supplied before improving the displayed\nzero-free region; extra prime or sieve weights need their own control.\n"
+      },
+      {
+        "line": 78,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovCoarseCongruence.lean": [
+      {
+        "line": 17,
+        "publishedLineCount": 2,
+        "previousLines": "This is the coarse-conditioned congruence counting ingredient of efficient\ncongruencing. Counting all tail completions, partitioning arbitrary singular\nconfigurations and carrying out the high-moment iteration remain open.\n"
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovConditionedHigherMoment.lean": [
+      {
+        "line": 20,
+        "publishedLineCount": 0,
+        "previousLines": "Singular conditioning, the complete high-moment iteration and the required\nVinogradov--Korobov analytic saving are separate remaining obligations.\n"
+      },
+      {
+        "line": 147,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovConditioningPowerSaving.lean": [
+      {
+        "line": 27,
+        "publishedLineCount": 1,
+        "previousLines": "Improving the high-moment exponent, the VK growth and zero-free proof, and\nthe original weighted Riesz saving remain open. No new zero-free width\nor historical novelty is claimed here.\n"
+      },
+      {
+        "line": 380,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovConditioningRemainder.lean": [
+      {
+        "line": 18,
+        "publishedLineCount": 1,
+        "previousLines": "`VinogradovConditioningPowerSaving`; full high-moment iteration is still open.\n"
+      },
+      {
+        "line": 184,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovCongruenceEnergy.lean": [
+      {
+        "line": 20,
+        "publishedLineCount": 1,
+        "previousLines": "and whole conditioned-moment transfer. The high-moment iteration still\nrequires its own proof.\n"
+      },
+      {
+        "line": 149,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovCongruencingStep.lean": [
+      {
+        "line": 20,
+        "publishedLineCount": 2,
+        "previousLines": "It does not yet condition arbitrary singular tuples or complete the\nhigh-moment iteration and Vinogradov--Korobov zero-free proof.\n"
+      },
+      {
+        "line": 153,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovCriticalExponent.lean": [
+      {
+        "line": 19,
+        "publishedLineCount": 2,
+        "previousLines": "k,u,epsilon, are unevaluated. Quantitative joint resonance control, the\nzeta growth estimate and a new VK zero-free region still need proof.\n"
+      },
+      {
+        "line": 88,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovCriticalKorobov.lean": [
+      {
+        "line": 18,
+        "publishedLineCount": 1,
+        "previousLines": "The remaining resonance envelope and uniform quantitative parameter costs\nstill need estimates before this becomes a zeta growth or zero-free theorem.\nConstants and terminal thresholds are not numerically evaluated.\n"
+      },
+      {
+        "line": 100,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovExplicitKorobov.lean": [
+      {
+        "line": 14,
+        "publishedLineCount": 1,
+        "previousLines": "This general bound is not a uniform zeta-growth theorem. Quantitative costs\nand a useful parameter regime must still be checked downstream.\n"
+      },
+      {
+        "line": 64,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovExponentBootstrap.lean": [
+      {
+        "line": 19,
+        "publishedLineCount": 2,
+        "previousLines": "thresholds are existential and not numerically evaluated. Pointwise strict\nimprovement alone does not establish convergence to the critical exponent:\na uniform improvement near the infimum still needs proof. No new VK or RH\nzero-free region is asserted.\n"
+      },
+      {
+        "line": 176,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovFiniteCritical.lean": [
+      {
+        "line": 15,
+        "publishedLineCount": 1,
+        "previousLines": "remains unevaluated; uniform VK growth and a larger zero-free region remain open.\n"
+      },
+      {
+        "line": 124,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovGaussianBounds.lean": [
+      {
+        "line": 15,
+        "publishedLineCount": 1,
+        "previousLines": "support. Estimating that arithmetic resonance support remains separate.\n"
+      },
+      {
+        "line": 155,
+        "publishedLineCount": 1,
+        "previousLines": "explicit expression. Quantitative arithmetic spacing is still needed. -/\n"
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovGaussianCost.lean": [
+      {
+        "line": 14,
+        "publishedLineCount": 1,
+        "previousLines": "k>=12. The homogeneous moment constants and their degree dependence remain\nseparate obligations; this theorem does not prove uniform zeta growth.\n"
+      },
+      {
+        "line": 174,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovImprovedNormalization.lean": [
+      {
+        "line": 19,
+        "publishedLineCount": 1,
+        "previousLines": "as a bound for the remaining energies. The critical exponent is still open.\n"
+      },
+      {
+        "line": 180,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovInitialConditioning.lean": [
+      {
+        "line": 17,
+        "publishedLineCount": 1,
+        "previousLines": "No upper mean-value budget is assumed. This closes the initial global\nconditioning interface; the critical high-moment exponent, VK zeta growth\nand a new zero-free width still require further arguments.\n"
+      },
+      {
+        "line": 66,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovInitialSaving.lean": [
+      {
+        "line": 19,
+        "publishedLineCount": 1,
+        "previousLines": "The critical high-moment exponent and VK zeta-growth argument remain open.\n"
+      },
+      {
+        "line": 216,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovIteratedCongruencing.lean": [
+      {
+        "line": 20,
+        "publishedLineCount": 1,
+        "previousLines": "These are finite ingredients underlying Wooley (2012), Lemma 6.3; the full\nhigh-moment exponent improvement and VK zeta growth remain open.\n"
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovKorobovBilinearPhase.lean": [
+      {
+        "line": 16,
+        "publishedLineCount": 1,
+        "previousLines": "Lemma 8.2, using the repository's exact unit-phase estimate. The subsequent\nVinogradov mean-value estimates and the resulting zeta region remain open.\n"
+      },
+      {
+        "line": 127,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovKorobovBlock.lean": [
+      {
+        "line": 15,
+        "publishedLineCount": 1,
+        "previousLines": "We use integer block lengths, so there is no hidden endpoint rounding. The\nquantitative mean-value estimate for the resulting polynomial sum is a\nseparate, still open obligation.\n"
+      },
+      {
+        "line": 295,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovKorobovMoment.lean": [
+      {
+        "line": 20,
+        "publishedLineCount": 2,
+        "previousLines": "and all alignment weights. Its dual moment and homogeneous mean-value\nfactors still require independent quantitative estimates.\n"
+      },
+      {
+        "line": 283,
+        "publishedLineCount": 1,
+        "previousLines": "preceding signed Gram theorem; the resonance and high moments still need\nquantitative estimates to obtain a saving. -/\n"
+      },
+      {
+        "line": 322,
+        "publishedLineCount": 2,
+        "previousLines": "the explicit geometric denominators. The high moments and the remaining\nfinite arithmetic resonance envelope still require quantitative bounds. -/\n"
+      },
+      {
+        "line": 398,
+        "publishedLineCount": 1,
+        "previousLines": "This improves the smoothing cost, not the still-open arithmetic saving. -/\n"
+      },
+      {
+        "line": 456,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovKorobovPowerSaving.lean": [
+      {
+        "line": 17,
+        "publishedLineCount": 1,
+        "previousLines": "This proves the displayed parameter regime. Constants and thresholds are\nunevaluated; their uniform degree dependence, wider parameter ranges,\nzeta growth and any new zero-free region remain open. No RH claim follows.\n"
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovMomentReduction.lean": [
+      {
+        "line": 14,
+        "publishedLineCount": 2,
+        "previousLines": "Ford (2002), Lemma 5.1, equation (5.3); estimating the resulting moment and\nthe homogeneous Vinogradov counts is still required for a power saving.\n"
+      },
+      {
+        "line": 259,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovNarrowDirichlet.lean": [
+      {
+        "line": 16,
+        "publishedLineCount": 2,
+        "previousLines": "Global scale coverage and the VK zero detector remain separate obligations.\n"
+      },
+      {
+        "line": 195,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovNegativeProfile.lean": [
+      {
+        "line": 18,
+        "publishedLineCount": 2,
+        "previousLines": "The constants and finite depth are existential and not numerically evaluated.\nThis is a conditioned-energy estimate, not yet weighted Riesz decay or a\nnew zero-free region.\n"
+      },
+      {
+        "line": 104,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovNonsingularConditioning.lean": [
+      {
+        "line": 22,
+        "publishedLineCount": 1,
+        "previousLines": "`VinogradovConditioningPowerSaving`. Improving the high-moment exponent,\nthe original weighted Riesz saving and the VK zero-free region remain open.\n"
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovNonsingularDescent.lean": [
+      {
+        "line": 70,
+        "publishedLineCount": 1,
+        "previousLines": "differencing cost displayed. The remaining full `K` conditioning must\nstill handle repeated tuples, prime selection and the residue-tail boundary. -/\n"
+      },
+      {
+        "line": 99,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovNormalizedIteration.lean": [
+      {
+        "line": 43,
+        "publishedLineCount": 1,
+        "previousLines": "/-- A stated actual next-moment bound gives the exact normalized defect factor; the hypothesis is kept visible for later discharge. -/\n"
+      },
+      {
+        "line": 307,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovPolynomialConditionedDescent.lean": [
+      {
+        "line": 53,
+        "publishedLineCount": 1,
+        "previousLines": "`VinogradovUnrestrictedConditioning`; controlled iteration remains open. -/\n"
+      },
+      {
+        "line": 85,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovPolynomialRigidity.lean": [
+      {
+        "line": 20,
+        "publishedLineCount": 1,
+        "previousLines": "conditioning in Ford (2002), Section 3. It is not the moment-order-raising\ninequality, which still requires conditioning and differencing estimates.\n"
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovPowerSumRigidity.lean": [
+      {
+        "line": 181,
+        "publishedLineCount": 1,
+        "previousLines": "The quantitative mean-value problem for `r > k` remains separate. -/\n"
+      },
+      {
+        "line": 227,
+        "publishedLineCount": 1,
+        "previousLines": "its base. This saves `min(r,k)` powers over the trivial tuple count;\nthe stronger Vinogradov estimate still requires further arithmetic. -/\n"
+      },
+      {
+        "line": 276,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovProductEnergy.lean": [
+      {
+        "line": 18,
+        "publishedLineCount": 2,
+        "previousLines": "The endpoint has no unproved moment-budget premise. It supplies the product\nand first finite Holder ingredients following Wooley (2012), equation (6.6).\nThe subsequent interpolation, singular conditioning, high-moment iteration\nand Vinogradov--Korobov analytic saving still need their own proofs.\n"
+      },
+      {
+        "line": 373,
+        "publishedLineCount": 1,
+        "previousLines": "No moment-budget hypothesis is assumed; the later analytic saving remains open. -/\n"
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovQuantitativeProfile.lean": [
+      {
+        "line": 16,
+        "publishedLineCount": 1,
+        "previousLines": "retain these evaluated costs. This is not yet a quantitative all-endpoint\nglobal moment or a new zero-free region.\n"
+      },
+      {
+        "line": 158,
+        "publishedLineCount": 2,
+        "previousLines": "and coefficient through the original prime packet. The displayed quotient\nbudgets must still be supplied by a global exponent descent. -/\n"
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovRectanglePowerSaving.lean": [
+      {
+        "line": 13,
+        "publishedLineCount": 1,
+        "previousLines": "unevaluated; a uniform Vinogradov--Korobov zeta estimate remains open.\n"
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovRelativeProfile.lean": [
+      {
+        "line": 149,
+        "publishedLineCount": 2,
+        "previousLines": "and coefficient through the original prime packet. The displayed quotient\nbudgets must still be supplied by a global exponent descent. -/\n"
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovRelativeResonance.lean": [
+      {
+        "line": 15,
+        "publishedLineCount": 1,
+        "previousLines": "theorem, whose coefficient is a specified function of the degree. Its size\nstill has to be assessed before inferring uniform zeta growth.\n"
+      },
+      {
+        "line": 208,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovResidueEnergy.lean": [
+      {
+        "line": 21,
+        "publishedLineCount": 1,
+        "previousLines": "actual product factorization and finite mixed-moment maximum bound. Singular\nconditioning and the high-moment iteration still require separate proofs.\n"
+      },
+      {
+        "line": 288,
+        "publishedLineCount": 2,
+        "previousLines": ""
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovSignedCongruence.lean": [
+      {
+        "line": 17,
+        "publishedLineCount": 2,
+        "previousLines": "The result covers tuples distinct modulo p > k. Conditioning singular\nclasses and the high-moment iteration remain separate obligations.\n"
+      }
+    ],
+    "Theorem1/RiemannGaussian/VinogradovSingularConditioning.lean": [
+      {
+        "line": 26,
+        "publishedLineCount": 1,
+        "previousLines": "is in `VinogradovConditioningPowerSaving`. High-moment exponent improvement\nand the Vinogradov--Korobov zero-free proof remain open.\n"
+      }
+    ],
+    "Theorem1/RiemannGaussian/ZetaEulerTruncation.lean": [
+      {
+        "line": 13,
+        "publishedLineCount": 2,
+        "previousLines": "tail bound has no eta-factor loss. It is not yet the sharp oscillatory\nremainder bound used in Yang's Lemma 3.2; the exact remainder stays available\nfor that next step.\n"
+      }
+    ],
+    "Theorem1/T1LogarithmicHeadSum.lean": [
+      {
+        "line": 6,
+        "publishedLineCount": 1,
+        "previousLines": "kernel. A one-cell comparison avoids imposing an unproved monotonicity\ncondition on the product x * log(R/x)^(3/2). -/\n"
+      }
+    ],
+    "Theorem1/T1MarkovGeneration.lean": [
+      {
+        "line": 3,
+        "publishedLineCount": 2,
+        "previousLines": "/-! The genuine Vieta child relation and generation of every ordered Markov\ntriple by strict descent. This is not yet a cardinality/orbit theorem. -/\n"
+      }
+    ],
+    "Theorem1/T1MertensEnvelope.lean": [
+      {
+        "line": 2,
+        "publishedLineCount": 3,
+        "previousLines": "/-! The actual uniform Mertens envelope. The bound by one is elementary;\nany decay of this envelope is a separate analytic obligation. -/\n"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+Frobenius uniqueness through 10^30000: VERIFIED
+Strict triples: 862,356,771
+Triples including (1,1,1) and (1,1,2): 862,356,773
+Repeated 128-bit residue signatures: 0
+All residues distinct modulo 2^128: True
+Exact cutoff comparisons: yes
+Global comparison across all workers: yes
+Independent prior count matched: True
+Current session wall time: 5416.845 seconds
+Result metadata: frobenius-10e30000.json

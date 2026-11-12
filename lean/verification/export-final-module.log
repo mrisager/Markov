@@ -1,0 +1,3 @@
+COMMAND: lean -j1 -DwarningAsError=true -DautoImplicit=false -o .lake/build/lib/lean/Markov/IntrinsicMcShaneRivinCount.olean Markov/IntrinsicMcShaneRivinCount.lean
+
+EXIT: 0

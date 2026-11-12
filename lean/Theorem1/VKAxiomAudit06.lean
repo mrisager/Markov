@@ -1,0 +1,175 @@
+import RiemannGaussian.VinogradovNarrowResonance
+import RiemannGaussian.ZetaPrimeGram
+import RiemannGaussian.ZetaPrimeMomentEnvelope
+import RiemannGaussian.RiemannXiSuzukiPositiveCriticalStripEtaFiniteApproximation
+import RiemannGaussian.DirichletDyadicBlocks
+import RiemannGaussian.PhaseIncrementInverse
+import RiemannGaussian.FiniteKuzminLandau
+import RiemannGaussian.FiniteKuzminLandauPeriodic
+import RiemannGaussian.MonotonePhaseBlocks
+import RiemannGaussian.FiniteResonancePartition
+import RiemannGaussian.DiscreteSecondDerivativeTest
+import RiemannGaussian.FirstDerivativeTest
+import RiemannGaussian.SecondDerivativeIncrements
+import RiemannGaussian.SecondDerivativeTest
+import RiemannGaussian.LogarithmicShiftPhase
+import RiemannGaussian.LogarithmicSecondDerivativeTest
+import RiemannGaussian.FiniteAbelVariation
+import RiemannGaussian.ZetaFiniteDifferencing
+import RiemannGaussian.DirichletSecondDerivativeBound
+import RiemannGaussian.VinogradovKorobovDamping
+import RiemannGaussian.VinogradovDampedSaving
+import RiemannGaussian.VinogradovNarrowDirichlet
+import RiemannGaussian.VinogradovDyadic
+import RiemannGaussian.VinogradovScaleSelection
+import RiemannGaussian.DerivativeRecursionBudget
+
+#print axioms RiemannGaussian.VinogradovNarrowResonance.polynomial_bound
+#print axioms RiemannGaussian.VinogradovNarrowResonance.product_moment_bound_with_defect
+#print axioms RiemannGaussian.VinogradovNarrowResonance.inverse_square_le_ratio
+#print axioms RiemannGaussian.zetaPrimeFeature
+#print axioms RiemannGaussian.zetaPrimeExpWeight
+#print axioms RiemannGaussian.norm_zetaPrimeFeature
+#print axioms RiemannGaussian.zetaPrimeExpWeight.eq_1
+#print axioms RiemannGaussian.zetaPrimeFeature.eq_1
+#print axioms RiemannGaussian.pairedEtaCorePartialSum
+#print axioms RiemannGaussian.pairedEtaCoreSummand
+#print axioms RiemannGaussian.pairedEtaCorePartialSum.eq_1
+#print axioms RiemannGaussian.DirichletDyadicBlocks.eta_pow_two_eq_blocks
+#print axioms RiemannGaussian.DirichletDyadicBlocks.prefix_succ
+#print axioms RiemannGaussian.DirichletDyadicBlocks.block
+#print axioms RiemannGaussian.DirichletDyadicBlocks.eta_eq_prefix
+#print axioms RiemannGaussian.DirichletDyadicBlocks.positivePrefix.eq_1
+#print axioms RiemannGaussian.DirichletDyadicBlocks.feature_eq_cpow
+#print axioms RiemannGaussian.DirichletDyadicBlocks.feature_mul
+#print axioms RiemannGaussian.DirichletDyadicBlocks.positivePrefix
+#print axioms RiemannGaussian.DirichletDyadicBlocks.block_eq_Ico
+#print axioms RiemannGaussian.DirichletDyadicBlocks.eta_pair_eq_features
+#print axioms RiemannGaussian.DirichletDyadicBlocks.prefix_pow_two
+#print axioms RiemannGaussian.pairedEtaCoreSummand.eq_1
+#print axioms RiemannGaussian.DirichletDyadicBlocks.weight_eq_rpow
+#print axioms RiemannGaussian.PhaseIncrementInverse.inverseStep_im_monotoneOn
+#print axioms RiemannGaussian.PhaseIncrementInverse.norm_inverseStep_le
+#print axioms RiemannGaussian.PhaseIncrementInverse.inverseStep.eq_1
+#print axioms RiemannGaussian.PhaseIncrementInverse.sin_half_lower
+#print axioms RiemannGaussian.PhaseIncrementInverse.inverseStep_re
+#print axioms RiemannGaussian.PhaseIncrementInverse.norm_rotation
+#print axioms RiemannGaussian.PhaseIncrementInverse.inverseStep_eq
+#print axioms RiemannGaussian.PhaseIncrementInverse.inverseStep_im
+#print axioms RiemannGaussian.PhaseIncrementInverse.norm_rotation_sub_one
+#print axioms RiemannGaussian.PhaseIncrementInverse.inverseStep
+#print axioms RiemannGaussian.PhaseIncrementInverse.rotation_add
+#print axioms RiemannGaussian.PhaseIncrementInverse.rotation_sub_one_ne_zero
+#print axioms RiemannGaussian.PhaseIncrementInverse.rotation
+#print axioms RiemannGaussian.PhaseIncrementInverse.rotation.eq_1
+#print axioms RiemannGaussian.PhaseIncrementInverse.cot_antitoneOn
+#print axioms RiemannGaussian.FiniteKuzminLandau.variation_le
+#print axioms RiemannGaussian.FiniteKuzminLandau.bound
+#print axioms RiemannGaussian.FiniteKuzminLandau.increment
+#print axioms RiemannGaussian.FiniteKuzminLandau.phase_sum_identity
+#print axioms RiemannGaussian.FiniteKuzminLandau.inverseStep_mul_difference
+#print axioms RiemannGaussian.FiniteKuzminLandau.summation_by_parts
+#print axioms RiemannGaussian.FiniteKuzminLandauPeriodic.bound_Ico
+#print axioms RiemannGaussian.FiniteKuzminLandau.increment.eq_1
+#print axioms RiemannGaussian.FiniteKuzminLandauPeriodic.twist
+#print axioms RiemannGaussian.FiniteKuzminLandauPeriodic.rotation_twist
+#print axioms RiemannGaussian.FiniteKuzminLandauPeriodic.rotation_int_period
+#print axioms RiemannGaussian.FiniteKuzminLandauPeriodic.increment_twist
+#print axioms RiemannGaussian.FiniteKuzminLandauPeriodic.bound_period
+#print axioms RiemannGaussian.MonotonePhaseBlocks.mem_band
+#print axioms RiemannGaussian.MonotonePhaseBlocks.band
+#print axioms RiemannGaussian.MonotonePhaseBlocks.band_eq_Ico
+#print axioms RiemannGaussian.MonotonePhaseBlocks.band_card_le
+#print axioms RiemannGaussian.MonotonePhaseBlocks.band.eq_1
+#print axioms RiemannGaussian.MonotonePhaseBlocks.nonresonant_band_bound
+#print axioms RiemannGaussian.FiniteResonancePartition.cell_eq_filter
+#print axioms RiemannGaussian.FiniteResonancePartition.cellIndex.eq_1
+#print axioms RiemannGaussian.FiniteResonancePartition.cells_card_le
+#print axioms RiemannGaussian.FiniteResonancePartition.sum_eq_bands
+#print axioms RiemannGaussian.FiniteResonancePartition.cellIndex
+#print axioms RiemannGaussian.FiniteResonancePartition.band_sum_split
+#print axioms RiemannGaussian.FiniteResonancePartition.cells.eq_1
+#print axioms RiemannGaussian.FiniteResonancePartition.cellIndex_mem_cells
+#print axioms RiemannGaussian.FiniteResonancePartition.cells
+#print axioms RiemannGaussian.FiniteResonancePartition.cellIndex_eq_iff
+#print axioms RiemannGaussian.FiniteResonancePartition.cellIndex_mono
+#print axioms RiemannGaussian.DiscreteSecondDerivativeTest.monotone_of_separation
+#print axioms RiemannGaussian.DiscreteSecondDerivativeTest.cells_card_le_of_separation
+#print axioms RiemannGaussian.DiscreteSecondDerivativeTest.resonant_band_bound
+#print axioms RiemannGaussian.DiscreteSecondDerivativeTest.bound
+#print axioms RiemannGaussian.FirstDerivativeTest.bound_succ
+#print axioms RiemannGaussian.FirstDerivativeTest.bound
+#print axioms RiemannGaussian.FirstDerivativeTest.increment_witness
+#print axioms RiemannGaussian.SecondDerivativeIncrements.difference_bounds
+#print axioms RiemannGaussian.SecondDerivativeIncrements.unitIncrement_eq
+#print axioms RiemannGaussian.SecondDerivativeIncrements.hasDerivAt_unitIncrement
+#print axioms RiemannGaussian.SecondDerivativeIncrements.unitIncrement.eq_1
+#print axioms RiemannGaussian.SecondDerivativeIncrements.unitIncrement
+#print axioms RiemannGaussian.SecondDerivativeIncrements.increment_gap_bounds
+#print axioms RiemannGaussian.SecondDerivativeTest.square_root_bound
+#print axioms RiemannGaussian.SecondDerivativeTest.bound
+#print axioms RiemannGaussian.LogarithmicShiftPhase.hasDerivAt_shift
+#print axioms RiemannGaussian.LogarithmicShiftPhase.hasDerivAt_phase
+#print axioms RiemannGaussian.LogarithmicShiftPhase.slope_pos
+#print axioms RiemannGaussian.LogarithmicShiftPhase.slope_antitoneOn
+#print axioms RiemannGaussian.LogarithmicShiftPhase.shift
+#print axioms RiemannGaussian.LogarithmicShiftPhase.slope_dyadic_bounds
+#print axioms RiemannGaussian.LogarithmicShiftPhase.slope
+#print axioms RiemannGaussian.LogarithmicShiftPhase.hasDerivAt_slope
+#print axioms RiemannGaussian.LogarithmicShiftPhase.shift_eq_log_ratio
+#print axioms RiemannGaussian.LogarithmicShiftPhase.phase
+#print axioms RiemannGaussian.LogarithmicShiftPhase.shift_eq_log_one_add
+#print axioms RiemannGaussian.LogarithmicSecondDerivativeTest.bound
+#print axioms RiemannGaussian.LogarithmicSecondDerivativeTest.square_root_bound
+#print axioms RiemannGaussian.LogarithmicSecondDerivativeTest.hasDerivAt_first
+#print axioms RiemannGaussian.LogarithmicSecondDerivativeTest.curvature_bounds
+#print axioms RiemannGaussian.FiniteAbelVariation.decreasing_bound
+#print axioms RiemannGaussian.FiniteAbelVariation.decreasing_budget
+#print axioms RiemannGaussian.FiniteAbelVariation.weighted_bound
+#print axioms RiemannGaussian.FiniteAbelVariation.weighted_sum_eq
+#print axioms RiemannGaussian.LogarithmicShiftPhase.phase.eq_1
+#print axioms RiemannGaussian.ZetaFiniteDifferencing.feature_polar
+#print axioms RiemannGaussian.DirichletSecondDerivativeBound.damping_antitoneOn
+#print axioms RiemannGaussian.DirichletSecondDerivativeBound.damped_bound
+#print axioms RiemannGaussian.DirichletSecondDerivativeBound.feature_bound
+#print axioms RiemannGaussian.VinogradovKorobovDamping.abelTransform_norm_le
+#print axioms RiemannGaussian.VinogradovKorobovDamping.feature_approximation_error_le
+#print axioms RiemannGaussian.VinogradovKorobovDamping.featureApproximation
+#print axioms RiemannGaussian.VinogradovKorobovDamping.featureApproximation.eq_1
+#print axioms RiemannGaussian.VinogradovKorobovDamping.abel_length_mass
+#print axioms RiemannGaussian.VinogradovKorobovDamping.abelTransform.eq_1
+#print axioms RiemannGaussian.VinogradovKorobovDamping.weighted_approximation_error_le
+#print axioms RiemannGaussian.VinogradovKorobovDamping.abelTransform
+#print axioms RiemannGaussian.VinogradovKorobovDamping.weighted_identity
+#print axioms RiemannGaussian.VinogradovKorobovDamping.abelTransform_sub
+#print axioms RiemannGaussian.VinogradovKorobovDamping.feature_eq_damped
+#print axioms RiemannGaussian.VinogradovDampedSaving.exists_decreasing_weight_saving
+#print axioms RiemannGaussian.VinogradovDampedSaving.abelTransform_norm_affine_le
+#print axioms RiemannGaussian.VinogradovDampedSaving.exists_feature_block_saving
+#print axioms RiemannGaussian.VinogradovNarrowDirichlet.partial_block_bound
+#print axioms RiemannGaussian.VinogradovNarrowDirichlet.block_bound
+#print axioms RiemannGaussian.VinogradovNarrowDirichlet.weighted_block_bound
+#print axioms RiemannGaussian.VinogradovNarrowDirichlet.product_bound
+#print axioms RiemannGaussian.VinogradovNarrowDirichlet.feature_block_bound
+#print axioms RiemannGaussian.VinogradovDyadic.fourth_root_window
+#print axioms RiemannGaussian.VinogradovDyadic.original_block_bound
+#print axioms RiemannGaussian.VinogradovDyadic.dyadic_block_bound
+#print axioms RiemannGaussian.VinogradovDyadic.root_saving_le
+#print axioms RiemannGaussian.VinogradovScaleSelection.heightThreshold.eq_1
+#print axioms RiemannGaussian.VinogradovScaleSelection.exists_window_parameters
+#print axioms RiemannGaussian.VinogradovScaleSelection.exists_degree
+#print axioms RiemannGaussian.VinogradovScaleSelection.heightThreshold
+#print axioms RiemannGaussian.VinogradovScaleSelection.rootBase_ge_sixteen
+#print axioms RiemannGaussian.VinogradovScaleSelection.rootBase_le_heightThreshold
+#print axioms RiemannGaussian.VinogradovScaleSelection.rootBase
+#print axioms RiemannGaussian.DerivativeRecursionBudget.base_le
+#print axioms RiemannGaussian.DerivativeRecursionBudget.le_length
+#print axioms RiemannGaussian.DerivativeRecursionBudget.budget.match_1
+#print axioms RiemannGaussian.DerivativeRecursionBudget.nonneg
+#print axioms RiemannGaussian.DerivativeRecursionBudget.shiftCount_pos
+#print axioms RiemannGaussian.DerivativeRecursionBudget.shiftCount
+#print axioms RiemannGaussian.DerivativeRecursionBudget.budget.eq_2
+#print axioms RiemannGaussian.DerivativeRecursionBudget.budget.eq_1
+#print axioms RiemannGaussian.DerivativeRecursionBudget.budget.eq_def
+#print axioms RiemannGaussian.DerivativeRecursionBudget.budget
+#print axioms RiemannGaussian.DerivativeRecursionBudget.Cutoffs

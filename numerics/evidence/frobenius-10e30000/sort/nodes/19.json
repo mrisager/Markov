@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "node_id": "19",
+  "input_records": 3370462,
+  "input_sha256": "d873f1d01e5637ef0106ce8db4ac10511644ff6a410c1af4463c4866b5c48f8b",
+  "kind": "leaf",
+  "completed": true,
+  "duplicate_signature_count": 0,
+  "repeated_record_count": 0,
+  "records_in_duplicate_groups": 0,
+  "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

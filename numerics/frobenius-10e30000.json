@@ -1,0 +1,1995 @@
+{
+  "format": "frobenius-packed-verification-result",
+  "schema_version": 1,
+  "created_utc": "2026-10-03T07:29:18.761181+00:00",
+  "session_started_utc": "2026-10-03T05:59:01.895857+00:00",
+  "maximum_cutoff": "10^30000",
+  "counting_definition": "positive Markov triples a <= b <= c <= bound",
+  "strict_triples": 862356771,
+  "triples_including_exceptions": 862356773,
+  "exceptional_triples_included": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      2
+    ]
+  ],
+  "uniqueness_verified": true,
+  "distinct_residues_modulo_2_to_128": true,
+  "certificate_logic": "Equal largest coordinates imply equal 128-bit residues; all residues are checked globally.",
+  "cutoff_comparisons": "exact integer arithmetic with a proved bit-length rejection guard",
+  "pruned_children": 862356772,
+  "completed": true,
+  "backend": "gmpy2",
+  "backend_version": "2.3.1",
+  "workers": 6,
+  "task_count": 64,
+  "prefix_strict_triples": 63,
+  "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+  "source_sha256": {
+    "frobenius_packed_verify.py": "b483dedb3dc54bbf824e512aa5aadb6e3c0aad26cc1c58206d9bc7f2562123da",
+    "frobenius_packed_generate.py": "37895de7cd777a1efcc52e760802753bfa7aed4e4a4744d37a24b35c4605cfa4",
+    "frobenius_packed_sort.py": "eea022da9be892a3db716c5cc11dc8efb5934f6d2c6e8b3f1a1f979959734c48",
+    "markov_error_parallel.py": "a018b7bdd8a368d984c128504feac90fe67076322a42d1e98c409d36ea00ea24",
+    "markov_error_plot.py": "107119f7a2b2dd95f1d339b5685b3ef5814c3a2dc1c6110fa27639d6fe39b5b4"
+  },
+  "work_directory": "evidence/frobenius-10e30000",
+  "manifest": "evidence/frobenius-10e30000/manifest.json",
+  "independent_previous_count": {
+    "path": "markov-error-10e30000.json",
+    "sha256": "5c18c473ec51b9950cbc919d7c3237bb3900731af14baf95cb57293ea88af8b4",
+    "strict_triples": 862356771,
+    "triples_including_exceptions": 862356773
+  },
+  "previous_count_matched": true,
+  "resumed": false,
+  "generation_session_seconds": 4215.052643667004,
+  "total_session_seconds": 5416.844597040996,
+  "generation_jobs": [
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00000",
+      "max_exponent": 30000,
+      "initial_root": [
+        1,
+        806515533049393,
+        2111485077978050
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:19:44.173218+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00000.bin",
+      "records": 42546675,
+      "size_bytes": 680746800,
+      "sha256": "ad25b5eb8f9b1be330291ffe33ead02e8104ac9c0d3677ac46505e76cedecb96",
+      "statistics": {
+        "strict_triples": 42546675,
+        "pruned_children": 42546676,
+        "products_avoided_by_bit_length_guard": 42545612,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 1242.1181770840049
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00001",
+      "max_exponent": 30000,
+      "initial_root": [
+        308061521170129,
+        806515533049393,
+        745369205875600370486739545090
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:09:14.794755+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00001.bin",
+      "records": 1188232,
+      "size_bytes": 19011712,
+      "sha256": "9bd6009b32b0d788dd9d5edd263fa669402c9fc3c0efbb8620e31cf60c66d66a",
+      "statistics": {
+        "strict_triples": 1188232,
+        "pruned_children": 1188233,
+        "products_avoided_by_bit_length_guard": 1188202,
+        "maximum_pending_stack_entries": 15,
+        "counting_seconds": 28.0543722089933
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00002",
+      "max_exponent": 30000,
+      "initial_root": [
+        117669030460994,
+        308061521170129,
+        108747901555284171885517344677
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:09:16.178513+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00002.bin",
+      "records": 1256575,
+      "size_bytes": 20105200,
+      "sha256": "f52b29376e3ad901dee8764c753c06563a7565814ca28144ef886dc21e9cb04d",
+      "statistics": {
+        "strict_triples": 1256575,
+        "pruned_children": 1256576,
+        "products_avoided_by_bit_length_guard": 1256548,
+        "maximum_pending_stack_entries": 15,
+        "counting_seconds": 29.702429332988686
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00003",
+      "max_exponent": 30000,
+      "initial_root": [
+        44945570212853,
+        117669030460994,
+        15866105011388832711881867645
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:09:16.091567+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00003.bin",
+      "records": 1330897,
+      "size_bytes": 21294352,
+      "sha256": "6d8ecd13b99aab08526538067a0bfa7e994b48c14ea5beaf39bd40282aa8d3dc",
+      "statistics": {
+        "strict_triples": 1330897,
+        "pruned_children": 1330898,
+        "products_avoided_by_bit_length_guard": 1330864,
+        "maximum_pending_stack_entries": 15,
+        "counting_seconds": 31.986448750001728
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00004",
+      "max_exponent": 30000,
+      "initial_root": [
+        17167680177565,
+        44945570212853,
+        2314833524437657097655728834
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:09:16.980860+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00004.bin",
+      "records": 1412050,
+      "size_bytes": 22592800,
+      "sha256": "efff53bc2d4e4fd6faeb31159e8ca4413d6b3ea7a1639a6dfc55f3412ac8b8a5",
+      "statistics": {
+        "strict_triples": 1412050,
+        "pruned_children": 1412051,
+        "products_avoided_by_bit_length_guard": 1412020,
+        "maximum_pending_stack_entries": 15,
+        "counting_seconds": 33.91050833299232
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00005",
+      "max_exponent": 30000,
+      "initial_root": [
+        6557470319842,
+        17167680177565,
+        337729659674766971708234189
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:08:46.474914+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00005.bin",
+      "records": 1500805,
+      "size_bytes": 24012880,
+      "sha256": "2a92aaef4d585fb2eef26dc5ea6c7577d6582af6ef04886cf8fcd03cdce019c1",
+      "statistics": {
+        "strict_triples": 1500805,
+        "pruned_children": 1500806,
+        "products_avoided_by_bit_length_guard": 1500767,
+        "maximum_pending_stack_entries": 15,
+        "counting_seconds": 43.98228429199662
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00006",
+      "max_exponent": 30000,
+      "initial_root": [
+        2504730781961,
+        6557470319842,
+        49274093285711704301910485
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:08:47.643299+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00006.bin",
+      "records": 1598261,
+      "size_bytes": 25572176,
+      "sha256": "e14cc0db2d905ce6b5a68ad3f9e6f88bf92173cc6d724a7f439f542ba91fd5d9",
+      "statistics": {
+        "strict_triples": 1598261,
+        "pruned_children": 1598262,
+        "products_avoided_by_bit_length_guard": 1598223,
+        "maximum_pending_stack_entries": 15,
+        "counting_seconds": 47.174077332994784
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00007",
+      "max_exponent": 30000,
+      "initial_root": [
+        956722026041,
+        2504730781961,
+        7188993325214958405139202
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:08:43.069230+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00007.bin",
+      "records": 1705522,
+      "size_bytes": 27288352,
+      "sha256": "548ec2a820fa35fc38948fba1509589ded6831ec4787296884db32121d0a88a4",
+      "statistics": {
+        "strict_triples": 1705522,
+        "pruned_children": 1705523,
+        "products_avoided_by_bit_length_guard": 1705486,
+        "maximum_pending_stack_entries": 15,
+        "counting_seconds": 50.31716375000542
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00008",
+      "max_exponent": 30000,
+      "initial_root": [
+        365435296162,
+        956722026041,
+        1048859990793004534063925
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:08:44.103975+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00008.bin",
+      "records": 1823981,
+      "size_bytes": 29183696,
+      "sha256": "77fb90a2ae45b2aac807f8cb20ea580e7e7be94bc1c31065be689389f3c4e8d1",
+      "statistics": {
+        "strict_triples": 1823981,
+        "pruned_children": 1823982,
+        "products_avoided_by_bit_length_guard": 1823935,
+        "maximum_pending_stack_entries": 15,
+        "counting_seconds": 53.72277483399375
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00009",
+      "max_exponent": 30000,
+      "initial_root": [
+        139583862445,
+        365435296162,
+        153026610336073333308269
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:08:47.456474+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00009.bin",
+      "records": 1955098,
+      "size_bytes": 31281568,
+      "sha256": "65793cb975135312e950ab0394cdb6d4f6f21fa7358fa66f9cfab91aa40a0859",
+      "statistics": {
+        "strict_triples": 1955098,
+        "pruned_children": 1955099,
+        "products_avoided_by_bit_length_guard": 1955053,
+        "maximum_pending_stack_entries": 15,
+        "counting_seconds": 57.54639245799626
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00010",
+      "max_exponent": 30000,
+      "initial_root": [
+        53316291173,
+        139583862445,
+        22326281559508799093954
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:08:46.739123+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00010.bin",
+      "records": 2100949,
+      "size_bytes": 33615184,
+      "sha256": "b35f8d398b91e8b8c870159d41947bd3ea38de2f0745e0708221430a85c487ee",
+      "statistics": {
+        "strict_triples": 2100949,
+        "pruned_children": 2100950,
+        "products_avoided_by_bit_length_guard": 2100901,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 61.36496666599123
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00011",
+      "max_exponent": 30000,
+      "initial_root": [
+        20365011074,
+        53316291173,
+        3257360580488260349405
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:07:45.372757+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00011.bin",
+      "records": 2263868,
+      "size_bytes": 36221888,
+      "sha256": "c6053af9c46a13105bd6bfa99558fd3b76b10aa057f77eba17e61764decc847c",
+      "statistics": {
+        "strict_triples": 2263868,
+        "pruned_children": 2263869,
+        "products_avoided_by_bit_length_guard": 2263811,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 67.5791422919865
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00012",
+      "max_exponent": 30000,
+      "initial_root": [
+        7778742049,
+        20365011074,
+        475242503909023351877
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:07:49.908601+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00012.bin",
+      "records": 2446393,
+      "size_bytes": 39142288,
+      "sha256": "bd4c4f5bff180f86eb10ad4a2a1d285b57091de5b786050fef4ccfc643984d5f",
+      "statistics": {
+        "strict_triples": 2446393,
+        "pruned_children": 2446394,
+        "products_avoided_by_bit_length_guard": 2446337,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 72.1994928750064
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00013",
+      "max_exponent": 30000,
+      "initial_root": [
+        2971215073,
+        7778742049,
+        69336946874903113730
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:07:50.379664+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00013.bin",
+      "records": 2651912,
+      "size_bytes": 42430592,
+      "sha256": "88e0f3e30819b645384446a7ca6999723a74218bd9d9d77fdbc0f5376aa1a8b5",
+      "statistics": {
+        "strict_triples": 2651912,
+        "pruned_children": 2651913,
+        "products_avoided_by_bit_length_guard": 2651841,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 78.98840533300245
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00014",
+      "max_exponent": 30000,
+      "initial_root": [
+        1134903170,
+        2971215073,
+        10116124215298444229
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:07:52.750774+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00014.bin",
+      "records": 2884480,
+      "size_bytes": 46151680,
+      "sha256": "e6d8054b0ce38921d979acb0203b3154651b221bdbc6209126097cdd09384094",
+      "statistics": {
+        "strict_triples": 2884480,
+        "pruned_children": 2884481,
+        "products_avoided_by_bit_length_guard": 2884412,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 85.43400545799523
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00015",
+      "max_exponent": 30000,
+      "initial_root": [
+        433494437,
+        1134903170,
+        1475922632185995869
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:08:00.467963+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00015.bin",
+      "records": 3148984,
+      "size_bytes": 50383744,
+      "sha256": "30e1623ef33cd1a91feb03e60db7d80422751c27afa33141db11efdd22e43dec",
+      "statistics": {
+        "strict_triples": 3148984,
+        "pruned_children": 3148985,
+        "products_avoided_by_bit_length_guard": 3148906,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 94.05768129200442
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00016",
+      "max_exponent": 30000,
+      "initial_root": [
+        165580141,
+        433494437,
+        215334210003526850
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:06:26.395791+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00016.bin",
+      "records": 3451715,
+      "size_bytes": 55227440,
+      "sha256": "b80ed69fa758f7e1f2c9bc2df692422a0ed014e847c8880891f93aa055d2e0be",
+      "statistics": {
+        "strict_triples": 3451715,
+        "pruned_children": 3451716,
+        "products_avoided_by_bit_length_guard": 3451632,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 104.13944016599271
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00017",
+      "max_exponent": 30000,
+      "initial_root": [
+        63245986,
+        165580141,
+        31416837838692077
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:06:26.408225+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00017.bin",
+      "records": 3800280,
+      "size_bytes": 60804480,
+      "sha256": "541ac2676bedda210e58409498f38b29644fd3ede05978d31b364823c6b7ae57",
+      "statistics": {
+        "strict_triples": 3800280,
+        "pruned_children": 3800281,
+        "products_avoided_by_bit_length_guard": 3800192,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 113.97822716600785
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00018",
+      "max_exponent": 30000,
+      "initial_root": [
+        24157817,
+        63245986,
+        4583654867317685
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:06:31.389555+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00018.bin",
+      "records": 4204499,
+      "size_bytes": 67271984,
+      "sha256": "ad7f78a2120f3b0fdbe873f3f1b1d27e933f60dd586753f7cbdd9dde996c826a",
+      "statistics": {
+        "strict_triples": 4204499,
+        "pruned_children": 4204500,
+        "products_avoided_by_bit_length_guard": 4204392,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 126.49601662500936
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00019",
+      "max_exponent": 30000,
+      "initial_root": [
+        9227465,
+        24157817,
+        668746232531714
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:06:37.707277+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00019.bin",
+      "records": 4676744,
+      "size_bytes": 74827904,
+      "sha256": "3b1f93972b14b6b6c76a6dc0490cbc7c9f8dfbe1188ae0ff5dd33023fe5107e2",
+      "statistics": {
+        "strict_triples": 4676744,
+        "pruned_children": 4676745,
+        "products_avoided_by_bit_length_guard": 4676638,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 139.85352283300017
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00020",
+      "max_exponent": 30000,
+      "initial_root": [
+        3524578,
+        9227465,
+        97568760404309
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:04:18.096252+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00020.bin",
+      "records": 5233312,
+      "size_bytes": 83732992,
+      "sha256": "087f2f5c46eaf42f72270aee28e376682b917b13c0fac5dfa2e4e75bb1d21ae8",
+      "statistics": {
+        "strict_triples": 5233312,
+        "pruned_children": 5233313,
+        "products_avoided_by_bit_length_guard": 5233174,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 154.11917970801005
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00021",
+      "max_exponent": 30000,
+      "initial_root": [
+        1346269,
+        3524578,
+        14235090298445
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:04:17.851718+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00021.bin",
+      "records": 5895572,
+      "size_bytes": 94329152,
+      "sha256": "697c781748d9de174763bb3dd41ba8043370838f9c2d3c1d18debd23a50c5935",
+      "statistics": {
+        "strict_triples": 5895572,
+        "pruned_children": 5895573,
+        "products_avoided_by_bit_length_guard": 5895435,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 174.20611358400492
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00022",
+      "max_exponent": 30000,
+      "initial_root": [
+        514229,
+        1346269,
+        2076871684802
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:04:32.428185+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00022.bin",
+      "records": 6691957,
+      "size_bytes": 107071312,
+      "sha256": "062014368bfee26ef7e2999641598fe98bcc70d99a61b80684d207e9805323c3",
+      "statistics": {
+        "strict_triples": 6691957,
+        "pruned_children": 6691958,
+        "products_avoided_by_bit_length_guard": 6691796,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 197.32120379200205
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00023",
+      "max_exponent": 30000,
+      "initial_root": [
+        196418,
+        514229,
+        303011495165
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:00:42.768818+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00023.bin",
+      "records": 7661438,
+      "size_bytes": 122583008,
+      "sha256": "cedcf2573f061f8ce1b6697f960208d3ec363ddfa6741c0124049d379bdc1274",
+      "statistics": {
+        "strict_triples": 7661438,
+        "pruned_children": 7661439,
+        "products_avoided_by_bit_length_guard": 7661247,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 228.54730341600953
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00024",
+      "max_exponent": 30000,
+      "initial_root": [
+        75025,
+        196418,
+        44208781349
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:01:15.104979+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00024.bin",
+      "records": 8857993,
+      "size_bytes": 141727888,
+      "sha256": "a12950035cf4b4217548e816f21c382b75bfcfd218c708dcaa1c5cc25c0bd53e",
+      "statistics": {
+        "strict_triples": 8857993,
+        "pruned_children": 8857994,
+        "products_avoided_by_bit_length_guard": 8857773,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 263.3160170830088
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00025",
+      "max_exponent": 30000,
+      "initial_root": [
+        28657,
+        75025,
+        6449974274
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:01:43.975195+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00025.bin",
+      "records": 10358698,
+      "size_bytes": 165739168,
+      "sha256": "29a97c3127d1ea5972e248c97a1e9c27ad389532e8d08c448d5238fd267f6da7",
+      "statistics": {
+        "strict_triples": 10358698,
+        "pruned_children": 10358699,
+        "products_avoided_by_bit_length_guard": 10358439,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 306.53173866600264
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00026",
+      "max_exponent": 30000,
+      "initial_root": [
+        10946,
+        28657,
+        941038565
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:56:30.109414+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00026.bin",
+      "records": 12276040,
+      "size_bytes": 196416640,
+      "sha256": "8656b90c6b7b74dcd289b7eaec8997105a3fc6b7d2d3812a6d62f07c1542dcbb",
+      "statistics": {
+        "strict_triples": 12276040,
+        "pruned_children": 12276041,
+        "products_avoided_by_bit_length_guard": 12275730,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 354.64077687500685
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00027",
+      "max_exponent": 30000,
+      "initial_root": [
+        4181,
+        10946,
+        137295677
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:49:50.398900+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00027.bin",
+      "records": 14779987,
+      "size_bytes": 236479792,
+      "sha256": "c5359eb420c163506ff97ec01082f6d28204c50426ca72f501fa07a21c5a28cc",
+      "statistics": {
+        "strict_triples": 14779987,
+        "pruned_children": 14779988,
+        "products_avoided_by_bit_length_guard": 14779620,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 429.9318078329961
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00028",
+      "max_exponent": 30000,
+      "initial_root": [
+        1597,
+        4181,
+        20031170
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:50:35.464263+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00028.bin",
+      "records": 18136958,
+      "size_bytes": 290191328,
+      "sha256": "e5acfe342b134fc35ef750724fa02710a2cf5023d94f867bccc5901702570a83",
+      "statistics": {
+        "strict_triples": 18136958,
+        "pruned_children": 18136959,
+        "products_avoided_by_bit_length_guard": 18136515,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 526.3309059589956
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00029",
+      "max_exponent": 30000,
+      "initial_root": [
+        610,
+        1597,
+        2922509
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:41:29.744452+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00029.bin",
+      "records": 22784263,
+      "size_bytes": 364548208,
+      "sha256": "365a6245dde81d8a5e5aff780a51b7480d19c622081374a449eff755246caa83",
+      "statistics": {
+        "strict_triples": 22784263,
+        "pruned_children": 22784264,
+        "products_avoided_by_bit_length_guard": 22783683,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 665.8951294169965
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00030",
+      "max_exponent": 30000,
+      "initial_root": [
+        233,
+        610,
+        426389
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:29:34.183135+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00030.bin",
+      "records": 29480334,
+      "size_bytes": 471685344,
+      "sha256": "56a0556353e6214e45bd9bcd2630549eb33922f81f547c2dac033d082f888a8e",
+      "statistics": {
+        "strict_triples": 29480334,
+        "pruned_children": 29480335,
+        "products_avoided_by_bit_length_guard": 29479588,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 876.5549841669999
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00031",
+      "max_exponent": 30000,
+      "initial_root": [
+        89,
+        62210,
+        16609837
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:42:40.458441+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00031.bin",
+      "records": 21389675,
+      "size_bytes": 342234800,
+      "sha256": "07d2a320aae4bbb1047303a12a1218c84094f0bfbf01c15e03a0fca94bed1c13",
+      "statistics": {
+        "strict_triples": 21389675,
+        "pruned_children": 21389676,
+        "products_avoided_by_bit_length_guard": 21389135,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 624.7464857089944
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00032",
+      "max_exponent": 30000,
+      "initial_root": [
+        233,
+        62210,
+        43484701
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:50:19.013122+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00032.bin",
+      "records": 18246671,
+      "size_bytes": 291946736,
+      "sha256": "a4bbbcb4d98b2a026d19b740ae287aaff11252267b198a689c778ef62d66c00e",
+      "statistics": {
+        "strict_triples": 18246671,
+        "pruned_children": 18246672,
+        "products_avoided_by_bit_length_guard": 18246205,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 529.2599450830021
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00033",
+      "max_exponent": 30000,
+      "initial_root": [
+        34,
+        9077,
+        925765
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:13:48.293093+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00033.bin",
+      "records": 30710941,
+      "size_bytes": 491375056,
+      "sha256": "d7a73821d9b53a6b737fd39188ecec8a0a05d089426353fb00d108ce81fa9567",
+      "statistics": {
+        "strict_triples": 30710941,
+        "pruned_children": 30710942,
+        "products_avoided_by_bit_length_guard": 30710180,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 886.2257224170025
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00034",
+      "max_exponent": 30000,
+      "initial_root": [
+        89,
+        9077,
+        2423525
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:32:15.710523+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00034.bin",
+      "records": 25421286,
+      "size_bytes": 406740576,
+      "sha256": "f05f1a4a80adc197eb2943e41e6176bb5e888f7fb570fccbf0ea8c744f4a40f9",
+      "statistics": {
+        "strict_triples": 25421286,
+        "pruned_children": 25421287,
+        "products_avoided_by_bit_length_guard": 25420651,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 751.5356709999905
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00035",
+      "max_exponent": 30000,
+      "initial_root": [
+        13,
+        51641,
+        2012674
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:14:57.622592+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00035.bin",
+      "records": 33135308,
+      "size_bytes": 530164928,
+      "sha256": "a6c5a30c13a155a468ada1f965fb638f59455566fd7124772986625d82e43727",
+      "statistics": {
+        "strict_triples": 33135308,
+        "pruned_children": 33135309,
+        "products_avoided_by_bit_length_guard": 33134482,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 955.5587213339895
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00036",
+      "max_exponent": 30000,
+      "initial_root": [
+        1325,
+        51641,
+        205272962
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:56:54.219600+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00036.bin",
+      "records": 14644628,
+      "size_bytes": 234314048,
+      "sha256": "7c0521969d2cab8db9ae9bb3666ec07ea168d6e172928e859d198122af308a8a",
+      "statistics": {
+        "strict_triples": 14644628,
+        "pruned_children": 14644629,
+        "products_avoided_by_bit_length_guard": 14644277,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 423.818217166001
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00037",
+      "max_exponent": 30000,
+      "initial_root": [
+        34,
+        135137,
+        13782649
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:41:26.876871+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00037.bin",
+      "records": 24288114,
+      "size_bytes": 388609824,
+      "sha256": "a64ebf1f2f6a5d4ee6c57b85bf27d0d7ed05071fabf18cb8e9684f3c9244e526",
+      "statistics": {
+        "strict_triples": 24288114,
+        "pruned_children": 24288115,
+        "products_avoided_by_bit_length_guard": 24287513,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 712.6919213329966
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00038",
+      "max_exponent": 30000,
+      "initial_root": [
+        1325,
+        135137,
+        537169541
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:56:53.848022+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00038.bin",
+      "records": 13553653,
+      "size_bytes": 216858448,
+      "sha256": "3c98d601c0c267ede782999f585e3de07f66af773c19d37a0575cc9a5396ed38",
+      "statistics": {
+        "strict_triples": 13553653,
+        "pruned_children": 13553654,
+        "products_avoided_by_bit_length_guard": 13553311,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 392.1042557500041
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00039",
+      "max_exponent": 30000,
+      "initial_root": [
+        5,
+        646018,
+        9647009
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:16:59.878629+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00039.bin",
+      "records": 37058357,
+      "size_bytes": 592933712,
+      "sha256": "40ad8e0249a0d79e17d76f85ff9b5aab2a692cc89bbeee2fd7a3b0e378f23a1a",
+      "statistics": {
+        "strict_triples": 37058357,
+        "pruned_children": 37058358,
+        "products_avoided_by_bit_length_guard": 37057427,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 1077.8197035000048
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00040",
+      "max_exponent": 30000,
+      "initial_root": [
+        43261,
+        646018,
+        83842154089
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:01:07.950530+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00040.bin",
+      "records": 8509717,
+      "size_bytes": 136155472,
+      "sha256": "260c28190f533c9c23b990e1c3441d322e97f8d430c47f74e1adccd0aea0a46b",
+      "statistics": {
+        "strict_triples": 8509717,
+        "pruned_children": 8509718,
+        "products_avoided_by_bit_length_guard": 8509518,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 254.10080216699862
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00041",
+      "max_exponent": 30000,
+      "initial_root": [
+        2897,
+        43261,
+        375981346
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:56:51.787147+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00041.bin",
+      "records": 13582834,
+      "size_bytes": 217325344,
+      "sha256": "b39b7bcceac360b1ea0e23e2f61a8d78d586f559b1e8ebd9549c40e99c119ebe",
+      "statistics": {
+        "strict_triples": 13582834,
+        "pruned_children": 13582835,
+        "products_avoided_by_bit_length_guard": 13582499,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 392.7718079579936
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00042",
+      "max_exponent": 30000,
+      "initial_root": [
+        194,
+        2897,
+        1686049
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:41:05.274637+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00042.bin",
+      "records": 25118927,
+      "size_bytes": 401902832,
+      "sha256": "e6828adf927465ae41b2edfe8a877eaab45c05b72c3716a6476945ca9a975d69",
+      "statistics": {
+        "strict_triples": 25118927,
+        "pruned_children": 25118928,
+        "products_avoided_by_bit_length_guard": 25118304,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 736.7184036249964
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00043",
+      "max_exponent": 30000,
+      "initial_root": [
+        13,
+        294685,
+        11485154
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:31:13.244299+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00043.bin",
+      "records": 28920633,
+      "size_bytes": 462730128,
+      "sha256": "ed9c1224e84fc20a169f76105d2da973386cb990e628d82bba3bcd0ec093e9c1",
+      "statistics": {
+        "strict_triples": 28920633,
+        "pruned_children": 28920634,
+        "products_avoided_by_bit_length_guard": 28919908,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 853.3601367499941
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00044",
+      "max_exponent": 30000,
+      "initial_root": [
+        7561,
+        294685,
+        6684339842
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:01:43.662407+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00044.bin",
+      "records": 10562339,
+      "size_bytes": 168997424,
+      "sha256": "d07f64bd217da45eda8d69bc14013a29ac88056546ab7f463b973ede47e7a28b",
+      "statistics": {
+        "strict_triples": 10562339,
+        "pruned_children": 10562340,
+        "products_avoided_by_bit_length_guard": 10562083,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 313.55129791700165
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00045",
+      "max_exponent": 30000,
+      "initial_root": [
+        194,
+        7561,
+        4400489
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:41:56.068942+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00045.bin",
+      "records": 22716249,
+      "size_bytes": 363459984,
+      "sha256": "8f2688b85fc166d0ddb7146ff513b726b6b012723a09d91c00fa9fa271fc8ec9",
+      "statistics": {
+        "strict_triples": 22716249,
+        "pruned_children": 22716250,
+        "products_avoided_by_bit_length_guard": 22715690,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 664.2847863329953
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00046",
+      "max_exponent": 30000,
+      "initial_root": [
+        2,
+        1311738121,
+        7645370045
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:17:06.403274+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00046.bin",
+      "records": 37244354,
+      "size_bytes": 595909664,
+      "sha256": "dccd0e5765ccc886abda57906f4cf64087803d15008a5277f65eb4acf72b1240",
+      "statistics": {
+        "strict_triples": 37244354,
+        "pruned_children": 37244355,
+        "products_avoided_by_bit_length_guard": 37243435,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 1084.344178875006
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00047",
+      "max_exponent": 30000,
+      "initial_root": [
+        225058681,
+        1311738121,
+        885654153989035201
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:08:02.491337+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00047.bin",
+      "records": 3229213,
+      "size_bytes": 51667408,
+      "sha256": "b391bb0341b12641f5f7e80e22aab2549c90332e54a821eb6bd3400586606e92",
+      "statistics": {
+        "strict_triples": 3229213,
+        "pruned_children": 3229214,
+        "products_avoided_by_bit_length_guard": 3229132,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 96.09202395800094
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00048",
+      "max_exponent": 30000,
+      "initial_root": [
+        38613965,
+        225058681,
+        26071224093240493
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:06:27.315139+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00048.bin",
+      "records": 3842373,
+      "size_bytes": 61477968,
+      "sha256": "23a7d9595019a38c50bc88da5a1400551259200b4a3bdd1b0b9ad1e2e5343102",
+      "statistics": {
+        "strict_triples": 3842373,
+        "pruned_children": 3842374,
+        "products_avoided_by_bit_length_guard": 3842289,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 115.45609837499796
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00049",
+      "max_exponent": 30000,
+      "initial_root": [
+        6625109,
+        38613965,
+        767465181141553
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:06:37.791738+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00049.bin",
+      "records": 4648504,
+      "size_bytes": 74376064,
+      "sha256": "cfdd094199d941ef4e2021b7dded396921819c3892bd51eca4fbec3824983bc9",
+      "statistics": {
+        "strict_triples": 4648504,
+        "pruned_children": 4648505,
+        "products_avoided_by_bit_length_guard": 4648387,
+        "maximum_pending_stack_entries": 16,
+        "counting_seconds": 139.69358400000783
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00050",
+      "max_exponent": 30000,
+      "initial_root": [
+        1136689,
+        6625109,
+        22592065572301
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:04:31.857291+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00050.bin",
+      "records": 5737985,
+      "size_bytes": 91807760,
+      "sha256": "8820de6ee1df1689c4dc62ca112b854c06cd409b1d0c49040e5c96c174f93007",
+      "statistics": {
+        "strict_triples": 5737985,
+        "pruned_children": 5737986,
+        "products_avoided_by_bit_length_guard": 5737841,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 168.19289508300426
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00051",
+      "max_exponent": 30000,
+      "initial_root": [
+        195025,
+        1136689,
+        665048316673
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:04:42.254406+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00051.bin",
+      "records": 7261303,
+      "size_bytes": 116180848,
+      "sha256": "34740dbb7e91e33b94fadd78c5b54751273095353226be01a1b0a2538eb27a16",
+      "statistics": {
+        "strict_triples": 7261303,
+        "pruned_children": 7261304,
+        "products_avoided_by_bit_length_guard": 7261130,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 214.3018769580085
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00052",
+      "max_exponent": 30000,
+      "initial_root": [
+        33461,
+        195025,
+        19577194573
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:01:23.643675+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00052.bin",
+      "records": 9484122,
+      "size_bytes": 151745952,
+      "sha256": "4ef80ab3775508d5fd647cc09007d5f9512d4a10d04316ebf8d85b05577cb8d2",
+      "statistics": {
+        "strict_triples": 9484122,
+        "pruned_children": 9484123,
+        "products_avoided_by_bit_length_guard": 9483874,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 281.94027529199957
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00053",
+      "max_exponent": 30000,
+      "initial_root": [
+        5741,
+        33461,
+        576298801
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:56:41.701682+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00053.bin",
+      "records": 12912104,
+      "size_bytes": 206593664,
+      "sha256": "d71ad792078c159b4e9bf9c8a7692cbc9817ca918e38e3bfabaa19eaf5496373",
+      "statistics": {
+        "strict_triples": 12912104,
+        "pruned_children": 12912105,
+        "products_avoided_by_bit_length_guard": 12911804,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 373.79411708400585
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00054",
+      "max_exponent": 30000,
+      "initial_root": [
+        985,
+        5741,
+        16964653
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:50:27.905364+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00054.bin",
+      "records": 18608503,
+      "size_bytes": 297736048,
+      "sha256": "b7cc8d52d3be9573ccf468db0f796792e33a6af6f79de4acba245fb17e8032e1",
+      "statistics": {
+        "strict_triples": 18608503,
+        "pruned_children": 18608504,
+        "products_avoided_by_bit_length_guard": 18608021,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 541.0198180840089
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00055",
+      "max_exponent": 30000,
+      "initial_root": [
+        169,
+        985,
+        499393
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:30:23.847615+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00055.bin",
+      "records": 29141446,
+      "size_bytes": 466263136,
+      "sha256": "ca3f26a88141a2a4077270ec2773e2495bde55bb7af840f1f96601888d2c074f",
+      "statistics": {
+        "strict_triples": 29141446,
+        "pruned_children": 29141447,
+        "products_avoided_by_bit_length_guard": 29140737,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 863.9752679579979
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00056",
+      "max_exponent": 30000,
+      "initial_root": [
+        29,
+        14701,
+        1278818
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:28:48.554631+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00056.bin",
+      "records": 30371102,
+      "size_bytes": 485937632,
+      "sha256": "4bed413146b2ff7c2849713372455b5ee42b7458b1f4d19e130ab456dff3a459",
+      "statistics": {
+        "strict_triples": 30371102,
+        "pruned_children": 30371103,
+        "products_avoided_by_bit_length_guard": 30370367,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 900.2560479170061
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00057",
+      "max_exponent": 30000,
+      "initial_root": [
+        169,
+        14701,
+        7453378
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:41:49.124759+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00057.bin",
+      "records": 21775762,
+      "size_bytes": 348412192,
+      "sha256": "c8c68127aaad2f15b95aeb5d840b821e05b8e32f4f6ebb9c95852600bb618f91",
+      "statistics": {
+        "strict_triples": 21775762,
+        "pruned_children": 21775763,
+        "products_avoided_by_bit_length_guard": 21775211,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 635.8790221669915
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00058",
+      "max_exponent": 30000,
+      "initial_root": [
+        5,
+        1441889,
+        21531778
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:15:59.866354+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00058.bin",
+      "records": 35111169,
+      "size_bytes": 561778704,
+      "sha256": "50be666428d16e393526dacfc4762f40d21e6cb5e0367dc6f15d5c6b4356b8bf",
+      "statistics": {
+        "strict_triples": 35111169,
+        "pruned_children": 35111170,
+        "products_avoided_by_bit_length_guard": 35110298,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 1017.8033707080031
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00059",
+      "max_exponent": 30000,
+      "initial_root": [
+        96557,
+        1441889,
+        417673428514
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T07:04:24.891466+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00059.bin",
+      "records": 7547832,
+      "size_bytes": 120765312,
+      "sha256": "c1ce610795d867caa03c8532aaa745adbf79d09f65d86e7555d63994be316211",
+      "statistics": {
+        "strict_triples": 7547832,
+        "pruned_children": 7547833,
+        "products_avoided_by_bit_length_guard": 7547642,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 222.1205810829997
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00060",
+      "max_exponent": 30000,
+      "initial_root": [
+        6466,
+        96557,
+        1873012681
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:56:37.441599+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00060.bin",
+      "records": 11681635,
+      "size_bytes": 186906160,
+      "sha256": "692d5dcb0d8f274525e2bc5b3718b411b4353f2eb528381ae8eba1ca1a6186cb",
+      "statistics": {
+        "strict_triples": 11681635,
+        "pruned_children": 11681636,
+        "products_avoided_by_bit_length_guard": 11681340,
+        "maximum_pending_stack_entries": 17,
+        "counting_seconds": 337.64492366599734
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00061",
+      "max_exponent": 30000,
+      "initial_root": [
+        433,
+        6466,
+        8399329
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:50:59.794519+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00061.bin",
+      "records": 20491934,
+      "size_bytes": 327870944,
+      "sha256": "745fd20060ddad92db25c0f7bc868212a1ae04bc91b4512aaf24ae019f8b6c83",
+      "statistics": {
+        "strict_triples": 20491934,
+        "pruned_children": 20491935,
+        "products_avoided_by_bit_length_guard": 20491407,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 594.5111363749893
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00062",
+      "max_exponent": 30000,
+      "initial_root": [
+        29,
+        37666,
+        3276509
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:30:51.782847+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00062.bin",
+      "records": 27915202,
+      "size_bytes": 446643232,
+      "sha256": "efe0ba1635ff6c815b6ace0c5d4a262aece584fcc169fa89f8a56ace75c61c73",
+      "statistics": {
+        "strict_triples": 27915202,
+        "pruned_children": 27915203,
+        "products_avoided_by_bit_length_guard": 27914508,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 825.3748225419986
+      }
+    },
+    {
+      "format": "frobenius-packed-job-metadata",
+      "schema_version": 1,
+      "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+      "job_id": "job-00063",
+      "max_exponent": 30000,
+      "initial_root": [
+        433,
+        37666,
+        48928105
+      ],
+      "backend": "gmpy2",
+      "record_bytes": 16,
+      "residue_bits": 128,
+      "byte_order": "little",
+      "created_utc": "2026-10-03T06:50:21.741647+00:00",
+      "completed": true,
+      "backend_version": "2.3.1",
+      "raw_path": "evidence/frobenius-10e30000/records/job-00063.bin",
+      "records": 17388361,
+      "size_bytes": 278213776,
+      "sha256": "46115755f6250da0c780b21616c165246901fa90c44e9868776c906a7350525f",
+      "statistics": {
+        "strict_triples": 17388361,
+        "pruned_children": 17388362,
+        "products_avoided_by_bit_length_guard": 17387913,
+        "maximum_pending_stack_entries": 18,
+        "counting_seconds": 505.66409783299605
+      }
+    }
+  ],
+  "global_sort": {
+    "schema_version": 1,
+    "configuration_id": "1996922702a75f1164becd1e0b229f1f26f5d46c21f7a81fe9ed81ebccbae00f",
+    "completed": true,
+    "total_records": 862356773,
+    "duplicate_signature_count": 0,
+    "repeated_record_count": 0,
+    "records_in_duplicate_groups": 0,
+    "repeated_record_count_definition": "sum(occurrences - 1) over repeated-signature groups",
+    "candidates_path": "evidence/frobenius-10e30000/sort/candidates.bin",
+    "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "candidate_format": "24 bytes: little-endian unsigned low64, high64, occurrences64",
+    "sharding_seconds": 813.5484554209106,
+    "sorting_seconds": 386.22089136808063,
+    "max_memory_bytes": 536870912,
+    "maximum_leaf_bytes": 89478480,
+    "scratch_cleaned": true,
+    "scope": "128-bit residues only; repeated signatures require exact replay"
+  },
+  "exact_candidate_replay": null
+}

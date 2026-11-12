@@ -1,0 +1,274 @@
+Verifying largest coordinates through 10^30000; 64 disjoint jobs, 63 ancestor records, two exceptional triples, 6 workers.
+job-00039: generated 5,000,000 residues; elapsed 142.2s; pending roots 7
+job-00035: generated 5,000,000 residues; elapsed 142.5s; pending roots 8
+job-00058: generated 5,000,000 residues; elapsed 142.6s; pending roots 7
+job-00000: generated 5,000,000 residues; elapsed 142.8s; pending roots 8
+job-00033: generated 5,000,000 residues; elapsed 142.9s; pending roots 6
+job-00046: generated 5,000,000 residues; elapsed 143.1s; pending roots 7
+job-00039: generated 10,000,000 residues; elapsed 284.5s; pending roots 6
+job-00058: generated 10,000,000 residues; elapsed 284.5s; pending roots 5
+job-00033: generated 10,000,000 residues; elapsed 284.7s; pending roots 6
+job-00035: generated 10,000,000 residues; elapsed 284.8s; pending roots 11
+job-00046: generated 10,000,000 residues; elapsed 285.4s; pending roots 6
+job-00000: generated 10,000,000 residues; elapsed 285.7s; pending roots 5
+job-00039: durable checkpoint at 10,600,000 records
+job-00058: durable checkpoint at 10,600,000 records
+job-00035: durable checkpoint at 10,600,000 records
+job-00033: durable checkpoint at 10,600,000 records
+job-00046: durable checkpoint at 10,600,000 records
+job-00000: durable checkpoint at 10,600,000 records
+job-00035: generated 15,000,000 residues; elapsed 427.2s; pending roots 7
+job-00039: generated 15,000,000 residues; elapsed 427.3s; pending roots 7
+job-00058: generated 15,000,000 residues; elapsed 427.4s; pending roots 6
+job-00033: generated 15,000,000 residues; elapsed 428.1s; pending roots 10
+job-00000: generated 15,000,000 residues; elapsed 428.6s; pending roots 7
+job-00046: generated 15,000,000 residues; elapsed 428.6s; pending roots 7
+job-00035: generated 20,000,000 residues; elapsed 572.7s; pending roots 7
+job-00058: generated 20,000,000 residues; elapsed 572.9s; pending roots 10
+job-00039: generated 20,000,000 residues; elapsed 573.1s; pending roots 11
+job-00033: generated 20,000,000 residues; elapsed 573.6s; pending roots 7
+job-00000: generated 20,000,000 residues; elapsed 574.2s; pending roots 4
+job-00046: generated 20,000,000 residues; elapsed 574.2s; pending roots 8
+job-00058: durable checkpoint at 21,000,000 records
+job-00035: durable checkpoint at 21,000,000 records
+job-00039: durable checkpoint at 21,000,000 records
+job-00033: durable checkpoint at 21,000,000 records
+job-00046: durable checkpoint at 21,000,000 records
+job-00000: durable checkpoint at 21,000,000 records
+job-00058: generated 25,000,000 residues; elapsed 719.4s; pending roots 4
+job-00035: generated 25,000,000 residues; elapsed 719.7s; pending roots 9
+job-00039: generated 25,000,000 residues; elapsed 719.9s; pending roots 8
+job-00033: generated 25,000,000 residues; elapsed 720.5s; pending roots 9
+job-00046: generated 25,000,000 residues; elapsed 720.9s; pending roots 9
+job-00000: generated 25,000,000 residues; elapsed 722.1s; pending roots 6
+job-00058: generated 30,000,000 residues; elapsed 864.3s; pending roots 7
+job-00035: generated 30,000,000 residues; elapsed 864.6s; pending roots 8
+job-00039: generated 30,000,000 residues; elapsed 865.3s; pending roots 9
+job-00033: generated 30,000,000 residues; elapsed 865.8s; pending roots 7
+job-00046: generated 30,000,000 residues; elapsed 866.3s; pending roots 6
+job-00000: generated 30,000,000 residues; elapsed 867.5s; pending roots 8
+Completed 1/64 generation jobs; 30,711,004 strict triples in completed work; wall 886.4s.
+job-00058: durable checkpoint at 31,300,000 records
+job-00035: durable checkpoint at 31,300,000 records
+job-00039: durable checkpoint at 31,300,000 records
+job-00046: durable checkpoint at 31,300,000 records
+job-00000: durable checkpoint at 31,300,000 records
+Completed 2/64 generation jobs; 63,846,312 strict triples in completed work; wall 955.7s.
+job-00058: generated 35,000,000 residues; elapsed 1014.9s; pending roots 4
+job-00039: generated 35,000,000 residues; elapsed 1015.7s; pending roots 7
+job-00046: generated 35,000,000 residues; elapsed 1016.5s; pending roots 5
+Completed 3/64 generation jobs; 98,957,481 strict triples in completed work; wall 1018.0s.
+job-00000: generated 35,000,000 residues; elapsed 1018.0s; pending roots 5
+job-00056: generated 5,000,000 residues; elapsed 150.6s; pending roots 7
+Completed 4/64 generation jobs; 136,015,838 strict triples in completed work; wall 1078.0s.
+Completed 5/64 generation jobs; 173,260,192 strict triples in completed work; wall 1084.5s.
+job-00030: generated 5,000,000 residues; elapsed 155.7s; pending roots 10
+job-00055: generated 5,000,000 residues; elapsed 151.0s; pending roots 10
+job-00000: generated 40,000,000 residues; elapsed 1169.2s; pending roots 6
+job-00056: generated 10,000,000 residues; elapsed 300.8s; pending roots 8
+job-00056: durable checkpoint at 10,000,000 records
+job-00000: durable checkpoint at 41,300,000 records
+job-00043: generated 5,000,000 residues; elapsed 147.9s; pending roots 6
+job-00062: generated 5,000,000 residues; elapsed 147.9s; pending roots 7
+Completed 6/64 generation jobs; 215,806,867 strict triples in completed work; wall 1242.3s.
+job-00030: generated 10,000,000 residues; elapsed 301.7s; pending roots 13
+job-00030: durable checkpoint at 10,000,000 records
+job-00055: generated 10,000,000 residues; elapsed 298.5s; pending roots 5
+job-00055: durable checkpoint at 10,100,000 records
+job-00056: generated 15,000,000 residues; elapsed 448.9s; pending roots 7
+job-00043: generated 10,000,000 residues; elapsed 296.4s; pending roots 5
+job-00043: durable checkpoint at 10,200,000 records
+job-00062: generated 10,000,000 residues; elapsed 297.1s; pending roots 10
+job-00062: durable checkpoint at 10,100,000 records
+job-00034: generated 5,000,000 residues; elapsed 149.6s; pending roots 8
+job-00030: generated 15,000,000 residues; elapsed 450.7s; pending roots 7
+job-00055: generated 15,000,000 residues; elapsed 446.4s; pending roots 7
+job-00056: generated 20,000,000 residues; elapsed 596.0s; pending roots 9
+job-00056: durable checkpoint at 20,200,000 records
+job-00043: generated 15,000,000 residues; elapsed 443.2s; pending roots 8
+job-00062: generated 15,000,000 residues; elapsed 444.2s; pending roots 10
+job-00034: generated 10,000,000 residues; elapsed 296.5s; pending roots 11
+job-00034: durable checkpoint at 10,200,000 records
+job-00030: generated 20,000,000 residues; elapsed 597.5s; pending roots 8
+job-00030: durable checkpoint at 20,200,000 records
+job-00055: generated 20,000,000 residues; elapsed 593.5s; pending roots 7
+job-00055: durable checkpoint at 20,300,000 records
+job-00056: generated 25,000,000 residues; elapsed 742.3s; pending roots 6
+job-00043: generated 20,000,000 residues; elapsed 589.8s; pending roots 8
+job-00062: generated 20,000,000 residues; elapsed 590.8s; pending roots 9
+job-00043: durable checkpoint at 20,500,000 records
+job-00034: generated 15,000,000 residues; elapsed 443.1s; pending roots 6
+job-00062: durable checkpoint at 20,400,000 records
+job-00030: generated 25,000,000 residues; elapsed 744.5s; pending roots 6
+job-00055: generated 25,000,000 residues; elapsed 740.4s; pending roots 7
+job-00056: generated 30,000,000 residues; elapsed 889.6s; pending roots 6
+Completed 7/64 generation jobs; 246,177,969 strict triples in completed work; wall 1786.7s.
+job-00043: generated 25,000,000 residues; elapsed 737.0s; pending roots 5
+job-00062: generated 25,000,000 residues; elapsed 738.4s; pending roots 10
+Completed 8/64 generation jobs; 275,658,303 strict triples in completed work; wall 1832.3s.
+job-00034: generated 20,000,000 residues; elapsed 590.7s; pending roots 8
+job-00034: durable checkpoint at 20,400,000 records
+Completed 9/64 generation jobs; 304,799,749 strict triples in completed work; wall 1882.0s.
+Completed 10/64 generation jobs; 332,714,951 strict triples in completed work; wall 1909.9s.
+Completed 11/64 generation jobs; 361,635,584 strict triples in completed work; wall 1931.3s.
+job-00042: generated 5,000,000 residues; elapsed 148.4s; pending roots 8
+job-00037: generated 5,000,000 residues; elapsed 148.4s; pending roots 9
+job-00034: generated 25,000,000 residues; elapsed 739.1s; pending roots 4
+Completed 12/64 generation jobs; 387,056,870 strict triples in completed work; wall 1993.8s.
+job-00029: generated 5,000,000 residues; elapsed 146.6s; pending roots 8
+job-00045: generated 5,000,000 residues; elapsed 146.8s; pending roots 9
+job-00057: generated 5,000,000 residues; elapsed 146.3s; pending roots 6
+job-00042: generated 10,000,000 residues; elapsed 295.0s; pending roots 8
+job-00042: durable checkpoint at 10,200,000 records
+job-00037: generated 10,000,000 residues; elapsed 295.4s; pending roots 8
+job-00037: durable checkpoint at 10,200,000 records
+job-00031: generated 5,000,000 residues; elapsed 146.4s; pending roots 7
+job-00029: generated 10,000,000 residues; elapsed 293.3s; pending roots 6
+job-00029: durable checkpoint at 10,300,000 records
+job-00045: generated 10,000,000 residues; elapsed 294.0s; pending roots 10
+job-00045: durable checkpoint at 10,300,000 records
+job-00057: generated 10,000,000 residues; elapsed 293.0s; pending roots 6
+job-00042: generated 15,000,000 residues; elapsed 441.9s; pending roots 10
+job-00057: durable checkpoint at 10,300,000 records
+job-00037: generated 15,000,000 residues; elapsed 442.4s; pending roots 8
+job-00031: generated 10,000,000 residues; elapsed 293.6s; pending roots 4
+job-00031: durable checkpoint at 10,300,000 records
+job-00029: generated 15,000,000 residues; elapsed 440.2s; pending roots 6
+job-00045: generated 15,000,000 residues; elapsed 440.4s; pending roots 11
+job-00057: generated 15,000,000 residues; elapsed 439.7s; pending roots 6
+job-00042: generated 20,000,000 residues; elapsed 588.2s; pending roots 7
+job-00042: durable checkpoint at 20,500,000 records
+job-00037: generated 20,000,000 residues; elapsed 588.4s; pending roots 6
+job-00031: generated 15,000,000 residues; elapsed 439.3s; pending roots 6
+job-00037: durable checkpoint at 20,500,000 records
+job-00029: generated 20,000,000 residues; elapsed 585.0s; pending roots 9
+job-00029: durable checkpoint at 20,600,000 records
+job-00045: generated 20,000,000 residues; elapsed 585.6s; pending roots 6
+job-00045: durable checkpoint at 20,600,000 records
+job-00057: generated 20,000,000 residues; elapsed 584.7s; pending roots 5
+job-00042: generated 25,000,000 residues; elapsed 733.4s; pending roots 3
+Completed 13/64 generation jobs; 412,175,797 strict triples in completed work; wall 2523.4s.
+job-00057: durable checkpoint at 20,600,000 records
+Completed 14/64 generation jobs; 436,463,911 strict triples in completed work; wall 2545.0s.
+Completed 15/64 generation jobs; 459,248,174 strict triples in completed work; wall 2547.8s.
+Completed 16/64 generation jobs; 481,023,936 strict triples in completed work; wall 2567.2s.
+Completed 17/64 generation jobs; 503,740,185 strict triples in completed work; wall 2574.2s.
+job-00031: generated 20,000,000 residues; elapsed 584.3s; pending roots 5
+job-00031: durable checkpoint at 20,700,000 records
+Completed 18/64 generation jobs; 525,129,860 strict triples in completed work; wall 2618.6s.
+job-00061: generated 5,000,000 residues; elapsed 144.7s; pending roots 10
+job-00054: generated 5,000,000 residues; elapsed 144.7s; pending roots 6
+job-00032: generated 5,000,000 residues; elapsed 144.4s; pending roots 10
+job-00028: generated 5,000,000 residues; elapsed 144.5s; pending roots 8
+job-00063: generated 5,000,000 residues; elapsed 145.3s; pending roots 5
+job-00027: generated 5,000,000 residues; elapsed 146.4s; pending roots 9
+job-00061: generated 10,000,000 residues; elapsed 291.3s; pending roots 7
+job-00061: durable checkpoint at 10,400,000 records
+job-00054: generated 10,000,000 residues; elapsed 291.6s; pending roots 8
+job-00032: generated 10,000,000 residues; elapsed 291.0s; pending roots 11
+job-00054: durable checkpoint at 10,300,000 records
+job-00032: durable checkpoint at 10,400,000 records
+job-00028: generated 10,000,000 residues; elapsed 291.2s; pending roots 7
+job-00063: generated 10,000,000 residues; elapsed 291.7s; pending roots 9
+job-00028: durable checkpoint at 10,400,000 records
+job-00063: durable checkpoint at 10,300,000 records
+job-00027: generated 10,000,000 residues; elapsed 291.7s; pending roots 7
+job-00027: durable checkpoint at 10,300,000 records
+job-00061: generated 15,000,000 residues; elapsed 435.7s; pending roots 6
+job-00054: generated 15,000,000 residues; elapsed 436.4s; pending roots 9
+job-00032: generated 15,000,000 residues; elapsed 435.3s; pending roots 5
+job-00028: generated 15,000,000 residues; elapsed 435.5s; pending roots 9
+job-00063: generated 15,000,000 residues; elapsed 436.4s; pending roots 7
+Completed 19/64 generation jobs; 539,909,847 strict triples in completed work; wall 3048.5s.
+Completed 20/64 generation jobs; 558,156,518 strict triples in completed work; wall 3077.1s.
+Completed 21/64 generation jobs; 575,544,879 strict triples in completed work; wall 3079.8s.
+Completed 22/64 generation jobs; 594,153,382 strict triples in completed work; wall 3086.0s.
+Completed 23/64 generation jobs; 612,290,340 strict triples in completed work; wall 3093.6s.
+job-00061: generated 20,000,000 residues; elapsed 580.4s; pending roots 3
+Completed 24/64 generation jobs; 632,782,274 strict triples in completed work; wall 3117.9s.
+job-00036: generated 5,000,000 residues; elapsed 144.8s; pending roots 8
+job-00041: generated 5,000,000 residues; elapsed 144.4s; pending roots 8
+job-00038: generated 5,000,000 residues; elapsed 144.5s; pending roots 9
+job-00053: generated 5,000,000 residues; elapsed 144.5s; pending roots 9
+job-00026: generated 5,000,000 residues; elapsed 144.5s; pending roots 7
+job-00060: generated 5,000,000 residues; elapsed 144.5s; pending roots 5
+job-00036: generated 10,000,000 residues; elapsed 289.2s; pending roots 7
+job-00036: durable checkpoint at 10,400,000 records
+job-00041: generated 10,000,000 residues; elapsed 289.0s; pending roots 6
+job-00038: generated 10,000,000 residues; elapsed 289.3s; pending roots 7
+job-00053: generated 10,000,000 residues; elapsed 289.3s; pending roots 10
+job-00041: durable checkpoint at 10,400,000 records
+job-00038: durable checkpoint at 10,400,000 records
+job-00026: generated 10,000,000 residues; elapsed 288.8s; pending roots 8
+job-00053: durable checkpoint at 10,400,000 records
+job-00026: durable checkpoint at 10,400,000 records
+job-00060: generated 10,000,000 residues; elapsed 288.9s; pending roots 9
+job-00060: durable checkpoint at 10,400,000 records
+Completed 25/64 generation jobs; 645,058,314 strict triples in completed work; wall 3448.2s.
+Completed 26/64 generation jobs; 656,739,949 strict triples in completed work; wall 3455.5s.
+Completed 27/64 generation jobs; 669,652,053 strict triples in completed work; wall 3459.8s.
+Completed 28/64 generation jobs; 683,234,887 strict triples in completed work; wall 3469.9s.
+Completed 29/64 generation jobs; 696,788,540 strict triples in completed work; wall 3471.9s.
+Completed 30/64 generation jobs; 711,433,168 strict triples in completed work; wall 3472.3s.
+job-00044: generated 5,000,000 residues; elapsed 149.7s; pending roots 9
+job-00025: generated 5,000,000 residues; elapsed 149.1s; pending roots 8
+job-00052: generated 5,000,000 residues; elapsed 150.0s; pending roots 9
+job-00024: generated 5,000,000 residues; elapsed 149.7s; pending roots 8
+job-00040: generated 5,000,000 residues; elapsed 150.2s; pending roots 6
+job-00023: generated 5,000,000 residues; elapsed 149.9s; pending roots 8
+Completed 31/64 generation jobs; 719,094,606 strict triples in completed work; wall 3700.9s.
+Completed 32/64 generation jobs; 727,604,323 strict triples in completed work; wall 3726.0s.
+Completed 33/64 generation jobs; 736,462,316 strict triples in completed work; wall 3733.2s.
+Completed 34/64 generation jobs; 745,946,438 strict triples in completed work; wall 3741.7s.
+job-00044: generated 10,000,000 residues; elapsed 297.0s; pending roots 5
+job-00044: durable checkpoint at 10,200,000 records
+job-00025: generated 10,000,000 residues; elapsed 296.1s; pending roots 4
+job-00025: durable checkpoint at 10,200,000 records
+Completed 35/64 generation jobs; 756,508,777 strict triples in completed work; wall 3761.8s.
+Completed 36/64 generation jobs; 766,867,475 strict triples in completed work; wall 3762.1s.
+job-00059: generated 5,000,000 residues; elapsed 146.9s; pending roots 11
+job-00051: generated 5,000,000 residues; elapsed 147.6s; pending roots 5
+job-00022: generated 5,000,000 residues; elapsed 147.5s; pending roots 10
+job-00021: generated 5,000,000 residues; elapsed 147.7s; pending roots 3
+job-00050: generated 5,000,000 residues; elapsed 146.7s; pending roots 6
+job-00020: generated 5,000,000 residues; elapsed 147.3s; pending roots 5
+Completed 37/64 generation jobs; 772,763,047 strict triples in completed work; wall 3915.9s.
+Completed 38/64 generation jobs; 777,996,359 strict triples in completed work; wall 3916.2s.
+Completed 39/64 generation jobs; 785,544,191 strict triples in completed work; wall 3923.0s.
+Completed 40/64 generation jobs; 791,282,176 strict triples in completed work; wall 3930.0s.
+Completed 41/64 generation jobs; 797,974,133 strict triples in completed work; wall 3930.5s.
+Completed 42/64 generation jobs; 805,235,436 strict triples in completed work; wall 3940.4s.
+Completed 43/64 generation jobs; 808,687,151 strict triples in completed work; wall 4044.5s.
+Completed 44/64 generation jobs; 812,487,431 strict triples in completed work; wall 4044.5s.
+Completed 45/64 generation jobs; 816,329,804 strict triples in completed work; wall 4045.4s.
+Completed 46/64 generation jobs; 820,534,303 strict triples in completed work; wall 4049.5s.
+Completed 47/64 generation jobs; 825,211,047 strict triples in completed work; wall 4055.8s.
+Completed 48/64 generation jobs; 829,859,551 strict triples in completed work; wall 4055.9s.
+Completed 49/64 generation jobs; 832,123,419 strict triples in completed work; wall 4123.5s.
+Completed 50/64 generation jobs; 834,569,812 strict triples in completed work; wall 4128.0s.
+Completed 51/64 generation jobs; 837,221,724 strict triples in completed work; wall 4128.5s.
+Completed 52/64 generation jobs; 840,106,204 strict triples in completed work; wall 4130.8s.
+Completed 53/64 generation jobs; 843,255,188 strict triples in completed work; wall 4138.6s.
+Completed 54/64 generation jobs; 846,484,401 strict triples in completed work; wall 4140.6s.
+Completed 55/64 generation jobs; 848,189,923 strict triples in completed work; wall 4181.2s.
+Completed 56/64 generation jobs; 850,013,904 strict triples in completed work; wall 4182.2s.
+Completed 57/64 generation jobs; 851,514,709 strict triples in completed work; wall 4184.6s.
+Completed 58/64 generation jobs; 853,615,658 strict triples in completed work; wall 4184.8s.
+Completed 59/64 generation jobs; 855,570,756 strict triples in completed work; wall 4185.6s.
+Completed 60/64 generation jobs; 857,169,017 strict triples in completed work; wall 4185.7s.
+Completed 61/64 generation jobs; 858,357,249 strict triples in completed work; wall 4212.9s.
+Completed 62/64 generation jobs; 859,688,146 strict triples in completed work; wall 4214.2s.
+Completed 63/64 generation jobs; 860,944,721 strict triples in completed work; wall 4214.3s.
+Completed 64/64 generation jobs; 862,356,771 strict triples in completed work; wall 4215.1s.
+Enumeration complete: 862,356,771 strict triples; checking packed residues globally across all jobs.
+Frobenius uniqueness through 10^30000: VERIFIED
+Strict triples: 862,356,771
+Triples including (1,1,1) and (1,1,2): 862,356,773
+Repeated 128-bit residue signatures: 0
+All residues distinct modulo 2^128: True
+Exact cutoff comparisons: yes
+Global comparison across all workers: yes
+Independent prior count matched: True
+Current session wall time: 5416.845 seconds
+Result metadata: frobenius-10e30000.json
+

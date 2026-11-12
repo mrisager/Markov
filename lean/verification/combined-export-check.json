@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "scope": "Combined source export for Theorems 1 and 12",
+  "checkedUTC": "2026-11-11T08:34:07.378395+00:00",
+  "leanToolchain": "leanprover/lean4:v4.28.0",
+  "mathlibRevision": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+  "leanSourceFiles": 894,
+  "leanSourceLines": 115106,
+  "registeredDistinctAxiomReports": 6859,
+  "sourceManifestSHA256": "a0ce49b8e9672f38b58029e62a85abfcad1e0e663823810eb5b5db12225d61b4",
+  "historicalTheorem12AndTheorem1ProofReceipts": "Source identity and normalized audit inventories checked",
+  "installedDependencyGitRevisionsChecked": 9,
+  "freshStrictExportChecks": {
+    "Markov.IntrinsicMcShaneRivinCount": {
+      "strictCompile": "PASS",
+      "logSHA256": "fb017e6d617772e7eefd43595b78b0758295e4662414c5e1ce2c5f1570fd778e"
+    },
+    "RiemannGaussian.ZetaVinogradovZeroFree": {
+      "strictCompile": "PASS",
+      "logSHA256": "1c265f3b6f85246909f8643f92032cbb0f09d89e174b9df4b164b2a9d1d96c59"
+    },
+    "T1ExactTheoremOne": {
+      "strictCompile": "PASS",
+      "logSHA256": "bfb27b4e3aa706f147edd0e3c12356468edb5c802965986daa4e99b036aa59d2"
+    },
+    "T1AxiomAudit01": {
+      "strictCompile": "PASS",
+      "logSHA256": "1992c1c4c5a501c0e7c6865d8e46298aaa80e9803f62ea27bf70748f86b906e5",
+      "reports": 193,
+      "axiomsUsed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "T1AxiomAudit02": {
+      "strictCompile": "PASS",
+      "logSHA256": "e782b8b598e70fbf3f7c3e9dc2c280f6132fd7423bd5db036973f0e42d3be839",
+      "reports": 252,
+      "axiomsUsed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "T1AxiomAudit03": {
+      "strictCompile": "PASS",
+      "logSHA256": "cd972b7a20fe8f88cf60e534f096c0df4d8745f15dd5e79bfba1e41f1c65216f",
+      "reports": 126,
+      "axiomsUsed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "VKAxiomAudit01": {
+      "strictCompile": "PASS",
+      "logSHA256": "eb8699f691aee0135d53e9fec331e1a96bb37ccfe8c4661782882ecea6cffdda",
+      "reports": 389,
+      "axiomsUsed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "VKAxiomAudit02": {
+      "strictCompile": "PASS",
+      "logSHA256": "c71f747bcbd7718d69314a5f8897037a29213c694990c0fafd8ff637c86cec16",
+      "reports": 303,
+      "axiomsUsed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "VKAxiomAudit03": {
+      "strictCompile": "PASS",
+      "logSHA256": "7b86a72c3d0c61360538228d24d228ab7399fb32b739444cc66a526a65d0730a",
+      "reports": 183,
+      "axiomsUsed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "VKAxiomAudit04": {
+      "strictCompile": "PASS",
+      "logSHA256": "2ea8d60264c2faff7052592665f7262f1d3faf9d9705cd15122c3937f2630ec5",
+      "reports": 264,
+      "axiomsUsed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "VKAxiomAudit05": {
+      "strictCompile": "PASS",
+      "logSHA256": "622225611794f888db462262e45a258cb9d42c3256854c07ca27b04460ebbd8e",
+      "reports": 212,
+      "axiomsUsed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "VKAxiomAudit06": {
+      "strictCompile": "PASS",
+      "logSHA256": "c397f5c21fade544fa9bdb80cfa1c7a7807406b4b98724176d8fc8b37bd4d70d",
+      "reports": 149,
+      "axiomsUsed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "VKAxiomAudit07": {
+      "strictCompile": "PASS",
+      "logSHA256": "529be9801d7143ad30e6b21839904143387c8951f9f32628b1026bf6a6afec8b",
+      "reports": 181,
+      "axiomsUsed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "VKAxiomAudit08": {
+      "strictCompile": "PASS",
+      "logSHA256": "1d456e7c62b7c042c374401667910775477013044c2152031946f69de87ede63",
+      "reports": 174,
+      "axiomsUsed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "MarkovTheorem1": {
+      "strictCompile": "PASS",
+      "logSHA256": "28e5fa2573f5b3debbcc36a02bb04705873abdb85e3c0946000db574c66194af"
+    }
+  },
+  "freshAllSourcesRebuilt": false,
+  "freshCheckDependencyObjects": "Pinned mathlib objects and previously verified local proof objects",
+  "packageChecks": [
+    "Combined Lake module registration and import closure",
+    "Five negative audit parser cases",
+    "Local documentation links and declaration anchors",
+    "Workflow YAML parsed",
+    "No local compiled objects or machine-specific paths in upload files"
+  ]
+}

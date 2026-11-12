@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "checkedUTC": "2026-11-11T08:56:07.399341+00:00",
+  "scope": "Apache-2.0 license and comment update for the combined Theorems 1 and 12 export",
+  "sourceManifestSHA256": "dec0a76419ed9aa68cfb089ff6d837ba309731451b99ffbba39fb2d889530c39",
+  "previousCombinedArchiveSHA256": "2e63cfa01928cf2f585d60a10c1e01e6455a213b3c3e50aba45171740ffdd5e5",
+  "leanFiles": 894,
+  "leanFilesWithCommentEdits": 97,
+  "leanSourceLines": 115066,
+  "leanCodeLines": 92936,
+  "lineCounting": "Code lines are nonblank after removing Lean comments. Audit commands and import lines count as code.",
+  "registeredDistinctAxiomReports": 6859,
+  "historicalSourceHashCheck": "PASS",
+  "nonCommentSourceComparisonWithPreviousExport": "PASS",
+  "strictLeanToolchain": "leanprover/lean4:v4.28.0",
+  "mathlibRevision": "8f9d9cff6bd728b17a24e163c9402775d9e6a365",
+  "freshStrictSourceChecks": {
+    "Markov.Statements": "4b4fa3614e906e3c98bca54dcb4ff36b386d6a342dedcbf4280f51d8177c4444",
+    "T1MarkovGeneration": "27a5977e1387b7251e55f1bd011666302a6df0b92279871b31ff34dbe81ea459",
+    "RiemannGaussian.VinogradovNormalizedIteration": "0a4fb78546c59c5da6333ba3c7cf4c99bc2d03b473689dd88740e706de44ec95",
+    "RiemannGaussian.VinogradovNarrowDirichlet": "f337a12fba0fa740085fe238c79a072648bdb9b90871f5ce8b8802d9f2c22db8",
+    "Markov.TraceLatticeAsymptotic": "43de44d41b356f183d126b303d7fbbb4fc9284c60bae0714021e53dfa24ba9e1",
+    "Markov.PrimitiveAxisTraceNorm": "f213df7c2c0efbcccb40620bacfa139b45349200d0dbd4ebbe795cba658e16b7",
+    "Markov.PrimitiveSimpleGeodesicLengthAgreement": "caafe08330d0bfd24a32a6290cb1e34406cd392114aae843c37a2b1f71d32dc7",
+    "Markov.IntrinsicMcShaneRivinNorm": "1d607dc3f2b3fe6adf124b034389ad194822d4ac15169f693872d7b6552ed519",
+    "Markov.IntrinsicMcShaneRivinCount": "fb017e6d617772e7eefd43595b78b0758295e4662414c5e1ce2c5f1570fd778e",
+    "T1ExactTheoremOne": "bfb27b4e3aa706f147edd0e3c12356468edb5c802965986daa4e99b036aa59d2"
+  },
+  "freshEndpointAudit": {
+    "names": [
+      "Markov.modularMcShaneRivin_lattice_asymptotic",
+      "Markov.t1_mainTheorem",
+      "Markov.t1_markovUnconditional",
+      "Markov.t1_markovConditional_of_QRH",
+      "Markov.t1_VKZeroFreeRegion_proved"
+    ],
+    "axiomsUsed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "logSHA256": "9c1aa78fcc1135ceb9ad121aaa45cef2d25021c04cfc665a4560d87c07e4d73a"
+  },
+  "freshAllSourcesRebuilt": false,
+  "freshCheckDependencyObjects": "Pinned mathlib objects and previously verified local proof objects"
+}

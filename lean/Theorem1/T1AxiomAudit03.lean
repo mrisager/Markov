@@ -1,0 +1,161 @@
+import T1SectorCounting
+import T1PrimitiveOrbitMap
+import T1LatticeOrbitCoverage
+import T1LatticeOrbitUnique
+import T1PrimitiveOrbitBijection
+import T1ActualMarkovCountIdentity
+import T1ScaleComparison
+import T1LengthAsymptotics
+import T1ScaleComposition
+import T1ScaleGrowth
+import T1GeometricYCutoff
+import T1PowerCutoffAlgebra
+import T1MertensPowerEnvelope
+import T1PowerCutoffEnvelopeTerm
+import T1PowerPrimitiveEstimate
+import T1FinalScaleTransfer
+import T1VKPrimitiveEstimate
+import T1RieszMertensGrowth
+import T1RieszDesmoothing
+import T1QRHMertensPower
+import T1MertensVKFromRegion
+import T1ChebyshevPrimePowers
+import T1ChebyshevLower
+import T1ZetaConjugation
+import T1BlaschkeFactor
+import T1AnalyticDiskZeros
+import T1DiskCanonicalProduct
+import T1DiskLogDerivBound
+import T1DiskLogDerivativeDecomposition
+import T1ZetaDiskLogDerivative
+import T1ZetaDiskDerivativeBounds
+import T1ZetaPoleLogDerivative
+import T1VKRawRegionInterface
+import T1ExactTheoremOne
+
+#print axioms Markov.t1_geometricSectorSet
+#print axioms Markov.t1_geometricSectorCount
+#print axioms Markov.t1_boundedSectorTripleEquiv
+#print axioms Markov.t1_geometricSectorCount_eq_nonexceptional
+#print axioms Markov.t1_geometricSectorCount_add_two
+#print axioms Markov.t1_geometricSectorCount_actual_markov_count
+#print axioms Markov.t1_boundaryOrbitFinset
+#print axioms Markov.t1_boundaryOrbitFinset_card
+#print axioms Markov.t1_mem_geometricPrimitiveCoordinates_norm
+#print axioms Markov.t1_geometricSectorSet_finite
+#print axioms Markov.t1_primitiveOrbitDomain
+#print axioms Markov.t1_primitiveOrbitMap
+#print axioms Markov.t1_primitiveOrbitMap_inl
+#print axioms Markov.t1_primitiveOrbitMap_inr
+#print axioms Markov.t1_hasStrictDihedralForm
+#print axioms Markov.t1_primitive_lattice_orbit_coverage
+#print axioms Markov.t1_dihedralAction_strict_unique
+#print axioms Markov.t1_dihedralAction_strict_not_boundary
+#print axioms Markov.t1_primitiveOrbitMap_injective
+#print axioms Markov.t1_primitiveOrbitMap_surjective
+#print axioms Markov.t1_primitiveOrbitEquiv
+#print axioms Markov.t1_primitiveOrbitDomain_card
+#print axioms Markov.t1_geometricPrimitiveCount_sector_decomposition
+#print axioms Markov.t1_actual_markov_primitive_nat_identity
+#print axioms Markov.t1_actual_markov_primitive_identity
+#print axioms Markov.t1_actual_markov_primitive_identity_eventually
+#print axioms Markov.t1_primitiveLeadingCoefficient
+#print axioms Markov.t1_markovLeadingCoefficient
+#print axioms Markov.t1_markovLeadingCoefficient_pos
+#print axioms Markov.t1_leadingCoefficient_div_three
+#print axioms Markov.t1_primitiveConditionalScale_compare
+#print axioms Markov.t1_double_log_compare
+#print axioms Markov.t1_primitiveUnconditionalScale_compare
+#print axioms Markov.t1_markovLength_log_bounds
+#print axioms Markov.t1_markovLength_tendsto
+#print axioms Markov.t1_markovLength_isBigO_log
+#print axioms Markov.t1_conditionalScale_log
+#print axioms Markov.t1_unconditionalScale_log
+#print axioms Markov.t1_primitiveConditional_composed_isBigO
+#print axioms Markov.t1_primitiveUnconditional_composed_isBigO
+#print axioms Markov.t1_primitiveConditionalScale_eventually_ge_one
+#print axioms Markov.t1_primitiveUnconditionalScale_eventually_ge_one
+#print axioms Markov.t1_one_isBigO_conditionalScale
+#print axioms Markov.t1_one_isBigO_unconditionalScale
+#print axioms Markov.t1_geometric_primitive_Y_cutoff
+#print axioms Markov.t1_cutoffExponent_lt_one
+#print axioms Markov.t1_power_cutoff_quotient
+#print axioms Markov.t1_power_cutoff_tail_identity
+#print axioms Markov.t1_power_cutoff_head_identity
+#print axioms Markov.t1_powerCutoff_eventually_ge
+#print axioms Markov.t1_powerCutoff_eventually_admissible
+#print axioms Markov.t1_MertensPowerBound
+#print axioms Markov.t1_MertensEnvelopePowerBound
+#print axioms Markov.t1_mertens_power_implies_envelope
+#print axioms Markov.t1_envelope_power_implies_mertens
+#print axioms Markov.t1_mertens_power_iff_envelope
+#print axioms Markov.t1_powerCutoff_envelope_term
+#print axioms Markov.t1_primitiveConditional_of_mertens_power
+#print axioms Markov.t1_transfer_actual_markov_rate
+#print axioms Markov.t1_markovConditional_of_primitive
+#print axioms Markov.t1_markovUnconditional_of_primitive
+#print axioms Markov.t1_markovConditional_of_mertens_power
+#print axioms Markov.t1_primitiveUnconditional_of_mertens_vk
+#print axioms Markov.t1_markovUnconditional_of_mertens_vk
+#print axioms Markov.t1_mainTheorem_of_mertens_estimates
+#print axioms Markov.t1_rieszMertens_bound_of_strip
+#print axioms Markov.t1_QRH_rieszMertens_bound
+#print axioms Markov.t1_rieszDifference_bound
+#print axioms Markov.t1_mertens_desmoothing_bound
+#print axioms Markov.t1_mertens_power_of_riesz
+#print axioms Markov.t1_QRH_implies_mertens_power
+#print axioms Markov.t1_markovConditional_of_QRH
+#print axioms Markov.t1_mertens_vk_eventually_of_region
+#print axioms Markov.t1_mertens_vk_of_region
+#print axioms Markov.t1_markovUnconditional_of_vk_region
+#print axioms Markov.t1_mainTheorem_of_vk_region
+#print axioms Markov.t1_chebyshev_prime_power_tail
+#print axioms Markov.t1_primesLE
+#print axioms Markov.t1_mem_primesLE
+#print axioms Markov.t1_prime_of_mem_primesLE
+#print axioms Markov.t1_primesLE_mono
+#print axioms Markov.t1_chebyshev_psi_eq_sum_prime_logs
+#print axioms Markov.t1_chebyshevPrimeProduct
+#print axioms Markov.t1_chebyshevPrimeProduct_ne_zero
+#print axioms Markov.t1_choose_dvd_chebyshevPrimeProduct
+#print axioms Markov.t1_chebyshevPsi_ge_nat
+#print axioms Markov.t1_chebyshevPsi_ge
+#print axioms Markov.t1_poleRemovedZeta_conj
+#print axioms Markov.t1_riemannZeta_conj
+#print axioms Markov.t1_blaschkeDenom
+#print axioms Markov.t1_blaschkeFactor
+#print axioms Markov.t1_blaschkeDenom_ne_zero
+#print axioms Markov.t1_blaschkeFactor_analyticAt
+#print axioms Markov.t1_blaschkeFactor_ne_zero
+#print axioms Markov.t1_norm_blaschkeFactor_boundary
+#print axioms Markov.t1_norm_blaschkeFactor_zero
+#print axioms Markov.t1_logDeriv_blaschkeFactor_zero
+#print axioms Markov.t1_analytic_disk_exists_zeroFree_sphere
+#print axioms Markov.t1_analytic_disk_finite_zero_factorization
+#print axioms Markov.t1_analytic_disk_canonical_product
+#print axioms Markov.t1_disk_residual_bound
+#print axioms Markov.t1_caratheodory_norm_deriv_zero_le
+#print axioms Markov.t1_disk_norm_logDeriv_center_le
+#print axioms Markov.t1_blaschkeLogTerm
+#print axioms Markov.t1_blaschkeLogTerm_re
+#print axioms Markov.t1_blaschkeLogTerm_re_nonneg
+#print axioms Markov.t1_logDeriv_of_disk_canonical_product
+#print axioms Markov.t1_disk_logDeriv_decomposition
+#print axioms Markov.t1_zetaDiscTranslate
+#print axioms Markov.t1_zetaDiscTranslate_analytic
+#print axioms Markov.t1_zetaDiscLogDeriv_at_zero
+#print axioms Markov.t1_zetaDisc_center_cost
+#print axioms Markov.t1_zetaDisc_zero_re_lt
+#print axioms Markov.t1_zetaDiscLogDerivative_split
+#print axioms Markov.t1_zetaRadiusBudget
+#print axioms Markov.t1_neg_logDeriv_zeta_disc_le
+#print axioms Markov.t1_neg_logDeriv_zeta_disc_le_sub_zero
+#print axioms Markov.t1_logDeriv_riemannZeta_of_ne_one
+#print axioms Markov.t1_neg_logDeriv_zeta_real_bounded
+#print axioms Markov.t1_vkRawHeightDenom
+#print axioms Markov.t1_vkHeightBase_ge_two
+#print axioms Markov.t1_vkHeightWidth_le_raw
+#print axioms Markov.t1_VKZeroFreeRegion_of_raw
+#print axioms Markov.t1_mertens_vk
+#print axioms Markov.t1_markovUnconditional
+#print axioms Markov.t1_mainTheorem

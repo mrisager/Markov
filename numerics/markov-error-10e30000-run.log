@@ -1,0 +1,274 @@
+Counting exact Markov triples up to 10^30000; 30,000 samples; 6 worker processes.
+Partition: 64 disjoint jobs; 63 prefix nodes; 0 jobs already complete; 64 pending.
+job-00000: 5,000,000 triples; elapsed 151.4s; pending roots 8
+job-00039: 5,000,000 triples; elapsed 151.8s; pending roots 7
+job-00033: 5,000,000 triples; elapsed 151.6s; pending roots 6
+job-00046: 5,000,000 triples; elapsed 152.0s; pending roots 7
+job-00035: 5,000,000 triples; elapsed 151.9s; pending roots 8
+job-00058: 5,000,000 triples; elapsed 152.1s; pending roots 7
+job-00039: checkpoint saved after 9,800,000 triples
+job-00046: checkpoint saved after 9,800,000 triples
+job-00035: checkpoint saved after 9,800,000 triples
+job-00058: checkpoint saved after 9,800,000 triples
+job-00000: checkpoint saved after 9,900,000 triples
+job-00033: checkpoint saved after 9,900,000 triples
+job-00000: 10,000,000 triples; elapsed 304.8s; pending roots 5
+job-00033: 10,000,000 triples; elapsed 305.8s; pending roots 6
+job-00039: 10,000,000 triples; elapsed 306.2s; pending roots 6
+job-00046: 10,000,000 triples; elapsed 306.3s; pending roots 6
+job-00035: 10,000,000 triples; elapsed 306.5s; pending roots 11
+job-00058: 10,000,000 triples; elapsed 307.0s; pending roots 5
+job-00000: 15,000,000 triples; elapsed 458.1s; pending roots 7
+job-00039: 15,000,000 triples; elapsed 460.0s; pending roots 7
+job-00033: 15,000,000 triples; elapsed 459.9s; pending roots 10
+job-00046: 15,000,000 triples; elapsed 460.3s; pending roots 7
+job-00035: 15,000,000 triples; elapsed 460.6s; pending roots 7
+job-00058: 15,000,000 triples; elapsed 461.1s; pending roots 6
+job-00039: checkpoint saved after 19,700,000 triples
+job-00046: checkpoint saved after 19,700,000 triples
+job-00000: checkpoint saved after 19,800,000 triples
+job-00035: checkpoint saved after 19,700,000 triples
+job-00058: checkpoint saved after 19,700,000 triples
+job-00033: checkpoint saved after 19,800,000 triples
+job-00000: 20,000,000 triples; elapsed 608.4s; pending roots 4
+job-00039: 20,000,000 triples; elapsed 610.8s; pending roots 11
+job-00033: 20,000,000 triples; elapsed 611.0s; pending roots 7
+job-00046: 20,000,000 triples; elapsed 611.3s; pending roots 8
+job-00035: 20,000,000 triples; elapsed 611.5s; pending roots 7
+job-00058: 20,000,000 triples; elapsed 612.1s; pending roots 10
+job-00000: 25,000,000 triples; elapsed 758.4s; pending roots 6
+job-00039: 25,000,000 triples; elapsed 761.6s; pending roots 8
+job-00046: 25,000,000 triples; elapsed 762.1s; pending roots 9
+job-00033: 25,000,000 triples; elapsed 762.0s; pending roots 9
+job-00035: 25,000,000 triples; elapsed 762.4s; pending roots 9
+job-00058: 25,000,000 triples; elapsed 763.1s; pending roots 4
+job-00000: checkpoint saved after 29,800,000 triples
+job-00039: checkpoint saved after 29,700,000 triples
+job-00046: checkpoint saved after 29,700,000 triples
+job-00035: checkpoint saved after 29,700,000 triples
+job-00058: checkpoint saved after 29,700,000 triples
+job-00033: checkpoint saved after 29,800,000 triples
+job-00000: 30,000,000 triples; elapsed 909.2s; pending roots 8
+job-00039: 30,000,000 triples; elapsed 913.0s; pending roots 9
+job-00046: 30,000,000 triples; elapsed 913.5s; pending roots 6
+job-00033: 30,000,000 triples; elapsed 913.6s; pending roots 7
+job-00035: 30,000,000 triples; elapsed 914.0s; pending roots 8
+job-00058: 30,000,000 triples; elapsed 914.8s; pending roots 7
+Completed 1/64 jobs; 30,711,004 strict triples in prefix/completed jobs; wall time 936.2s.
+Completed 2/64 jobs; 63,846,312 strict triples in prefix/completed jobs; wall time 1009.5s.
+job-00000: 35,000,000 triples; elapsed 1059.0s; pending roots 5
+job-00039: 35,000,000 triples; elapsed 1063.4s; pending roots 7
+job-00046: 35,000,000 triples; elapsed 1063.8s; pending roots 5
+job-00058: 35,000,000 triples; elapsed 1065.4s; pending roots 4
+Completed 3/64 jobs; 98,957,481 strict triples in prefix/completed jobs; wall time 1069.6s.
+job-00056: 5,000,000 triples; elapsed 150.6s; pending roots 7
+Completed 4/64 jobs; 136,015,838 strict triples in prefix/completed jobs; wall time 1126.0s.
+Completed 5/64 jobs; 173,260,192 strict triples in prefix/completed jobs; wall time 1132.0s.
+job-00030: 5,000,000 triples; elapsed 151.2s; pending roots 10
+job-00000: checkpoint saved after 39,800,000 triples
+job-00000: 40,000,000 triples; elapsed 1210.4s; pending roots 6
+job-00055: 5,000,000 triples; elapsed 152.5s; pending roots 10
+job-00056: checkpoint saved after 9,900,000 triples
+job-00056: 10,000,000 triples; elapsed 303.2s; pending roots 8
+job-00043: 5,000,000 triples; elapsed 152.4s; pending roots 6
+job-00062: 5,000,000 triples; elapsed 152.8s; pending roots 7
+Completed 6/64 jobs; 215,806,867 strict triples in prefix/completed jobs; wall time 1287.0s.
+job-00030: checkpoint saved after 9,900,000 triples
+job-00030: 10,000,000 triples; elapsed 303.7s; pending roots 13
+job-00055: checkpoint saved after 9,900,000 triples
+job-00055: 10,000,000 triples; elapsed 303.3s; pending roots 5
+job-00056: 15,000,000 triples; elapsed 454.1s; pending roots 7
+job-00043: checkpoint saved after 9,900,000 triples
+job-00043: 10,000,000 triples; elapsed 303.2s; pending roots 5
+job-00062: checkpoint saved after 9,900,000 triples
+job-00062: 10,000,000 triples; elapsed 303.7s; pending roots 10
+job-00034: 5,000,000 triples; elapsed 150.6s; pending roots 8
+job-00030: 15,000,000 triples; elapsed 454.5s; pending roots 7
+job-00055: 15,000,000 triples; elapsed 454.6s; pending roots 7
+job-00056: checkpoint saved after 19,900,000 triples
+job-00056: 20,000,000 triples; elapsed 605.6s; pending roots 9
+job-00043: 15,000,000 triples; elapsed 454.5s; pending roots 8
+job-00062: 15,000,000 triples; elapsed 455.7s; pending roots 10
+job-00034: 10,000,000 triples; elapsed 302.1s; pending roots 11
+job-00034: checkpoint saved after 10,000,000 triples
+job-00030: checkpoint saved after 19,900,000 triples
+job-00030: 20,000,000 triples; elapsed 607.0s; pending roots 8
+job-00055: checkpoint saved after 19,800,000 triples
+job-00055: 20,000,000 triples; elapsed 607.2s; pending roots 7
+job-00056: 25,000,000 triples; elapsed 758.0s; pending roots 6
+job-00043: checkpoint saved after 19,800,000 triples
+job-00043: 20,000,000 triples; elapsed 606.2s; pending roots 8
+job-00062: checkpoint saved after 19,800,000 triples
+job-00062: 20,000,000 triples; elapsed 607.4s; pending roots 9
+job-00034: 15,000,000 triples; elapsed 453.5s; pending roots 6
+job-00030: 25,000,000 triples; elapsed 757.9s; pending roots 6
+job-00055: 25,000,000 triples; elapsed 757.9s; pending roots 7
+job-00056: checkpoint saved after 29,800,000 triples
+job-00056: 30,000,000 triples; elapsed 909.5s; pending roots 6
+Completed 7/64 jobs; 246,177,969 strict triples in prefix/completed jobs; wall time 1856.9s.
+job-00043: 25,000,000 triples; elapsed 757.9s; pending roots 5
+job-00034: checkpoint saved after 19,900,000 triples
+job-00062: 25,000,000 triples; elapsed 759.4s; pending roots 10
+job-00034: 20,000,000 triples; elapsed 605.5s; pending roots 8
+Completed 8/64 jobs; 275,658,303 strict triples in prefix/completed jobs; wall time 1903.6s.
+Completed 9/64 jobs; 304,799,749 strict triples in prefix/completed jobs; wall time 1954.9s.
+Completed 10/64 jobs; 332,714,951 strict triples in prefix/completed jobs; wall time 1980.5s.
+Completed 11/64 jobs; 361,635,584 strict triples in prefix/completed jobs; wall time 2003.0s.
+job-00042: 5,000,000 triples; elapsed 152.2s; pending roots 8
+job-00034: 25,000,000 triples; elapsed 758.1s; pending roots 4
+job-00037: 5,000,000 triples; elapsed 152.3s; pending roots 9
+Completed 12/64 jobs; 387,056,870 strict triples in prefix/completed jobs; wall time 2057.8s.
+job-00029: 5,000,000 triples; elapsed 152.0s; pending roots 8
+job-00045: 5,000,000 triples; elapsed 151.9s; pending roots 9
+job-00057: 5,000,000 triples; elapsed 152.4s; pending roots 6
+job-00042: checkpoint saved after 9,900,000 triples
+job-00042: 10,000,000 triples; elapsed 305.0s; pending roots 8
+job-00037: checkpoint saved after 9,900,000 triples
+job-00037: 10,000,000 triples; elapsed 304.5s; pending roots 8
+job-00031: 5,000,000 triples; elapsed 151.9s; pending roots 7
+job-00029: checkpoint saved after 9,900,000 triples
+job-00029: 10,000,000 triples; elapsed 303.0s; pending roots 6
+job-00045: 10,000,000 triples; elapsed 302.7s; pending roots 10
+job-00045: checkpoint saved after 10,000,000 triples
+job-00057: 10,000,000 triples; elapsed 302.2s; pending roots 6
+job-00057: checkpoint saved after 10,000,000 triples
+job-00042: 15,000,000 triples; elapsed 455.1s; pending roots 10
+job-00037: 15,000,000 triples; elapsed 454.0s; pending roots 8
+job-00031: 10,000,000 triples; elapsed 301.4s; pending roots 4
+job-00031: checkpoint saved after 10,000,000 triples
+job-00029: 15,000,000 triples; elapsed 452.7s; pending roots 6
+job-00045: 15,000,000 triples; elapsed 452.6s; pending roots 11
+job-00057: 15,000,000 triples; elapsed 451.5s; pending roots 6
+job-00042: checkpoint saved after 19,900,000 triples
+job-00042: 20,000,000 triples; elapsed 604.9s; pending roots 7
+job-00037: 20,000,000 triples; elapsed 603.4s; pending roots 6
+job-00037: checkpoint saved after 20,000,000 triples
+job-00031: 15,000,000 triples; elapsed 450.7s; pending roots 6
+job-00029: 20,000,000 triples; elapsed 602.2s; pending roots 9
+job-00029: checkpoint saved after 20,000,000 triples
+job-00045: 20,000,000 triples; elapsed 601.7s; pending roots 6
+job-00045: checkpoint saved after 20,100,000 triples
+job-00057: 20,000,000 triples; elapsed 600.8s; pending roots 5
+job-00057: checkpoint saved after 20,100,000 triples
+job-00042: 25,000,000 triples; elapsed 754.6s; pending roots 3
+Completed 13/64 jobs; 412,175,797 strict triples in prefix/completed jobs; wall time 2615.1s.
+Completed 14/64 jobs; 436,463,911 strict triples in prefix/completed jobs; wall time 2635.5s.
+Completed 15/64 jobs; 459,248,174 strict triples in prefix/completed jobs; wall time 2640.9s.
+Completed 16/64 jobs; 481,023,936 strict triples in prefix/completed jobs; wall time 2657.6s.
+job-00031: 20,000,000 triples; elapsed 600.8s; pending roots 5
+job-00031: checkpoint saved after 20,100,000 triples
+Completed 17/64 jobs; 503,740,185 strict triples in prefix/completed jobs; wall time 2664.6s.
+Completed 18/64 jobs; 525,129,860 strict triples in prefix/completed jobs; wall time 2701.5s.
+job-00061: 5,000,000 triples; elapsed 151.4s; pending roots 10
+job-00054: 5,000,000 triples; elapsed 151.2s; pending roots 6
+job-00032: 5,000,000 triples; elapsed 151.2s; pending roots 10
+job-00028: 5,000,000 triples; elapsed 150.7s; pending roots 8
+job-00063: 5,000,000 triples; elapsed 150.6s; pending roots 5
+job-00027: 5,000,000 triples; elapsed 148.9s; pending roots 9
+job-00061: 10,000,000 triples; elapsed 301.0s; pending roots 7
+job-00061: checkpoint saved after 10,000,000 triples
+job-00054: 10,000,000 triples; elapsed 300.7s; pending roots 8
+job-00054: checkpoint saved after 10,000,000 triples
+job-00032: 10,000,000 triples; elapsed 301.1s; pending roots 11
+job-00032: checkpoint saved after 10,000,000 triples
+job-00028: 10,000,000 triples; elapsed 300.4s; pending roots 7
+job-00028: checkpoint saved after 10,000,000 triples
+job-00063: 10,000,000 triples; elapsed 300.6s; pending roots 9
+job-00063: checkpoint saved after 10,000,000 triples
+job-00027: 10,000,000 triples; elapsed 298.6s; pending roots 7
+job-00027: checkpoint saved after 10,100,000 triples
+job-00061: 15,000,000 triples; elapsed 451.7s; pending roots 6
+job-00054: 15,000,000 triples; elapsed 451.5s; pending roots 9
+job-00032: 15,000,000 triples; elapsed 451.5s; pending roots 5
+job-00028: 15,000,000 triples; elapsed 450.9s; pending roots 9
+job-00063: 15,000,000 triples; elapsed 451.6s; pending roots 7
+Completed 19/64 jobs; 539,909,847 strict triples in prefix/completed jobs; wall time 3144.2s.
+Completed 20/64 jobs; 557,298,208 strict triples in prefix/completed jobs; wall time 3188.3s.
+Completed 21/64 jobs; 575,544,879 strict triples in prefix/completed jobs; wall time 3190.2s.
+Completed 22/64 jobs; 594,153,382 strict triples in prefix/completed jobs; wall time 3195.6s.
+Completed 23/64 jobs; 612,290,340 strict triples in prefix/completed jobs; wall time 3202.8s.
+job-00061: 20,000,000 triples; elapsed 602.3s; pending roots 3
+job-00061: checkpoint saved after 20,000,000 triples
+Completed 24/64 jobs; 632,782,274 strict triples in prefix/completed jobs; wall time 3232.1s.
+job-00036: 5,000,000 triples; elapsed 149.6s; pending roots 8
+job-00041: 5,000,000 triples; elapsed 149.4s; pending roots 8
+job-00038: 5,000,000 triples; elapsed 149.4s; pending roots 9
+job-00053: 5,000,000 triples; elapsed 149.3s; pending roots 9
+job-00026: 5,000,000 triples; elapsed 149.2s; pending roots 7
+job-00060: 5,000,000 triples; elapsed 149.3s; pending roots 5
+job-00036: 10,000,000 triples; elapsed 298.8s; pending roots 7
+job-00036: checkpoint saved after 10,100,000 triples
+job-00041: 10,000,000 triples; elapsed 298.6s; pending roots 6
+job-00038: 10,000,000 triples; elapsed 298.3s; pending roots 7
+job-00041: checkpoint saved after 10,100,000 triples
+job-00038: checkpoint saved after 10,100,000 triples
+job-00053: 10,000,000 triples; elapsed 298.4s; pending roots 10
+job-00053: checkpoint saved after 10,100,000 triples
+job-00026: 10,000,000 triples; elapsed 298.4s; pending roots 8
+job-00026: checkpoint saved after 10,100,000 triples
+job-00060: 10,000,000 triples; elapsed 298.6s; pending roots 9
+job-00060: checkpoint saved after 10,100,000 triples
+Completed 25/64 jobs; 645,058,314 strict triples in prefix/completed jobs; wall time 3568.9s.
+Completed 26/64 jobs; 657,970,418 strict triples in prefix/completed jobs; wall time 3580.8s.
+Completed 27/64 jobs; 669,652,053 strict triples in prefix/completed jobs; wall time 3580.9s.
+Completed 28/64 jobs; 684,296,681 strict triples in prefix/completed jobs; wall time 3581.6s.
+Completed 29/64 jobs; 697,879,515 strict triples in prefix/completed jobs; wall time 3593.9s.
+Completed 30/64 jobs; 711,433,168 strict triples in prefix/completed jobs; wall time 3594.9s.
+job-00044: 5,000,000 triples; elapsed 148.8s; pending roots 9
+job-00025: 5,000,000 triples; elapsed 148.6s; pending roots 8
+job-00052: 5,000,000 triples; elapsed 149.1s; pending roots 9
+job-00024: 5,000,000 triples; elapsed 148.8s; pending roots 8
+job-00040: 5,000,000 triples; elapsed 149.1s; pending roots 6
+job-00023: 5,000,000 triples; elapsed 148.8s; pending roots 8
+Completed 31/64 jobs; 719,094,606 strict triples in prefix/completed jobs; wall time 3823.4s.
+Completed 32/64 jobs; 727,952,599 strict triples in prefix/completed jobs; wall time 3845.6s.
+Completed 33/64 jobs; 736,462,316 strict triples in prefix/completed jobs; wall time 3848.0s.
+Completed 34/64 jobs; 745,946,438 strict triples in prefix/completed jobs; wall time 3863.9s.
+job-00044: 10,000,000 triples; elapsed 298.1s; pending roots 5
+job-00044: checkpoint saved after 10,100,000 triples
+job-00025: 10,000,000 triples; elapsed 298.3s; pending roots 4
+job-00025: checkpoint saved after 10,100,000 triples
+Completed 35/64 jobs; 756,508,777 strict triples in prefix/completed jobs; wall time 3884.3s.
+Completed 36/64 jobs; 766,867,475 strict triples in prefix/completed jobs; wall time 3890.2s.
+job-00059: 5,000,000 triples; elapsed 151.0s; pending roots 11
+job-00051: 5,000,000 triples; elapsed 150.7s; pending roots 5
+job-00022: 5,000,000 triples; elapsed 151.0s; pending roots 10
+job-00021: 5,000,000 triples; elapsed 151.3s; pending roots 3
+job-00050: 5,000,000 triples; elapsed 150.5s; pending roots 6
+job-00020: 5,000,000 triples; elapsed 150.7s; pending roots 5
+Completed 37/64 jobs; 772,763,047 strict triples in prefix/completed jobs; wall time 4042.2s.
+Completed 38/64 jobs; 777,996,359 strict triples in prefix/completed jobs; wall time 4047.9s.
+Completed 39/64 jobs; 784,688,316 strict triples in prefix/completed jobs; wall time 4050.0s.
+Completed 40/64 jobs; 792,236,148 strict triples in prefix/completed jobs; wall time 4051.2s.
+Completed 41/64 jobs; 797,974,133 strict triples in prefix/completed jobs; wall time 4057.0s.
+Completed 42/64 jobs; 805,235,436 strict triples in prefix/completed jobs; wall time 4064.5s.
+Completed 43/64 jobs; 809,077,809 strict triples in prefix/completed jobs; wall time 4166.7s.
+Completed 44/64 jobs; 812,529,524 strict triples in prefix/completed jobs; wall time 4168.2s.
+Completed 45/64 jobs; 816,329,804 strict triples in prefix/completed jobs; wall time 4171.1s.
+Completed 46/64 jobs; 820,534,303 strict triples in prefix/completed jobs; wall time 4176.4s.
+Completed 47/64 jobs; 825,211,047 strict triples in prefix/completed jobs; wall time 4182.7s.
+Completed 48/64 jobs; 829,859,551 strict triples in prefix/completed jobs; wall time 4187.7s.
+Completed 49/64 jobs; 832,123,419 strict triples in prefix/completed jobs; wall time 4255.8s.
+Completed 50/64 jobs; 834,775,331 strict triples in prefix/completed jobs; wall time 4256.2s.
+Completed 51/64 jobs; 837,221,724 strict triples in prefix/completed jobs; wall time 4256.2s.
+Completed 52/64 jobs; 840,106,204 strict triples in prefix/completed jobs; wall time 4257.8s.
+Completed 53/64 jobs; 843,255,188 strict triples in prefix/completed jobs; wall time 4262.7s.
+Completed 54/64 jobs; 846,484,401 strict triples in prefix/completed jobs; wall time 4263.8s.
+Completed 55/64 jobs; 848,189,923 strict triples in prefix/completed jobs; wall time 4308.7s.
+Completed 56/64 jobs; 849,690,728 strict triples in prefix/completed jobs; wall time 4308.8s.
+Completed 57/64 jobs; 851,288,989 strict triples in prefix/completed jobs; wall time 4310.6s.
+Completed 58/64 jobs; 853,112,970 strict triples in prefix/completed jobs; wall time 4311.0s.
+Completed 59/64 jobs; 855,068,068 strict triples in prefix/completed jobs; wall time 4314.9s.
+Completed 60/64 jobs; 857,169,017 strict triples in prefix/completed jobs; wall time 4318.4s.
+Completed 61/64 jobs; 858,357,249 strict triples in prefix/completed jobs; wall time 4340.5s.
+Completed 62/64 jobs; 859,613,824 strict triples in prefix/completed jobs; wall time 4341.7s.
+Completed 63/64 jobs; 860,944,721 strict triples in prefix/completed jobs; wall time 4342.1s.
+Completed 64/64 jobs; 862,356,771 strict triples in prefix/completed jobs; wall time 4343.8s.
+Counted 862,356,771 strict triples (862,356,773 including exceptions) in 4343.847 seconds this session.
+Final sampled error: 35.3367217048576246922480748977238174636322387836273689475128813
+markov-error-10e30000.csv
+markov-error-10e30000.json
+markov-error-10e30000.png
+markov-error-10e30000.svg
+markov-error-normalized-10e30000.png
+markov-error-normalized-10e30000.svg
