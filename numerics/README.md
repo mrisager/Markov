@@ -283,6 +283,6 @@ cmp unit-ball-volume.txt results/unit-ball-volume.txt
 ```
 
 The saved [output](unit-ball-volume.txt) gives lower and upper bounds for
-the area and for $C=2\operatorname{area}(B_X)/\pi^2$, using the Farey area
+the area and for C = 2 × area(B<sub>X</sub>) / π², using the Farey area
 series and truncation bound in Appendix A. The count plots use the decimal
 constant recorded in their own historical run reports.
