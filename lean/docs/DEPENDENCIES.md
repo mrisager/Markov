@@ -14,8 +14,7 @@ The build does not require a separate Prime Number Theorem project.
 
 ## Vinogradov–Korobov source port
 
-Theorem 1 uses mathlib's Riemann zeta function and its nonvanishing for
-$\operatorname{Re}(s)\ge1$. The wider high-height Vinogradov–Korobov region
+Theorem 1 uses mathlib's Riemann zeta function and its nonvanishing forRe(s) ≥ 1. The wider high-height Vinogradov–Korobov region
 comes from a port of David Sanftenberg's RiemannGaussian development at
 revision `f5fd3ddb407972f9ca65298fbe9be3225fe06635`. The local port retains
 the moment and Dirichlet block estimates, trims unrelated imports, and
