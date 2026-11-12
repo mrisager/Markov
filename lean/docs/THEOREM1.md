@@ -18,7 +18,7 @@ $$
 
 In both statements C = 2 × area(B<sub>X</sub>) / π² > 0, with the same
 geometric $B_X$ as in [Theorem 12](THEOREM12.md). QRH is the existence of a
-fixed $\delta>0$ such that the Riemann zeta function has no zeros inRe(s) > 1 − δ, with the pole $s=1$ excluded.
+fixed $\delta>0$ such that the Riemann zeta function has no zeros in Re(s) > 1 − δ, with the pole $s=1$ excluded.
 
 ## Lean entry points
 
