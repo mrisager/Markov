@@ -16,10 +16,9 @@ M(x)=C\bigl(\log(3x)\bigr)^2+
 O\!\left(\frac{\log x}{(\log\log x)^{1/2}}\right).
 $$
 
-In both statements $C=2\operatorname{area}(B_X)/\pi^2>0$, with the same
+In both statements C = 2 × area(B<sub>X</sub>) / π² > 0, with the same
 geometric $B_X$ as in [Theorem 12](THEOREM12.md). QRH is the existence of a
-fixed $\delta>0$ such that the Riemann zeta function has no zeros in
-$\operatorname{Re}(s)>1-\delta$, with the pole $s=1$ excluded.
+fixed $\delta>0$ such that the Riemann zeta function has no zeros inRe(s) > 1 − δ, with the pole $s=1$ excluded.
 
 ## Lean entry points
 
@@ -45,7 +44,7 @@ geometric coefficient.
 2. The Farey and Vieta constructions identify the primitive lattice points
    in a fundamental sector with nonexceptional sorted Markov triples.
    The twelve symmetries and boundary corrections give an exact count
-   identity at length $2\operatorname{arcosh}(3x/2)$ for $x\ge2$.
+   identity at length 2 arcosh(3x/2) for $x\ge2$.
 3. For the unconditional error, a checked Vinogradov–Korobov region for
    mathlib's Riemann zeta function yields the required Mertens estimate
    through contour bounds and desmoothing. Under QRH the fixed zero-free
