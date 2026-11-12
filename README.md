@@ -1,7 +1,7 @@
 # Counting Markov triples and simple geodesics
 
-Companion repository to Morten S. Risager's
-[*Counting Markov triples and simple geodesics*](https://arxiv.org/abs/2610.36069v1).
+Companion repository to
+[*Counting Markov triples and simple geodesics*](https://arxiv.org/abs/2610.36069v1) by [Morten S. Risager](https://web.math.ku.dk/~risager/).
 The theorem numbering and saved figure follow arXiv version 1.
 
 ## Lean verification
