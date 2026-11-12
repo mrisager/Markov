@@ -9,7 +9,7 @@ The statements follow version 1 of the paper.
 | Theorem 1. Asymptotics for the number of sorted positive Markov triples, with both the unconditional and quasi-Riemann-hypothesis error terms | [`Markov.t1_mainTheorem`](Theorem1/T1ExactTheoremOne.lean#L15) |
 | Theorem 12. Lattice-point asymptotics for the geometric norm on the modular once-punctured torus | [`Markov.modularMcShaneRivin_lattice_asymptotic`](Markov/IntrinsicMcShaneRivinCount.lean#L156) |
 
-Theorem 1 uses the same positive constant $2\operatorname{area}(B_X)/\pi^2$ in
+Theorem 1 uses the same positive constant 2 × area(B<sub>X</sub>) / π² in
 both branches. Theorem 12 uses the actual simple-geodesic length norm,
 the paper's original A/B integral homology marking, and standard Euclidean
 area. Its lattice count includes zero, both signs, and nonprimitive points.
